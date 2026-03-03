@@ -48,8 +48,7 @@
   fit,
   backgrounds,
   decorations.pathreplacing,
-  calc,
-  shadows.blur
+  calc
 }
 
 % ── tcolorbox libraries ────────────────────────────────────
@@ -125,14 +124,14 @@
    \MakeUppercase{\chaptername}\hspace{.5em}
    \colorbox{MahestanDarkBlue}{\textcolor{white}{\thechapter}}}
   {1ex}
-  {\titlerule\vspace{1ex}\raggedleft}
-  [\vspace{1ex}\titlerule]
+  {\titlerule\raggedleft}
+  [\titlerule]
 
 \titleformat{\section}
   {\needspace{6\baselineskip}\nopagebreak[4]%
    \normalfont\bfseries\large\color{MahestanDarkBlue}}
   {\thesection}{1em}{}
-  [\vspace{-0.3ex}{\color{MahestanBlue}\hrule height 0.8pt}\vspace{0.5ex}]
+  [{\color{MahestanBlue}\hrule height 0.8pt}]
 
 \titleformat{\subsection}
   {\needspace{4\baselineskip}\nopagebreak[4]%
@@ -167,10 +166,13 @@
 }
 
 % ── tcolorbox Styles ─────────────────────────────────────────
+% NOTE: breakable is intentionally omitted — it conflicts with XePersian bidi.
+% NOTE: simple boxes use standard skin (no enhanced) to avoid TikZ/bidi conflicts.
+% NOTE: parbox=false on all boxes prevents \parbox vs bidi direction clash.
 
 % General information box
 \newtcolorbox{infobox}[1][]{%
-  enhanced, breakable, parbox=false,
+  parbox=false,
   before skip=10pt, after skip=10pt,
   colback=NodeBg, colframe=MahestanBlue,
   arc=4pt, boxrule=1pt,
@@ -181,7 +183,7 @@
 
 % Warning / note box
 \newtcolorbox{notebox}[1][]{%
-  enhanced, breakable, parbox=false,
+  parbox=false,
   before skip=10pt, after skip=10pt,
   colback=WarningBg, colframe=MahestanGold,
   arc=4pt, boxrule=1pt,
@@ -190,9 +192,9 @@
   #1
 }
 
-% Principle box (for the 6 principles)
+% Principle box — needs enhanced for attach boxed title
 \newtcolorbox{principlebox}[2][]{%
-  enhanced, breakable, parbox=false,
+  enhanced, parbox=false,
   before skip=12pt, after skip=12pt,
   colback=MahestanLightPurple, colframe=MahestanPurple,
   arc=6pt, boxrule=1.5pt,
@@ -204,9 +206,9 @@
   #1
 }
 
-% Article / Band box
+% Article / Band box — needs enhanced for attach boxed title + borderline west
 \newtcolorbox{bandbox}[2][]{%
-  enhanced, breakable, parbox=false,
+  enhanced, parbox=false,
   before skip=8pt, after skip=8pt,
   colback=white, colframe=MahestanBlue!40,
   arc=3pt, boxrule=0.8pt,
@@ -221,7 +223,7 @@
 
 % Success / positive box
 \newtcolorbox{successbox}[1][]{%
-  enhanced, breakable, parbox=false,
+  parbox=false,
   before skip=10pt, after skip=10pt,
   colback=SuccessBg, colframe=MahestanGreen,
   arc=4pt, boxrule=1pt,
@@ -231,7 +233,7 @@
 
 % Danger box
 \newtcolorbox{dangerbox}[1][]{%
-  enhanced, breakable, parbox=false,
+  parbox=false,
   before skip=10pt, after skip=10pt,
   colback=DangerBg, colframe=MahestanRed,
   arc=4pt, boxrule=1pt,
@@ -239,9 +241,9 @@
   #1
 }
 
-% Quote / blockquote
+% Quote / blockquote — needs enhanced for borderline west
 \newtcolorbox{quotebox}[1][]{%
-  enhanced, breakable, parbox=false,
+  enhanced, parbox=false,
   before skip=10pt, after skip=10pt,
   colback=MahestanLightGray, colframe=MahestanGray!50,
   arc=2pt, boxrule=0pt,
@@ -253,7 +255,7 @@
 
 % Summary box
 \newtcolorbox{summarybox}[1][]{%
-  enhanced, breakable, parbox=false,
+  parbox=false,
   before skip=12pt, after skip=12pt,
   colback=MahestanLightBlue!30, colframe=MahestanBlue,
   arc=5pt, boxrule=1.5pt,
@@ -382,7 +384,6 @@
 		boxrule=1.5pt,
 		width=0.8\textwidth,
 		left=20pt, right=20pt, top=15pt, bottom=15pt,
-		shadow={0pt}{-3pt}{0pt}{black!50!white},
 		opacityback=0.6
 		]
 		\centering\color{white}
@@ -714,7 +715,7 @@
 \begin{itemize}
   \item رأی اعتماد اولیه: \textbf{۵۰\%+۱} نمایندگان
   \item استیضاح و برکناری: \textbf{۷۵\%} آرای نمایندگان
-  \item تعویض فردی وزرا: \textbf{⅔} آرا
+  \item تعویض فردی وزرا: \textbf{\lr{$\frac{2}{3}$}} آرا
 \end{itemize}
 \end{bandbox}
 
@@ -729,7 +730,7 @@
 \begin{enumerate}
   \item \textbf{کمیسیون ویژه‌ی قانون اساسی موقت} را تشکیل دهد (۲۱ عضو مجلس + ۷ حقوقدان مستقل + ۳ ناظر بین‌المللی)
   \item پیش‌نویس‌های جریان‌ها را بررسی و ترکیب کند
-  \item متن واحد را تدوین کرده و به \textbf{تصویب ⅔ مجلس} برساند
+  \item متن واحد را تدوین کرده و به \textbf{تصویب \lr{$\frac{2}{3}$} مجلس} برساند
   \item متن را به \textbf{رفراندوم عمومی} (۵۰\%+۱، حداقل مشارکت ۴۰\%) بگذارد
 \end{enumerate}
 \end{bandbox}
@@ -1064,8 +1065,8 @@
 \node[mahbox=MahestanGold, text width=6cm, below=0.5cm of s4] (s5) {
   \textbf{\rl{۵. رأی‌گیری}}\\
   \rl{قوانین عادی: اکثریت ساده}\\
-  \rl{قوانین مهم: ⅔ آرا}\\
-  \rl{اصلاح قانون اساسی موقت: ¾ آرا}
+  \rl{قوانین مهم: \lr{$\frac{2}{3}$} آرا}\\
+  \rl{اصلاح قانون اساسی موقت: \lr{$\frac{3}{4}$} آرا}
 };
 \node[decisionnode, below=0.5cm of s5] (dec) {\rl{نیاز به رفراندوم؟}};
 \node[mahbox=MahestanRed, text width=5cm, below right=0.5cm and 1.5cm of dec] (s7a) {
@@ -1111,7 +1112,7 @@
   \item تعیین نوع حکومت (جمهوری/مشروطه)
   \item تعیین ساختار حکمرانی (متمرکز/فدرال/خودمختار)
   \item الحاق یا واگذاری سرزمینی
-  \item هر موضوعی که مجلس مهستان با رأی ⅔ آن را «سرنوشت‌ساز» تشخیص دهد
+  \item هر موضوعی که مجلس مهستان با رأی \lr{$\frac{2}{3}$} آن را «سرنوشت‌ساز» تشخیص دهد
   \item هر موضوعی که به آستانه‌ی [X] امضای مردمی برسد
   \textit{(عدد دقیق توسط مجلس مهستان تعیین می‌شود)}
 \end{itemize}
@@ -1139,7 +1140,7 @@
 
 \begin{itemize}
   \item اگر \textbf{فرایند گذار به پایان رسیده}: مجلس منحل و قدرت منتقل می‌شود.
-  \item اگر \textbf{فرایند در جریان است}: مجلس می‌تواند با \textbf{رأی ⅔ نمایندگان}،
+  \item اگر \textbf{فرایند در جریان است}: مجلس می‌تواند با \textbf{رأی \lr{$\frac{2}{3}$} نمایندگان}،
   دوره‌ی خود را برای \textbf{حداکثر یک بار} و به مدت \textbf{حداکثر ۶ ماه} تمدید کند.
 \end{itemize}
 
@@ -1486,7 +1487,7 @@
   ۱۰ فرمان اضطراری؛ تشکیل کابینه و رأی اعتماد؛ مصوبات فوری \\
 \rowcolor{MahestanLightPurple!40}
 \textbf{فاز ۳} & هفته‌ی ۱--۱۰ &
-  تدوین قانون اساسی موقت؛ رأی مجلس (⅔)؛ رفراندوم عمومی \\
+  تدوین قانون اساسی موقت؛ رأی مجلس (\lr{$\frac{2}{3}$})؛ رفراندوم عمومی \\
 \rowcolor{NodeBg}
 \textbf{فاز ۴} & ماه ۳--۱۸ &
   نهادسازی؛ عدالت انتقالی؛ \lr{SSR}؛ اصلاحات اقتصادی \\
@@ -1709,7 +1710,7 @@
 \end{bandbox}
 
 \begin{bandbox}{اصل سوم --- شفافیت کامل}
-تمام جلسات و تصمیمات شورا علنی است. هیچ تصمیمی با اکثریت کمتر از ⅔ اعضا اتخاذ نمی‌شود.
+تمام جلسات و تصمیمات شورا علنی است. هیچ تصمیمی با اکثریت کمتر از \lr{$\frac{2}{3}$} اعضا اتخاذ نمی‌شود.
 \end{bandbox}
 
 \begin{bandbox}{اصل چهارم --- محدودیت مأموریت}
@@ -2559,12 +2560,12 @@
 عمق و تفصیل & حداقلی و عملیاتی (۴۰--۶۰ اصل) & جامع (۱۵۰--۲۵۰ اصل) \\
 \addlinespace
 \rowcolor{MahestanLightGray}
-تصویب در مجلس & ⅔ آرای مجلس مهستان & ⅔ آرای مجلس مؤسسان \\
+تصویب در مجلس & \lr{$\frac{2}{3}$} آرای مجلس مهستان & \lr{$\frac{2}{3}$} آرای مجلس مؤسسان \\
 \addlinespace
 رفراندوم & بله (۵۰\%+۱) & بله (۵۰\%+۱) \\
 \addlinespace
 \rowcolor{MahestanLightGray}
-قابلیت تغییر & با رأی ⅔ مجلس مهستان & فقط با رفراندوم یا فوق‌اکثریت ⅘ \\
+قابلیت تغییر & با رأی \lr{$\frac{2}{3}$} مجلس مهستان & فقط با رفراندوم یا فوق‌اکثریت \lr{$\frac{4}{5}$} \\
 \addlinespace
 مدت اعتبار & تا تصویب قانون اساسی نهایی (حداکثر ۲ سال) & دائمی \\
 \addlinespace
