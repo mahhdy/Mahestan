@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D47A1"/>
+      <stop offset="100%" stop-color="#1A237E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg4)"/>
+  <rect x="0" y="0" width="1080" height="5" fill="#64B5F6"/>
+
+  <text x="540" y="70" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="18" fill="#90CAF9" letter-spacing="2">ترکیب مجلس مهستان</text>
+  <text x="540" y="140" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="48" font-weight="bold" fill="#ffffff">۳۰۰ نماینده‌ی منتخب مردم</text>
+
+  <!-- Donut chart -->
+  <circle cx="540" cy="400" r="160" fill="none" stroke="#1E88E5" stroke-width="55" stroke-dasharray="804 200" stroke-dashoffset="0"/>
+  <circle cx="540" cy="400" r="160" fill="none" stroke="#FFA726" stroke-width="55" stroke-dasharray="200 804" stroke-dashoffset="-804"/>
+  <circle cx="540" cy="400" r="160" fill="none" stroke="#EF5350" stroke-width="55" stroke-dasharray="100 904" stroke-dashoffset="-1004"/>
+  <circle cx="540" cy="400" r="115" fill="#0D47A1"/>
+  <text x="540" y="390" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="44" font-weight="bold" fill="#ffffff">۳۰۰</text>
+  <text x="540" y="425" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="16" fill="#90CAF9">کرسی</text>
+
+  <!-- Legend boxes -->
+  <rect x="80" y="620" width="280" height="90" rx="12" fill="rgba(30,136,229,0.2)" stroke="#1E88E5" stroke-width="1.5"/>
+  <text x="220" y="660" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="34" font-weight="bold" fill="#64B5F6">۲۴۰</text>
+  <text x="220" y="695" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#BBDEFB">🔵 کرسی استانی (نسبی)</text>
+
+  <rect x="400" y="620" width="280" height="90" rx="12" fill="rgba(255,167,38,0.2)" stroke="#FFA726" stroke-width="1.5"/>
+  <text x="540" y="660" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="34" font-weight="bold" fill="#FFB74D">۴۰</text>
+  <text x="540" y="695" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#FFE0B2">🟠 فهرست ملی (سراسری)</text>
+
+  <rect x="720" y="620" width="280" height="90" rx="12" fill="rgba(239,83,80,0.2)" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="860" y="660" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="34" font-weight="bold" fill="#EF9A9A">۲۰</text>
+  <text x="860" y="695" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#FFCDD2">🔴 تضمینی اقلیت‌ها</text>
+
+  <!-- Gender quota -->
+  <rect x="180" y="760" width="720" height="60" rx="14" fill="rgba(206,147,216,0.15)" stroke="#CE93D8" stroke-width="1"/>
+  <text x="540" y="800" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#E1BEE7">👩‍💼 حداقل ۳۰٪ تنوع جنسیتی الزامی در فهرست‌ها</text>
+
+  <text x="540" y="900" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="16" fill="#90CAF9">انتخابات مستقیم · سیستم نسبی-فهرستی · عزل با ۴۰٪ آرا · حداکثر ۲ سال</text>
+  <text x="540" y="1010" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="13" fill="#64B5F6" opacity="0.5">۴ از ۲۵ · طرح مهستان</text>
+</svg>

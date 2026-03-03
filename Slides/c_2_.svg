@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg2)"/>
+  <rect x="0" y="0" width="8" height="1080" fill="#C62828"/>
+
+  <text x="540" y="80" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="22" fill="#EF9A9A" letter-spacing="2">چرا گذار ضروری است؟</text>
+  <text x="540" y="150" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="44" font-weight="bold" fill="#ffffff"> بالای ۴۵ سال سرکوب نظام‌مند </text>
+
+  <!-- Stat boxes -->
+  <rect x="60" y="200" width="460" height="160" rx="16" fill="rgba(198,40,40,0.15)" stroke="#EF5350" stroke-width="1"/>
+  <text x="290" y="270" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="48" font-weight="bold" fill="#EF5350">هزاران</text>
+  <text x="290" y="310" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="17" fill="#FFCDD2">اعدام سیاسی و عقیدتی</text>
+  <text x="290" y="335" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="13" fill="#EF9A9A">از کشتار ۶۷ تا سرکوب ژینا</text>
+
+  <rect x="560" y="200" width="460" height="160" rx="16" fill="rgba(198,40,40,0.15)" stroke="#EF5350" stroke-width="1"/>
+  <text x="790" y="270" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="48" font-weight="bold" fill="#EF5350">میلیون‌ها</text>
+  <text x="790" y="310" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="17" fill="#FFCDD2">ایرانی آواره و تبعیدی</text>
+  <text x="790" y="335" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="13" fill="#EF9A9A">بزرگ‌ترین فرار مغزها در منطقه</text>
+
+  <!-- Problem cards -->
+  <rect x="60" y="400" width="480" height="90" rx="12" fill="rgba(255,255,255,0.05)"/>
+  <rect x="60" y="400" width="4" height="90" rx="2" fill="#EF5350"/>
+  <text x="510" y="435" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="32" font-weight="bold" fill="#ffffff">⛓️ سرکوب سیاسی</text>
+  <text x="510" y="475" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#BDBDBD">زندانیان سیاسی · شکنجه · محاکم انقلاب</text>
+
+  <rect x="560" y="400" width="480" height="90" rx="12" fill="rgba(255,255,255,0.05)"/>
+  <rect x="560" y="400" width="4" height="90" rx="2" fill="#EF5350"/>
+  <text x="1010" y="435" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="32" font-weight="bold" fill="#ffffff">🧕 تبعیض علیه زنان</text>
+  <text x="1010" y="465" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#BDBDBD">حجاب اجباری · نابرابری حقوقی</text>
+
+  <rect x="60" y="510" width="480" height="90" rx="12" fill="rgba(255,255,255,0.05)"/>
+  <rect x="60" y="510" width="4" height="90" rx="2" fill="#EF5350"/>
+  <text x="510" y="545" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="32" font-weight="bold" fill="#ffffff">💸 فساد اقتصادی</text>
+  <text x="510" y="575" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#BDBDBD">صدها میلیارد دلار غارت · بنیادها · سپاه</text>
+
+  <rect x="560" y="510" width="480" height="90" rx="12" fill="rgba(255,255,255,0.05)"/>
+  <rect x="560" y="510" width="4" height="90" rx="2" fill="#EF5350"/>
+  <text x="1010" y="545" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="32" font-weight="bold" fill="#ffffff">🌐 سانسور و فیلترینگ</text>
+  <text x="1010" y="575" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#BDBDBD">بدترین رتبه‌ی آزادی اینترنت</text>
+
+  <rect x="60" y="620" width="480" height="90" rx="12" fill="rgba(255,255,255,0.05)"/>
+  <rect x="60" y="620" width="4" height="90" rx="2" fill="#EF5350"/>
+  <text x="510" y="655" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="32" font-weight="bold" fill="#ffffff">🏳️ سرکوب اقلیت‌ها</text>
+  <text x="510" y="685" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#BDBDBD">کُرد · بلوچ · عرب · بهایی · سنی</text>
+
+  <rect x="560" y="620" width="480" height="90" rx="12" fill="rgba(255,255,255,0.05)"/>
+  <rect x="560" y="620" width="4" height="90" rx="2" fill="#EF5350"/>
+  <text x="1010" y="655" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="32" font-weight="bold" fill="#ffffff">🌍 انزوای بین‌المللی</text>
+  <text x="1010" y="685" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#BDBDBD">تحریم · تروریسم · بحران هسته‌ای</text>
+
+    <rect x="60" y="750" width="480" height="90" rx="12" fill="rgba(255,255,255,0.05)"/>
+  <rect x="60" y="750" width="4" height="90" rx="2" fill="#EF5350"/>
+  <text x="510" y="785" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="32" font-weight="bold" fill="#ffffff">🏳️ ناکارآمدی گسترده</text>
+  <text x="510" y="815" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#BDBDBD">نفی تخصص‌ها و چسبیدن به افراد متعهد و مخلص!</text>
+
+  <rect x="560" y="750" width="480" height="90" rx="12" fill="rgba(255,255,255,0.05)"/>
+  <rect x="560" y="750" width="4" height="90" rx="2" fill="#EF5350"/>
+  <text x="1010" y="785" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="32" font-weight="bold" fill="#ffffff">🌍 تضییع حقوق بین نسلی</text>
+  <text x="1010" y="815" text-anchor="end" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#BDBDBD">غارت اموال و دارایی‌های ملی و بین نسلی و محیط زیست</text>
+
+  <text x="540" y="1000" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="18" fill="#EF9A9A">وقت تغییر رسیده است · اما چگونه؟ ➡️</text>
+</svg>

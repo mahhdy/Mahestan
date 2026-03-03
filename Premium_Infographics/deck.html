@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Vazirmatn', 'sans-serif'] }
+          }
+        }
+      }
+      mermaid.initialize({ startOnLoad: true, theme: 'dark', fontFamily: 'Vazirmatn' });
+    </script>
+    <style>
+        body { margin: 0; background: #09090b; color: #f8fafc; overflow-x: hidden; font-family: 'Vazirmatn', sans-serif;}
+        .slide { 
+            width: 1080px; height: 1350px; 
+            position: relative; overflow: hidden; 
+            background: linear-gradient(to bottom right, #020617, #0f172a, #1e1b4b);
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            padding: 4rem;
+        }
+        @media print {
+            .slide { page-break-after: always; height: 1350px; width: 1080px; margin: 0; padding: 4rem; -webkit-print-color-adjust: exact; }
+            @page { size: 10.8in 13.5in; margin: 0; }
+            body { -webkit-print-color-adjust: exact; }
+        }
+        .bg-blob-1 { position: absolute; top: -10%; left: -10%; width: 600px; height: 600px; background-color: rgba(6, 182, 212, 0.3); border-radius: 50%; filter: blur(120px); mix-blend-mode: screen; }
+        .bg-blob-2 { position: absolute; bottom: -10%; right: -10%; width: 700px; height: 700px; background-color: rgba(79, 70, 229, 0.3); border-radius: 50%; filter: blur(150px); mix-blend-mode: screen; }
+        .bg-grid { position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.1) 2px, transparent 2px); background-size: 40px 40px; opacity: 0.5; }
+        .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+        .glow-text { text-shadow: 0 0 25px rgba(56, 189, 248, 0.6); }
+        .node rect { fill: rgba(255,255,255,0.1) !important; stroke: #38bdf8 !important; stroke-width: 2px; rx: 10px; ry: 10px; }
+        .node text { fill: #fff !important; font-size: 24px !important; font-weight: bold; }
+        .edgeLabel { background-color: transparent !important; }
+        .edgePath path { stroke: #cbd5e1 !important; stroke-width: 3px !important; }
+    </style>
+</head>
+<body>
+<!-- Slide 1 -->
+<div class="slide" id="slide-1">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 01/33</div>
+
+            <h2 class="text-yellow-400 text-4xl font-bold mb-8 tracking-widest">بیانیه‌ی چارچوب نهادی گذار ایران</h2>
+            <h1 class="text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-indigo-300 mb-12 drop-shadow-xl leading-tight glow-text" style="line-height:1.2;">طرح مجلس مهستان</h1>
+            <div class="glass-card p-10 mt-8 w-11/12 max-w-4xl text-center border-b-4 border-b-emerald-400">
+                <p class="text-4xl text-slate-200 font-bold leading-relaxed">طراحی هوشمندانه برای عبور ایمن از استبداد</p>
+            </div>
+        </div></div>
+<!-- Slide 2 -->
+<div class="slide" id="slide-2">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 02/33</div>
+
+            <i class="fa-solid fa-map-signs text-cyan-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">ایران در تقاطع تاریخ</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">هیجان و عمل‌گرایی سریع باید با خرد جمعی همراه شود. تصمیمات امروز ما، سرنوشت نسل‌های آینده را رقم خواهد زد.</p>
+            </div>
+        </div></div>
+<!-- Slide 3 -->
+<div class="slide" id="slide-3">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 03/33</div>
+
+            <h2 class="text-6xl font-black text-white mb-20">درس‌هایی از تجارب جهانی</h2>
+            <div class="flex flex-col gap-10 w-full max-w-4xl">
+        
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-check-circle text-emerald-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">الگوهای موفق</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">آفریقای جنوبی و اسپانیا؛ گذار با نهادسازی دقیق</p>
+                    </div>
+                </div>
+            
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-times-circle text-rose-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">ضدالگوها</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">عراق و لیبی؛ انحلال کامل نهادها و سال‌ها هرج‌ومرج</p>
+                    </div>
+                </div>
+            </div></div></div>
+<!-- Slide 4 -->
+<div class="slide" id="slide-4">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 04/33</div>
+
+            <h2 class="text-6xl font-black text-white mb-20">اصل اول: تخصص در کنار اراده ملی</h2>
+            <div class="flex flex-row gap-8 w-full max-w-5xl">
+                <div class="glass-card w-1/2 p-12 text-center border-b-4 border-b-rose-400 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-chart-pie text-cyan-400 text-7xl mb-8"></i>
+                    <p class="text-3xl text-slate-200 leading-[2.2] whitespace-pre-line">بُعد واقعیت
+تکنوکرات‌ها، داده‌ها و حقایق اقتصادی-اجتماعی</p>
+                </div>
+                <div class="flex items-center text-4xl text-slate-400"><i class="fa-solid fa-plus"></i></div>
+                <div class="glass-card w-1/2 p-12 text-center border-b-4 border-b-cyan-400 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-users text-emerald-400 text-7xl mb-8"></i>
+                    <p class="text-3xl text-slate-200 leading-[2.2] whitespace-pre-line">بُعد ارزش
+خواست مردم متبلور در صندوق رأی و رفراندوم</p>
+                </div>
+            </div>
+            <div class="mt-16 text-3xl text-yellow-400 font-bold">حکمرانی هوشمند نیازمند تلفیق حقایق علمی و دموکراسی است</div>
+        </div></div>
+<!-- Slide 5 -->
+<div class="slide" id="slide-5">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 05/33</div>
+
+            <i class="fa-solid fa-users-viewfinder text-fuchsia-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">اصل دوم: نمایندگی نسبتی</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">در جامعه متکثر ایران، سیستم انتخاباتی لیستی-نسبی تضمین می‌کند ترکیب مجلس آینه‌ای از کل ملت باشد و هیچ صدایی مسکوت نماند.</p>
+            </div>
+        </div></div>
+<!-- Slide 6 -->
+<div class="slide" id="slide-6">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 06/33</div>
+
+            <i class="fa-solid fa-file-signature text-amber-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">اصل سوم: قانون موقت</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">خلأ قانونی مادر جنگ‌های داخلی است! با تصویب دوماهه قانون اساسی موقت، فرصت کافی و آرام برای تبیین قانون نهایی فراهم می‌گردد.</p>
+            </div>
+        </div></div>
+<!-- Slide 7 -->
+<div class="slide" id="slide-7">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 07/33</div>
+
+            <i class="fa-solid fa-building-columns text-slate-300 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">اصل چهارم: حفظ ساختارها</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">فروپاشی دستگاه‌های زیربنایی فاجعه‌بار است. امور درمانی، اداری و خدماتی با رهبری نوین حفظ شده، تنها بازوهای سرکوب منحل می‌شوند.</p>
+            </div>
+        </div></div>
+<!-- Slide 8 -->
+<div class="slide" id="slide-8">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 08/33</div>
+
+            <i class="fa-solid fa-eye text-cyan-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">اصل پنجم: پایان تاریک‌خانه‌ها</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">تمامی جلسات مجلس علنی، آرا شفاف و مقامات ملزم به افشای دارایی خواهند بود. قدرت بی‌حصار، زاینده‌ی فساد است.</p>
+            </div>
+        </div></div>
+<!-- Slide 9 -->
+<div class="slide" id="slide-9">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 09/33</div>
+
+            <i class="fa-solid fa-scale-balanced text-emerald-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">اصل ششم: حقوق بشر قطعی</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">حقوق بنیادین، برابری حقوقی زن و مرد، و حقوق اقلیت‌ها فوق هر قانونی است؛ حتی مجلس هم توان تعلیق آن‌ها را نخواهد داشت.</p>
+            </div>
+        </div></div>
+<!-- Slide 10 -->
+<div class="slide" id="slide-10">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 10/33</div>
+
+            <i class="fa-solid fa-landmark-dome text-yellow-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">نهاد محوری: مجلس مهستان</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">یک مجلس مردم‌محور که بلافاصله پس از فروپاشی نظام پیشین، با انتخاباتی همگانی زیر نظر جامعه جهانی تشکیل می‌گردد.</p>
+            </div>
+        </div></div>
+<!-- Slide 11 -->
+<div class="slide" id="slide-11">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 11/33</div>
+
+            <h2 class="text-7xl font-black text-white mb-24">ترکیب ۳۰۰ نفره مجلس</h2>
+            <div class="flex flex-wrap gap-10 justify-center w-full max-w-5xl">
+        
+                <div class="glass-card p-12 flex flex-col items-center justify-center min-w-[300px] flex-1 border-t-4 border-t-yellow-400">
+                    <div class="text-[7rem] font-black text-yellow-400 mb-6 drop-shadow-[0_0_20px_rgba(250,204,21,0.5)] leading-none" dir="ltr">۲۴۰</div>
+                    <div class="text-3xl font-bold text-slate-200 text-center leading-[1.8]">کرسی استانی (محلی)</div>
+                </div>
+            
+                <div class="glass-card p-12 flex flex-col items-center justify-center min-w-[300px] flex-1 border-t-4 border-t-yellow-400">
+                    <div class="text-[7rem] font-black text-yellow-400 mb-6 drop-shadow-[0_0_20px_rgba(250,204,21,0.5)] leading-none" dir="ltr">۴۰</div>
+                    <div class="text-3xl font-bold text-slate-200 text-center leading-[1.8]">کرسی فهرست‌های ملی</div>
+                </div>
+            
+                <div class="glass-card p-12 flex flex-col items-center justify-center min-w-[300px] flex-1 border-t-4 border-t-yellow-400">
+                    <div class="text-[7rem] font-black text-yellow-400 mb-6 drop-shadow-[0_0_20px_rgba(250,204,21,0.5)] leading-none" dir="ltr">۲۰</div>
+                    <div class="text-3xl font-bold text-slate-200 text-center leading-[1.8]">سهمیه اقلیت‌ها</div>
+                </div>
+            </div></div></div>
+<!-- Slide 12 -->
+<div class="slide" id="slide-12">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 12/33</div>
+
+            <h2 class="text-7xl font-black text-white mb-24">توسعه‌ی همه‌جانبه‌ی مشارکت</h2>
+            <div class="flex flex-wrap gap-10 justify-center w-full max-w-5xl">
+        
+                <div class="glass-card p-12 flex flex-col items-center justify-center min-w-[300px] flex-1 border-t-4 border-t-yellow-400">
+                    <div class="text-[7rem] font-black text-yellow-400 mb-6 drop-shadow-[0_0_20px_rgba(250,204,21,0.5)] leading-none" dir="ltr">۳۰٪</div>
+                    <div class="text-3xl font-bold text-slate-200 text-center leading-[1.8]">حداقل الزام حضور زنان در تمامی لیست‌ها</div>
+                </div>
+            
+                <div class="glass-card p-12 flex flex-col items-center justify-center min-w-[300px] flex-1 border-t-4 border-t-yellow-400">
+                    <div class="text-[7rem] font-black text-yellow-400 mb-6 drop-shadow-[0_0_20px_rgba(250,204,21,0.5)] leading-none" dir="ltr">دیاسپورا</div>
+                    <div class="text-3xl font-bold text-slate-200 text-center leading-[1.8]">حق کاندیداتوری و رأی برای تمام ایرانیان خارج از کشور</div>
+                </div>
+            </div></div></div>
+<!-- Slide 13 -->
+<div class="slide" id="slide-13">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 13/33</div>
+
+            <i class="fa-solid fa-globe text-cyan-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">تبعیدیان، بازوهای توسعه</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">میلیون‌ها ایرانی دیاسپورا سرمایه‌ی ایران هستند و حق انتخاب مستقیم و واریز رأی به حوزه‌ی داخلی منتخب خود را خواهند داشت.</p>
+            </div>
+        </div></div>
+<!-- Slide 14 -->
+<div class="slide" id="slide-14">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 14/33</div>
+
+            <h2 class="text-6xl font-black text-white mb-20">کابینه اجرایی موقت</h2>
+            <div class="flex flex-col gap-10 w-full max-w-4xl">
+        
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-briefcase text-cyan-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">مدیریت کارآمد</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">کابینه‌ای از وزرای متخصص برای جلوگیری از اقتصاد رو به زوال.</p>
+                    </div>
+                </div>
+            
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-handshake text-yellow-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">ائتلاف الزام‌آور</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">پایان دادن کامل به تک‌صدایی و بن‌بست‌های سیاسی.</p>
+                    </div>
+                </div>
+            </div></div></div>
+<!-- Slide 15 -->
+<div class="slide" id="slide-15">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 15/33</div>
+
+            <h2 class="text-6xl font-black text-white mb-20">اولین مأموریت بنیادین</h2>
+            <div class="flex flex-col gap-10 w-full max-w-4xl">
+        
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-gavel text-amber-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">قانون اساسی موقت در ۶۰ روز!</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">مجلس مهستان تنها ۲ ماه فرصت دارد پیش‌نویس قانون موقت را آماده و مستقیما به نظرسنجی و رفراندوم ملی بگذارد.</p>
+                    </div>
+                </div>
+            </div></div></div>
+<!-- Slide 16 -->
+<div class="slide" id="slide-16">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 16/33</div>
+
+            <h2 class="text-6xl font-black text-white mb-20">تصفیه قضایی</h2>
+            <div class="flex flex-col gap-10 w-full max-w-4xl">
+        
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-scale-unbalanced text-rose-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">شورای قضایی انتقالی</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">قاضیان و حقوق‌دانان شریف، مأمور برکناری فوری عناصر فاسد، تعلیق قوانین ظالمانه و محاکمات عادلانه.</p>
+                    </div>
+                </div>
+            </div></div></div>
+<!-- Slide 17 -->
+<div class="slide" id="slide-17">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 17/33</div>
+
+            <i class="fa-solid fa-shield-halved text-emerald-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">اصلاح بخش امنیتی</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">سریعاً نهادهایی نظیر گشت ارشاد، سازمان‌های عقیدتی و بازوهای سرکوب منحل و نیروهای مردمی در یک ارتش واحد ملی ادغام خواهند شد.</p>
+            </div>
+        </div></div>
+<!-- Slide 18 -->
+<div class="slide" id="slide-18">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 18/33</div>
+
+            <h2 class="text-7xl font-black text-white mb-12">عدالت انتقالی</h2>
+            <div class="glass-card p-12 w-full max-w-5xl bg-slate-900/80">
+                <div class="mermaid text-2xl font-bold flex justify-center w-full">
+                    graph TD;
+TJ[عدالت انتقالی] --> TR[حقیقت یابی بی‌طرفانه];
+TJ --> CR[محاکمات عادلانه بدون انتقام];
+TJ --> CO[جبران خسارت قربانیان];
+TJ --> NP[تضمین عدم تکرار تاریخ];
+                </div>
+            </div>
+        </div></div>
+<!-- Slide 19 -->
+<div class="slide" id="slide-19">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 19/33</div>
+
+            <i class="fa-solid fa-tower-broadcast text-fuchsia-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">آزادی بی‌حصر رسانه</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">پایان انحصار! دستگاه عریض صداوسیما به شبکه‌ای مردمی و بی‌طرف بدل گشته و آزادی تأسیس شبکه‌های خصوصی تضمین می‌گردد.</p>
+            </div>
+        </div></div>
+<!-- Slide 20 -->
+<div class="slide" id="slide-20">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 20/33</div>
+
+            <i class="fa-solid fa-chart-line text-emerald-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">شورای اقتصادی دوران گذار</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">اقتصاددانان خوش‌نام ایران و جهان، مشاور کابینه برای مقابله با ابرتورم، مدیریت یارانه‌ها و شفافیت اموال ملی خواهند بود.</p>
+            </div>
+        </div></div>
+<!-- Slide 21 -->
+<div class="slide" id="slide-21">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 21/33</div>
+
+            <h2 class="text-6xl font-black text-white mb-20">دو بازوی قانون‌گذاری</h2>
+            <div class="flex flex-row gap-8 w-full max-w-5xl">
+                <div class="glass-card w-1/2 p-12 text-center border-b-4 border-b-rose-400 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-chart-pie text-cyan-400 text-7xl mb-8"></i>
+                    <p class="text-3xl text-slate-200 leading-[2.2] whitespace-pre-line">مرکز تحقیقات
+تأمین مستندات تخصصی، پیش‌بینی‌های اقتصادی و مدل‌سازی‌های علمی (واقعیت)</p>
+                </div>
+                <div class="flex items-center text-4xl text-slate-400"><i class="fa-solid fa-plus"></i></div>
+                <div class="glass-card w-1/2 p-12 text-center border-b-4 border-b-cyan-400 flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-users text-emerald-400 text-7xl mb-8"></i>
+                    <p class="text-3xl text-slate-200 leading-[2.2] whitespace-pre-line">ارتباط مردمی
+کشف خواست جامع از طریق نظرسنجی‌های ملی و پلتفرم‌های دموکراتیک (ارزش)</p>
+                </div>
+            </div>
+            <div class="mt-16 text-3xl text-yellow-400 font-bold">حکمرانی هوشمند نیازمند تلفیق حقایق علمی و دموکراسی است</div>
+        </div></div>
+<!-- Slide 22 -->
+<div class="slide" id="slide-22">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 22/33</div>
+
+            <i class="fa-solid fa-calendar-check text-yellow-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">صد روزِ سرنوشت‌ساز</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">فرامین ۱۰۰ روز نخست، تعیین‌کننده است؛ روزهایی که بنیان‌های استبداد ۴۵ ساله با دستورات اضطراری الغا و درهم‌شکسته می‌شوند.</p>
+            </div>
+        </div></div>
+<!-- Slide 23 -->
+<div class="slide" id="slide-23">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 23/33</div>
+
+            <h2 class="text-6xl font-black text-white mb-20">فرامین آزادی (هفته اول)</h2>
+            <div class="flex flex-col gap-10 w-full max-w-4xl">
+        
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-dove text-cyan-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">زندانیان</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">آزادی فوری و بی‌قید تمامی زندانیان سیاسی، عقیدتی و مدنی.</p>
+                    </div>
+                </div>
+            
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-ban text-rose-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">حجاب اختیاری</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">لغو کامل حجاب اجباری و گشت‌های کنترل پوشش.</p>
+                    </div>
+                </div>
+            </div></div></div>
+<!-- Slide 24 -->
+<div class="slide" id="slide-24">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 24/33</div>
+
+            <h2 class="text-6xl font-black text-white mb-20">فرامین حقوق جانی</h2>
+            <div class="flex flex-col gap-10 w-full max-w-4xl">
+        
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-hand-paper text-rose-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">لغو اعدام</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">تعلیق کامل هرگونه مجازات غیرانسانی و اعدام در سراسر کشور.</p>
+                    </div>
+                </div>
+            
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-person-walking-arrow-loop-left text-emerald-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">حق بازگشت</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">پایان دادن به کابوس تبعید سیاسی و صدور حق بازگشت.</p>
+                    </div>
+                </div>
+            </div></div></div>
+<!-- Slide 25 -->
+<div class="slide" id="slide-25">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 25/33</div>
+
+            <h2 class="text-6xl font-black text-white mb-20">فرامین شفافیت</h2>
+            <div class="flex flex-col gap-10 w-full max-w-4xl">
+        
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-wifi text-cyan-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">پایان فیلترینگ</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">رفع کلیه محدودیت‌های اینترنت و دسترسی آزاد جهانی.</p>
+                    </div>
+                </div>
+            
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-lock text-yellow-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">حفاظت اسناد</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">دستور فوری برای محاصره و مراقبت از پرونده‌های امنیتی جهت دادخواهی قضایی.</p>
+                    </div>
+                </div>
+            </div></div></div>
+<!-- Slide 26 -->
+<div class="slide" id="slide-26">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 26/33</div>
+
+            <h2 class="text-6xl font-black text-white mb-20">اولویت‌های هفته‌های نخستین</h2>
+            <div class="flex flex-col gap-10 w-full max-w-4xl">
+        
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-newspaper text-emerald-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">آزادی تشکل</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">توسعه احزاب، سندیکاها و رسانه‌ها بدون اخذ مجوزهای حکومتی.</p>
+                    </div>
+                </div>
+            
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-mars-stroke text-fuchsia-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">حقوق زنان</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">لغو کامل تمامی قوانین تبعیض‌آمیز سیستماتیک علیه زنان در طلاق، خروج و حضانت.</p>
+                    </div>
+                </div>
+            </div></div></div>
+<!-- Slide 27 -->
+<div class="slide" id="slide-27">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 27/33</div>
+
+            <h2 class="text-6xl font-black text-white mb-20">زیربناهای توسعه</h2>
+            <div class="flex flex-col gap-10 w-full max-w-4xl">
+        
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-language text-cyan-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">زبان مادری</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">آزادی آموزش و تضمین حقوق تنوع اقوامی.</p>
+                    </div>
+                </div>
+            
+                <div class="glass-card p-12 flex items-center gap-10 text-right">
+                    <div class="flex-shrink-0"><i class="fa-solid fa-building-columns text-yellow-400 text-7xl"></i></div>
+                    <div>
+                        <h3 class="text-4xl font-bold text-white mb-4">اقتصاد</h3>
+                        <p class="text-3xl text-slate-300 leading-relaxed">استقلال بانک مرکزی و حسابرسی سریع بنیادهای فرادولتی از جمله سپاه و آستان‌ها.</p>
+                    </div>
+                </div>
+            </div></div></div>
+<!-- Slide 28 -->
+<div class="slide" id="slide-28">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 28/33</div>
+
+            <h2 class="text-7xl font-black text-white mb-12">قانون‌گذاری خردمندانه</h2>
+            <div class="glass-card p-12 w-full max-w-5xl bg-slate-900/80">
+                <div class="mermaid text-2xl font-bold flex justify-center w-full">
+                    graph TD;
+R[پیشنهاد لوایح] --> T1[گزارش فنی تکنوکرات ها];
+R --> T2[نظرسنجی واحد مردمی];
+T1 --> C[تصمیم‌گیری آگاهانه در مجلس];
+T2 --> C;
+C --> V[تصویب بر مبنای عقلانیت و آرای عمومی];
+                </div>
+            </div>
+        </div></div>
+<!-- Slide 29 -->
+<div class="slide" id="slide-29">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 29/33</div>
+
+            <i class="fa-solid fa-check-to-slot text-emerald-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">رفراندوم، خط قرمز نهایی</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">تعیین نوع حکومت، قراردادهای حیاتی ملی و قانون اساسی، فقط و فقط با رأی مستقیم مردم در رفراندوم آزاد و شفاف اعمال می‌شود.</p>
+            </div>
+        </div></div>
+<!-- Slide 30 -->
+<div class="slide" id="slide-30">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 30/33</div>
+
+            <i class="fa-solid fa-user-times text-rose-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">حق عزل نماینده بدعهد!</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">اگر ۴۰ درصد از شهروندانِ رأی‌دهنده‌ی یک حوزه از نماینده ناراضی باشند، او بدون معطلی عزل شده و نفر بعدی لیست جایگزین می‌گردد.</p>
+            </div>
+        </div></div>
+<!-- Slide 31 -->
+<div class="slide" id="slide-31">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 31/33</div>
+
+            <i class="fa-solid fa-hourglass-end text-yellow-400 text-[9rem] mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"></i>
+            <h2 class="text-6xl font-black text-white mb-16">پایان مأموریت مهستان</h2>
+            <div class="glass-card p-16 w-full max-w-4xl text-right">
+                <p class="text-4xl text-slate-200 leading-[2.2]">مجلس مهستان موقتی است! این مجلس حداکثر پس از ۲ سال منحل شده و امور کشور را به نهادهای تثبیت شده قانون اساسی نهایی می‌سپارد.</p>
+            </div>
+        </div></div>
+<!-- Slide 32 -->
+<div class="slide" id="slide-32">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 32/33</div>
+
+            <h2 class="text-yellow-400 text-4xl font-bold mb-8 tracking-widest">با انتشار این طرح، مسیر گذار را بسازید</h2>
+            <h1 class="text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-indigo-300 mb-12 drop-shadow-xl leading-tight glow-text" style="line-height:1.2;">آینده در دستان ماست</h1>
+            <div class="glass-card p-10 mt-8 w-11/12 max-w-4xl text-center border-b-4 border-b-emerald-400">
+                <p class="text-4xl text-slate-200 font-bold leading-relaxed">تعهد جامعه‌ی آگاه امروز، ضامن آزادی فردای ایران است.</p>
+            </div>
+        </div></div>
+<!-- Slide 33 -->
+<div class="slide" id="slide-33">
+<div class="bg-blob-1"></div><div class="bg-blob-2"></div><div class="bg-grid"></div>
+<div class="relative z-10 w-full flex flex-col items-center">
+<div class="absolute top-[-2rem] right-0 text-slate-500 font-bold text-xl">طرح مهستان • 33/33</div>
+
+            <h2 class="text-yellow-400 text-4xl font-bold mb-8 tracking-widest">پایان استبداد، آغاز سازندگی</h2>
+            <h1 class="text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-indigo-300 mb-12 drop-shadow-xl leading-tight glow-text" style="line-height:1.2;">ایرانِ متکثر و متحد</h1>
+            <div class="glass-card p-10 mt-8 w-11/12 max-w-4xl text-center border-b-4 border-b-emerald-400">
+                <p class="text-4xl text-slate-200 font-bold leading-relaxed">طرح مجلس مهستان؛ گامی اساسی به سوی طلوعی پرامید.</p>
+            </div>
+        </div></div>
+
+</body>
+</html>
