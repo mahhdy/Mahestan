@@ -58,22 +58,6 @@
 % ── pgfplots ───────────────────────────────────────────────
 \pgfplotsset{compat=1.18}
 
-% ── Hyperref setup ─────────────────────────────────────────
-\hypersetup{
-  colorlinks=true,
-  linkcolor=MahestanBlue,
-  citecolor=MahestanGreen,
-  urlcolor=MahestanGold,
-  pdfencoding=unicode,
-  pdftitle={بیانیه‌ی چارچوب نهادی گذار ایران — طرح مجلس مهستان},
-  pdfauthor={طرح مهستان},
-  pdfsubject={گذار دموکراتیک ایران},
-  pdfkeywords={مجلس مهستان، گذار، دموکراسی، ایران},
-  pdfcreator={XeLaTeX + XePersian},
-  bookmarksnumbered=true,
-  bookmarksopen=true
-}
-
 % ── XePersian (MUST be last) ────────────────────────────────
 \usepackage{xepersian}
 
@@ -126,6 +110,22 @@
 \definecolor{SoftPurple}{HTML}{F3E5F5}
 \definecolor{SlateGray}{HTML}{455A64}
 \definecolor{AccentGold}{HTML}{FFD700}
+
+% ── Hyperref setup (AFTER colors are defined) ───────────────
+\hypersetup{
+  colorlinks=true,
+  linkcolor=MahestanBlue,
+  citecolor=MahestanGreen,
+  urlcolor=MahestanGold,
+  pdfencoding=unicode,
+  pdftitle={بیانیه‌ی چارچوب نهادی گذار ایران — طرح مجلس مهستان},
+  pdfauthor={طرح مهستان},
+  pdfsubject={گذار دموکراتیک ایران},
+  pdfkeywords={مجلس مهستان، گذار، دموکراسی، ایران},
+  pdfcreator={XeLaTeX + XePersian},
+  bookmarksnumbered=true,
+  bookmarksopen=true
+}
 
 % ── Chapter / Section Formatting ────────────────────────────
 \titleformat{\chapter}[display]
