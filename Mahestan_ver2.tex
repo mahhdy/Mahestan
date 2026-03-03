@@ -1,0 +1,2036 @@
+%%% ============================================================
+%%% بیانیه‌ی چارچوب نهادی گذار ایران — طرح مجلس مهستان
+%%% نسخه‌ی بازنگری‌شده ۲.۰
+%%% ============================================================
+\documentclass[12pt, a4paper, openright, twoside]{book}
+
+\usepackage[top=3cm, bottom=3cm,
+inner=3.5cm, outer=2.5cm, headheight=1.5cm, headsep=0.8cm,
+footskip=1.2cm, marginparwidth=1.8cm]{geometry}
+
+%% ── بسته‌های پایه ──────────────────────────────────────────
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgf-pie}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{tcolorbox}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{fancyhdr}
+\usepackage{emptypage}
+\usepackage{needspace}
+\usepackage{adjustbox}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{eso-pic}
+\usepackage{afterpage}
+\usepackage{etoolbox}
+\usepackage{calc}
+\usepackage{ifthen}
+
+%% ── کتابخانه‌های TikZ ─────────────────────────────────────
+\usetikzlibrary{
+	arrows.meta, shapes.geometric, shapes.misc,
+	shapes.multipart, backgrounds, fit, positioning,
+	decorations.pathmorphing, decorations.markings,
+	patterns, shadows.blur, mindmap, trees,
+	matrix, chains, scopes, calc, fadings
+}
+\pgfplotsset{compat=1.18}
+\tcbuselibrary{skins, breakable, fitting, most}
+
+%% ── hyperref + bookmark (قبل از xepersian) ────────────────
+\usepackage[unicode]{hyperref}
+\usepackage{bookmark}
+
+%% ── xepersian باید آخرین بسته باشد ────────────────────────
+\usepackage{xepersian}
+
+%% ── فونت‌ها ────────────────────────────────────────────────
+\settextfont[Scale=1.1]{Vazirmatn}
+\setlatintextfont[Scale=1.1]{TeX Gyre Pagella}
+\setdigitfont{Vazirmatn}
+%% ── رنگ‌های سفارشی ──────────────────────────────────────────
+\definecolor{PrimaryBlue}{HTML}{1565C0}
+\definecolor{LightBlue}{HTML}{BBDEFB}
+\definecolor{DeepBlue}{HTML}{0D47A1}
+\definecolor{PrimaryGreen}{HTML}{2E7D32}
+\definecolor{LightGreen}{HTML}{C8E6C9}
+\definecolor{DeepGreen}{HTML}{1B5E20}
+\definecolor{PrimaryRed}{HTML}{C62828}
+\definecolor{LightRed}{HTML}{FFCDD2}
+\definecolor{DeepRed}{HTML}{B71C1C}
+\definecolor{PrimaryPurple}{HTML}{6A1B9A}
+\definecolor{LightPurple}{HTML}{F3E5F5}
+\definecolor{DeepPurple}{HTML}{4A148C}
+\definecolor{PrimaryOrange}{HTML}{E65100}
+\definecolor{LightOrange}{HTML}{FFF3E0}
+\definecolor{GoldYellow}{HTML}{F9A825}
+\definecolor{LightYellow}{HTML}{FFF9C4}
+\definecolor{DarkBrown}{HTML}{4E342E}
+\definecolor{LightBrown}{HTML}{D7CCC8}
+\definecolor{TealColor}{HTML}{00695C}
+\definecolor{LightTeal}{HTML}{E0F2F1}
+\definecolor{CyanBlue}{HTML}{00838F}
+\definecolor{LightCyan}{HTML}{B2EBF2}
+\definecolor{SageGreen}{HTML}{558B2F}
+\definecolor{LightSage}{HTML}{DCEDC8}
+\definecolor{BurntOrange}{HTML}{BF360C}
+\definecolor{LightBurnt}{HTML}{FFCCBC}
+\definecolor{ChapterColor}{HTML}{1A237E}
+\definecolor{SectionColor}{HTML}{283593}
+\definecolor{SubsectionColor}{HTML}{1565C0}
+\definecolor{RuleColor}{HTML}{C62828}
+\definecolor{BoxBg}{HTML}{FAFAFA}
+\definecolor{FrameGray}{HTML}{BDBDBD}
+\definecolor{PageBg}{HTML}{FFFEF8}
+\definecolor{HeaderBg}{HTML}{1A237E}
+\definecolor{FooterRule}{HTML}{C62828}
+
+%% ── تنظیمات hyperref ────────────────────────────────────────
+\hypersetup{
+	pdfencoding    = unicode,
+	pdfauthor      = {طرح مهستان},
+	pdftitle       = {بیانیه‌ی چارچوب نهادی گذار ایران},
+	pdfsubject     = {گذار دموکراتیک},
+	pdfkeywords    = {مجلس مهستان, گذار, دموکراسی, ایران},
+	colorlinks     = true,
+	linkcolor      = PrimaryBlue,
+	citecolor      = PrimaryGreen,
+	urlcolor       = PrimaryPurple,
+	bookmarksnumbered = true,
+	bookmarksopen  = true,
+	bookmarksdepth = 3,
+	pdfstartview   = {FitH}
+}
+
+%% ── فاصله‌گذاری ──────────────────────────────────────────────
+\setstretch{1.6}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.3em}
+\setlength{\columnsep}{1.5em}
+
+%% ── سبک فصل‌ها با titlesec ───────────────────────────────────
+\titleformat{\chapter}[display]
+{\normalfont\bfseries\color{ChapterColor}}
+{%
+	\begin{tikzpicture}
+		\fill[ChapterColor] (0,0) rectangle (\textwidth, 1.8cm);
+		\node[anchor=east, text=white, font=\Large\bfseries]
+		at (\textwidth-0.5cm, 0.9cm)
+		{\rl{فصل} \thechapter};
+		\fill[RuleColor] (0,-0.18cm) rectangle (\textwidth, 0);
+	\end{tikzpicture}%
+}
+{0pt}
+{\vspace{0.4cm}\raggedleft\fontsize{22}{28}\selectfont}
+[\vspace{0.2cm}{\color{RuleColor}\hrule height 2pt}\vspace{0.6cm}]
+
+\titlespacing*{\chapter}{0pt}{-1cm}{1.2cm}
+
+\titleformat{\section}
+{\needspace{6\baselineskip}\normalfont\Large\bfseries\color{SectionColor}}
+{\thesection}
+{0.6em}
+{}
+[{\color{SectionColor}\vspace{0.15cm}\hrule height 0.8pt}\vspace{0.2cm}]
+
+\titlespacing*{\section}{0pt}{1.2em}{0.6em}
+
+\titleformat{\subsection}
+{\needspace{5\baselineskip}\normalfont\large\bfseries\color{SubsectionColor}}
+{\thesubsection}
+{0.5em}
+{}
+
+\titlespacing*{\subsection}{0pt}{1em}{0.4em}
+
+\titleformat{\subsubsection}
+{\needspace{4\baselineskip}\normalfont\normalsize\bfseries\color{PrimaryPurple}}
+{\thesubsubsection}
+{0.4em}
+{}
+
+\titlespacing*{\subsubsection}{0pt}{0.8em}{0.3em}
+
+%% ── سرصفحه و پاصفحه ─────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO]{%
+	\small\color{SectionColor}\rightmark
+}
+\fancyhead[LE]{%
+	\small\color{SectionColor}\leftmark
+}
+\fancyhead[LO,RE]{%
+	\begin{tikzpicture}[baseline]
+		\fill[ChapterColor] (0,0) rectangle (0.5cm,0.5cm);
+		\node[text=white,font=\small\bfseries] at (0.25cm,0.25cm) {\thepage};
+	\end{tikzpicture}%
+}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{{\color{PrimaryBlue}\hrule height 0.4pt}}
+\fancyfoot[C]{%
+	{\color{FooterRule}\rule{3cm}{0.4pt}}
+	\quad{\small\color{DarkBrown}\rl{طرح مجلس مهستان — نسخه‌ی ۲.۰}}\quad
+	{\color{FooterRule}\rule{3cm}{0.4pt}}%
+}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\fancyfoot[C]{%
+		{\small\color{DarkBrown}\thepage}%
+	}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+%% ── جعبه‌های tcolorbox ───────────────────────────────────────
+\tcbset{
+	persianbox/.style={
+		enhanced, breakable,
+		before skip=12pt, after skip=12pt,
+		colback=BoxBg,
+		colframe=PrimaryBlue,
+		fonttitle=\bfseries,
+		boxrule=0.8pt,
+		arc=4pt,
+		left=8pt, right=8pt,
+		top=6pt, bottom=6pt
+	},
+	principleBox/.style={
+		enhanced, breakable,
+		before skip=12pt, after skip=12pt,
+		colback=LightPurple,
+		colframe=PrimaryPurple,
+		fonttitle=\bfseries\color{white},
+		coltitle=white,
+		attach boxed title to top right={yshift=-3mm, xshift=-4mm},
+		boxed title style={
+			colback=PrimaryPurple,
+			arc=3pt,
+			boxrule=0pt
+		},
+		boxrule=1pt,
+		arc=5pt,
+		left=10pt, right=10pt,
+		top=8pt, bottom=8pt
+	},
+	warningBox/.style={
+		enhanced, breakable,
+		before skip=12pt, after skip=12pt,
+		colback=LightYellow,
+		colframe=GoldYellow,
+		fonttitle=\bfseries,
+		boxrule=1pt,
+		arc=4pt,
+		left=8pt, right=8pt,
+		top=6pt, bottom=6pt,
+		borderline west={3pt}{0pt}{PrimaryOrange}
+	},
+	importantBox/.style={
+		enhanced, breakable,
+		before skip=12pt, after skip=12pt,
+		colback=LightRed,
+		colframe=PrimaryRed,
+		fonttitle=\bfseries\color{white},
+		coltitle=white,
+		boxrule=1pt,
+		arc=5pt,
+		left=8pt, right=8pt,
+		top=6pt, bottom=6pt,
+		attach boxed title to top right={yshift=-3mm,xshift=-4mm},
+		boxed title style={colback=PrimaryRed,arc=3pt,boxrule=0pt}
+	},
+	successBox/.style={
+		enhanced, breakable,
+		before skip=12pt, after skip=12pt,
+		colback=LightGreen,
+		colframe=PrimaryGreen,
+		fonttitle=\bfseries\color{white},
+		coltitle=white,
+		boxrule=1pt,
+		arc=5pt,
+		left=8pt, right=8pt,
+		top=6pt, bottom=6pt,
+		attach boxed title to top right={yshift=-3mm,xshift=-4mm},
+		boxed title style={colback=PrimaryGreen,arc=3pt,boxrule=0pt}
+	},
+	quoteBox/.style={
+		enhanced, breakable,
+		before skip=12pt, after skip=12pt,
+		colback=LightBlue!40,
+		colframe=PrimaryBlue!60,
+		fonttitle=\itshape\bfseries,
+		boxrule=0pt,
+		arc=0pt,
+		left=18pt, right=8pt,
+		top=6pt, bottom=6pt,
+		borderline west={5pt}{0pt}{PrimaryBlue}
+	},
+	timelineBox/.style={
+		enhanced, breakable,
+		before skip=8pt, after skip=8pt,
+		colback=white,
+		colframe=FrameGray,
+		fonttitle=\small\bfseries,
+		boxrule=0.5pt,
+		arc=3pt,
+		left=6pt, right=6pt,
+		top=4pt, bottom=4pt
+	},
+	tableBox/.style={
+		enhanced, breakable,
+		before skip=12pt, after skip=12pt,
+		colback=white,
+		colframe=PrimaryBlue!50,
+		fonttitle=\bfseries,
+		boxrule=0.5pt,
+		arc=4pt,
+		left=0pt, right=0pt,
+		top=0pt, bottom=0pt
+	}
+}
+
+%% ── سبک‌های TikZ ─────────────────────────────────────────────
+\tikzset{
+	flowbox/.style={
+		rectangle, rounded corners=4pt,
+		draw=#1!70, fill=#1!15,
+		text width=5.2cm, align=center,
+		minimum height=1.1cm,
+		font=\small,
+		inner sep=6pt,
+		drop shadow={shadow blur steps=4, shadow xshift=1pt, shadow yshift=-1pt}
+	},
+	flowbox/.default=PrimaryBlue,
+	arrow/.style={
+		-Stealth, thick,
+		color=#1,
+		shorten >=2pt, shorten <=2pt
+	},
+	arrow/.default=PrimaryBlue,
+	doublearrow/.style={
+		Stealth-Stealth, thick,
+		color=#1
+	},
+	doublearrow/.default=PrimaryBlue,
+	phasenode/.style={
+		rectangle, rounded corners=6pt,
+		draw=#1, fill=#1!12,
+		text width=\linewidth-1cm,
+		align=right,
+		minimum height=1.2cm,
+		font=\normalsize\bfseries,
+		inner sep=8pt
+	},
+	phasenode/.default=PrimaryBlue,
+	pillarbg/.style={
+		rectangle, rounded corners=5pt,
+		draw=#1!80, fill=#1!10,
+		text width=3.8cm,
+		align=center,
+		minimum height=3.5cm,
+		inner sep=6pt,
+		font=\small
+	},
+	pillarbg/.default=PrimaryBlue,
+	institutionnode/.style={
+		ellipse,
+		draw=PrimaryBlue!80,
+		fill=LightBlue!50,
+		text width=3cm,
+		align=center,
+		font=\small\bfseries,
+		inner sep=4pt
+	},
+	checktrue/.style={
+		circle, fill=PrimaryGreen!80, draw=PrimaryGreen,
+		minimum size=0.5cm, font=\small\bfseries\color{white}
+	},
+	checkfalse/.style={
+		circle, fill=PrimaryRed!80, draw=PrimaryRed,
+		minimum size=0.5cm, font=\small\bfseries\color{white}
+	},
+	checkwarn/.style={
+		circle, fill=GoldYellow!80, draw=GoldYellow!60,
+		minimum size=0.5cm, font=\small\bfseries   % بدون کاما
+	}
+
+}
+
+%% ── دستورهای کمکی ────────────────────────────────────────────
+\newcommand{\princbox}[2]{%
+	\begin{tcolorbox}[principleBox, title={#1}]
+		#2
+	\end{tcolorbox}%
+}
+
+\newcommand{\warnbox}[2]{%
+	\begin{tcolorbox}[warningBox, title={#1}]
+		#2
+	\end{tcolorbox}%
+}
+
+\newcommand{\impbox}[2]{%
+	\begin{tcolorbox}[importantBox, title={#1}]
+		#2
+	\end{tcolorbox}%
+}
+
+\newcommand{\succbox}[2]{%
+	\begin{tcolorbox}[successBox, title={#1}]
+		#2
+	\end{tcolorbox}%
+}
+
+\newcommand{\qbox}[1]{%
+	\begin{tcolorbox}[quoteBox]
+		\itshape #1
+	\end{tcolorbox}%
+}
+
+\newcommand{\artline}[1]{%
+	\vspace{0.3em}%
+	\noindent{\color{RuleColor}\rule{0.8cm}{2pt}}%
+	\quad{\large\bfseries\color{ChapterColor}#1}\quad%
+	{\color{RuleColor}\rule{0.8cm}{2pt}}%
+	\vspace{0.3em}%
+}
+
+\newcommand{\sectionrule}{%
+	{\color{PrimaryBlue!40}\hrule height 0.5pt}%
+	\vspace{0.4em}%
+}
+
+\newcommand{\ornament}{%
+	\begin{center}
+		\begin{tikzpicture}
+			\foreach \i in {1,...,5}{%
+				\fill[PrimaryBlue!60] (\i*0.4cm,0) circle (1.5pt);%
+			}
+			\fill[RuleColor] (1.2cm,0) circle (3pt);
+		\end{tikzpicture}
+	\end{center}%
+}
+
+%% ── فهرست مطالب سفارشی ───────────────────────────────────────
+\contentsmargin{2em}
+\titlecontents{chapter}[1.5em]
+{\vspace{0.5em}\bfseries\color{ChapterColor}}
+{\contentslabel{1.5em}}
+{\hspace*{-1.5em}}
+{\hfill\contentspage}
+[\vspace{0.2em}]
+
+\titlecontents{section}[3.5em]
+{\color{SectionColor}}
+{\contentslabel{2em}}
+{\hspace*{-2em}}
+{\titlerule*[6pt]{.}\contentspage}
+
+\titlecontents{subsection}[5.5em]
+{\small\color{SubsectionColor}}
+{\contentslabel{2.5em}}
+{\hspace*{-2.5em}}
+{\titlerule*[6pt]{.}\contentspage}
+
+%% ── کپشن ─────────────────────────────────────────────────────
+\captionsetup{
+	font=small,
+	labelfont={bf,color=PrimaryBlue},
+	labelsep=period,
+	textfont=it,
+	justification=centering,
+	position=bottom
+}
+
+%% ══════════════════════════════════════════════════════════════
+\begin{document}
+	%% ══════════════════════════════════════════════════════════════
+	
+	\frontmatter
+	\pagecolor{PageBg}
+	
+	%% ── صفحه‌ی عنوان ──────────────────────────────────────────────
+	\begin{titlepage}
+		\newgeometry{margin=0pt}
+		\begin{tikzpicture}[remember picture, overlay]
+			%% پس‌زمینه‌ی گرادیان
+			\fill[top color=ChapterColor, bottom color=DeepBlue!90]
+			(current page.north west) rectangle (current page.south east);
+			%% نوار زرین بالا
+			\fill[GoldYellow]
+			(current page.north west) rectangle
+			([yshift=-0.8cm]current page.north east);
+			%% نوار قرمز پایین
+			\fill[RuleColor]
+			([yshift=1.2cm]current page.south west) rectangle
+			(current page.south east);
+			%% نوار سبز زیر قرمز
+			\fill[PrimaryGreen!80]
+			([yshift=0.4cm]current page.south west) rectangle
+			([yshift=1.2cm]current page.south east);
+			%% حلقه‌ی تزئینی
+			\draw[white!30, line width=1.5pt, dashed]
+			(current page.center) circle (7.5cm);
+			\draw[GoldYellow!50, line width=0.5pt]
+			(current page.center) circle (8cm);
+			%% نام کتاب
+			\node[anchor=center, text=white,
+			font=\fontsize{32}{42}\selectfont\bfseries,
+			text width=14cm, align=center]
+			at ([yshift=4cm]current page.center)
+			{\rl{بیانیه‌ی چارچوب نهادی گذار ایران}};
+			%% زیرعنوان
+			\node[anchor=center, text=GoldYellow!90,
+			font=\fontsize{18}{26}\selectfont\bfseries,
+			text width=13cm, align=center]
+			at ([yshift=1.6cm]current page.center)
+			{\rl{طرح مجلس مهستان}};
+			%% نسخه
+			\node[anchor=center, text=white!80,
+			font=\large,
+			text width=10cm, align=center]
+			at ([yshift=0.4cm]current page.center)
+			{\rl{نسخه‌ی بازنگری‌شده ۲.۰}};
+			%% خط جداکننده تزئینی
+			\draw[GoldYellow, line width=1.5pt]
+			([xshift=-5cm,yshift=-0.4cm]current page.center) --
+			([xshift=5cm,yshift=-0.4cm]current page.center);
+			%% توضیح
+			\node[anchor=center, text=white!70,
+			font=\normalsize,
+			text width=12cm, align=center]
+			at ([yshift=-1.6cm]current page.center)
+			{\rl{چارچوبی جامع، عملیاتی و مبتنی بر تجربه‌ی جهانی}\\[0.3cm]
+				\rl{برای مدیریت دوران گذار به دموکراسی}};
+			%% تاریخ
+			\node[anchor=center, text=white!60,
+			font=\normalsize]
+			at ([yshift=-3.2cm]current page.center)
+			{\rl{اسفند ۱۴۰۴ / فوریه‌ی ۲۰۲۶}};
+			%% شعار پایین
+			\node[anchor=center, text=white,
+			font=\large\bfseries]
+			at ([yshift=0.8cm]current page.south)
+			{\rl{«ایران برای همه‌ی ایرانیان»}};
+		\end{tikzpicture}
+		\restoregeometry
+	\end{titlepage}
+	
+	%% ── صفحه‌ی پشت عنوان ─────────────────────────────────────────
+	\clearpage
+	\thispagestyle{empty}
+	\vspace*{\fill}
+	\begin{tcolorbox}[
+		enhanced, breakable,
+		before skip=12pt, after skip=12pt,
+		colback=LightBlue!30,
+		colframe=PrimaryBlue,
+		boxrule=0.5pt, arc=4pt,
+		left=12pt, right=12pt,
+		top=10pt, bottom=10pt
+		]
+		\begin{center}
+			{\large\bfseries\color{ChapterColor}\rl{یادداشت ناشر}}\par
+			\vspace{0.4cm}
+			\hrule height 0.4pt
+			\vspace{0.4cm}
+		\end{center}
+		{\rl{این سند زنده است و به‌روزرسانی خواهد شد.
+				تمام اعداد، نسبت‌ها، آستانه‌ها و زمان‌بندی‌های مشخصی که در این سند
+				ذکر می‌شوند \textbf{پیشنهادی برای بحث و شروع گفتگو} هستند.
+				تصمیم نهایی درباره‌ی آینده‌ی ایران فقط و فقط با \textbf{مردم ایران} است.}}\par
+		\vspace{0.4cm}
+		\begin{latin}
+			\small
+			\textit{Version 2.0 — February 2026}\\
+			\textit{Mehestan Assembly Framework Declaration}
+		\end{latin}
+	\end{tcolorbox}
+	\vspace*{\fill}
+	\clearpage
+	
+	%% ── فهرست مطالب ──────────────────────────────────────────────
+	\tableofcontents
+	\clearpage
+	
+	%% ── پیشگفتار هنری ────────────────────────────────────────────
+	\chapter*{پیشگفتار}
+	\addcontentsline{toc}{chapter}{پیشگفتار}
+	\markboth{پیشگفتار}{پیشگفتار}
+	
+	\begin{center}
+		\begin{tikzpicture}
+			\fill[ChapterColor!10] (0,0) rectangle (\linewidth, 3.5cm);
+			\draw[ChapterColor, line width=1.5pt]
+			(0,0) rectangle (\linewidth, 3.5cm);
+			\draw[GoldYellow, line width=0.8pt]
+			(0.3cm,0.3cm) rectangle (\linewidth-0.3cm, 3.2cm);
+			\node[anchor=center, text width=\linewidth-2cm, align=center,
+			font=\large\itshape\color{ChapterColor}]
+			at (0.5\linewidth, 1.75cm)
+			{\rl{«نه تعلل و بی‌عملی و یا ترس از تغییر کارساز است،
+					نه شتاب و هیجان و احساساتی شدن.
+					برای داشتن ایرانی آزاد، آباد، متکثر و چندصدایی،
+					باید فرایند گذار را هرچه بیشتر و بهتر مهندسی کرد.»}};
+		\end{tikzpicture}
+	\end{center}
+	
+	\vspace{0.8cm}
+	
+	ایران در مقطعی تاریخی قرار دارد که تصمیمات امروز، سرنوشت نسل‌های آینده
+	را رقم خواهد زد. تجربه‌ی جهانی --- از تونس و آفریقای جنوبی تا اسپانیا و
+	لهستان و شیلی، و همچنین ضدالگوهایی مانند لیبی، مصر و عراق --- نشان داده
+	است که \textbf{کیفیت طراحی نهادی دوران گذار} بیش از هر عامل دیگری
+	تعیین‌کننده‌ی سرنوشت نظام سیاسی آینده است.
+	
+	\ornament
+	
+	این سند، بیانیه‌ای پایان‌یافته نیست بلکه \textbf{آغاز یک گفتگو} است.
+	نقد، تکمیل و چکش‌کاری آن از سوی همه‌ی ایرانیان نه‌تنها خوشایند که ضروری است.
+	
+	\mainmatter
+	
+	%% ══════════════════════════════════════════════════════════════
+	\chapter{مقدمه و اصول راهنما}
+	%% ══════════════════════════════════════════════════════════════
+	
+	\section{مقدمه}
+	
+	ایران در مقطعی تاریخی قرار دارد که تصمیمات امروز، سرنوشت نسل‌های آینده
+	را رقم خواهد زد. نه تعلل و بی‌عملی و یا ترس از تغییر کارساز است، نه شتاب
+	و هیجان و احساساتی شدن و یا تمامیت‌خواهی و مصادره‌ی جنبش به نفع فرد یا
+	گروهی خاص.
+	
+	\qbox{%
+		خشم و خشونت و عمل‌گرایی سریع و انقلابی تا مقطع عبور از جمهوری اسلامی
+		و اطمینان از بازگشت‌ناپذیر بودن آن قابل درک و شاید ضروری باشد --- هرچند که
+		هنوز نباید مصداق خشونت کور و یا خارج از اندازه باشد --- ولی فراتر از آن،
+		قطعاً و طبیعتاً مانع ساختن و همکاری و همدلی مردمی خواهد بود.%
+	}
+	
+	\vspace{0.5\baselineskip}
+	\begin{tcolorbox}[tableBox,
+		title={\rl{جدول ۱.۱: نمونه‌های موفق و ناموفق گذار دموکراتیک}}]
+		\begin{adjustbox}{max width=\linewidth}
+			\begin{tabular}{>{\raggedleft\arraybackslash}p{3cm}
+					>{\raggedleft\arraybackslash}p{4.5cm}
+					>{\raggedleft\arraybackslash}p{4.5cm}}
+				\toprule
+				\rowcolor{ChapterColor!15}
+				\textbf{\rl{کشور}} & \textbf{\rl{الگوی موفق}} & \textbf{\rl{درس کلیدی}} \\
+				\midrule
+				\rl{تونس} & \rl{مجلس مؤسسان منتخب} & \rl{نهاد واحد با مشروعیت} \\
+				\addlinespace[2pt]
+				\rl{آفریقای جنوبی} & \rl{دو قانون اساسی} & \rl{گذار مرحله‌بندی‌شده} \\
+				\addlinespace[2pt]
+				\rl{اسپانیا} & \rl{پیمان‌های مونکلوآ} & \rl{اجماع اقتصادی} \\
+				\addlinespace[2pt]
+				\rl{لهستان} & \rl{میز مذاکره} & \rl{گفتگوی ساختارمند} \\
+				\midrule
+				\rowcolor{LightRed!40}
+				\rl{لیبی} & \rl{---} & \rl{نبود نهاد واحد = فاجعه} \\
+				\addlinespace[2pt]
+				\rowcolor{LightRed!40}
+				\rl{مصر} & \rl{---} & \rl{نظامیان به‌عنوان ضامن = شکست} \\
+				\addlinespace[2pt]
+				\rowcolor{LightRed!40}
+				\rl{عراق} & \rl{---} & \rl{انحلال کامل نهادها = هرج‌ومرج} \\
+				\bottomrule
+			\end{tabular}
+		\end{adjustbox}
+	\end{tcolorbox}
+	\vspace{0.5\baselineskip}
+	
+	%% ══════════════════════════════════════════════════════════════
+	\section{اصول راهنمای طراحی نظام نهادی گذار}
+	%% ══════════════════════════════════════════════════════════════
+	
+	\subsection{اصل اول: ترکیب دموکراسی مستقیم و تخصص‌گرایی}
+	
+	\princbox{اصل اول}{%
+		\textbf{\rl{هر تصمیم سیاسی دو بُعد دارد: بُعد واقعیت و بُعد ارزش.
+				هنر حکمرانی خوب در دوران گذار، جدا کردن و سپس ترکیب درست این دو بُعد است.}}%
+	}
+	
+	\begin{itemize}[rightmargin=1em, leftmargin=0pt, itemsep=4pt]
+		\item \textbf{\rl{بُعد واقعیت و تخصص:}}
+		داده‌ها، حقایق علمی-تجربی، تحلیل‌های فنی، پیامدهای اقتصادی، حقوقی
+		و اجتماعی هر تصمیم. این بُعد از تکنوکرات‌ها، متخصصان، مراکز پژوهشی
+		و مشاوران دریافت می‌شود.
+		
+		\item \textbf{\rl{بُعد ارزش و خواست ملی:}}
+		تمایلات، ارزش‌ها، آرزوها، ترجیحات و حق تعیین سرنوشت مردم.
+		این بُعد \textbf{فقط و فقط} از طریق مراجعه‌ی مستقیم به آرای مردم
+		قابل تعیین است.
+	\end{itemize}
+	
+	\vspace{0.5\baselineskip}
+	\noindent
+	\textbf{\rl{مبنای نظری:}}
+	این تفکیک ریشه در اندیشه‌ی \lr{David Hume} (تفکیک «هست» از «باید»)،
+	\lr{Jürgen Habermas} (دموکراسی مشورتی)،
+	و \lr{Philip Pettit} (جمهوری‌خواهی و آزادی به‌مثابه عدم سلطه) دارد.
+	
+	\vspace{0.8cm}
+	%% نمودار دو بازو
+	\noindent
+	\begin{center}
+		\begin{tikzpicture}[node distance=0.8cm and 1.2cm]
+			
+			\node[rectangle, rounded corners=8pt,
+			draw=PrimaryOrange, fill=LightOrange,
+			text width=5.5cm, align=center,
+			minimum height=4.5cm,
+			font=\small, inner sep=10pt] (tech)
+			{%
+				\textbf{\color{PrimaryOrange}\rl{مرکز تحقیقات}}\\[4pt]
+				{\color{PrimaryOrange}\rl{(بازوی تکنوکراتیک)}}\\[6pt]
+				\rule{3cm}{0.4pt}\\[4pt]
+				\rl{واقعیت چیست؟}\\[4pt]
+				\rl{داده‌ها و آمار}\\
+				\rl{تحلیل فنی پیامدها}\\
+				\rl{گزینه‌های سیاستی}\\
+				\rl{تجربه‌ی جهانی}\\
+				\rl{نظر متخصصان}%
+			};
+			
+			\node[rectangle, rounded corners=8pt,
+			draw=PrimaryBlue, fill=LightBlue,
+			text width=5.5cm, align=center,
+			minimum height=4.5cm,
+			font=\small, inner sep=10pt,
+			right=2cm of tech] (demo)
+			{%
+				\textbf{\color{PrimaryBlue}\rl{واحد ارتباط مردمی}}\\[4pt]
+				{\color{PrimaryBlue}\rl{(بازوی دموکراتیک)}}\\[6pt]
+				\rule{3cm}{0.4pt}\\[4pt]
+				\rl{مردم چه می‌خواهند؟}\\[4pt]
+				\rl{اولویت‌ها و ارزش‌ها}\\
+				\rl{نظرسنجی‌ها}\\
+				\rl{پیشنهادها و بازخوردها}\\
+				\rl{جلسات عمومی}\\
+				\rl{رفراندوم‌ها}%
+			};
+			
+			\node[rectangle, rounded corners=8pt,
+			draw=PrimaryGreen, fill=LightGreen,
+			text width=5.5cm, align=center,
+			minimum height=3cm,
+			font=\small\bfseries, inner sep=10pt,
+			below right=0.5cm and -2.2cm of tech] (mehestan)
+			{%
+				\textbf{\color{PrimaryGreen}\rl{مجلس مهستان}}\\[4pt]
+				\rule{3cm}{0.4pt}\\[4pt]
+				\rl{تصمیم‌گیری آگاهانه}\\
+				\rl{بر اساس هر دو بُعد:}\\[4pt]
+				\rl{واقعیت + خواست مردم}\\
+				\rl{= حکمرانی مطلوب}%
+			};
+			
+			\draw[-Stealth, thick, PrimaryOrange, shorten >=2pt]
+			(tech.south) -- (mehestan.north west)
+			node[midway, below left, font=\scriptsize\color{PrimaryOrange}]
+			{\rl{گزارش فنی}};
+			
+			\draw[-Stealth, thick, PrimaryBlue, shorten >=2pt]
+			(demo.south) -- (mehestan.north east)
+			node[midway, below right, font=\scriptsize\color{PrimaryBlue}]
+			{\rl{گزارش مردمی}};
+			
+		\end{tikzpicture}
+	\end{center}
+	\vspace{0.5\baselineskip}
+	
+	%% ── تجربه‌ی جهانی ────────────────────────────────────────────
+	\begin{tcolorbox}[persianbox,
+		title={\rl{تجربه‌ی جهانی --- ترکیب تخصص و دموکراسی}},
+		colframe=PrimaryGreen]
+		\begin{itemize}[rightmargin=0.5em, leftmargin=0pt, itemsep=3pt]
+			\item \textbf{\rl{ایرلند (۲۰۱۶--۲۰۱۹):}}
+			مجمع شهروندان (\lr{Citizens' Assembly}) ترکیبی از شهروندان عادی
+			(انتخاب تصادفی) و متخصصان بود. نتیجه: اصلاحات قانون اساسی که
+			از طریق رفراندوم تأیید شد.
+			
+			\item \textbf{\rl{فرانسه (۲۰۱۹--۲۰۲۰):}}
+			کنوانسیون شهروندی اقلیم --- ۱۵۰ شهروند تصادفی با کمک متخصصان
+			اقلیمی، پیشنهاداتی تدوین کردند.
+			
+			\item \textbf{\rl{آفریقای جنوبی:}}
+			فرایند تدوین قانون اساسی ۱۹۹۶ شامل مشاوره‌ی عمومی گسترده
+			(بیش از ۲ میلیون نظر مردمی) به علاوه کمیته‌های فنی تخصصی.
+		\end{itemize}
+	\end{tcolorbox}
+	
+	\subsection{اصل دوم: نمایندگی نسبتی}
+	
+	\princbox{اصل دوم}{%
+		\rl{در جامعه‌ای به تنوع و تکثر ایران، هیچ صدایی نباید نشنیده بماند.}%
+	}
+	
+	سیستم انتخاباتی نسبی-فهرستی تضمین می‌کند که ترکیب مجلس مهستان آینه‌ی
+	واقعی جامعه‌ی ایران باشد. تجربه‌ی جهانی (\lr{Lijphart, 1999}؛ \lr{Reynolds, 2011})
+	نشان داده که سیستم‌های نسبی در جوامع متکثر:
+	
+	\begin{itemize}[rightmargin=1em, leftmargin=0pt, itemsep=2pt]
+		\item نمایندگی عادلانه‌تر اقلیت‌ها را تضمین می‌کنند
+		\item ائتلاف‌سازی و مذاکره را تشویق می‌کنند
+		\item ریسک انحصار قدرت توسط یک گروه را کاهش می‌دهند
+		\item مشارکت سیاسی را افزایش می‌دهند
+	\end{itemize}
+	
+	\subsection{اصل سوم: قانون اساسی‌گرایی دو مرحله‌ای}
+	
+	\princbox{اصل سوم}{%
+		\rl{خلأ قانونی خطرناک‌ترین تهدید دوران گذار است.}%
+	}
+	
+	مدل دو قانون اساسی (موقت + نهایی) --- بر اساس تجربه‌ی موفق آفریقای جنوبی ---
+	تضمین می‌کند که از روز اول چارچوب حقوقی وجود داشته باشد.
+	
+	\subsection{اصل چهارم: اصلاح نه تخریب}
+	
+	\impbox{درس حیاتی از عراق}{%
+		\rl{تجربه‌ی عراق نشان داد: انحلال کامل نهادها = فاجعه.
+			ساختارهای اداری، نظامی و خدماتی کشور با رهبری جدید و اصلاح‌شده
+			حفظ می‌شوند. فقط ساختارهای ایدئولوژیک و عاملان جنایات کنار گذاشته
+			می‌شوند.}%
+	}
+	
+	\subsection{اصول پنجم و ششم: شفافیت و فراگیری}
+	
+	\begin{tcolorbox}[persianbox, colframe=TealColor,
+		title={\rl{اصول پنجم و ششم}}]
+		\begin{itemize}[rightmargin=0.5em, leftmargin=0pt, itemsep=4pt]
+			\item \textbf{\rl{اصل پنجم:}} تمام جلسات مجلس مهستان علنی خواهد بود.
+			تمام تصمیمات مستند و عمومی خواهند شد.
+			نهادهای نظارتی مستقل از ابتدا تشکیل خواهند شد.
+			
+			\item \textbf{\rl{اصل ششم:}} هیچ گروه، قوم، جنسیت، مذهب یا ایدئولوژی
+			از فرایند گذار حذف نخواهد شد. اصول بنیادین حقوق بشر
+			\textbf{غیرقابل‌نقض} هستند.
+		\end{itemize}
+	\end{tcolorbox}
+	
+	%% ══════════════════════════════════════════════════════════════
+	\chapter{مجلس مهستان: ساختار و مأموریت}
+	%% ══════════════════════════════════════════════════════════════
+	
+	\warnbox{یادداشت مهم درباره‌ی اعداد}{%
+		\rl{تمام اعداد، نسبت‌ها، آستانه‌ها و زمان‌بندی‌های مشخصی که در این سند
+			ذکر می‌شوند (مانند ۳۰۰ نماینده، ۳\% آستانه، ۱۰۰٬۰۰۰ امضا، ۲ ماه مهلت)
+			\textbf{پیشنهادی برای بحث و شروع گفتگو} هستند، نه مقادیر ثابت.}%
+	}
+	
+	\section{فرایند انتخابات و تشکیل مجلس}
+	
+	\begin{enumerate}[rightmargin=1em, leftmargin=0pt, itemsep=6pt,
+		label=\textbf{بند \arabic*.}]
+		
+		\item جریان‌ها و ائتلاف‌هایی به شکل خودجوش باید شکل گرفته و برای
+		عضویت در این نهاد ملی گذار، اعضایی را در کل کشور (یا منطقه‌ی
+		مورد نظر خود) به شکل فهرست کاندیداهای مورد تأیید معرفی کنند.
+		\textbf{هر جریانی که فهرست ملی معرفی می‌کند، موظف است پیش‌نویس
+			قانون اساسی موقت پیشنهادی خود را نیز منتشر کند.}
+		
+		\item پس از آغاز دوره‌ی گذار، فرایند ثبت‌نام و تبلیغات رسمی‌تر آغاز
+		می‌شود. ثبت‌نام رسمی در وب‌سایت وزارت کشور و سایر پایگاه‌های
+		اطلاع‌رسانی عمومی منعکس خواهد شد.
+		
+		\item اجرای انتخابات به شکل \textbf{غیرمتمرکز} توسط فرمانداری‌ها و
+		شهرداری‌ها با کمک مدارس و آموزش‌وپرورش صورت خواهد گرفت.
+		
+		\item پس از شمارش آرا و تأیید نتایج، ظرف یک هفته مجلس مهستان دوران
+		گذار تشکیل خواهد شد.
+	\end{enumerate}
+	
+	\section{ترکیب مجلس مهستان}
+	
+	\vspace{0.5\baselineskip}
+	\noindent
+	\begin{center}
+		\begin{tikzpicture}
+			
+			%% دایره‌ی بزرگ مرکزی
+			\node[circle, draw=PrimaryGreen, fill=LightGreen,
+			minimum size=3cm, font=\large\bfseries\color{PrimaryGreen},
+			align=center] (center) at (0,0)
+			{\rl{۳۰۰}\\[2pt]\rl{نماینده}};
+			
+			%% بخش استانی
+			\node[rectangle, rounded corners=5pt,
+			draw=PrimaryBlue, fill=LightBlue,
+			text width=4.5cm, align=center,
+			minimum height=2.5cm,
+			font=\small, inner sep=8pt] (prov)
+			at (6cm, 2cm)
+			{%
+				\textbf{\color{PrimaryBlue}\rl{۲۴۰ کرسی استانی}}\\[4pt]
+				\rl{بر اساس جمعیت}\\
+				\rl{سیستم نسبی-فهرستی}\\
+				\rl{آستانه: ۳\%}\\
+				\rl{(حداقل ۳ کرسی هر استان)}%
+			};
+			
+			%% بخش ملی
+			\node[rectangle, rounded corners=5pt,
+			draw=GoldYellow, fill=LightYellow,
+			text width=4.5cm, align=center,
+			minimum height=2.5cm,
+			font=\small, inner sep=8pt] (national)
+			at (6cm, -0.5cm)
+			{%
+				\textbf{\color{GoldYellow!80}\rl{۴۰ کرسی فهرست ملی}}\\[4pt]
+				\rl{جریان‌های سراسری}\\
+				\rl{سیستم نسبی}\\
+				\rl{آستانه: ۵\%}%
+			};
+			
+			%% بخش اقلیت
+			\node[rectangle, rounded corners=5pt,
+			draw=PrimaryPurple, fill=LightPurple,
+			text width=4.5cm, align=center,
+			minimum height=2.5cm,
+			font=\small, inner sep=8pt] (minor)
+			at (6cm, -3cm)
+			{%
+				\textbf{\color{PrimaryPurple}\rl{۲۰ کرسی تضمینی اقلیت‌ها}}\\[4pt]
+				\rl{قومی، زبانی، مذهبی}\\
+				\rl{انتخاب توسط خود اقلیت‌ها}%
+			};
+			
+			%% فلش‌ها
+			\draw[-Stealth, thick, PrimaryBlue, shorten >=2pt]
+			(center.east) -- (prov.west);
+			\draw[-Stealth, thick, GoldYellow!80, shorten >=2pt]
+			(center.east) -- (national.west);
+			\draw[-Stealth, thick, PrimaryPurple, shorten >=2pt]
+			(center.east) -- (minor.west);
+			
+			%% برچسب سهمیه‌ی جنسیتی
+			\node[rectangle, rounded corners=3pt,
+			draw=PrimaryRed, fill=LightRed,
+			text width=4cm, align=center,
+			font=\small, inner sep=6pt] at (0, -4cm)
+			{%
+				\textbf{\color{PrimaryRed}\rl{بند ۶: سهمیه‌ی جنسیتی}}\\[2pt]
+				\rl{حداقل ۳۰\% هر جنسیت}\\
+				\rl{در فهرست‌های انتخاباتی}%
+			};
+			
+		\end{tikzpicture}
+	\end{center}
+	\vspace{0.5\baselineskip}
+	
+	\begin{enumerate}[rightmargin=1em, leftmargin=0pt, itemsep=6pt,
+		label=\textbf{بند \arabic*.}, start=5]
+		
+		\item مجلس مهستان متشکل از \textbf{۳۰۰ نماینده} خواهد بود:
+		\begin{itemize}[rightmargin=1.5em, leftmargin=0pt, itemsep=3pt]
+			\item \textbf{۲۴۰ کرسی استانی:} بر اساس جمعیت هر استان با
+			سیستم نسبی-فهرستی. آستانه‌ی ورود: ۳\%
+			\item \textbf{۴۰ کرسی فهرست ملی:} برای جریان‌هایی که فهرست
+			سراسری دارند. آستانه‌ی ورود: ۵\%
+			\item \textbf{۲۰ کرسی تضمینی اقلیت‌ها:} انتخاب توسط خود اقلیت‌ها
+		\end{itemize}
+		
+		\item رعایت \textbf{حداقل ۳۰\% تنوع جنسیتی} در فهرست‌های انتخاباتی
+		الزامی است.
+	\end{enumerate}
+	
+	\section{هیأت رئیسه و کمیسیون‌های تخصصی}
+	
+	\begin{enumerate}[rightmargin=1em, leftmargin=0pt, itemsep=6pt,
+		label=\textbf{بند \arabic*.}, start=7]
+		
+		\item اگر جریانی با فهرست واحد سراسری به اکثریت مطلق (۵۰\%+۱)
+		برسد، ریاست جلسه‌ی اول را بر عهده خواهد داشت. در غیر این صورت،
+		\textbf{ریاست سنی} تعیین‌کننده خواهد بود.
+		
+		\item مجلس مهستان بلافاصله کمیسیون‌های تخصصی دائمی زیر را تشکیل
+		خواهد داد:
+	\end{enumerate}
+	
+	\vspace{0.5\baselineskip}
+	\begin{tcolorbox}[persianbox, colframe=PrimaryBlue,
+		title={\rl{کمیسیون‌های تخصصی مجلس مهستان}}]
+		\begin{itemize}[rightmargin=0.5em, leftmargin=0pt,
+			itemsep=2pt, label={\color{PrimaryBlue}\textbullet}]
+			\item \rl{کمیسیون قانون اساسی موقت}
+			\item \rl{کمیسیون عدالت انتقالی و حقوق بشر}
+			\item \rl{کمیسیون اصلاح بخش امنیتی و نظامی}
+			\item \rl{کمیسیون اصلاح قضایی و حقوقی}
+			\item \rl{کمیسیون اقتصاد و بودجه}
+			\item \rl{کمیسیون آموزش، علم و فرهنگ}
+			\item \rl{کمیسیون سیاست خارجی و روابط بین‌الملل}
+			\item \rl{کمیسیون حقوق اقلیت‌ها و تنوع قومی-زبانی}
+			\item \rl{کمیسیون محیط زیست و منابع طبیعی}
+			\item \rl{کمیسیون حقوق زنان و برابری جنسیتی}
+			\item \rl{کمیسیون رسانه و حقوق دیجیتال}
+		\end{itemize}
+	\end{tcolorbox}
+	
+	\section{تشکیل کابینه‌ی اجرایی موقت}
+	
+	\vspace{0.5\baselineskip}
+	\noindent
+	\begin{center}
+		\begin{tikzpicture}[node distance=0.7cm and 0.5cm]
+			
+			\node[rectangle, rounded corners=5pt,
+			draw=PrimaryBlue, fill=LightBlue,
+			text width=\linewidth-2cm,
+			align=right, font=\small, inner sep=8pt] (q1)
+			{\textbf{\color{PrimaryBlue}\rl{آیا جریانی اکثریت مطلق (۵۰\%+۱) دارد؟}}};
+			
+			\node[rectangle, rounded corners=5pt,
+			draw=PrimaryGreen, fill=LightGreen,
+			text width=5cm, align=center,
+			font=\small, inner sep=6pt,
+			below right=0.8cm and -1cm of q1] (yes)
+			{%
+				\textbf{\color{PrimaryGreen}\rl{بله}}\\[2pt]
+				\rl{جریان اکثریت مسئول}\\
+				\rl{تشکیل کابینه است}%
+			};
+			
+			\node[rectangle, rounded corners=5pt,
+			draw=GoldYellow, fill=LightYellow,
+			text width=5cm, align=center,
+			font=\small, inner sep=6pt,
+			below left=0.8cm and -1cm of q1] (no)
+			{%
+				\textbf{\color{GoldYellow!80}\rl{خیر}}\\[2pt]
+				\rl{آیا ائتلافی با}\\
+				\rl{اکثریت قاطع شکل می‌گیرد؟}%
+			};
+			
+			\node[rectangle, rounded corners=5pt,
+			draw=PrimaryOrange, fill=LightOrange,
+			text width=5cm, align=center,
+			font=\small, inner sep=6pt,
+			below=1.5cm of no] (fallback)
+			{%
+				\textbf{\color{PrimaryOrange}\rl{رأی‌گیری فردی}}\\[2pt]
+				\rl{هر پست کابینه به‌طور}\\
+				\rl{جداگانه رأی‌گیری می‌شود}%
+			};
+			
+			\node[rectangle, rounded corners=5pt,
+			draw=PrimaryGreen, fill=LightGreen,
+			text width=8cm, align=center,
+			font=\small\bfseries, inner sep=8pt,
+			below=3.5cm of q1] (result)
+			{\rl{کابینه‌ی اجرایی موقت تشکیل شد}};
+			
+			\draw[-Stealth, thick, PrimaryGreen] (q1.south) -|
+			node[near start, below right, font=\scriptsize] {\rl{بله}} (yes.north);
+			\draw[-Stealth, thick, GoldYellow!80] (q1.south) -|
+			node[near start, below left, font=\scriptsize] {\rl{خیر}} (no.north);
+			\draw[-Stealth, thick, PrimaryOrange]
+			(no.south) -- (fallback.north);
+			\draw[-Stealth, thick, PrimaryGreen]
+			(yes.south) |- (result.east);
+			\draw[-Stealth, thick, PrimaryGreen]
+			(fallback.south) |- (result.west);
+			
+		\end{tikzpicture}
+	\end{center}
+	\vspace{0.5\baselineskip}
+	
+	\begin{enumerate}[rightmargin=1em, leftmargin=0pt, itemsep=6pt,
+		label=\textbf{بند \arabic*.}, start=12]
+		
+		\item کابینه به مجلس مهستان \textbf{پاسخ‌گو} است:
+		\begin{itemize}[rightmargin=1.5em, leftmargin=0pt, itemsep=2pt]
+			\item رأی اعتماد اولیه: \textbf{۵۰\%+۱} نمایندگان
+			\item استیضاح و برکناری: \textbf{۷۵\%} آرای نمایندگان
+			\item تعویض فردی وزرا: \textbf{۲/۳} آرا
+		\end{itemize}
+	\end{enumerate}
+	
+	%% ══════════════════════════════════════════════════════════════
+	\chapter{مأموریت‌های ویژه و نهادسازی}
+	%% ══════════════════════════════════════════════════════════════
+	
+	\section{قانون اساسی موقت}
+	
+	\begin{enumerate}[rightmargin=1em, leftmargin=0pt, itemsep=6pt,
+		label=\textbf{بند \arabic*.}, start=14]
+		
+		\item مجلس مهستان موظف است ظرف حداکثر \textbf{۲ ماه} پس از تشکیل:
+		\begin{enumerate}[rightmargin=1.5em, leftmargin=0pt, itemsep=3pt,
+			label=\arabic{enumi}.\arabic{enumii}.]
+			\item کمیسیون ویژه‌ی قانون اساسی موقت را تشکیل دهد
+			\item پیش‌نویس‌های جریان‌ها را بررسی و ترکیب کند
+			\item متن واحد را با \textbf{تصویب ۲/۳ مجلس} نهایی کند
+			\item متن را به \textbf{رفراندوم عمومی} بگذارد (۵۰\%+۱، مشارکت حداقل ۴۰\%)
+		\end{enumerate}
+	\end{enumerate}
+	
+	\vspace{0.5\baselineskip}
+	\begin{center}
+		\begin{tikzpicture}[node distance=0.6cm]
+			
+			\foreach \i/\title/\col/\content in {%
+				1/{مرحله‌ی ۱: تشکیل کمیسیون (هفته ۱-۲)}/PrimaryBlue/{%
+					۲۱ عضو از مجلس مهستان\\
+					۷ حقوقدان مستقل\\
+					۳ ناظر بین‌المللی},
+				2/{مرحله‌ی ۲: تدوین (هفته ۲-۶)}/PrimaryPurple/{%
+					بررسی پیش‌نویس‌ها\\
+					مذاکره و تلفیق\\
+					مشاوره‌ی عمومی},
+				3/{مرحله‌ی ۳: تصویب (هفته ۷)}/PrimaryOrange/{%
+					رأی‌گیری در مجلس\\      نیاز به ⅔ آرا\\
+					بحث و اصلاح نهایی},
+					4/{مرحله‌ی ۴: رفراندوم (هفته ۸-۱۰)}/PrimaryGreen/{%
+					نظارت بین‌المللی\\
+					۵۰\%+۱ آرا\\
+					مشارکت حداقل ۴۰\%}%
+				}{%
+				\node[rectangle, rounded corners=5pt,
+				draw=\col, fill=\col!12,
+				text width=3.2cm, align=center,
+				minimum height=2.8cm,
+				font=\scriptsize, inner sep=5pt] (step\i)
+				at ({(\i-1)*3.8cm}, 0)
+				{%
+				\textbf{\color{\col}\rl{\title}}\\[3pt]
+				\rule{2cm}{0.3pt}\\[2pt]
+				\rl{\content}%
+				};
+			}
+		
+	\draw[-Stealth, thick, PrimaryBlue!70] (step1.east) -- (step2.west);
+\draw[-Stealth, thick, PrimaryPurple!70] (step2.east) -- (step3.west);
+\draw[-Stealth, thick, PrimaryOrange!70] (step3.east) -- (step4.west);
+
+\end{tikzpicture}
+\end{center}
+\vspace{0.5\baselineskip}
+
+\begin{tcolorbox}[persianbox, colframe=PrimaryPurple,
+title={\rl{محتوای الزامی قانون اساسی موقت}}]
+\begin{itemize}[rightmargin=0.5em, leftmargin=0pt, itemsep=3pt]
+\item \rl{اصول بنیادین غیرقابل‌تغییر}
+\item \rl{ساختار نهادهای گذار}
+\item \rl{منشور حقوق شهروندی}
+\item \rl{چارچوب عدالت انتقالی}
+\item \rl{مسیر رسیدن به قانون اساسی نهایی}
+\end{itemize}
+\end{tcolorbox}
+
+\section{عدالت انتقالی}
+
+\begin{enumerate}[rightmargin=1em, leftmargin=0pt, itemsep=6pt,
+label=\textbf{بند \arabic*.}, start=18]
+
+\item مجلس مهستان در اسرع وقت و حداکثر ظرف \textbf{۳ ماه} طرح جامع
+عدالت انتقالی را تدوین خواهد کرد. مجلس بر اساس مشاوره‌ی عمومی و
+تخصصی، یکی از مدل‌های شناخته‌شده را انتخاب خواهد کرد.
+\end{enumerate}
+
+\vspace{0.8cm}
+\noindent
+\begin{center}
+\begin{tikzpicture}[node distance=0.5cm]
+
+%% عنوان مرکزی
+\node[rectangle, rounded corners=8pt,
+draw=PrimaryPurple, fill=LightPurple,
+text width=6cm, align=center,
+minimum height=1.5cm,
+font=\normalsize\bfseries, inner sep=10pt] (center)
+{%
+\color{PrimaryPurple}\rl{عدالت انتقالی ایران}\\[2pt]
+{\small\rl{مدل نهایی را مجلس مهستان تعیین می‌کند}}%
+};
+
+%% ستون ۱: حقیقت‌یابی
+\node[pillarbg=PrimaryBlue,
+below left=1.2cm and 2cm of center] (p1)
+{%
+\textbf{\color{PrimaryBlue}\rl{حقیقت‌یابی}}\\[4pt]
+\rule{2.5cm}{0.3pt}\\[3pt]
+{\scriptsize%
+\rl{کمیسیون حقیقت‌یابی}\\
+\rl{مستندسازی جنایات}\\
+\rl{ثبت شهادت قربانیان}\\
+\rl{جلسات علنی}\\
+\rl{گزارش نهایی جامع}}%
+};
+
+%% ستون ۲: عدالت کیفری
+\node[pillarbg=PrimaryRed,
+right=0.4cm of p1] (p2)
+{%
+\textbf{\color{PrimaryRed}\rl{عدالت کیفری}}\\[4pt]
+\rule{2.5cm}{0.3pt}\\[3pt]
+{\scriptsize%
+\rl{محاکمات عادلانه}\\
+\rl{تفکیک سطوح مسئولیت}\\
+\rl{دادرسی عادلانه}\\
+\rl{عفو مشروط (سطوح پایین)}}%
+};
+
+%% ستون ۳: جبران خسارت
+\node[pillarbg=PrimaryOrange,
+right=0.4cm of p2] (p3)
+{%
+\textbf{\color{PrimaryOrange}\rl{جبران خسارت}}\\[4pt]
+\rule{2.5cm}{0.3pt}\\[3pt]
+{\scriptsize%
+\rl{غرامت مالی}\\
+\rl{اعاده‌ی حیثیت}\\
+\rl{خدمات درمانی}\\
+\rl{بازگرداندن اموال}}%
+};
+
+%% ستون ۴: آشتی ملی
+\node[pillarbg=GoldYellow,
+right=0.4cm of p3] (p4)
+{%
+\textbf{\color{GoldYellow!80}\rl{آشتی ملی}}\\[4pt]
+\rule{2.5cm}{0.3pt}\\[3pt]
+{\scriptsize%
+\rl{گفتگوهای ملی}\\
+\rl{موزه‌ها و یادبودها}\\
+\rl{اصلاح تاریخ‌نگاری}\\
+\rl{روز ملی یادبود}}%
+};
+
+%% ستون ۵: تضمین عدم تکرار
+\node[pillarbg=PrimaryGreen,
+right=0.4cm of p4] (p5)
+{%
+\textbf{\color{PrimaryGreen}\rl{عدم تکرار}}\\[4pt]
+\rule{2.5cm}{0.3pt}\\[3pt]
+{\scriptsize%
+\rl{اصلاح نهادی}\\
+\rl{آموزش حقوق بشر}\\
+\rl{نهادهای نظارتی}\\
+\rl{قانون اساسی دموکراتیک}}%
+};
+
+%% فلش‌ها به مرکز
+\draw[-Stealth, thick, PrimaryBlue!60] (center.south) -- (p1.north);
+\draw[-Stealth, thick, PrimaryRed!60] (center.south) -- (p2.north);
+\draw[-Stealth, thick, PrimaryOrange!60] (center.south) -- (p3.north);
+\draw[-Stealth, thick, GoldYellow!60] (center.south) -- (p4.north);
+\draw[-Stealth, thick, PrimaryGreen!60] (center.south) -- (p5.north);
+
+\end{tikzpicture}
+\end{center}
+\vspace{0.5\baselineskip}
+
+\section{سایر نهادهای دوران گذار}
+
+\begin{tcolorbox}[tableBox,
+title={\rl{جدول ۳.۱: نهادهای تخصصی دوران گذار}}]
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{>{\raggedleft\arraybackslash}p{4cm}
+>{\raggedleft\arraybackslash}p{8cm}}
+\toprule
+\rowcolor{ChapterColor!15}
+\textbf{\rl{نهاد}} & \textbf{\rl{مأموریت اصلی}} \\
+\midrule
+\rl{شورای قضایی انتقالی} &
+\rl{تصفیه‌ی دستگاه قضایی، بازبینی قوانین، تشکیل دادگاه‌های ویژه} \\
+\addlinespace[4pt]
+\rl{فرماندهی نظامی-انتظامی موقت} &
+\rl{مدیریت نیروهای نظامی و انتظامی تحت نظارت مجلس} \\
+\addlinespace[4pt]
+\rl{کمیسیون اصلاح بخش امنیتی} &
+\rl{غربال‌گری، انحلال نهادهای سرکوب، ادغام نیروها} \\
+\addlinespace[4pt]
+\rl{کمیسیون حقیقت‌یابی} &
+\rl{مستندسازی جنایات ۴۵ ساله، ثبت شهادت‌ها} \\
+\addlinespace[4pt]
+\rl{هیأت نظارت بر انتخابات} &
+\rl{نظارت مستقل بر تمام رأی‌گیری‌ها و رفراندوم‌ها} \\
+\addlinespace[4pt]
+\rl{آمبودزمان} &
+\rl{رسیدگی به شکایات شهروندان از نهادهای دولتی} \\
+\addlinespace[4pt]
+\rl{کمیسیون ملی رسانه‌ها} &
+\rl{تبدیل صداوسیما به رسانه‌ی عمومی، تضمین آزادی مطبوعات} \\
+\addlinespace[4pt]
+\rl{شورای اقتصادی دوران گذار} &
+\rl{مشاوره و طراحی سیاست‌های اقتصادی} \\
+\addlinespace[4pt]
+\rl{مرکز تحقیقات مجلس} &
+\rl{بازوی تکنوکراتیک، گزارش‌های فنی-تخصصی} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{tcolorbox}
+
+%% ══════════════════════════════════════════════════════════════
+\chapter{اولویت‌های تقنینی و خط زمانی}
+%% ══════════════════════════════════════════════════════════════
+
+\section{اولویت‌های فاز اول (۱۰۰ روز اول)}
+
+\subsection{اقدامات فوری --- هفته‌ی اول}
+
+\impbox{فرمان‌های اضطراری}{%
+\rl{اقدامات زیر \textbf{بلافاصله} پس از تشکیل مجلس و بدون نیاز به فرایند
+قانون‌گذاری عادی، به‌صورت فرمان اضطراری (با رأی اکثریت ساده) صادر خواهند شد.}%
+}
+
+\vspace{0.5\baselineskip}
+\begin{tcolorbox}[tableBox,
+title={\rl{جدول ۴.۱: ۱۰ فرمان اضطراری هفته‌ی اول}}]
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{>{\centering\arraybackslash}p{0.8cm}
+>{\raggedleft\arraybackslash}p{6.5cm}
+>{\raggedleft\arraybackslash}p{5cm}}
+\toprule
+\rowcolor{PrimaryRed!15}
+\textbf{\rl{ردیف}} & \textbf{\rl{اقدام}} & \textbf{\rl{دلیل فوریت}} \\
+\midrule
+۱ & \rl{آزادی فوری تمام زندانیان سیاسی و عقیدتی} & \rl{حق بنیادین؛ نمادین} \\
+\addlinespace[3pt]
+۲ & \rl{لغو حجاب اجباری و قوانین کنترل پوشش} & \rl{تبعیض؛ نماد سرکوب} \\
+\addlinespace[3pt]
+۳ & \rl{رفع کامل فیلترینگ و سانسور اینترنت} & \rl{حق اطلاعات} \\
+\addlinespace[3pt]
+۴ & \rl{تعلیق مجازات اعدام} & \rl{حق حیات} \\
+\addlinespace[3pt]
+۵ & \rl{آزادی فعالیت احزاب، اتحادیه‌ها و تشکل‌ها} & \rl{آزادی تجمع} \\
+\addlinespace[3pt]
+۶ & \rl{ممنوعیت بازداشت بدون حکم قضایی} & \rl{دادرسی عادلانه} \\
+\addlinespace[3pt]
+۷ & \rl{لغو محاکم انقلاب و دادگاه‌های ویژه} & \rl{استقلال قضایی} \\
+\addlinespace[3pt]
+۸ & \rl{حق بازگشت آزادانه‌ی تبعیدیان} & \rl{حق شهروندی} \\
+\addlinespace[3pt]
+۹ & \rl{مسدودسازی حساب‌های مشکوک نهادهای حکومتی} & \rl{حفاظت از اموال} \\
+\addlinespace[3pt]
+۱۰ & \rl{حفاظت از اسناد نهادهای امنیتی} & \rl{عدالت انتقالی} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{tcolorbox}
+
+\subsection{اولویت‌های تقنینی هفته‌های ۱ تا ۱۴}
+
+\vspace{0.5\baselineskip}
+\noindent
+\begin{center}
+\begin{tikzpicture}[node distance=0.4cm]
+
+%% فاز ۱: اولویت بالا
+\node[rectangle, rounded corners=6pt,
+draw=PrimaryOrange, fill=LightOrange,
+text width=\linewidth-1cm, align=right,
+minimum height=2.5cm,
+font=\small, inner sep=10pt] (high)
+{%
+\textbf{\color{PrimaryOrange}\rl{اولویت بالا --- هفته‌ی ۱ تا ۴}}\\[4pt]
+\rule{\linewidth-1.5cm}{0.3pt}\\[3pt]
+\rl{قانون آزادی مطبوعات و رسانه‌ها}
+\hfill
+\rl{قانون تشکیل احزاب و تشکل‌های مدنی}\\
+\rl{قانون اجتماعات و تظاهرات}
+\hfill
+\rl{قانون موقت مدیریت بحران اقتصادی}\\
+\rl{قانون شفافیت مالی مقامات}
+\hfill
+\rl{لغو قوانین تبعیض‌آمیز علیه زنان}\\
+\rl{قانون حمایت از حقوق اقلیت‌ها}
+\hfill
+\rl{قانون موقت حفاظت از داده‌های شخصی}%
+};
+
+%% فاز ۲: اولویت متوسط
+\node[rectangle, rounded corners=6pt,
+draw=GoldYellow, fill=LightYellow,
+text width=\linewidth-1cm, align=right,
+minimum height=2cm,
+font=\small, inner sep=10pt,
+below=0.5cm of high] (med)
+{%
+\textbf{\color{GoldYellow!80}\rl{اولویت متوسط --- هفته‌ی ۴ تا ۸}}\\[4pt]
+\rule{\linewidth-1.5cm}{0.3pt}\\[3pt]
+\rl{قانون عدالت انتقالی}
+\hfill
+\rl{قانون تشکیل کمیسیون حقیقت‌یابی}\\
+\rl{قانون اصلاح بخش امنیتی}
+\hfill
+\rl{قانون موقت استقلال قوه‌ی قضاییه}\\
+\rl{قانون استقلال بانک مرکزی}
+\hfill
+\rl{قانون حسابرسی ملی}%
+};
+
+%% فاز ۳: اولویت عادی
+\node[rectangle, rounded corners=6pt,
+draw=PrimaryGreen, fill=LightGreen,
+text width=\linewidth-1cm, align=right,
+minimum height=2cm,
+font=\small, inner sep=10pt,
+below=0.5cm of med] (normal)
+{%
+\textbf{\color{PrimaryGreen}\rl{اولویت عادی --- هفته‌ی ۸ تا ۱۴}}\\[4pt]
+\rule{\linewidth-1.5cm}{0.3pt}\\[3pt]
+\rl{قانون جامع محیط زیست}
+\hfill
+\rl{قانون اصلاح نظام آموزشی}\\
+\rl{قانون خصوصی‌سازی شفاف}
+\hfill
+\rl{قانون سرمایه‌گذاری خارجی}\\
+\rl{قانون تشکیل مجلس مؤسسان}
+\hfill
+\rl{الحاق به کنوانسیون‌های بین‌المللی}%
+};
+
+%% فلش‌های زمانی
+\draw[-Stealth, thick, PrimaryOrange!70]
+([xshift=-0.5cm]high.south west) -- ([xshift=-0.5cm]med.north west);
+\draw[-Stealth, thick, GoldYellow!70]
+([xshift=-0.5cm]med.south west) -- ([xshift=-0.5cm]normal.north west);
+
+\end{tikzpicture}
+\end{center}
+\vspace{0.5\baselineskip}
+
+\section{خط زمانی جامع گذار}
+
+\warnbox{یادداشت مهم}{%
+\rl{تمام زمان‌بندی‌ها \textbf{نسبی} هستند و از \textbf{روز صفر} (آغاز رسمی گذار)
+محاسبه می‌شوند. تاریخ دقیق آغاز گذار از پیش قابل تعیین نیست.}%
+}
+
+\vspace{0.8cm}
+\noindent
+\begin{center}
+\begin{tikzpicture}[node distance=0.3cm]
+
+%% محور زمانی
+\draw[thick, ChapterColor!60, -{Stealth[length=4mm]}]
+(0,0) -- (15cm,0)
+node[anchor=west, font=\small\color{ChapterColor}] {\rl{زمان}};
+
+%% نقاط زمانی
+\foreach \x/\label in {%
+0/{\rl{روز صفر}},
+2.5/{\rl{هفته ۵}},
+5/{\rl{هفته ۱۰}},
+7.5/{\rl{ماه ۶}},
+10/{\rl{ماه ۱۲}},
+12.5/{\rl{ماه ۱۸}},
+14/{\rl{ماه ۲۴}}%
+}{%
+\draw[thick, ChapterColor!60] (\x,-0.15) -- (\x,0.15);
+\node[anchor=north, font=\tiny\color{DarkBrown}] at (\x,-0.3) {\label};
+}
+
+%% فازها
+\node[rectangle, rounded corners=3pt, fill=LightOrange,
+draw=PrimaryOrange, minimum width=2.3cm, minimum height=0.7cm,
+font=\scriptsize, align=center] at (1.25,1)
+{\rl{فاز ۱}\\[-1pt]\rl{انتخابات}};
+
+\node[rectangle, rounded corners=3pt, fill=LightRed,
+draw=PrimaryRed, minimum width=2.3cm, minimum height=0.7cm,
+font=\scriptsize, align=center] at (3.75,1)
+{\rl{فاز ۲}\\[-1pt]\rl{اقدامات فوری}};
+
+\node[rectangle, rounded corners=3pt, fill=LightPurple,
+draw=PrimaryPurple, minimum width=2.3cm, minimum height=0.7cm,
+font=\scriptsize, align=center] at (5,2)
+{\rl{فاز ۳}\\[-1pt]\rl{ق.ا. موقت}};
+
+\node[rectangle, rounded corners=3pt, fill=LightBlue,
+draw=PrimaryBlue, minimum width=4.8cm, minimum height=0.7cm,
+font=\scriptsize, align=center] at (8.75,1)
+{\rl{فاز ۴: نهادسازی و اصلاحات}};
+
+\node[rectangle, rounded corners=3pt, fill=LightTeal,
+draw=TealColor, minimum width=4.8cm, minimum height=0.7cm,
+font=\scriptsize, align=center] at (10,2)
+{\rl{فاز ۵: قانون اساسی نهایی}};
+
+\node[rectangle, rounded corners=3pt, fill=LightGreen,
+draw=PrimaryGreen, minimum width=2.8cm, minimum height=0.7cm,
+font=\scriptsize, align=center] at (13.25,1)
+{\rl{فاز ۶}\\[-1pt]\rl{انتقال قدرت}};
+
+%% نقاط عطف
+\fill[RuleColor] (0,0) circle (4pt)
+node[anchor=south, yshift=4pt, font=\tiny\bfseries\color{RuleColor}]
+{\rl{آغاز گذار}};
+\fill[PrimaryGreen] (5,0) circle (4pt)
+node[anchor=south, yshift=4pt, font=\tiny\bfseries\color{PrimaryGreen}]
+{\rl{ق.ا. موقت}};
+\fill[PrimaryBlue] (12.5,0) circle (4pt)
+node[anchor=south, yshift=4pt, font=\tiny\bfseries\color{PrimaryBlue}]
+{\rl{ق.ا. نهایی}};
+\fill[DeepGreen] (14,0) circle (4pt)
+node[anchor=south, yshift=4pt, font=\tiny\bfseries\color{DeepGreen}]
+{\rl{پایان}};
+
+\end{tikzpicture}
+\end{center}
+\vspace{0.5\baselineskip}
+
+\begin{tcolorbox}[tableBox,
+title={\rl{جدول ۴.۲: خلاصه‌ی فازهای گذار}}]
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{>{\centering\arraybackslash}p{1.5cm}
+>{\raggedleft\arraybackslash}p{4cm}
+>{\raggedleft\arraybackslash}p{6cm}}
+\toprule
+\rowcolor{ChapterColor!15}
+\textbf{\rl{فاز}} & \textbf{\rl{زمان (نسبی)}} & \textbf{\rl{مأموریت اصلی}} \\
+\midrule
+\rl{صفر} & \rl{پیش از گذار} & \rl{آمادگی، تدوین پیش‌نویس‌ها، ائتلاف‌سازی} \\
+\addlinespace[3pt]
+\rl{۱} & \rl{روز صفر تا هفته‌ی ۵} & \rl{انتخابات و تشکیل مجلس مهستان} \\
+\addlinespace[3pt]
+\rl{۲} & \rl{هفته‌ی ۱-۸} & \rl{فرمان‌های اضطراری، کابینه، مصوبات فوری} \\
+\addlinespace[3pt]
+\rl{۳} & \rl{هفته‌ی ۱-۱۰} & \rl{قانون اساسی موقت + رفراندوم} \\
+\addlinespace[3pt]
+\rl{۴} & \rl{ماه ۳-۱۸} & \rl{نهادسازی، عدالت انتقالی، اصلاحات امنیتی} \\
+\addlinespace[3pt]
+\rl{۵} & \rl{ماه ۶-۱۸} & \rl{قانون اساسی نهایی + رفراندوم} \\
+\addlinespace[3pt]
+\rl{۶} & \rl{ماه ۱۸-۲۴ (+۶)} & \rl{انتخابات نهایی، انتقال قدرت} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{tcolorbox}
+
+%% ══════════════════════════════════════════════════════════════
+\chapter{اصول بنیادین غیرقابل‌نقض}
+%% ══════════════════════════════════════════════════════════════
+
+\begin{enumerate}[rightmargin=1em, leftmargin=0pt, itemsep=6pt,
+label=\textbf{بند ۳۵.}]
+\item مجلس مهستان و هیچ نهاد دوران گذار دیگری حق تعلیق یا نقض اصول
+زیر را ندارد. قانون اساسی نهایی نیز ملزم به رعایت این اصول خواهد بود:
+\end{enumerate}
+
+\vspace{0.5\baselineskip}
+\noindent
+\begin{center}
+\begin{tikzpicture}
+
+%% چارچوب اصلی
+\fill[LightPurple!50] (0,0) rectangle (\linewidth, 10cm);
+\draw[PrimaryPurple, line width=2pt] (0,0) rectangle (\linewidth, 10cm);
+\draw[GoldYellow, line width=1pt] (0.2cm,0.2cm) rectangle (\linewidth-0.2cm, 9.8cm);
+
+%% عنوان
+\node[anchor=north, font=\Large\bfseries\color{PrimaryPurple}]
+at (0.5\linewidth, 9.5cm)
+{\rl{منشور اصول بنیادین غیرقابل‌نقض}};
+
+\draw[RuleColor, line width=1pt]
+(3cm, 9cm) -- (\linewidth-3cm, 9cm);
+
+%% اصول در دو ستون
+\node[anchor=north west, text width=0.45\linewidth, align=right,
+font=\small, inner sep=8pt]
+at (0.5cm, 8.8cm)
+{%
+\textbf{۱.} \rl{حاکمیت مردم}\\[2pt]
+\textbf{۲.} \rl{جدایی دین از دولت}\\[2pt]
+\textbf{۳.} \rl{برابری همه‌ی شهروندان}\\[2pt]
+\textbf{۴.} \rl{آزادی‌های بنیادین}\\[2pt]
+\textbf{۵.} \rl{ممنوعیت مطلق شکنجه}\\[2pt]
+\textbf{۶.} \rl{حق دادرسی عادلانه}\\[2pt]
+\textbf{۷.} \rl{حقوق اقلیت‌ها}%
+};
+
+\node[anchor=north east, text width=0.45\linewidth, align=right,
+font=\small, inner sep=8pt]
+at (\linewidth-0.5cm, 8.8cm)
+{%
+\textbf{۸.} \rl{حقوق زنان و برابری جنسیتی}\\[2pt]
+\textbf{۹.} \rl{استقلال قضایی}\\[2pt]
+\textbf{۱۰.} \rl{تمامیت ارضی و حق تعیین سرنوشت}\\[2pt]
+\textbf{۱۱.} \rl{حاکمیت قانون}\\[2pt]
+\textbf{۱۲.} \rl{عدالت نه انتقام}\\[2pt]
+\textbf{۱۳.} \rl{آزادی اطلاعات}\\[2pt]
+\textbf{۱۴.} \rl{تعهد به صلح}%
+};
+
+%% پیام پایین
+\node[rectangle, rounded corners=4pt,
+fill=LightGreen, draw=PrimaryGreen,
+text width=\linewidth-3cm, align=center,
+font=\small, inner sep=8pt]
+at (0.5\linewidth, 1cm)
+{%
+\color{PrimaryGreen}\rl{%
+این اصول خطوط قرمز غیرقابل‌عبورند.
+هیچ فرد، نهاد یا اکثریتی حق نقض آن‌ها را ندارد.}%
+};
+
+\end{tikzpicture}
+\end{center}
+\vspace{0.5\baselineskip}
+
+%% ══════════════════════════════════════════════════════════════
+\chapter{تجربه‌ی جهانی: الگوها و درس‌ها}
+%% ══════════════════════════════════════════════════════════════
+
+\section{الگوهای موفق}
+
+\subsection{تونس (۲۰۱۱--۲۰۱۴)}
+
+\begin{tcolorbox}[persianbox, colframe=PrimaryBlue,
+title={\rl{تونس: نزدیک‌ترین الگو}}]
+
+\textbf{\rl{شباهت‌ها با طرح مهستان:}}
+\begin{itemize}[rightmargin=0.5em, leftmargin=0pt, itemsep=2pt]
+\item \rl{انتخاب مجلس مؤسسان ملی به‌عنوان نهاد محوری گذار}
+\item \rl{تشکیل دولت تکنوکرات تحت نظارت مجلس}
+\item \rl{استفاده از ائتلاف سه‌جانبه (ترویکا) برای مدیریت تکثرگرایانه}
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{\rl{درس‌های آموخته:}}
+\begin{itemize}[rightmargin=0.5em, leftmargin=0pt, itemsep=2pt]
+\item \rl{«چهارگانه‌ی گفتگوی ملی» از سقوط فرایند جلوگیری کرد}
+\item \rl{عدم رسیدگی کافی به اصلاحات اقتصادی و امنیتی، زمینه‌ی بازگشت
+استبداد را فراهم کرد (قیس سعید، ۲۰۲۱)}
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{آفریقای جنوبی (۱۹۹۰--۱۹۹۶)}
+
+\begin{tcolorbox}[persianbox, colframe=PrimaryGreen,
+title={\rl{آفریقای جنوبی: مدل عدالت انتقالی}}]
+
+\textbf{\rl{نکات کلیدی:}}
+\begin{itemize}[rightmargin=0.5em, leftmargin=0pt, itemsep=2pt]
+\item \rl{مدل دو مرحله‌ای قانون اساسی (موقت ۱۹۹۳ + نهایی ۱۹۹۶)}
+\item \rl{کمیسیون حقیقت و آشتی (\lr{TRC}) با عفو مشروط}
+\item \rl{ضمانت‌های حقوق اقلیت‌ها در قانون اساسی موقت}
+\end{itemize}
+
+\vspace{0.3cm}
+\succbox{درس برای ایران}{%
+\rl{یک منشور اصول بنیادین غیرقابل‌نقض باید پیش از انتخابات مجلس مهستان
+تدوین شود تا فضای امن برای مذاکره ایجاد گردد.}%
+}
+\end{tcolorbox}
+
+\section{نمونه‌های ناموفق --- درس‌های منفی}
+
+\vspace{0.5\baselineskip}
+\begin{tcolorbox}[tableBox,
+title={\rl{جدول ۶.۱: چرا برخی گذارها شکست خوردند؟}}]
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{>{\raggedleft\arraybackslash}p{2cm}
+>{\raggedleft\arraybackslash}p{4.5cm}
+>{\raggedleft\arraybackslash}p{5.5cm}}
+\toprule
+\rowcolor{LightRed!40}
+\textbf{\rl{کشور}} & \textbf{\rl{مشکل اصلی}} & \textbf{\rl{درس برای ایران}} \\
+\midrule
+\rl{لیبی} & \rl{عدم وجود نهاد مورد توافق؛ شوراهای رقیب} &
+\rl{نهاد واحد گذار با مشروعیت انتخاباتی ضروری است} \\
+\addlinespace[4pt]
+\rl{مصر} & \rl{ارتش به‌عنوان «ضامن»؛ تقابل اسلامگرا-سکولار} &
+\rl{استقلال نهاد گذار از نیروهای نظامی} \\
+\addlinespace[4pt]
+\rl{عراق} & \rl{اشغال خارجی؛ انحلال ارتش؛ محاصصه} &
+\rl{اصلاح نه تخریب؛ عدم انحلال کامل نهادها} \\
+\addlinespace[4pt]
+\rl{یمن} & \rl{گذار مصنوعی؛ بدون مشارکت عمومی} &
+\rl{مشارکت واقعی مردم از طریق انتخابات} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{tcolorbox}
+
+\section{جدول مقایسه‌ای جامع}
+
+\vspace{0.5\baselineskip}
+\begin{tcolorbox}[tableBox,
+title={\rl{جدول ۶.۲: مقایسه‌ی طرح مهستان با گذارهای موفق}}]
+\begin{adjustbox}{max width=\linewidth}
+{\scriptsize
+\begin{tabular}{>{\raggedleft\arraybackslash}p{2.5cm}
+	>{\centering\arraybackslash}p{2cm}
+	>{\centering\arraybackslash}p{2cm}
+	>{\centering\arraybackslash}p{2cm}
+	>{\centering\arraybackslash}p{2cm}
+	>{\centering\arraybackslash}p{2cm}}
+\toprule
+\rowcolor{ChapterColor!15}
+\textbf{\rl{معیار}} & \textbf{\rl{مهستان}} & \textbf{\rl{تونس}} &
+\textbf{\rl{آفریقای جنوبی}} & \textbf{\rl{اسپانیا}} & \textbf{\rl{شیلی}} \\
+\midrule
+\rl{نهاد محوری} & \rl{مجلس منتخب} & \rl{مجلس مؤسسان} &
+\rl{شورا + مجلس} & \rl{پارلمان} & \rl{ائتلاف} \\
+\addlinespace[3pt]
+\rl{مدل قانون اساسی} &
+\tikz\node[checktrue]{\rl{۲}}; &
+\tikz\node[checkwarn]{\rl{۱}}; &
+\tikz\node[checktrue]{\rl{۲}}; &
+\tikz\node[checkwarn]{\rl{۱}}; &
+\tikz\node[checkwarn]{\rl{اصلاحی}}; \\
+\addlinespace[3pt]
+\rl{عدالت انتقالی} &
+\tikz\node[checktrue]{}; &
+\tikz\node[checkwarn]{}; &
+\tikz\node[checktrue]{}; &
+\tikz\node[checkfalse]{}; &
+\tikz\node[checkwarn]{}; \\
+\addlinespace[3pt]
+\rl{اصلاح امنیتی} &
+\tikz\node[checktrue]{}; &
+\tikz\node[checkfalse]{}; &
+\tikz\node[checkwarn]{}; &
+\tikz\node[checkwarn]{}; &
+\tikz\node[checkwarn]{}; \\
+\addlinespace[3pt]
+\rl{دموکراسی مستقیم} &
+\tikz\node[checktrue]{}; &
+\tikz\node[checkwarn]{}; &
+\tikz\node[checkwarn]{}; &
+\tikz\node[checktrue]{}; &
+\tikz\node[checktrue]{}; \\
+\addlinespace[3pt]
+\rl{مدت دوره‌ی گذار} & \rl{حداکثر ۲ سال} & \rl{≈۳ سال} &
+\rl{≈۶ سال} & \rl{≈۷ سال} & \rl{≈۲ سال} \\
+\bottomrule
+\end{tabular}%
+}
+\end{adjustbox}
+\end{tcolorbox}
+
+%% ══════════════════════════════════════════════════════════════
+\chapter{ضمائم}
+%% ══════════════════════════════════════════════════════════════
+
+\section{ضمیمه‌ی الف: مدیریت خلأ پیش از تشکیل مجلس}
+
+\begin{tcolorbox}[persianbox, colframe=GoldYellow,
+title={\rl{شورای هماهنگی گذار}}]
+
+\textbf{\rl{تعریف:}} یک نهاد موقت، کوچک و با مأموریت محدود که تنها برای
+مدیریت فاصله‌ی بین سقوط نظام و تشکیل مجلس مهستان تشکیل می‌شود و پس از
+آن \textbf{بلافاصله منحل} می‌گردد.
+
+\vspace{0.4cm}
+\textbf{\rl{مأموریت محدود:}}\\
+\begin{tabular}{@{}r@{\hspace{0.5em}}l@{\hspace{2em}}r@{\hspace{0.5em}}l@{}}
+\tikz\node[checktrue,scale=0.6]{}; & \rl{برگزاری انتخابات مهستان} &
+\tikz\node[checkfalse,scale=0.6]{}; & \rl{تصمیمات ساختاری} \\
+\tikz\node[checktrue,scale=0.6]{}; & \rl{صدور فرمان‌های اضطراری} &
+\tikz\node[checkfalse,scale=0.6]{}; & \rl{انتصابات بلندمدت} \\
+\tikz\node[checktrue,scale=0.6]{}; & \rl{تثبیت نظم عمومی} &
+\tikz\node[checkfalse,scale=0.6]{}; & \rl{معاهدات بین‌المللی الزام‌آور} \\
+\tikz\node[checktrue,scale=0.6]{}; & \rl{حفاظت از اسناد} &
+\tikz\node[checkfalse,scale=0.6]{}; & \rl{تغییر در دارایی‌های عمومی} \\
+\end{tabular}
+\end{tcolorbox}
+
+\section{ضمیمه‌ی ب: سیستم انتخاباتی --- جزئیات}
+
+\vspace{0.5\baselineskip}
+\noindent
+\begin{center}
+\begin{tikzpicture}[node distance=0.5cm]
+
+%% رأی‌دهنده
+\node[rectangle, rounded corners=5pt,
+draw=PrimaryBlue, fill=LightBlue,
+text width=4cm, align=center,
+minimum height=1.2cm,
+font=\normalsize\bfseries, inner sep=8pt] (voter)
+{\color{PrimaryBlue}\rl{هر رأی‌دهنده}};
+
+%% سه برگه
+\node[rectangle, rounded corners=4pt,
+draw=PrimaryBlue!80, fill=LightBlue!50,
+text width=3.5cm, align=center,
+minimum height=2cm,
+font=\small, inner sep=6pt,
+below left=1cm and 0.5cm of voter] (ballot1)
+{%
+\textbf{\rl{برگه‌ی ۱}}\\[2pt]
+\rl{فهرست استانی}\\
+\rl{← کرسی‌های استان}%
+};
+
+\node[rectangle, rounded corners=4pt,
+draw=GoldYellow!80, fill=LightYellow!50,
+text width=3.5cm, align=center,
+minimum height=2cm,
+font=\small, inner sep=6pt,
+below=1cm of voter] (ballot2)
+{%
+\textbf{\rl{برگه‌ی ۲}}\\[2pt]
+\rl{فهرست ملی}\\
+\rl{← ۴۰ کرسی ملی}%
+};
+
+\node[rectangle, rounded corners=4pt,
+draw=PrimaryPurple!80, fill=LightPurple!50,
+text width=3.5cm, align=center,
+minimum height=2cm,
+font=\small, inner sep=6pt,
+below right=1cm and 0.5cm of voter] (ballot3)
+{%
+\textbf{\rl{برگه‌ی ۳}}\\[2pt]
+\rl{(فقط اقلیت‌ها)}\\
+\rl{کرسی تضمینی}%
+};
+
+%% شمارش
+\node[rectangle, rounded corners=5pt,
+draw=PrimaryGreen, fill=LightGreen,
+text width=5cm, align=center,
+minimum height=1.5cm,
+font=\normalsize\bfseries, inner sep=8pt,
+below=3.5cm of voter] (result)
+{%
+\color{PrimaryGreen}\rl{نتایج نهایی}\\[2pt]
+{\small\rl{۲۴۰ + ۴۰ + ۲۰ = ۳۰۰ نماینده}}%
+};
+
+%% فلش‌ها
+\draw[-Stealth, thick, PrimaryBlue!70] (voter.south) -- (ballot1.north);
+\draw[-Stealth, thick, GoldYellow!70] (voter.south) -- (ballot2.north);
+\draw[-Stealth, thick, PrimaryPurple!70] (voter.south) -- (ballot3.north);
+
+\draw[-Stealth, thick, PrimaryGreen!70] (ballot1.south) -- (result.north west);
+\draw[-Stealth, thick, PrimaryGreen!70] (ballot2.south) -- (result.north);
+\draw[-Stealth, thick, PrimaryGreen!70] (ballot3.south) -- (result.north east);
+
+\end{tikzpicture}
+\end{center}
+\vspace{0.5\baselineskip}
+
+\section{ضمیمه‌ی ج: واژه‌نامه‌ی تخصصی}
+
+\vspace{0.5\baselineskip}
+\begin{tcolorbox}[tableBox,
+title={\rl{واژه‌نامه‌ی اصطلاحات کلیدی}}]
+\begin{adjustbox}{max width=\linewidth}
+{\small
+\begin{tabular}{>{\raggedleft\arraybackslash}p{3.5cm}
+	>{\centering\arraybackslash}p{4cm}
+	>{\raggedleft\arraybackslash}p{5cm}}
+\toprule
+\rowcolor{ChapterColor!15}
+\textbf{\rl{اصطلاح فارسی}} & \textbf{\lr{English}} & \textbf{\rl{توضیح}} \\
+\midrule
+\rl{مجلس مهستان} & \lr{Mehestan Assembly} &
+\rl{نهاد عالی منتخب مردم برای مدیریت دوران گذار} \\
+\addlinespace[3pt]
+\rl{عدالت انتقالی} & \lr{Transitional Justice} &
+\rl{سازوکارهای رسیدگی به نقض‌های حقوق بشر} \\
+\addlinespace[3pt]
+\rl{کمیسیون حقیقت‌یابی} & \lr{Truth Commission} &
+\rl{مستندسازی جنایات و ثبت شهادت قربانیان} \\
+\addlinespace[3pt]
+\rl{اصلاح بخش امنیتی} & \lr{SSR} &
+\rl{بازسازی نهادهای نظامی و انتظامی} \\
+\addlinespace[3pt]
+\rl{غربال‌گری} & \lr{Vetting} &
+\rl{بررسی سوابق و کنارگذاری متخلفان} \\
+\addlinespace[3pt]
+\rl{سیستم نسبی} & \lr{Proportional Rep.} &
+\rl{توزیع کرسی‌ها بر اساس نسبت آرا} \\
+\addlinespace[3pt]
+\rl{آمبودزمان} & \lr{Ombudsman} &
+\rl{نهاد رسیدگی به شکایات شهروندان} \\
+\addlinespace[3pt]
+\rl{فوق‌اکثریت} & \lr{Supermajority} &
+\rl{آستانه‌ی رأی بالاتر از ۵۰\% (مثلاً ۲/۳)} \\
+\bottomrule
+\end{tabular}%
+}
+\end{adjustbox}
+\end{tcolorbox}
+
+%% ══════════════════════════════════════════════════════════════
+\chapter*{فراخوان و سخن پایانی}
+\addcontentsline{toc}{chapter}{فراخوان و سخن پایانی}
+\markboth{فراخوان}{فراخوان}
+%% ══════════════════════════════════════════════════════════════
+
+\vspace{0.5\baselineskip}
+\begin{center}
+\begin{tikzpicture}
+
+%% چارچوب
+\fill[LightGreen!50] (0,0) rectangle (\linewidth, 8cm);
+\draw[PrimaryGreen, line width=2pt] (0,0) rectangle (\linewidth, 8cm);
+\draw[GoldYellow, line width=1pt] (0.15cm,0.15cm) rectangle (\linewidth-0.15cm, 7.85cm);
+
+%% عنوان
+\node[anchor=north, font=\Large\bfseries\color{PrimaryGreen}]
+at (0.5\linewidth, 7.5cm)
+{\rl{فراخوان به همه‌ی ایرانیان آزادیخواه}};
+
+\draw[RuleColor, line width=1pt]
+(4cm, 7cm) -- (\linewidth-4cm, 7cm);
+
+%% متن
+\node[anchor=north, text width=\linewidth-2cm, align=right,
+font=\normalsize, inner sep=10pt]
+at (0.5\linewidth, 6.8cm)
+{%
+\textbf{\rl{هر جریان و حزب و ائتلاف:}}
+\rl{از هم‌اکنون پیش‌نویس قانون اساسی موقت پیشنهادی خود را تدوین و منتشر کنید.}\\[6pt]
+%
+\textbf{\rl{هر شهروند:}}
+\rl{مطالعه کنید، بحث کنید، مشارکت کنید. نقد سازنده حق و وظیفه‌ی شماست.}\\[6pt]
+%
+\textbf{\rl{هر متخصص:}}
+\rl{دانش و تجربه‌ی خود را در خدمت طراحی نهادی گذار بگذارید.}\\[6pt]
+%
+\textbf{\rl{هر فعال حقوق بشر:}}
+\rl{مستندسازی را ادامه دهید. این اسناد مبنای عدالت انتقالی فردا خواهند بود.}%
+};
+
+%% پیام نهایی
+\node[rectangle, rounded corners=5pt,
+fill=white, draw=PrimaryGreen,
+text width=\linewidth-4cm, align=center,
+font=\large\bfseries, inner sep=10pt]
+at (0.5\linewidth, 1.2cm)
+{%
+\color{PrimaryGreen}\rl{تصمیم نهایی درباره‌ی آینده‌ی ایران}\\[2pt]
+\color{PrimaryGreen}\rl{فقط و فقط با مردم ایران است.}%
+};
+
+\end{tikzpicture}
+\end{center}
+\vspace{0.8cm}
+
+\ornament
+
+\vspace{0.5cm}
+\noindent
+\begin{center}
+\begin{tikzpicture}
+
+%% گذشته
+\node[rectangle, rounded corners=5pt,
+draw=PrimaryRed, fill=LightRed,
+text width=3.5cm, align=center,
+minimum height=3cm,
+font=\small, inner sep=8pt] (past) at (0,0)
+{%
+\textbf{\color{PrimaryRed}\rl{گذشته}}\\[4pt]
+\rule{2cm}{0.3pt}\\[3pt]
+\rl{استبداد دینی}\\
+\rl{سرکوب}\\
+\rl{تبعیض}\\
+\rl{فساد}\\
+\rl{انزوا}%
+};
+
+%% گذار
+\node[rectangle, rounded corners=5pt,
+draw=GoldYellow, fill=LightYellow,
+text width=4cm, align=center,
+minimum height=3cm,
+font=\small, inner sep=8pt] (trans) at (6cm,0)
+{%
+\textbf{\color{GoldYellow!80}\rl{گذار}}\\[4pt]
+\rule{2.5cm}{0.3pt}\\[3pt]
+\rl{مجلس مهستان}\\
+\rl{قانون اساسی موقت}\\
+\rl{عدالت انتقالی}\\
+\rl{اصلاحات نهادی}\\
+\rl{مشارکت مردمی}%
+};
+
+%% آینده
+\node[rectangle, rounded corners=5pt,
+draw=PrimaryGreen, fill=LightGreen,
+text width=3.5cm, align=center,
+minimum height=3cm,
+font=\small, inner sep=8pt] (future) at (12cm,0)
+{%
+\textbf{\color{PrimaryGreen}\rl{آینده}}\\[4pt]
+\rule{2cm}{0.3pt}\\[3pt]
+\rl{دموکراسی پایدار}\\
+\rl{حقوق بشر}\\
+\rl{برابری}\\
+\rl{رفاه اقتصادی}\\
+\rl{صلح و همکاری}%
+};
+
+%% فلش‌ها
+\draw[-Stealth, line width=2pt, PrimaryRed!70]
+(past.east) -- (trans.west);
+\draw[-Stealth, line width=2pt, PrimaryGreen!70]
+(trans.east) -- (future.west);
+
+\end{tikzpicture}
+\end{center}
+
+\vspace{1cm}
+\begin{center}
+{\fontsize{20}{28}\selectfont\bfseries\color{ChapterColor}%
+\rl{«ایران برای همه‌ی ایرانیان»}}
+\end{center}
+
+\vspace{1cm}
+\sectionrule
+
+\begin{center}
+{\small\color{DarkBrown}%
+\rl{این سند زنده است و به‌روزرسانی خواهد شد.}\\[4pt]
+\rl{آخرین ویرایش: اسفند ۱۴۰۴ / فوریه‌ی ۲۰۲۶ --- نسخه‌ی ۲.۰}\\[4pt]
+\rl{جزئیات بیشتر در کتاب «شکوفایی: ایران از بحران تا بالندگی» ارائه خواهد شد.}%
+}
+\end{center}
+
+%% ══════════════════════════════════════════════════════════════
+\backmatter
+%% ══════════════════════════════════════════════════════════════
+
+%% ── صفحه‌ی پایانی ────────────────────────────────────────────
+\clearpage
+\thispagestyle{empty}
+\newgeometry{margin=0pt}
+\begin{tikzpicture}[remember picture, overlay]
+\fill[top color=DeepBlue!90, bottom color=ChapterColor]
+(current page.north west) rectangle (current page.south east);
+\fill[GoldYellow]
+(current page.south west) rectangle
+([yshift=0.8cm]current page.south east);
+\node[anchor=center, text=white,
+font=\fontsize{24}{32}\selectfont\bfseries]
+at (current page.center)
+{\rl{ایران برای همه‌ی ایرانیان}};
+\node[anchor=center, text=white!70,
+font=\large]
+at ([yshift=-1.5cm]current page.center)
+    {\rl{طرح مجلس مهستان --- نسخه‌ی ۲.۰}};
+\node[anchor=center, text=white!50,
+font=\normalsize]
+at ([yshift=-2.5cm]current page.center)
+{\rl{اسفند ۱۴۰۴ / فوریه‌ی ۲۰۲۶}};
+\end{tikzpicture}
+\restoregeometry
+
+\end{document}
