@@ -96,6 +96,13 @@
 \definecolor{AccentGold}{HTML}{FFD700}
 
 % ── Hyperref setup (AFTER colors are defined) ───────────────
+% Disable problematic macros when hyperref writes PDF strings (bookmarks/TOC)
+\pdfstringdefDisableCommands{% 
+  % the \persian command enters font settings and causes missing-number errors
+  \def\persian#1{#1}%
+  \def\lr#1{#1}%
+  \def\rl#1{#1}%
+}
 \hypersetup{
   colorlinks=true,
   linkcolor=MahestanBlue,
@@ -143,6 +150,8 @@
 \titlespacing*{\subsubsection}{0pt}{8pt}{3pt}
 
 % ── Headers & Footers ───────────────────────────────────────
+% Adjust headheight to satisfy fancyhdr warning and avoid overfull heads
+\setlength{\headheight}{24pt} % FIXED: increased per fancyhdr recommendation
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE]{\small\color{MahestanGray}\leftmark}
@@ -332,7 +341,8 @@
 %  BEGIN DOCUMENT
 % ============================================================
 \begin{document}
-\SepMark{---}
+% \SepMark is a bidi separator used in archives; not needed here and
+% caused font-setting errors at chapter breaks. removed. % FIXED: removed unknown command
 
 % ── COVER PAGE ──────────────────────────────────────────────
 \begin{titlepage}
