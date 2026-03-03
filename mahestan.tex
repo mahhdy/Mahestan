@@ -53,7 +53,7 @@
 }
 
 % ── tcolorbox libraries ────────────────────────────────────
-\tcbuselibrary{skins, breakable, theorems, most}
+\tcbuselibrary{skins, breakable, theorems}
 
 % ── pgfplots ───────────────────────────────────────────────
 \pgfplotsset{compat=1.18}
@@ -62,25 +62,9 @@
 \usepackage{xepersian}
 
 % ── Fonts ──────────────────────────────────────────────────
-\settextfont[
-  BoldFont       = Vazir-Bold.ttf,
-  ItalicFont     = Vazir-Medium.ttf,
-  BoldItalicFont = Vazir-Bold.ttf,
-  Extension      = .ttf,
-  Path           = /usr/local/share/fonts/vazir/
-]{Vazir}
-
-\setlatintextfont[
-  BoldFont       = LiberationSans-Bold.ttf,
-  ItalicFont     = LiberationSans-Italic.ttf,
-  Extension      = .ttf,
-  Path           = /usr/share/fonts/truetype/liberation/
-]{Liberation Sans}
-
-\setmonofont[
-  Extension = .ttf,
-  Path      = /usr/share/fonts/truetype/liberation/
-]{LiberationMono-Regular}
+\settextfont[Scale=1.1]{Vazirmatn}
+\setlatintextfont[Scale=1.1]{TeX Gyre Pagella}
+\setdigitfont{Vazirmatn}
 
 % ── Color Palette ───────────────────────────────────────────
 \definecolor{MahestanBlue}{RGB}{21,101,192}
@@ -177,7 +161,7 @@
 
 % General information box
 \newtcolorbox{infobox}[1][]{%
-  enhanced, breakable,
+  enhanced, breakable, parbox=false,
   before skip=10pt, after skip=10pt,
   colback=NodeBg, colframe=MahestanBlue,
   arc=4pt, boxrule=1pt,
@@ -188,7 +172,7 @@
 
 % Warning / note box
 \newtcolorbox{notebox}[1][]{%
-  enhanced, breakable,
+  enhanced, breakable, parbox=false,
   before skip=10pt, after skip=10pt,
   colback=WarningBg, colframe=MahestanGold,
   arc=4pt, boxrule=1pt,
@@ -199,7 +183,7 @@
 
 % Principle box (for the 6 principles)
 \newtcolorbox{principlebox}[2][]{%
-  enhanced, breakable,
+  enhanced, breakable, parbox=false,
   before skip=12pt, after skip=12pt,
   colback=MahestanLightPurple, colframe=MahestanPurple,
   arc=6pt, boxrule=1.5pt,
@@ -213,7 +197,7 @@
 
 % Article / Band box
 \newtcolorbox{bandbox}[2][]{%
-  enhanced, breakable,
+  enhanced, breakable, parbox=false,
   before skip=8pt, after skip=8pt,
   colback=white, colframe=MahestanBlue!40,
   arc=3pt, boxrule=0.8pt,
@@ -228,7 +212,7 @@
 
 % Success / positive box
 \newtcolorbox{successbox}[1][]{%
-  enhanced, breakable,
+  enhanced, breakable, parbox=false,
   before skip=10pt, after skip=10pt,
   colback=SuccessBg, colframe=MahestanGreen,
   arc=4pt, boxrule=1pt,
@@ -238,7 +222,7 @@
 
 % Danger box
 \newtcolorbox{dangerbox}[1][]{%
-  enhanced, breakable,
+  enhanced, breakable, parbox=false,
   before skip=10pt, after skip=10pt,
   colback=DangerBg, colframe=MahestanRed,
   arc=4pt, boxrule=1pt,
@@ -248,7 +232,7 @@
 
 % Quote / blockquote
 \newtcolorbox{quotebox}[1][]{%
-  enhanced, breakable,
+  enhanced, breakable, parbox=false,
   before skip=10pt, after skip=10pt,
   colback=MahestanLightGray, colframe=MahestanGray!50,
   arc=2pt, boxrule=0pt,
@@ -260,7 +244,7 @@
 
 % Summary box
 \newtcolorbox{summarybox}[1][]{%
-  enhanced, breakable,
+  enhanced, breakable, parbox=false,
   before skip=12pt, after skip=12pt,
   colback=MahestanLightBlue!30, colframe=MahestanBlue,
   arc=5pt, boxrule=1.5pt,
@@ -381,7 +365,7 @@
 	\vfill
 	
 	\begin{tcolorbox}[
-		enhanced,
+		enhanced, parbox=false,
 		colback=white!10!MainBlue,
 		colframe=AccentGold,
 		arc=15pt,
