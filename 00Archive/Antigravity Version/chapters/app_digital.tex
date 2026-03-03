@@ -1,0 +1,60 @@
+\chapter{حقوق دیجیتال و آزادی اینترنت}
+\label{app:digital}
+
+در دنیای مدرن، آزادی اینترنت پله‌ی اول دموکراسی است. ایران نوین دسترسی به شبکه جهانی را به عنوان یک حق بنیادین می‌شناسد.
+
+\section{اقدامات فوری اینترنتی}
+
+\begin{modernbox}{رفع انسداد کامل (روز اول)}
+بزرگترین مانع اطلاع‌رسانی و سازماندهی در ایران، فیلترینگ است.
+\begin{itemize}
+    \item رفع فیلتر کامل از تمامی پلتفرم‌های بین‌المللی (تلگرام، یوتیوب، توییتر و غیره).
+    \item انحلال نهادهای سانسور اینترنت و پلیس فتا به شکل فعلی.
+    \item تضمین عدم قطع اینترنت (Kill Switch) تحت هیچ شرایط سیاسی.
+    \item حمایت از ورود تکنولوژی‌های دسترسی ماهواره‌ای و آزاد.
+\end{itemize}
+\end{modernbox}
+
+\section{معماری حقوق دیجیتال}
+
+\begin{center}
+\begin{tikzpicture}[node distance=3cm, auto]
+    \tikzstyle{block} = [circle, draw, fill=LightBlue!20, text width=2.5cm, text centered, font=\small]
+    \tikzstyle{line} = [draw, -Latex, line width=1pt]
+
+    \node [block] (privacy) {حریم خصوصی داده‌ها};
+    \node [block, left of=privacy] (access) {دسترسی آزاد و برابر};
+    \node [block, right of=privacy] (neutral) {بی‌طرفی شبکه};
+    \node [block, below of=privacy, node distance=2cm] (rights) {\textbf{حقوق دیجیتال شهروندی}};
+
+    \path [line] (access) -- (rights);
+    \path [line] (neutral) -- (rights);
+    \path [line] (privacy) -- (rights);
+\end{tikzpicture}
+\end{center}
+
+\section{نقشه‌ی راه زیرساخت دیجیتال}
+
+\begin{center}
+\begin{longtable}{R{3.5cm} R{5.5cm} R{6cm}}
+\caption{تحول در زیرساخت دیجیتال} \\
+\hline
+\textbf{فاز} & \textbf{اقدام فنی} & \textbf{هدف حقوقی} \\
+\hline
+\endfirsthead
+\hline
+\textbf{فاز} & \textbf{اقدام فنی} & \textbf{هدف حقوقی} \\
+\hline
+\endhead
+\hline
+\foot
+روز اول & خاموشی سیستم‌های فیلترینگ هوشمند & آزادی اطلاع‌رسانی فوری \\
+ماه اول & بازنگری در پهنای باند بین‌المللی & رقابتی کردن بازار ISPها \\
+سال اول & توسعه اینترنت ثابت فیبر نوری & تضمین حق دسترسی همگانی (Universal Access) \\
+\hline
+\end{longtable}
+\end{center}
+
+\begin{modernbox}{بلاک‌چین در خدمت دموکراسی}
+طرح مهستان استفاده از تکنولوژی بلاک‌چین را نه تنها برای ارزهای دیجیتال، بلکه برای ثبت شفاف آرا، طومارهای ملی و پیگیری بودجه‌های دولتی پیشنهاد می‌دهد تا فساد به حداقل برسد.
+\end{modernbox}

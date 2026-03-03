@@ -1,0 +1,57 @@
+\chapter{بندهای متمم و رویه‌های اجرایی}
+\label{app:clauses}
+
+این بخش شامل جزئیات فنی و رویه‌هایی است که پایداری عملیاتی مجلس مهستان را تضمین می‌کند.
+
+\section{بندهای متمم (۲۲ تا ۳۱)}
+
+\begin{modernbox}{بند ۲۲: نظارت بین‌المللی}
+تمامی مراحل انتخابات مجلس مهستان و رفراندوم‌های بعدی باید تحت نظارت ناظران بین‌المللی (سازمان ملل، اتحادیه اروپا و نهادهای تخصصی مانند IDEA) انجام شود.
+\end{modernbox}
+
+\begin{modernbox}{بند ۲۵: شفافیت مالی و تضاد منافع}
+نمایندگان مجلس مهستان و اعضای کابینه موظف به اعلام عمومی تمامی دارایی‌های خود پیش از شروع به کار هستند. پذیرش هرگونه هدیه یا رانت در دوران مسئولیت منجر به عزل فوری می‌شود.
+\end{modernbox}
+
+\begin{modernbox}{بند ۲۸: حفاظت از اسناد ملی}
+در روزهای اول گذار، کمیته‌ای ویژه مأمور حفاظت از تمامی آرشیوهای دولتی، امنیتی و مالی برای جلوگیری از امحای شواهد توسط عوامل نظام سابق می‌شود.
+\end{modernbox}
+
+\section{مکانیزم عزل نماینده (Recall)}
+
+برای اولین بار در تاریخ ایران، مکانیزم عزل نماینده پیش‌بینی شده است:
+
+\begin{center}
+\begin{tikzpicture}[node distance=2.5cm, auto]
+    \node (1) [circle, draw, fill=blue!10, text width=2cm, text centered] {۱. جمع‌آوری امضا (۲۰٪ حوزه)};
+    \node (2) [circle, draw, fill=blue!20, text width=2cm, text centered, right of=1, node distance=4cm] {۲. تأیید توسط آمبودزمان};
+    \node (3) [circle, draw, fill=blue!30, text width=2cm, text centered, right of=2, node distance=4cm] {۳. رأی‌گیری مجدد در حوزه};
+    \node (4) [circle, draw, fill=green!20, text width=2cm, text centered, below of=2, node distance=2.5cm] {عزل قطعی};
+
+    \path [draw, -Latex] (1) -- (2);
+    \path [draw, -Latex] (2) -- (3);
+    \path [draw, -Latex] (3) -- (4);
+\end{tikzpicture}
+\end{center}
+
+\section{جدول رویه‌های اضطراری}
+
+\begin{center}
+\begin{longtable}{R{4cm} R{5cm} R{6cm}}
+\caption{رویه‌های حاکم در شرایط بحران} \\
+\hline
+\textbf{موقعیت} & \textbf{مرجع تصمیم‌گیر} & \textbf{محدودیت زمانی} \\
+\hline
+\endfirsthead
+\hline
+\textbf{موقعیت} & \textbf{مرجع تصمیم‌گیر} & \textbf{محدودیت زمانی} \\
+\hline
+\endhead
+\hline
+\foot
+ناامنی گسترده & ستاد مشترک با تأیید مجلس & حداکثر ۷۲ ساعت بدون تأیید مجدد \\
+بحران پولی & بانک مرکزی و وزیر اقتصاد & گزارش هفتگی به کمیسیون اقتصاد \\
+اختلاف بین قوا & هیأت میانجی‌گری ملی & ۷ روز برای ارائه‌ی راه حل نهایی \\
+\hline
+\end{longtable}
+\end{center}

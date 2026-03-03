@@ -1,0 +1,99 @@
+\chapter{عدالت انتقالی در دوران گذار}
+\label{app:justice}
+
+در این بخش، مدل‌های تفصیلی عدالت انتقالی، مقایسه‌ی رویکردهای جهانی و نقشه راه اجرایی برای ایران ارائه می‌شود.
+
+\section{مدل‌های عدالت انتقالی: ۴ ستون و ۵ ستون}
+
+رویکرد استاندارد بین‌المللی بر اساس ۴ ستون اصلی است که در طرح مهستان برای جامعیت بیشتر به ۵ ستون ارتقا یافته است.
+
+\begin{modernbox}{ستون‌های عدالت انتقالی}
+\begin{enumerate}
+    \item \textbf{حقیقت‌یابی:} مستندسازی سیستماتیک نقض حقوق بشر.
+    \item \textbf{عدالت کیفری:} محاکمه‌ی عاملان اصلی جنایات.
+    \item \textbf{جبران خسارت:} ترمیم آسیب‌های مادی و معنوی قربانیان.
+    \item \textbf{اصلاحات نهادی:} تغییر ساختارهایی که سرکوب را ممکن کردند.
+    \item \textbf{آشتی و حافظه:} (ستون پنجم) تلاش برای التیام زخم‌های اجتماعی و جلوگیری از فراموشی.
+\end{enumerate}
+\end{modernbox}
+
+\section{مقایسه‌ی رویکردها به عاملان جنایت}
+
+یکی از حساس‌ترین تصمیمات دوران گذار، نحوه‌ی برخورد با عاملان در سطوح مختلف است.
+
+\begin{table}[htbp]
+\centering
+\caption{طبقه‌بندی عاملان و رویکرد پیشنهادی}
+\begin{tabular}{R{4cm} L{6cm} R{4cm}}
+\hline
+\textbf{سطح مسئولیت} & \textbf{شرح و مصادیق} & \textbf{رویکرد پیشنهادی} \\
+\hline
+رهبران و فرماندهان عالی & اعضای شورای عالی، فرماندهان ارشد سپاه و اطلاعات، قضات صادرکننده احکام اعدام سیاسی & محاکمه کامل و علنی، بدون امکان عفو \\
+فرماندهان میانی و مجریان ارشد & فرماندهان استانی، بازجویان ارشد، دادستان‌های فعال در سرکوب & محاکمه با امکان تخفیف در صورت همکاری کامل \\
+مجریان رده‌پایین & سربازان و مأموران عادی، افراد تحت فشار یا تهدید & عفو مشروط در ازای اعتراف کامل و عذرخواهی \\
+همکاران غیرمستقیم & مقامات دولتی غیرامنیتی، رسانه‌های تبلیغاتی، روحانیون حامی سرکوب & حقیقت‌یابی، شفافیت مالی و محدودیت‌های شغلی موقت \\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+\begin{landscape}
+\section{خط زمانی اجرایی عدالت انتقالی}
+
+\begin{pgfgantt}[
+    vgrid, hgrid,
+    title/.style={fill=MainBlue, text=white},
+    canvas/.style={fill=white},
+    group/.style={fill=SlateGray},
+    bar/.style={fill=LightBlue},
+    milestone/.style={fill=AccentGold},
+    y unit chart=0.7cm,
+    x unit=0.5cm,
+    time slot format=isodate
+]{2025-10-01}{2027-10-01}
+    \gantttitle{تقویم اجرایی عدالت انتقالی (۲۰۲۵-۲۰۲۷)}{25} \\
+    \gantttitlecalendar{year, month=shortname} \\
+    
+    \ganttgroup{حقیقت‌یابی}{2025-10-01}{2027-06-01} \\
+    \ganttbar{تشکیل کمیسیون}{2025-10-01}{2025-11-30} \\
+    \ganttbar{ثبت شهادت قربانیان}{2025-12-01}{2026-11-30} \\
+    \ganttbar{گزارش نهایی جامع}{2027-03-01}{2027-06-01} \\
+
+    \ganttgroup{عدالت کیفری}{2025-10-01}{2027-09-01} \\
+    \ganttbar{بازداشت عاملان اصلی}{2025-10-01}{2025-12-31} \\
+    \ganttbar{محاکمه فرماندهان عالی}{2026-06-01}{2027-06-01} \\
+    
+    \ganttgroup{جبران خسارت}{2025-10-01}{2027-10-01} \\
+    \ganttmilestone{آزادی زندانیان سیاسی}{2025-10-01} \\
+    \ganttbar{پرداخت‌های فوری}{2025-11-01}{2026-01-31} \\
+    \ganttbar{برنامه ملی غرامت}{2026-05-01}{2027-10-01} \\
+
+    \ganttgroup{آشتی و حافظه}{2026-01-01}{2027-10-01} \\
+    \ganttbar{طراحی موزه ملی حافظه}{2026-06-01}{2027-06-01} \\
+    \ganttmilestone{اعلام روز ملی یادبود}{2026-10-01} \\
+    \ganttmilestone{افتتاح موزه}{2027-10-01} 
+\end{pgfgantt}
+\end{landscape}
+
+\section{عدالت ترمیمی در مقابل عدالت تنبیهی}
+
+{\centering
+\begin{tikzpicture}[node distance=2.5cm, auto, scale=0.8, every node/.style={scale=0.8}]
+    \tikzstyle{block} = [rectangle, draw, fill=blue!10, text width=6cm, text centered, rounded corners, minimum height=3.5em, font=\small]
+    \tikzstyle{line} = [draw, -Latex, line width=1pt]
+
+    \node [block, fill=SoftRed] (ret) {\textbf{عدالت تنبیهی} \\ تمرکز بر مجازات مجرم \\ سؤال: چه قانونی نقض شد؟};
+    \node [block, fill=SoftGreen, below=1.5cm of ret] (res) {\textbf{عدالت ترمیمی} \\ تمرکز بر ترمیم آسیب \\ سؤال: چه کسی آسیب دید؟};
+    \node [block, fill=LightBlue, below=1.5cm of res] (trans) {\textbf{عدالت تحول‌گرا} \\ تمرکز بر تغییر ساختاری \\ سؤال: چه ساختاری عامل جنایت بود؟};
+
+    \path [line] (ret) -- (res);
+    \path [line] (res) -- (trans);
+
+    \node [right=1cm of res, text width=6cm, fill=SoftGold, draw, rounded corners, align=center] (hybrid) {
+        \textbf{رویکرد ترکیبی مهستان:} \\
+        ۱. تنبیهی برای سران سرکوب \\
+        ۲. ترمیمی برای بدنه و جامعه \\
+        ۳. تحول‌گرا برای اصلاح نهادها
+    };
+\end{tikzpicture}
+\par}

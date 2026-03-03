@@ -1,0 +1,44 @@
+\chapter{اولویت‌های تقنینی فاز اول}
+
+مجلس مهستان در فاز اول (صد روز نخست) موظف است اقدامات تقنینی زیر را به ترتیب اولویت انجام دهد.
+
+\section{فرمان‌های اضطراری (هفته‌ی اول)}
+این اقدامات بلافاصله و بدون نیاز به فرایند عادی صادر خواهند شد.
+
+\begin{tabular}{clp{8cm}}
+\toprule
+\textbf{ردیف} & \textbf{اقدام} & \textbf{دلیل فوریت} \\
+\midrule
+۱ & آزادی زندانیان سیاسی & حق بنیادین؛ نمادین \\
+۲ & لغو حجاب اجباری & رفع تبعیض و نماد سرکوب \\
+۳ & رفع فیلترینگ اینترنت & حق اطلاعات و زیرساخت دموکراسی \\
+۴ & تعلیق مجازات اعدام & حق حیات و اجماع بین‌المللی \\
+۵ & آزادی فعالیت احزاب & حق تجمع و تشکل \\
+۶ & حفاظت از اسناد امنیتی & مستندسازی عدالت انتقالی \\
+\bottomrule
+\end{tabular}
+
+\section{مصوبات اولویت بالا (هفته‌ی ۱ تا ۴)}
+\begin{itemize}
+    \item \textbf{قانون آزادی مطبوعات:} تضمین آزادی بیان نهادینه.
+    \item \textbf{قانون اجتماعات:} آزادی تظاهرات بدون نیاز به مجوز پیشینی.
+    \item \textbf{قانون شفافیت مالی:} الزام مقامات به انتشار دارایی‌ها.
+\end{itemize}
+
+\section{ترکیب تخصص و دموکراسی مستقیم}
+فرایند تصویب هر قانون از الگوی دو بازویی پیروی می‌کند:
+\begin{enumerate}
+    \item \textbf{مرکز تحقیقات (بازوی تکنوکراتیک):} بررسی داده‌ها، آمار و تجربه‌ی جهانی.
+    \item \textbf{واحد ارتباط مردمی (بازوی دموکراتیک):} نظرسنجی، بازخورد و رفراندوم موضوعی.
+\end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}[node distance=1.5cm]
+    \node (unit) [draw, fill=LightBlue, text width=4cm, align=center, rounded corners] {بازوی دموکراتیک \\ (صدای مردم)};
+    \node (research) [draw, fill=SoftPurple!30, text width=4cm, align=center, rounded corners, right=2cm of unit] {بازوی تکنوکراتیک \\ (واقعیت و تخصص)};
+    \node (assembly) [draw, fill=SoftGreen, text width=6cm, align=center, rounded corners, below=2cm of $(unit.south)!0.5!(research.south)$] {مجلس مهستان \\ (تصمیم‌گیری آگاهانه)};
+    
+    \draw[->, thick] (unit) -- (assembly);
+    \draw[->, thick] (research) -- (assembly);
+\end{tikzpicture}
+\end{center}

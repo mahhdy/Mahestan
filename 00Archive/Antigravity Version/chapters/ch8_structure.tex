@@ -1,0 +1,48 @@
+\chapter{نمودار جامع ساختار نهادی}
+
+در این بخش، ارتباط میان ارکان مختلف دوران گذار و چگونگی پاسخ‌گویی آن‌ها به مردم ایران به تصویر کشیده شده است.
+
+\begin{center}
+\begin{tikzpicture}[
+    node distance=1.5cm and 1cm,
+    block/.style={rectangle, draw, fill=blue!10, text width=3cm, align=center, rounded corners, minimum height=1cm, font=\bfseries\small},
+    main/.style={rectangle, draw=MainBlue, fill=LightBlue!50, text width=4cm, align=center, rounded corners, minimum height=1.5cm, font=\bfseries},
+    people/.style={ellipse, draw=MainBlue, fill=SoftPurple, text width=3cm, align=center, font=\bfseries\large}
+]
+
+    % Nodes
+    \node (people) [people] {مردم ایران};
+    \node (meh) [main, below=1.5cm of people] {مجلس مهستان \\ \footnotesize (نهاد محوری)};
+    
+    \node (cab) [block, below left=2cm and 0.5cm of meh] {کابینه‌ی اجرایی};
+    \node (jud) [block, below=2cm of meh] {شورای قضایی};
+    \node (mil) [block, below right=2cm and 0.5cm of meh] {ستاد نظامی};
+    
+    \node (tech) [block, left=2cm of meh, fill=SoftGold] {بازوی تکنوکراتیک};
+    \node (demo) [block, right=2cm of meh, fill=SoftGreen] {بازوی دموکراتیک};
+    
+    \node (int) [block, below=1.5cm of cab, fill=gray!10] {جامعه جهانی};
+    \node (civ) [block, below=1.5cm of mil, fill=gray!10] {جامعه مدنی};
+
+    % Connections
+    \draw[arrows={-Stealth}, line width=1.5pt] (people) -- (meh);
+    \draw[arrows={-Stealth}, thick] (meh) -- (cab);
+    \draw[arrows={-Stealth}, thick] (meh) -- (jud);
+    \draw[arrows={-Stealth}, thick] (meh) -- (mil);
+    
+    \draw[arrows={Stealth-Stealth}, thick] (meh) -- (tech);
+    \draw[arrows={Stealth-Stealth}, thick] (meh) -- (demo);
+    
+    \draw[arrows={-Stealth}, dashed] (int) -- (cab);
+    \draw[arrows={-Stealth}, dashed] (civ) -- (meh);
+    
+    \node[anchor=west, text width=4cm, font=\itshape\tiny, right=0.5cm of demo] {نظرسنجی، رفراندوم، مشاوره‌ی عمومی};
+    \node[anchor=east, text width=4cm, font=\itshape\tiny, left=0.5cm of tech] {گزارش فنی، تحلیل داده، تجربه‌ی جهانی};
+
+\end{tikzpicture}
+\end{center}
+
+\bigskip
+\begin{modernbox}{حاکمیت مطلق مردم}
+در طرح مهستان، تمام نهادها از مشروعیت مستقیم یا غیرمستقیم مردم برخاسته‌اند. بازوی دموکراتیک مجلس (واحد ارتباط مردمی) ضامن اتصال همیشگی نمایندگان با اراده‌ی مستقیم ملت در لحظه‌لحظه‌ی دوران گذار است.
+\end{modernbox}

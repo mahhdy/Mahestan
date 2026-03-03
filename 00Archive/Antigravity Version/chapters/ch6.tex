@@ -1,0 +1,37 @@
+\chapter{خط زمانی جامع گذار}
+
+زمان‌بندی‌های ارائه شده در این سند نسبی بوده و از روز صفر (شروع انتقال) محاسبه می‌شوند.
+
+\section{فازبندی عملیاتی}
+
+\begin{description}
+    \item[فاز ۱ — شروع و انتخابات:] هفته‌ی اول تا پنجم. ثبت‌نام و برگزاری انتخابات مجلس مهستان.
+    \item[فاز ۲ — اقدامات اضطراری:] هفته‌ی پنجم تا هشتم. تشکیل کابینه و صدور ۱۰ فرمان فوری.
+    \item[فاز ۳ — قانون اساسی موقت:] ماه دوم تا سوم. تدوین متن و برگزاری رفراندوم عمومی.
+    \item[فاز ۴ — نهادسازی:] ماه سوم تا هجدهم. اصلاح بخش امنیتی و اجرای عدالت انتقالی.
+    \item[فاز ۵ — قانون اساسی نهایی:] ماه ششم تا بیست‌ودوم. تدوین قانون اساسی دائم و انتخابات نهایی.
+\end{description}
+
+\section{نمودار مسیر گذار}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, line width=1pt]
+    \node (p1) [draw, fill=red!10, text width=2.5cm, align=center] {فاز ۱ \\ انتخابات};
+    \node (p2) [draw, fill=orange!10, text width=2.5cm, align=center, right=0.8cm of p1] {فاز ۲ \\ فرمان‌ها};
+    \node (p3) [draw, fill=yellow!10, text width=2.5cm, align=center, right=0.8cm of p2] {فاز ۳ \\ ق.ا موقت};
+    \node (p4) [draw, fill=blue!10, text width=2.5cm, align=center, below=1.5cm of p1] {فاز ۴ \\ اصلاحات};
+    \node (p5) [draw, fill=purple!10, text width=2.5cm, align=center, right=0.8cm of p4] {فاز ۵ \\ ق.ا نهایی};
+    \node (p6) [draw, fill=green!10, text width=2.5cm, align=center, right=0.8cm of p5] {فاز ۶ \\ انتقال قدرت};
+
+    \draw[->] (p1) -- (p2);
+    \draw[->] (p2) -- (p3);
+    \draw[->] (p3) -| ($(p3.south)!0.5!(p6.south)$) |- (p4);
+    \draw[->] (p4) -- (p5);
+    \draw[->] (p5) -- (p6);
+\end{tikzpicture}
+\end{center}
+
+\bigskip
+\begin{modernbox}{فراخوان به مشارکت}
+این بیانیه دعوتی است برای اندیشیدن و تکمیل. تصمیم نهایی درباره‌ی آینده‌ی ایران فقط و فقط با مردم ایران است. «ایران برای همه‌ی ایرانیان».
+\end{modernbox}

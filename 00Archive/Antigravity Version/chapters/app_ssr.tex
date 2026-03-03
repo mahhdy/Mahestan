@@ -1,0 +1,68 @@
+\chapter{اصلاح بخش امنیتی (SSR)}
+\label{app:ssr}
+
+اصلاح بخش امنیتی یکی از ارکان ثبات در دوران گذار است. هدف، انتقال از نیروهای وفادار به نظام/شخص به نیروهای حرفه‌ای وفادار به قانون و ملت است.
+
+\section{تغییرات بنیادین در ساختار امنیتی}
+
+\begin{center}
+\captionof{table}{مقایسه‌ی وضعیت فعلی و نظام اصلاح‌شده}
+\begin{tabular}{R{4.5cm} R{4.5cm} L{5cm}}
+\hline
+\textbf{شاخص} & \textbf{وضعیت فعلی} & \textbf{نظام اصلاح‌شده (SSR)} \\
+\hline
+%\endfirsthead
+%\hline
+%\textbf{شاخص} & \textbf{وضعیت فعلی} & \textbf{نظام اصلاح‌شده (SSR)} \\
+%\hline
+%\endhead
+%\hline
+%\endfoot
+\textbf{منبع مشروعیت} & وفاداری به رهبر/ایدئولوژی & وفاداری به قانون اساسی و ملت \\
+\textbf{ساختار نظامی} & ارتش دوقطبی (سپاه و ارتش) & ارتش واحد ملی تحت مقام مدنی \\
+\textbf{وظیفه‌ی اطلاعاتی} & سرکوب مخالفان و پایش عقیدتی & مقابله با تهدیدات خارجی و تروریسم \\
+\textbf{نقش اقتصادی} & تسلط بر صنایع کلیدی و قاچاق & ممنوعیت مطلق فعالیت اقتصادی نیروهای مسلح \\
+\textbf{پاسخ‌گویی} & عدم پاسخ‌گویی به نهادهای منتخب & نظارت پارلمانی، قضایی و آمبودزمان \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{فرایند غربال‌گری (Vetting)}
+
+فرایند غربال‌گری در سه مرحله‌ی اصلی انجام می‌شود تا از پاکسازی خودسرانه جلوگیری شود:
+
+\begin{enumerate}
+    \item \textbf{اظهارنامه داوطلبانه:} ثبت سوابق، دارایی‌ها و فعالیت‌ها توسط مأموران.
+    \item \textbf{بررسی سوابق حقوق بشری:} تطبیق با اسناد کمیسیون حقیقت‌یابی و شکایات شهروندان.
+    \item \textbf{تصمیم‌گیری:} ابقا، بازنشستگی اجباری، یا ارجاع به دادگاه در صورت وجود شواهد جنایی.
+\end{enumerate}
+
+\section{نمودار فرایند اصلاح نهادی}
+
+\begin{center}
+\begin{tikzpicture}[node distance=2.5cm, auto]
+    \tikzstyle{start} = [circle, draw, fill=red!20, minimum size=1cm, font=\small]
+    \tikzstyle{process} = [rectangle, draw, fill=blue!10, text width=4cm, text centered, rounded corners, minimum height=3em, font=\small]
+    \tikzstyle{decision} = [diamond, draw, fill=yellow!20, text width=2.5cm, text centered, font=\small]
+    \tikzstyle{line} = [draw, -Latex, line width=1pt]
+
+    \node [start] (init) {شکل‌گیری ستاد SSR};
+    \node [process, below of=init] (ident) {شناسایی واحدها و فرماندهان};
+    \node [process, below of=ident] (vet) {فرایند غربال‌گری (Vetting)};
+    \node [decision, below of=vet] (dec) {تأیید صلاحیت؟};
+    \node [process, right=2cm of dec] (retire) {بازنشستگی یا محاکمه};
+    \node [process, below of=dec] (modern) {آموزش مدرن و ادغام};
+    \node [process, below of=modern] (final) {ارتش واحد ملی};
+
+    \path [line] (init) -- (ident);
+    \path [line] (ident) -- (vet);
+    \path [line] (vet) -- (dec);
+    \path [line] (dec) -- node [near start] {خیر} (retire);
+    \path [line] (dec) -- node [near start] {بله} (modern);
+    \path [line] (modern) -- (final);
+\end{tikzpicture}
+\end{center}
+
+\begin{modernbox}{درس‌آموخته: ضدالگوی عراق}
+انحلال کامل کل ارتش و نهادهای امنیتی (De-Ba'athification) در عراق منجر به ایجاد هزاران نیروی مسلح ناراضی و فروپاشی نظم شد. طرح مهستان بر «اصلاح حداکثری و انحلال حداقلی» بازوهای اجرایی تأکید دارد، در حالی که رهبری سیاسی و ایدئولوژیک آن‌ها را به طور کامل جایگزین می‌کند.
+\end{modernbox}

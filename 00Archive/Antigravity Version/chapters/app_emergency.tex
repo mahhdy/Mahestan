@@ -1,0 +1,57 @@
+\chapter{پروتکل‌های اضطراری و راهبرد ارتباطات}
+\label{app:emergency}
+
+در لحظات بحرانی، نبود برنامه به معنای شکست است. طرح مهستان برای سناریوهای بحرانی پروتکل‌های مشخصی دارد.
+
+\section{سناریوهای بحران و پاسخ‌های اضطراری}
+
+\begin{modernbox}{سناریوی الف: خلأ امنیتی گسترده در روزهای اول}
+\textbf{پاسخ:}
+\begin{itemize}
+    \item فراخوان فوری آرامش از سوی شخصیت‌های مورد اعتماد ملی.
+    \item فعال‌سازی شوراهای محلی برای حفظ نظم محلات.
+    \item شناسایی و انتصاب فرماندهان میانی ارتش برای حفاظت از زیرساخت‌های حیاتی.
+    \item درخواست از جامعه‌ی بین‌المللی برای حمایت فنی و نظارتی.
+\end{itemize}
+\end{modernbox}
+
+\begin{modernbox}{سناریوی ب: بحران حاد اقتصادی و سقوط ریال}
+\textbf{پاسخ:}
+\begin{itemize}
+    \item مسدودسازی فوری خروج سرمایه و حسابرسی بانک‌های مشکوک.
+    \item تزریق ذخایر ارزی برای کالاهای اساسی.
+    \item فعال‌سازی شبکه‌ی توزیع موقت با نظارت جامعه‌ی مدنی.
+    \item توافق سریع با IMF برای دریافت وام اضطراری.
+\end{itemize}
+\end{modernbox}
+
+\section{نقشه‌ی راه ارتباطات (توجیه عمومی)}
+
+چگونه ۸۵ میلیون ایرانی را در جریان جزئیات گذار بگذاریم؟
+
+\begin{center}
+\begin{tikzpicture}[node distance=2.5cm, auto, scale=0.8, every node/.style={scale=0.8}]
+    \tikzstyle{block} = [rectangle, draw, fill=MainBlue!10, text width=4cm, text centered, rounded corners, minimum height=3em]
+    \tikzstyle{line} = [draw, -Latex, line width=1pt]
+
+    \node [block] (internet) {\textbf{۱. بستر دیجیتال} \\ وب‌سایت، شبکه‌های اجتماعی و اپلیکیشن تعاملی};
+    \node [block, bend left, right of=internet, node distance=5cm] (radio) {\textbf{۲. رسانه‌های سنتی} \\ رادیو و تلویزیون برای مناطق دورافتاده};
+    \node [block, below of=internet] (local) {\textbf{۳. شبکه‌های محلی} \\ مساجد، مدارس و بازارهای محلی};
+    \node [block, right of=local, node distance=5cm] (intl) {\textbf{۴. رسانه‌های جهانی} \\ پخش زنده جلسات به زبان‌های بین‌المللی};
+
+    \path [line] (internet) -- (radio);
+    \path [line] (radio) -- (intl);
+    \path [line] (intl) -- (local);
+    \path [line] (local) -- (internet);
+\end{tikzpicture}
+\end{center}
+
+\section{اصول ۵‌گانه ارتباطات در دوران گذار}
+
+\begin{enumerate}
+    \item \textbf{شفافیت مطلق:} پخش زنده تمامی جلسات مجلس و کمیسیون‌ها.
+    \item \textbf{زبان ساده:} اجتناب از واژگان پیچیده حقوقی در بیانیه‌های عمومی.
+    \item \textbf{چندزبانگی:} انتشار تمامی اسناد به زبان‌های فارسی، آذری، کُردی، عربی و بلوچی.
+    \item \textbf{دوسویه بودن:} ایجاد بستر برای دریافت نقد و نظر مردم و پاسخگویی به آن‌ها.
+    \item \textbf{جذب متخصص:} استفاده از حرفه‌ای‌ترین مدیران روابط عمومی و ارتباطات.
+\end{enumerate}

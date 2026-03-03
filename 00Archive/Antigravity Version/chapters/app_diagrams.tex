@@ -1,0 +1,76 @@
+\chapter{ضمیمه‌ی تصویری: ساختارها و فرایندهای گذار}
+\label{app:diagrams}
+
+این بخش شامل نمودارهای جامع برای درک بهتر لایه‌های مختلف طرح مهستان است.
+
+\section{تعاملات نهادی در دوران گذار}
+
+در این نمودار، نحوه‌ی توزیع قدرت بین نهادهای مختلف و نظارت مردم نشان داده شده است.
+
+\begin{center}
+\begin{tikzpicture}[node distance=3cm, auto, scale=0.8, every node/.style={scale=0.8}]
+    \tikzstyle{cloud} = [ellipse, draw, fill=SoftGold, minimum height=2em, text width=3cm, text centered]
+    \tikzstyle{block} = [rectangle, draw, fill=MainBlue!10, text width=4cm, text centered, rounded corners, minimum height=3em]
+    \tikzstyle{line} = [draw, -Latex, line width=1.5pt]
+
+    \node (people) [cloud] {\textbf{مردم ایران} \\ (منبع مشروعیت)};
+    \node (mehestan) [block, below of=people] {\textbf{مجلس مهستان} \\ (۳۰۰ نماینده)};
+    \node (cabinet) [block, below left=2cm and 0.5cm of mehestan] {\textbf{کابینه‌ی اجرایی} \\ (دولت موقت)};
+    \node (court) [block, below right=2cm and 0.5cm of mehestan] {\textbf{شورای عالی قضایی} \\ (مبتنی بر SSR)};
+    \node (comm) [block, below of=mehestan, node distance=5cm] {\textbf{کمیسیون‌های تخصصی} \\ (عدالت انتقالی، SSR، اقتصاد)};
+
+    \path [line] (people) -- node {رأی مستقیم} (mehestan);
+    \path [line] (mehestan) -- node [left] {رأی اعتماد} (cabinet);
+    \path [line] (mehestan) -- node [right] {انتصاب/تأیید} (court);
+    \path [line, dashed] (mehestan) -- (comm);
+    \path [line] (cabinet) -- (comm);
+    \path [line] (court) -- (comm);
+    \path [line, bend left=45] (cabinet) -- node [right] {پاسخ‌گویی} (mehestan);
+\end{tikzpicture}
+\end{center}
+
+\section{نقشه‌ی راه کلان گذار (Timeline)}
+
+\begin{center}
+\begin{tikzpicture}[node distance=2.5cm, auto, scale=0.9, every node/.style={scale=0.9}]
+    \tikzstyle{step} = [rectangle, draw, fill=gray!10, text width=3cm, text centered, minimum height=4em]
+    \tikzstyle{milestone} = [diamond, draw, fill=AccentGold!20, text width=2cm, text centered]
+    \tikzstyle{arrow} = [draw, -Stealth, line width=2pt, MainBlue]
+
+    \node [step, fill=SoftRed!40] (p1) {\textbf{۱. هم‌اکنون} \\ ائتلاف‌سازی و تدوین برنامه‌ها};
+    \node [step, right of=p1, node distance=4cm, fill=LightBlue!40] (p2) {\textbf{۲. ماه ۱} \\ انتخابات و تشکیل مجلس مهستان};
+    \node [milestone, right of=p2, node distance=3.5cm] (m1) {رفراندوم قانون اساسی موقت};
+    \node [step, right of=m1, node distance=3.5cm, fill=SoftGreen!40] (p3) {\textbf{۳. ماه ۲-۱۸} \\ عدالت انتقالی و اصلاحات نهادی};
+    \node [step, below of=p3, node distance=3cm, fill=SoftPurple!40] (p4) {\textbf{۴. ماه ۱۸-۲۴} \\ تصویب قانون اساسی نهایی و انتخابات عمومی};
+
+    \path [arrow] (p1) -- (p2);
+    \path [arrow] (p2) -- (m1);
+    \path [arrow] (m1) -- (p3);
+    \path [arrow] (p3) -- (p4);
+\end{tikzpicture}
+\end{center}
+
+\section{مقایسه‌ی مسیرهای گذار}
+
+در این نمودار، تفاوت رویکرد مهستان (گذار نهادمحور) با سایر مدل‌ها (مانند گذار مذاکره‌شده یا فروپاشی) نشان داده شده است.
+
+\begin{center}
+\begin{longtable}{R{4cm} C{3cm} C{3cm} C{4cm}}
+\caption{ارزیابی ریسک مسیرهای گذار} \\
+\hline
+\textbf{شاخص} & \textbf{فروپاشی ناگهانی} & \textbf{گذار مذاکره‌شده} & \textbf{مدل مهستان} \\
+\hline
+\endfirsthead
+\hline
+\textbf{شاخص} & \textbf{فروپاشی ناگهانی} & \textbf{گذار مذاکره‌شده} & \textbf{مدل مهستان} \\
+\hline
+\endhead
+\hline
+\foot
+مشروعیت دموکراتیک & نامعلوم & متوسط & \textbf{بسیار بالا} \\
+سرعت اجرا & بسیار بالا & پایین & \textbf{متوسط} \\
+ریسک بازگشت استبداد & بسیار بالا & بالا & \textbf{پایین} \\
+حفظ زیرساخت‌ها & بسیار پایین & بالا & \textbf{متوسط-بالا} \\
+\hline
+\end{longtable}
+\end{center}

@@ -1,0 +1,58 @@
+\chapter{مدل دو قانون اساسی و ساختار حکومت}
+\label{app:constitution}
+
+گذار موفق نیازمند تفکیک بین «قواعد بازی در دوران گذار» و «قواعد دائمی ملی» است.
+
+\section{مدل دو مرحله‌ای قانون اساسی}
+
+\begin{modernbox}{چرا دو قانون اساسی؟}
+نگارش یک قانون اساسی جامع و دائمی در فضای ملتهب پس از سقوط نظام، منجر به قطبی‌سازی و اشتباهات تاریخی می‌شود.
+\begin{enumerate}
+    \item \textbf{قانون اساسی موقت:} در هفته‌های اول تصویب می‌شود تا چارچوب حقوقی و محدودیت‌های قدرت در دوران گذار را تعیین کند.
+    \item \textbf{قانون اساسی نهایی:} پس از ۱۸ ماه گفتگو و چانه‌زنی در مجلس مؤسسان و با رفراندوم ملی تصویب می‌شود.
+\end{enumerate}
+\end{modernbox}
+
+\section{مقایسه‌ی مدل‌های حکومتی برای ایران نوین}
+
+مجلس مؤسسان باید بین مدل‌های مختلف، یکی را برگزیند. در اینجا مزایا و معایب اصلی هر یک آورده شده است:
+
+\begin{center}
+\captionof{table}{مدل‌های ساختار حکومتی}
+\begin{tabular}{R{4cm} R{4cm} L{6cm}}
+\hline
+\textbf{مدل} & \textbf{الگوهای جهانی} & \textbf{ویژگی‌های کلیدی} \\
+\hline
+%\endfirsthead
+%\hline
+%\textbf{مدل} & \textbf{الگوهای جهانی} & \textbf{ویژگی‌های کلیدی} \\
+%\hline
+%\endhead
+%\hline
+%\endfoot
+ریاست‌جمهوری & آمریکا، برزیل & جدایی کامل قوا، ثبات اجرایی، اما ریسک تمرکز قدرت و استبداد فردی \\
+پارلمانی & آلمان، پارلمان بریتانیا & پاسخ‌گویی بالا به مجلس، ائتلاف‌سازی، اما ریسک بی‌ثباتی دولت در صورت نبود اکثریت \\
+نیمه‌ریاستی & فرانسه، تونس & ترکیب منتخب مستقیم مردم با نخست‌وزیر پاسخ‌گو به مجلس \\
+فدرال & سوئیس، آلمان & توزیع قدرت بین مرکز و استان‌ها، مناسب برای تنوع جغرافیایی ایران \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{پیشنهاد ترکیبی: نظام پارلمانی-فدرال}
+
+\begin{center}
+\begin{tikzpicture}[node distance=2cm, auto]
+    \tikzstyle{block} = [rectangle, draw, fill=MainBlue!10, text width=4cm, text centered, rounded corners, minimum height=3em, font=\small]
+    \tikzstyle{line} = [draw, -Latex, line width=1pt]
+
+    \node [block] (parl) {\textbf{پارلمان دو مجلسی} \\ مجلس ملی + مجلس مناطق};
+    \node [block, below left=1.5cm and 0.5cm of parl] (gov) {\textbf{نخست‌وزیر و کابینه} \\ پاسخ‌گو به پارلمان};
+    \node [block, below right=1.5cm and 0.5cm of parl] (court) {\textbf{دادگاه قانون اساسی} \\ نگهبان حقوق بنیادین};
+    \node [block, below of=gov, node distance=2.5cm] (local) {\textbf{حکومت‌های محلی} \\ استان‌های خودمختار};
+
+    \path [line] (parl) -- (gov);
+    \path [line] (parl) -- (court);
+    \path [line] (gov) -- (local);
+    \path [line] (court) -- (local);
+\end{tikzpicture}
+\end{center}

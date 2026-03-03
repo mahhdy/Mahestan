@@ -118,6 +118,14 @@
 \definecolor{WarningBg}{RGB}{255,243,224}
 \definecolor{SuccessBg}{RGB}{232,245,233}
 \definecolor{DangerBg}{RGB}{252,228,236}
+\definecolor{MainBlue}{HTML}{2C5364}
+\definecolor{LightBlue}{HTML}{E3F2FD}
+\definecolor{SoftGreen}{HTML}{E8F5E9}
+\definecolor{SoftRed}{HTML}{FFEBEE}
+\definecolor{SoftGold}{HTML}{FFF9C4}
+\definecolor{SoftPurple}{HTML}{F3E5F5}
+\definecolor{SlateGray}{HTML}{455A64}
+\definecolor{AccentGold}{HTML}{FFD700}
 
 % ── Chapter / Section Formatting ────────────────────────────
 \titleformat{\chapter}[display]
@@ -345,58 +353,60 @@
 
 % ── COVER PAGE ──────────────────────────────────────────────
 \begin{titlepage}
-\begin{tikzpicture}[remember picture, overlay]
-  % Background gradient top
-  \fill[MahestanDarkBlue] (current page.north west) rectangle
-    ([yshift=-7cm]current page.north east);
-  % Gold accent band
-  \fill[MahestanGold] ([yshift=-7cm]current page.north west) rectangle
-    ([yshift=-7.5cm]current page.north east);
-  % Light background bottom
-  \fill[MahestanCream] ([yshift=-7.5cm]current page.north west) rectangle
-    (current page.south east);
-  % Decorative circle
-  \draw[MahestanGold!40, line width=2pt]
-    ([xshift=-3cm, yshift=-3.5cm]current page.north east) circle (3.5cm);
-  \draw[MahestanGold!20, line width=4pt]
-    ([xshift=-3cm, yshift=-3.5cm]current page.north east) circle (4.2cm);
-\end{tikzpicture}
-
-\vspace*{1cm}
-\begin{center}
-  {\color{white}\small\lr{Version 2.0 — February 2026}}\\[0.5cm]
-  {\color{MahestanGold!80}\Large طرح راهنمای گذار}\\[0.3cm]
-  \vspace{0.8cm}
-  {\color{white}\fontsize{36}{44}\selectfont\bfseries
-   بیانیه‌ی چارچوب نهادی گذار ایران}\\[0.5cm]
-  {\color{MahestanLightBlue}\fontsize{22}{30}\selectfont
-   طرح مجلس مهستان}\\[0.3cm]
-  {\color{MahestanGold}\rule{12cm}{2pt}}
-  \vspace{4.5cm}
-
-  % Bottom part
-  \begin{tcolorbox}[
-    enhanced, width=14cm,
-    colback=white, colframe=MahestanBlue!30,
-    arc=6pt, boxrule=1pt,
-    before skip=0pt, after skip=0pt
-  ]
-  \begin{center}
-    {\large\bfseries\color{MahestanDarkBlue}
-     نسخه‌ی بازنگری‌شده}\\[0.4cm]
-    {\normalsize\color{MahestanGray}
-     این سند چارچوب پیشنهادی نهادی برای دوران گذار ایران است.}\\[0.2cm]
-    {\normalsize\color{MahestanGray}
-     تمام اعداد و نسبت‌ها پیشنهادی برای بحث بوده و توسط}\\[0.1cm]
-    {\normalsize\color{MahestanGray}
-     مجلس مهستان منتخب مردم نهایی خواهند شد.}\\[0.4cm]
-    \hrule\vspace{0.3cm}
-    {\small\color{MahestanGray}
-     آخرین ویرایش: اسفند ۱۴۰۴ \lr{/} فوریه‌ی ۲۰۲۶ \quad
-     \lr{v2.0}}
-  \end{center}
-  \end{tcolorbox}
-\end{center}
+	\centering
+	\begin{tikzpicture}[remember picture,overlay]
+		% تصویر پس‌زمینه که کل صفحه را می‌پوشاند
+		\node[inner sep=0pt] at (current page.center) {
+			\includegraphics[width=\paperwidth,height=\paperheight]{cover.png}
+		};
+		% یک لایه‌ی نیمه‌شفاف برای بهتر خوانده شدن متن
+		\fill[white!15!MainBlue, opacity=0.8] ($(current page.north west)+(1cm,-4cm)$) rectangle ($(current page.south east)+(-1cm,-22cm)$);
+		
+		% خطوط تزئینی
+		\draw[AccentGold, line width=3pt] ($(current page.north west)+(1.5cm,-4.5cm)$) -- ($(current page.north east)+(-1.5cm,-4.5cm)$);
+		\draw[AccentGold, line width=3pt] ($(current page.north west)+(1.5cm,-21.5cm)$) -- ($(current page.north east)+(-1.5cm,-21.5cm)$);
+	\end{tikzpicture}
+	
+	\vspace*{4.5cm}
+	
+	{\Huge\bfseries\color{white} بیانیه‌ی چارچوب نهادی گذار ایران \par}
+	
+	\vspace{1.5cm}
+	
+	{\huge\bfseries\color{AccentGold} طرح مجلس مهستان \par}
+	
+	\vspace{0.8cm}
+	
+	{\Large\color{LightBlue!80} نسخه‌ی بازنگری‌شده و نهایی کتاب \par}
+	
+	\vfill
+	
+	\begin{tcolorbox}[
+		enhanced,
+		colback=white!10!MainBlue,
+		colframe=AccentGold,
+		arc=15pt,
+		boxrule=1.5pt,
+		width=0.8\textwidth,
+		left=20pt, right=20pt, top=15pt, bottom=15pt,
+		shadow={0pt}{-3pt}{0pt}{black!50!white},
+		opacityback=0.6
+		]
+		\centering\color{white}
+		\Large\bfseries
+		ترکیب هوشمندانه‌ی واقعیت و ارزش \\
+		\vskip 0.3cm
+		\large\mdseries
+		بال‌های دوقلوی تکنوکراسی و دموکراسی برای نیل به ایران آزاد
+	\end{tcolorbox}
+	
+	\vfill
+	
+	{\large\bfseries\color{white} مهدی سالم \par}
+	\vspace{0.2cm}
+	{\small\color{LightBlue!60} اسفند ۱۴۰۴ / مارس ۲۰۲۶ \par}
+	
+	\vspace{1cm}
 \end{titlepage}
 
 % ── FRONT MATTER ────────────────────────────────────────────

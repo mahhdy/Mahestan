@@ -1,0 +1,45 @@
+\chapter{تجربیات جهانی و دروس آموخته}
+
+کیفیت طراحی نهادی دوران گذار بیش از هر عامل دیگری تعیین‌کننده سرنوشت نظام سیاسی آینده است. در این فصل، برخی از موفق‌ترین و ناموفق‌ترین الگوهای جهانی را بررسی می‌کنیم.
+
+\section{تونس (۲۰۱۱-۲۰۱۴): نزدیک‌ترین الگو}
+تونس موفق‌ترین نمونه‌ی گذار دموکراتیک در خاورمیانه محسوب می‌شود.
+\begin{itemize}
+    \item \textbf{نقطه قوت:} انتخاب مجلس مؤسسان ملی به‌عنوان نهاد محوری گذار.
+    \item \textbf{درس آموخته:} نهادهای میانجی‌گر غیردولتی (اتحادیه‌ها، کانون وکلا) برای جلوگیری از بن‌بست سیاسی حیاتی هستند.
+\end{itemize}
+
+\section{آفریقای جنوبی (۱۹۹۰-۱۹۹۶): مدل عدالت انتقالی}
+\begin{itemize}
+    \item \textbf{نقطه قوت:} مدل دو مرحله‌ای قانون اساسی (موقت + نهایی) فضای مذاکره امن ایجاد کرد.
+    \item \textbf{درس آموخته:} کمیسیون حقیقت و آشتی با عفو مشروط توانست مسیر میانه‌ای بین انتقام و فراموشی ایجاد کند.
+\end{itemize}
+
+\section{الگوهای ناموفق و هشدارهای تاریخی}
+\begin{tabular}{lp{4cm}p{6cm}}
+\toprule
+\textbf{کشور} & \textbf{مشکل اصلی} & \textbf{درس برای ایران} \\
+\midrule
+لیبی & نبود نهاد محوری واحد & ضرورت مشروعیت انتخاباتی از روزهای اول \\
+مصر & دوقطبی‌سازی شدید & نیاز به ائتلاف فراگیر و بی‌طرفی ارتش \\
+عراق & انحلال کامل نهادها & ضرورت اصلاح به‌جای تخریب ساختارهای اداری \\
+\bottomrule
+\end{tabular}
+
+\section{عدالت + آشتی = صلح پایدار}
+\begin{center}
+\begin{tikzpicture}
+    \node (justice) [draw, fill=red!10, circle, minimum size=2.5cm] {عدالت};
+    \node (reconcile) [draw, fill=blue!10, circle, minimum size=2.5cm, right=1.5cm of justice] {آشتی};
+    \node (peace) [draw, fill=green!10, ellipse, minimum width=4cm, below=1.5cm of $(justice.east)!0.5!(reconcile.west)$] {صلح پایدار};
+    
+    \draw[->, thick] (justice) -- (peace);
+    \draw[->, thick] (reconcile) -- (peace);
+    
+    \node at ($(justice.east)!0.5!(reconcile.west)$) {\textbf{+}};
+\end{tikzpicture}
+\end{center}
+\begin{itemize}
+    \item عدالت بدون آشتی منجر به \textbf{انتقام} می‌شود.
+    \item آشتی بدون عدالت منجر به \textbf{فراموشی} و تکرار فاجعه می‌شود.
+\end{itemize}

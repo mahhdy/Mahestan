@@ -1,0 +1,75 @@
+\chapter{اقتصاد گذار و مدیریت دارایی‌های ملی}
+\label{app:economy}
+
+مدیریت اقتصادی در دوران گذار باید بین سه اولویت توازن برقرار کند: تثبیت اضطراری، بازسازی اعتماد و توسعه بلندمدت.
+
+\section{برنامه‌ی اقتصادی سه‌مرحله‌ای}
+
+\begin{modernbox}{فاز ۱: تثبیت اضطراری (۱۰۰ روز اول)}
+هدف: جلوگیری از فروپسانی معیشت و تأمین کالاهای اساسی.
+\begin{itemize}
+    \item حسابرسی فوری بانک مرکزی و تثبیت نرخ ارز.
+    \item تضمین زنجیره تأمین غذا و دارو.
+    \item پرداخت یارانه‌های نقدی اضطراری به دهک‌های پایین.
+    \item مذاکره با نهادهای بین‌المللی (IMF و بانک جهانی) برای بسته‌های حمایتی.
+\end{itemize}
+\end{modernbox}
+
+\begin{modernbox}{فاز ۲: بازسازی و اصلاحات (ماه ۳ تا ۱۸)}
+\begin{itemize}
+    \item بازسازی شفاف بودجه ملی و حذف هزینه‌های ایدئولوژیک.
+    \item اصلاح نظام مالیاتی و بانکی.
+    \item جذب سرمایه‌گذاری خارجی و فراخوان به دیاسپورای ایرانی.
+    \item خصوصی‌سازی شفاف نهادهای وابسته به سپاه و بنیادها.
+\end{itemize}
+\end{modernbox}
+
+\section{فرایند بازیابی دارایی‌های غارت‌شده}
+
+تخمین زده می‌شود صدها میلیارد دلار از ثروت ملی در اختیار نهادهای غیرپاسخ‌گو و افراد وابسته به نظام باشد.
+
+\begin{center}
+\begin{tikzpicture}[node distance=3cm, auto]
+    \tikzstyle{block} = [rectangle, draw, fill=SoftRed!20, text width=3cm, text centered, rounded corners, minimum height=3em, font=\small]
+    \tikzstyle{line} = [draw, -Latex, line width=1pt]
+
+    \node [block] (audit) {\textbf{۱. حسابرسی} \\ شناسایی اموال در داخل و خارج};
+    \node [block, left of=audit] (freeze) {\textbf{۲. مسدودسازی} \\ توقیف دارایی‌های مشکوک};
+    \node [block, below of=freeze] (recover) {\textbf{۳. بازیابی} \\ فرایندهای حقوقی بین‌المللی};
+    \node [block, right of=recover] (fund) {\textbf{۴. تخصیص} \\ واریز به صندوق ملی بازسازی};
+
+    \path [line] (audit) -- (freeze);
+    \path [line] (freeze) -- (recover);
+    \path [line] (recover) -- (fund);
+\end{tikzpicture}
+\end{center}
+
+\section{تخصیص منابع در صندوق ملی بازسازی}
+
+\begin{center}
+\begin{tikzpicture}
+    \pie[rotate=0, radius=2.5, text=inside, color={SoftPurple, SoftGreen, LightBlue, SoftGold, SlateGray}]
+    {30/جبران خسارت قربانیان, 30/پروژه‌های زیرساختی, 20/صندوق نسل‌های آینده, 10/آموزش و بهداشت, 10/محیط زیست}
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{longtable}{R{4cm} R{4cm} R{6cm}}
+\caption{وضعیت اقتصادی در لحظه‌ی گذار} \\
+\hline
+\textbf{چالش‌ها} & \textbf{دارایی‌ها} & \textbf{اقدام فوری} \\
+\hline
+\endfirsthead
+\hline
+\textbf{چالش‌ها} & \textbf{دارایی‌ها} & \textbf{اقدام فوری} \\
+\hline
+\endhead
+\hline
+\endfoot
+تورم شدید و سقوط ریال & نیروی کار تحصیل‌کرده & کنترل نرخ ارز و واردات کالا \\
+فساد سیستماتیک & منابع عظیم انرژی و معدن & حسابرسی بنیادها و نهادها \\
+بیکاری گسترده & موقعیت ژئوپلیتیک تجاری & پروژه‌های عمرانی کوچک و سریع \\
+تحریم‌های بین‌المللی & دیاسپورای ثروتمند و متخصص & دیپلماسی فعال برای لغو تحریم‌ها \\
+\hline
+\end{longtable}
+\end{center}

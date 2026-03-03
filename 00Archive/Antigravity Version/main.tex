@@ -1,0 +1,214 @@
+\documentclass[11pt,a4paper,oneside]{book}
+
+% ─────────────────────────── پکیج‌های پایه ───────────────────────────
+\usepackage[svgnames]{xcolor}
+\usepackage{geometry}
+\geometry{top=3cm, bottom=3cm, left=2.5cm, right=3cm, headheight=23pt, footskip=1.5cm}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, backgrounds, fit, shadows, gradients}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable, theorems}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{booktabs, longtable, multirow, array}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{microtype}
+\usepackage{pdflscape}
+\usepackage{pgfgantt}
+
+% تنظیمات ستون‌های راست‌به‌چپ برای جدول‌ها
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% ─────────────────────────── تعریف رنگ‌های مدرن و لایت ───────────────────────────
+\definecolor{MainBlue}{HTML}{2C5364}
+\definecolor{LightBlue}{HTML}{E3F2FD}
+\definecolor{SoftGreen}{HTML}{E8F5E9}
+\definecolor{SoftRed}{HTML}{FFEBEE}
+\definecolor{SoftGold}{HTML}{FFF9C4}
+\definecolor{SoftPurple}{HTML}{F3E5F5}
+\definecolor{SlateGray}{HTML}{455A64}
+\definecolor{AccentGold}{HTML}{FFD700}
+
+% ─────────────────────────── تنظیمات کادرها (TColorBox) ───────────────────────────
+\newtcolorbox{modernbox}[2][]{
+    enhanced, breakable,
+    colback=white, colframe=MainBlue,
+    coltitle=white, fonttitle=\bfseries\large,
+    title=\rl{#2},
+    boxrule=1pt, arc=4pt,
+    drop shadow={black!20!white},
+    left=15pt, right=15pt, top=10pt, bottom=10pt,
+    before skip=15pt, after skip=15pt,
+    attach boxed title to top right={xshift=-15pt, yshift=-10pt},
+    boxed title style={colback=MainBlue, arc=4pt, boxrule=0pt},
+    before upper=\setRTL,
+    #1
+}
+
+\newtcolorbox{principlebox}[1]{
+    enhanced, breakable,
+    colback=SoftPurple!20, colframe=MainBlue!80,
+    boxrule=0.5pt, arc=0pt,
+    borderline east={4pt}{0pt}{MainBlue},
+    fontupper=\itshape,
+    left=15pt, right=20pt, top=15pt,
+    title=\rl{اصل: #1},
+    coltitle=white, fonttitle=\bfseries\large,
+    attach boxed title to top right={xshift=-15pt, yshift=-12pt},
+    boxed title style={colback=MainBlue, arc=2pt, boxrule=0pt},
+    before upper=\setRTL,
+    before skip=25pt, after skip=25pt
+}
+
+\newtcolorbox{highlightbox}[1][]{
+    enhanced,
+    colback=SoftGold!50, colframe=AccentGold!80!black,
+    boxrule=0.5pt, arc=2pt,
+    left=10pt, right=10pt,
+    before upper=\setRTL,
+    #1
+}
+
+% ─────────────────────────── تنظیمات تیترها و صفحات ───────────────────────────
+\setstretch{1.6} % فاصله خطوط مناسب برای متن فارسی
+
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries\color{MainBlue}\filright}
+{\filright\makebox[0pt][l]{\hspace{10pt}\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east, inner sep=0pt] at ($(current page.north east)+(-1cm,-1cm)$) {
+        \scalebox{10}{\color{LightBlue!50}\thechapter}
+    };
+\end{tikzpicture}}\Huge\chaptertitlename\ \thechapter}
+{20pt}{\Huge}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries\color{MainBlue}}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\normalfont\large\bfseries\color{SlateGray}}{\thesubsection}{1em}{}
+
+% ─────────────────────────── سرصفحه و پاصفحه ───────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\small\color{gray}\leftmark}
+\fancyhead[L]{\small\color{MainBlue}\bfseries طرح مجلس مهستان}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ─────────────────────────── فونت‌های فارسی (Xepersian) ───────────────────────────
+\usepackage{fontspec}
+\usepackage{xepersian}
+
+% فرض بر این است که فونت‌های زیر نصب هستند. 
+% در صورت تمایل می‌توانید نام فونت‌ها را اینجا تغییر دهید.
+\settextfont[Scale=1.1]{Vazirmatn}
+\setlatintextfont{Arial}
+\setdigitfont{Vazirmatn}
+
+\def\persianfontmain{Vazirmatn}
+\def\persianfontbold{Vazirmatn}
+
+% ─────────────────────────── شروع سند ───────────────────────────
+\begin{document}
+
+% --- صفحه عنوان ---
+\begin{titlepage}
+    \centering
+    \begin{tikzpicture}[remember picture,overlay]
+        % تصویر پس‌زمینه که کل صفحه را می‌پوشاند
+        \node[inner sep=0pt] at (current page.center) {
+            \includegraphics[width=\paperwidth,height=\paperheight]{cover.png}
+        };
+        % یک لایه‌ی نیمه‌شفاف برای بهتر خوانده شدن متن
+        \fill[white!15!MainBlue, opacity=0.8] ($(current page.north west)+(1cm,-4cm)$) rectangle ($(current page.south east)+(-1cm,-22cm)$);
+        
+        % خطوط تزئینی
+        \draw[AccentGold, line width=3pt] ($(current page.north west)+(1.5cm,-4.5cm)$) -- ($(current page.north east)+(-1.5cm,-4.5cm)$);
+        \draw[AccentGold, line width=3pt] ($(current page.north west)+(1.5cm,-21.5cm)$) -- ($(current page.north east)+(-1.5cm,-21.5cm)$);
+    \end{tikzpicture}
+    
+    \vspace*{4.5cm}
+    
+    {\Huge\bfseries\color{white} بیانیه‌ی چارچوب نهادی گذار ایران \par}
+    
+    \vspace{1.5cm}
+    
+    {\huge\bfseries\color{AccentGold} طرح مجلس مهستان \par}
+    
+    \vspace{0.8cm}
+    
+    {\Large\color{LightBlue!80} نسخه‌ی بازنگری‌شده و نهایی کتاب \par}
+    
+    \vfill
+    
+    \begin{tcolorbox}[
+        enhanced,
+        colback=white!10!MainBlue,
+        colframe=AccentGold,
+        arc=15pt,
+        boxrule=1.5pt,
+        width=0.8\textwidth,
+        left=20pt, right=20pt, top=15pt, bottom=15pt,
+        shadow={0pt}{-3pt}{0pt}{black!50!white},
+        opacityback=0.6
+    ]
+        \centering\color{white}
+        \Large\bfseries
+        ترکیب هوشمندانه‌ی واقعیت و ارزش \\
+        \vskip 0.3cm
+        \large\mdseries
+        بال‌های دوقلوی تکنوکراسی و دموکراسی برای نیل به ایران آزاد
+    \end{tcolorbox}
+    
+    \vfill
+    
+    {\large\bfseries\color{white} مهدی سالم \par}
+    \vspace{0.2cm}
+    {\small\color{LightBlue!60} اسفند ۱۴۰۴ / مارس ۲۰۲۶ \par}
+    
+    \vspace{1cm}
+\end{titlepage}
+
+% --- فهرست ---
+\tableofcontents
+\newpage
+
+% --- محتوای کتاب ---
+\include{chapters/ch1}
+\include{chapters/ch2}
+\include{chapters/ch3}
+\include{chapters/ch4}
+\include{chapters/ch5}
+\include{chapters/ch6}
+\include{chapters/ch7_global}
+\include{chapters/ch8_structure}
+
+\appendix
+\include{chapters/app_justice}
+\include{chapters/app_intl}
+\include{chapters/app_ssr}
+\include{chapters/app_elections}
+\include{chapters/app_constitution}
+\include{chapters/app_economy}
+\include{chapters/app_rights}
+\include{chapters/app_digital}
+\include{chapters/app_media_edu}
+\include{chapters/app_diagrams}
+\include{chapters/app_clauses}
+\include{chapters/app_comparison}
+\include{chapters/app_summary_glossary}
+\include{chapters/app_checklist}
+\include{chapters/app_emergency}
+\include{chapters/app_references}
+
+% --- پایان ---
+
+\end{document}

@@ -1,0 +1,45 @@
+\chapter{مأموریت‌های ویژه و نهادسازی}
+
+مجلس مهستان موظف است نهادهای تخصصی مورد نیاز برای مدیریت دوران گذار را تشکیل دهد.
+
+\section{قانون اساسی موقت — مأموریت فوری}
+مجلس موظف است ظرف حداکثر ۲ ماه پیش‌نویس قانون اساسی موقت را تدوین کرده و به رفراندوم عمومی بگذارد. متن تصویب‌شده نیاز به ۵۰٪+۱ آرا با حداقل مشارکت ۴۰٪ دارد.
+
+\section{عدالت انتقالی}
+طرح جامع عدالت انتقالی شامل حقیقت‌یابی، عدالت کیفری، جبران خسارت، و تضمین عدم تکرار است.
+
+\begin{center}
+\begin{tikzpicture}[node distance=2cm, auto]
+    % Styles
+    \tikzstyle{box} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=MainBlue, fill=LightBlue!30, font=\bfseries\small, text width=3.5cm]
+    \tikzstyle{mainbox} = [rectangle, rounded corners, minimum width=4cm, minimum height=1.5cm, text centered, draw=MainBlue, fill=SoftPurple!50, font=\bfseries, text width=4.5cm]
+    \tikzstyle{arrow} = [thick, ->, >=stealth, MainBlue]
+
+    % Nodes
+    \node (main) [mainbox] {عدالت انتقالی ایران \\ \footnotesize (مدل پیشنهادی)};
+    
+    \node (tj1) [box, below left=1.5cm and 0.5cm of main] {حقیقت‌یابی \\ \scriptsize مستندسازی جنایات و ثبت شهادت قربانیان};
+    \node (tj2) [box, below right=1.5cm and 0.5cm of main] {عدالت کیفری \\ \scriptsize محاکمات عادلانه و عفو مشروط سطوح پایین};
+    
+    \node (tj3) [box, below=1cm of tj1] {جبران خسارت \\ \scriptsize غرامت مالی و اعاده‌ی حیثیت};
+    \node (tj4) [box, below=1cm of tj2] {آشتی ملی \\ \scriptsize گفتگوهای ملی و حافظه‌ی تاریخی};
+    
+    \node (tj5) [box, below=3.5cm of main] {تضمین عدم تکرار \\ \scriptsize اصلاح نهادی و آموزش حقوق بشر};
+
+    % Arrows
+    \draw [arrow] (main) -| (tj1);
+    \draw [arrow] (main) -| (tj2);
+    \draw [arrow] (tj1) -- (tj3);
+    \draw [arrow] (tj2) -- (tj4);
+    \draw [arrow] (tj3) |- (tj5);
+    \draw [arrow] (tj4) |- (tj5);
+    
+\end{tikzpicture}
+\captionof{figure}{مدل جامع عدالت انتقالی دوران گذار}
+\end{center}
+
+\section{اصلاح بخش امنیتی (SSR)}
+کمیسیون تخصصی برای غربال‌گری نیروهای امنیتی، انحلال نهادهای سرکوب و ادغام ارگان‌های واجد شرایط در ارتش واحد ملی تشکیل خواهد شد.
+
+\section{آمبودزمان (نهاد حقوق شهروندی)}
+نهاد مستقل رسیدگی به شکایات شهروندان از نهادهای دولتی که ریاست آن توسط مجلس مهستان انتخاب می‌شود.
