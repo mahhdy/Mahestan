@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4A148C"/>
+      <stop offset="50%" stop-color="#6A1B9A"/>
+      <stop offset="100%" stop-color="#311B92"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg1)"/>
+  <circle cx="100" cy="100" r="200" fill="#7B1FA2" opacity="0.15"/>
+  <circle cx="980" cy="980" r="250" fill="#CE93D8" opacity="0.1"/>
+  <rect x="80" y="320" width="920" height="440" rx="30" fill="none" stroke="#CE93D8" stroke-width="1.5" opacity="0.3"/>
+  <rect x="0" y="0" width="1080" height="6" fill="#2E7D32"/>
+  <rect x="0" y="1074" width="1080" height="6" fill="#C62828"/>
+
+  <text x="540" y="230" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="22" fill="#CE93D8" letter-spacing="3">بیانیه‌ی چارچوب نهادی</text>
+
+  <text x="540" y="440" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="68" font-weight="bold" fill="#ffffff">گذار ایران</text>
+  <text x="540" y="530" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="68" font-weight="bold" fill="#ffffff">طرح مهستان</text>
+
+  <rect x="390" y="570" width="300" height="3" rx="1.5" fill="#CE93D8"/>
+
+  <text x="540" y="640" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="22" fill="#E1BEE7">ترکیب دموکراسی مستقیم · تخصص‌گرایی · نمایندگی نسبتی</text>
+  <text x="540" y="680" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="16" fill="#E1BEE7" opacity="0.7">مبتنی بر تجربه‌ی تطبیقی جهانی</text>
+
+  <rect x="300" y="850" width="480" height="60" rx="30" fill="rgba(255,255,255,0.1)" stroke="#CE93D8" stroke-width="1"/>
+  <text x="540" y="890" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="24" font-weight="bold" fill="#ffffff">🇮🇷 ایران برای همه‌ی ایرانیان</text>
+
+  <text x="540" y="970" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="13" fill="#CE93D8" opacity="0.6">⬅ برای مشاهده‌ی کامل طرح، اسلایدها را ورق بزنید</text>
+</svg>

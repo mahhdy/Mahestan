@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg3n" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D1B2A"/>
+      <stop offset="100%" stop-color="#1B2838"/>
+    </linearGradient>
+    <linearGradient id="pGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD54F" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FFD54F" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="pBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#42A5F5" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#42A5F5" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="pGreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#66BB6A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#66BB6A" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="pOrange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFA726" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FFA726" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="pPurple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CE93D8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#CE93D8" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="pCyan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#26C6DA" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#26C6DA" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg3n)"/>
+
+  <!-- Floor/Base -->
+  <rect x="0" y="880" width="1080" height="200" fill="#13202E"/>
+  <rect x="30" y="868" width="1020" height="16" rx="4" fill="#FFD54F" opacity="0.2"/>
+
+  <!-- Top subtitle -->
+  <text x="540" y="68" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#CE93D8" opacity="0.5" letter-spacing="3">ستون‌های ایرانِ نو</text>
+
+  <!-- Roof / Pediment -->
+  <polygon points="25,258 540,88 1055,258" fill="none" stroke="#FFD54F" stroke-width="2" opacity="0.3"/>
+  <polygon points="100,258 540,125 980,258" fill="rgba(255,213,79,0.03)"/>
+
+  <!-- Roof text -->
+  <text x="540" y="185" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="32" font-weight="bold" fill="#FFD54F">شایسته‌سالاری</text>
+  <text x="540" y="218" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="15" fill="#B0BEC5" opacity="0.7">بنیان نظام نوین ایران</text>
+
+  <!-- ===================== -->
+  <!-- PILLAR 1 — آزادی      -->
+  <!-- ===================== -->
+  <rect x="140" y="280" width="115" height="588" fill="url(#pGold)" stroke="#FFD54F" stroke-width="1" opacity="0.6" rx="4"/>
+  <rect x="130" y="258" width="135" height="28" rx="6" fill="rgba(255,213,79,0.15)" stroke="#FFD54F" stroke-width="0.5"/>
+  <rect x="130" y="858" width="135" height="18" rx="4" fill="rgba(255,213,79,0.15)"/>
+  <circle cx="198" cy="345" r="32" fill="rgba(255,213,79,0.1)" stroke="#FFD54F" stroke-width="1"/>
+  <text x="198" y="357" text-anchor="middle" font-size="28">🕊️</text>
+  <text x="198" y="410" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="19" font-weight="bold" fill="#FFD54F">آزادی</text>
+  <text x="198" y="445" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">بیان · عقیده</text>
+  <text x="198" y="463" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">مطبوعات</text>
+  <text x="198" y="481" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">تجمع · تشکل</text>
+  <text x="198" y="499" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">وجدان · انتخاب</text>
+
+  <!-- ===================== -->
+  <!-- PILLAR 2 — برابری     -->
+  <!-- ===================== -->
+  <rect x="277" y="280" width="115" height="588" fill="url(#pBlue)" stroke="#42A5F5" stroke-width="1" opacity="0.6" rx="4"/>
+  <rect x="267" y="258" width="135" height="28" rx="6" fill="rgba(66,165,245,0.15)" stroke="#42A5F5" stroke-width="0.5"/>
+  <rect x="267" y="858" width="135" height="18" rx="4" fill="rgba(66,165,245,0.15)"/>
+  <circle cx="335" cy="345" r="32" fill="rgba(66,165,245,0.1)" stroke="#42A5F5" stroke-width="1"/>
+  <text x="335" y="357" text-anchor="middle" font-size="28">⚖️</text>
+  <text x="335" y="410" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="19" font-weight="bold" fill="#42A5F5">برابری</text>
+  <text x="335" y="445" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">جنسیتی · قومی</text>
+  <text x="335" y="463" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">زبانی · مذهبی</text>
+  <text x="335" y="481" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">حقوقی · اقتصادی</text>
+  <text x="335" y="499" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">فرصت برابر</text>
+
+  <!-- ===================== -->
+  <!-- PILLAR 3 — برادری     -->
+  <!-- ===================== -->
+  <rect x="414" y="280" width="115" height="588" fill="url(#pGreen)" stroke="#66BB6A" stroke-width="1" opacity="0.6" rx="4"/>
+  <rect x="404" y="258" width="135" height="28" rx="6" fill="rgba(102,187,106,0.15)" stroke="#66BB6A" stroke-width="0.5"/>
+  <rect x="404" y="858" width="135" height="18" rx="4" fill="rgba(102,187,106,0.15)"/>
+  <circle cx="472" cy="345" r="32" fill="rgba(102,187,106,0.1)" stroke="#66BB6A" stroke-width="1"/>
+  <text x="472" y="357" text-anchor="middle" font-size="28">🤝</text>
+  <text x="472" y="410" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="19" font-weight="bold" fill="#66BB6A">برادری</text>
+  <text x="472" y="445" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">همبستگی ملی</text>
+  <text x="472" y="463" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">تنوع در وحدت</text>
+  <text x="472" y="481" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">هم‌سرنوشتی</text>
+  <text x="472" y="499" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">گفتگوی ملی</text>
+
+  <!-- ===================== -->
+  <!-- PILLAR 4 — انصاف      -->
+  <!-- ===================== -->
+  <rect x="551" y="280" width="115" height="588" fill="url(#pOrange)" stroke="#FFA726" stroke-width="1" opacity="0.6" rx="4"/>
+  <rect x="541" y="258" width="135" height="28" rx="6" fill="rgba(255,167,38,0.15)" stroke="#FFA726" stroke-width="0.5"/>
+  <rect x="541" y="858" width="135" height="18" rx="4" fill="rgba(255,167,38,0.15)"/>
+  <circle cx="609" cy="345" r="32" fill="rgba(255,167,38,0.1)" stroke="#FFA726" stroke-width="1"/>
+  <text x="609" y="357" text-anchor="middle" font-size="28">🏛️</text>
+  <text x="609" y="410" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="19" font-weight="bold" fill="#FFA726">انصاف</text>
+  <text x="609" y="445" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">عدالت اجتماعی</text>
+  <text x="609" y="463" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">فرصت برابر</text>
+  <text x="609" y="481" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">توزیع عادلانه</text>
+  <text x="609" y="499" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">شفافیت مالی</text>
+
+  <!-- ===================== -->
+  <!-- PILLAR 5 — حق‌طلبی    -->
+  <!-- ===================== -->
+  <rect x="688" y="280" width="115" height="588" fill="url(#pPurple)" stroke="#CE93D8" stroke-width="1" opacity="0.6" rx="4"/>
+  <rect x="678" y="258" width="135" height="28" rx="6" fill="rgba(206,147,216,0.15)" stroke="#CE93D8" stroke-width="0.5"/>
+  <rect x="678" y="858" width="135" height="18" rx="4" fill="rgba(206,147,216,0.15)"/>
+  <circle cx="746" cy="345" r="32" fill="rgba(206,147,216,0.1)" stroke="#CE93D8" stroke-width="1"/>
+  <text x="746" y="357" text-anchor="middle" font-size="28">✊</text>
+  <text x="746" y="410" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="19" font-weight="bold" fill="#CE93D8">حق‌طلبی</text>
+  <text x="746" y="445" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">حقوق بشر</text>
+  <text x="746" y="463" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">کرامت انسانی</text>
+  <text x="746" y="481" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">مبارزه‌ی مدنی</text>
+  <text x="746" y="499" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#B0BEC5">پاسخگویی قدرت</text>
+
+  <!-- ================================ -->
+  <!-- PILLAR 6 — کارآمدی و پیشرفت  ✨ -->
+  <!-- ================================ -->
+  <rect x="825" y="280" width="115" height="588" fill="url(#pCyan)" stroke="#26C6DA" stroke-width="1" opacity="0.6" rx="4"/>
+  <rect x="815" y="258" width="135" height="28" rx="6" fill="rgba(38,198,218,0.15)" stroke="#26C6DA" stroke-width="0.5"/>
+  <rect x="815" y="858" width="135" height="18" rx="4" fill="rgba(38,198,218,0.15)"/>
+
+  <!-- Gear + Arrow icon circle -->
+  <circle cx="883" cy="345" r="32" fill="rgba(38,198,218,0.1)" stroke="#26C6DA" stroke-width="1"/>
+  <text x="883" y="357" text-anchor="middle" font-size="28">🚀</text>
+
+  <!-- Title -->
+  <text x="883" y="405" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="17" font-weight="bold" fill="#26C6DA">کارآمدی</text>
+  <text x="883" y="425" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="17" font-weight="bold" fill="#26C6DA">و پیشرفت</text>
+
+  <!-- Sub-items -->
+  <text x="883" y="458" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#80DEEA">شایسته‌سالاری</text>
+  <text x="883" y="476" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#80DEEA">رقابت سالم</text>
+  <text x="883" y="494" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#80DEEA">ارزش‌آفرینی</text>
+  <text x="883" y="512" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#80DEEA">فرصت‌آفرینی</text>
+  <text x="883" y="530" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="10" fill="#80DEEA">همکاری تضایفی</text>
+
+  <!-- Extra detail lines inside pillar 6 -->
+  <line x1="845" y1="555" x2="921" y2="555" stroke="#26C6DA" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Mini synergy diagram inside pillar -->
+  <circle cx="860" cy="600" r="12" fill="none" stroke="#26C6DA" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="883" cy="585" r="12" fill="none" stroke="#26C6DA" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="906" cy="600" r="12" fill="none" stroke="#26C6DA" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="883" cy="615" r="12" fill="none" stroke="#26C6DA" stroke-width="0.8" opacity="0.4"/>
+  <!-- Connection lines -->
+  <line x1="860" y1="600" x2="883" y2="585" stroke="#26C6DA" stroke-width="0.5" opacity="0.25"/>
+  <line x1="883" y1="585" x2="906" y2="600" stroke="#26C6DA" stroke-width="0.5" opacity="0.25"/>
+  <line x1="906" y1="600" x2="883" y2="615" stroke="#26C6DA" stroke-width="0.5" opacity="0.25"/>
+  <line x1="883" y1="615" x2="860" y2="600" stroke="#26C6DA" stroke-width="0.5" opacity="0.25"/>
+  <line x1="860" y1="600" x2="906" y2="600" stroke="#26C6DA" stroke-width="0.5" opacity="0.15"/>
+  <line x1="883" y1="585" x2="883" y2="615" stroke="#26C6DA" stroke-width="0.5" opacity="0.15"/>
+  <!-- Center node -->
+  <circle cx="883" cy="600" r="4" fill="#26C6DA" opacity="0.5"/>
+
+  <text x="883" y="650" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="9" fill="#4DD0E1" opacity="0.6">۱+۱ = ۳</text>
+
+  <!-- ========================== -->
+  <!-- Decorative: mini upward arrows inside pillar 6 -->
+  <!-- ========================== -->
+  <line x1="858" y1="720" x2="858" y2="690" stroke="#26C6DA" stroke-width="1" opacity="0.2"/>
+  <polygon points="858,685 852,695 864,695" fill="#26C6DA" opacity="0.2"/>
+  <line x1="883" y1="730" x2="883" y2="695" stroke="#26C6DA" stroke-width="1" opacity="0.3"/>
+  <polygon points="883,690 877,700 889,700" fill="#26C6DA" opacity="0.3"/>
+  <line x1="908" y1="720" x2="908" y2="690" stroke="#26C6DA" stroke-width="1" opacity="0.2"/>
+  <polygon points="908,685 902,695 914,695" fill="#26C6DA" opacity="0.2"/>
+
+  <!-- ===================== -->
+  <!-- Decorative elements   -->
+  <!-- ===================== -->
+
+  <!-- Subtle connecting arcs between pillar tops (unity) -->
+  <path d="M198,280 Q267,250 335,280" fill="none" stroke="#FFD54F" stroke-width="0.5" opacity="0.1"/>
+  <path d="M335,280 Q404,250 472,280" fill="none" stroke="#FFD54F" stroke-width="0.5" opacity="0.1"/>
+  <path d="M472,280 Q541,250 609,280" fill="none" stroke="#FFD54F" stroke-width="0.5" opacity="0.1"/>
+  <path d="M609,280 Q678,250 746,280" fill="none" stroke="#FFD54F" stroke-width="0.5" opacity="0.1"/>
+  <path d="M746,280 Q815,250 883,280" fill="none" stroke="#FFD54F" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Subtle light beams from roof center -->
+  <line x1="540" y1="130" x2="198" y2="258" stroke="#FFD54F" stroke-width="0.3" opacity="0.06"/>
+  <line x1="540" y1="130" x2="335" y2="258" stroke="#FFD54F" stroke-width="0.3" opacity="0.06"/>
+  <line x1="540" y1="130" x2="472" y2="258" stroke="#FFD54F" stroke-width="0.3" opacity="0.06"/>
+  <line x1="540" y1="130" x2="609" y2="258" stroke="#FFD54F" stroke-width="0.3" opacity="0.06"/>
+  <line x1="540" y1="130" x2="746" y2="258" stroke="#FFD54F" stroke-width="0.3" opacity="0.06"/>
+  <line x1="540" y1="130" x2="883" y2="258" stroke="#FFD54F" stroke-width="0.3" opacity="0.06"/>
+
+  <!-- ===================== -->
+  <!-- Bottom Inscriptions   -->
+  <!-- ===================== -->
+  <text x="540" y="920" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="16" fill="#FFD54F" opacity="0.6">هر ستون، نگهبان دیگری‌ست — هیچ‌کدام به تنهایی کافی نیست</text>
+
+  <rect x="260" y="950" width="560" height="45" rx="22" fill="rgba(38,198,218,0.08)" stroke="#26C6DA" stroke-width="0.8" opacity="0.5"/>
+  <text x="540" y="980" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#80DEEA" opacity="0.8">کارآمدی بدون آزادی، بردگی‌ست · آزادی بدون کارآمدی، هرج‌ومرج</text>
+
+  <text x="540" y="1030" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="15" fill="#ffffff" opacity="0.4">ایران برای همه‌ی ایرانیان 🇮🇷</text>
+  <text x="540" y="1060" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="12" fill="#ffffff" opacity="0.2">۳ از ۴ · طرح مهستان</text>
+</svg>

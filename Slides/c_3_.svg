@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1B5E20"/>
+      <stop offset="100%" stop-color="#0D3B0E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bg3)"/>
+  <circle cx="540" cy="540" r="400" fill="none" stroke="#A5D6A7" stroke-width="0.5" opacity="0.2"/>
+  <circle cx="540" cy="540" r="300" fill="none" stroke="#A5D6A7" stroke-width="0.5" opacity="0.15"/>
+  <rect x="0" y="0" width="1080" height="6" fill="#A5D6A7"/>
+
+  <text x="540" y="75" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="18" fill="#A5D6A7" letter-spacing="2">راه‌حل پیشنهادی</text>
+  <text x="540" y="150" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="50" font-weight="bold" fill="#ffffff">🏛️ مجلس مهستان</text>
+  <text x="540" y="210" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#C8E6C9">یک مجلس مردم‌محور منتخب · نهاد عالی حاکمیت دوران گذار</text>
+  <rect x="340" y="235" width="400" height="3" rx="1.5" fill="#A5D6A7" opacity="0.5"/>
+
+  <!-- 3 Features -->
+  <rect x="60" y="280" width="300" height="260" rx="20" fill="rgba(255,255,255,0.08)" stroke="#A5D6A7" stroke-width="1"/>
+  <text x="210" y="340" text-anchor="middle" font-size="50">🗳️</text>
+  <text x="210" y="390" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="22" font-weight="bold" fill="#ffffff">دموکراسی مستقیم</text>
+  <text x="210" y="425" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="13" fill="#C8E6C9">ارزش‌ها و خواست مردم</text>
+  <text x="210" y="450" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="13" fill="#C8E6C9">از طریق رفراندوم و مشارکت مستقیم</text>
+
+  <rect x="390" y="280" width="300" height="260" rx="20" fill="rgba(255,255,255,0.08)" stroke="#A5D6A7" stroke-width="1"/>
+  <text x="540" y="340" text-anchor="middle" font-size="50">🔬</text>
+  <text x="540" y="390" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="22" font-weight="bold" fill="#ffffff">تخصص‌گرایی</text>
+  <text x="540" y="425" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="13" fill="#C8E6C9">داده‌ها و حقایق علمی</text>
+  <text x="540" y="450" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="13" fill="#C8E6C9">از تکنوکرات‌ها و متخصصان برتر</text>
+
+  <rect x="720" y="280" width="300" height="260" rx="20" fill="rgba(255,255,255,0.08)" stroke="#A5D6A7" stroke-width="1"/>
+  <text x="870" y="340" text-anchor="middle" font-size="50">⚖️</text>
+  <text x="870" y="390" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="22" font-weight="bold" fill="#ffffff">نمایندگی نسبتی</text>
+  <text x="870" y="425" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="13" fill="#C8E6C9">هر صدایی شنیده شود</text>
+  <text x="870" y="450" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="13" fill="#C8E6C9">سیستم نسبی-فهرستی عادلانه</text>
+
+  <!-- Key Numbers -->
+  <rect x="60" y="590" width="220" height="110" rx="16" fill="rgba(165,214,167,0.15)"/>
+  <text x="170" y="645" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="44" font-weight="bold" fill="#A5D6A7">۳۰۰</text>
+  <text x="170" y="680" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#C8E6C9">نماینده‌ی منتخب</text>
+
+  <rect x="310" y="590" width="220" height="110" rx="16" fill="rgba(165,214,167,0.15)"/>
+  <text x="420" y="645" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="44" font-weight="bold" fill="#A5D6A7">۲</text>
+  <text x="420" y="680" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#C8E6C9">قانون اساسی</text>
+
+  <rect x="560" y="590" width="220" height="110" rx="16" fill="rgba(165,214,167,0.15)"/>
+  <text x="670" y="645" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="44" font-weight="bold" fill="#A5D6A7">۲۴</text>
+  <text x="670" y="680" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#C8E6C9">ماه دوره‌ی گذار</text>
+
+  <rect x="810" y="590" width="220" height="110" rx="16" fill="rgba(165,214,167,0.15)"/>
+  <text x="920" y="645" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="44" font-weight="bold" fill="#A5D6A7">۵</text>
+  <text x="920" y="680" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#C8E6C9">ستون عدالت انتقالی</text>
+
+  <!-- Quote -->
+  <rect x="80" y="750" width="920" height="100" rx="16" fill="rgba(255,255,255,0.05)" stroke="#A5D6A7" stroke-width="1"/>
+  <text x="540" y="800" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="16" fill="#E8F5E9" font-style="italic">«کیفیت طراحی نهادی دوران گذار، بیش از هر عامل دیگری،</text>
+  <text x="540" y="830" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="16" fill="#E8F5E9" font-style="italic">تعیین‌کننده‌ی سرنوشت نظام سیاسی آینده است»</text>
+
+  <text x="540" y="950" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="13" fill="#A5D6A7" opacity="0.6">۳ از ۲۵ · طرح مهستان</text>
+</svg>

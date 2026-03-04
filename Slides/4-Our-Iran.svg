@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <radialGradient id="bgR" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0%" stop-color="#1B2838"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </radialGradient>
+    <radialGradient id="glowC" cx="0.5" cy="0.45" r="0.3">
+      <stop offset="0%" stop-color="#FFD54F" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#FFD54F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgR)"/>
+  <rect width="1080" height="1080" fill="url(#glowC)"/>
+
+  <!-- Concentric rings (unity symbol) -->
+  <circle cx="540" cy="440" r="320" fill="none" stroke="#FFD54F" stroke-width="0.5" opacity="0.08"/>
+  <circle cx="540" cy="440" r="260" fill="none" stroke="#FFD54F" stroke-width="0.5" opacity="0.12"/>
+  <circle cx="540" cy="440" r="200" fill="none" stroke="#FFD54F" stroke-width="1" opacity="0.15"/>
+  <circle cx="540" cy="440" r="140" fill="none" stroke="#FFD54F" stroke-width="1" opacity="0.2"/>
+  <circle cx="540" cy="440" r="80" fill="none" stroke="#FFD54F" stroke-width="1.5" opacity="0.25"/>
+
+  <!-- Central star burst -->
+  <circle cx="540" cy="440" r="40" fill="rgba(255,213,79,0.1)"/>
+  <circle cx="540" cy="440" r="20" fill="rgba(255,213,79,0.2)"/>
+  <circle cx="540" cy="440" r="6" fill="#FFD54F"/>
+
+  <!-- Connecting dots on rings (people/nodes) -->
+  <!-- Ring 1 - 80r -->
+  <circle cx="620" cy="440" r="5" fill="#FFD54F" opacity="0.8"/>
+  <circle cx="460" cy="440" r="5" fill="#42A5F5" opacity="0.8"/>
+  <circle cx="540" cy="360" r="5" fill="#66BB6A" opacity="0.8"/>
+  <circle cx="540" cy="520" r="5" fill="#EF5350" opacity="0.8"/>
+
+  <!-- Ring 2 - 140r -->
+  <circle cx="680" cy="440" r="5" fill="#CE93D8" opacity="0.6"/>
+  <circle cx="400" cy="440" r="5" fill="#FFA726" opacity="0.6"/>
+  <circle cx="540" cy="300" r="5" fill="#FFD54F" opacity="0.6"/>
+  <circle cx="540" cy="580" r="5" fill="#42A5F5" opacity="0.6"/>
+  <circle cx="639" cy="341" r="4" fill="#66BB6A" opacity="0.5"/>
+  <circle cx="441" cy="539" r="4" fill="#EF5350" opacity="0.5"/>
+  <circle cx="639" cy="539" r="4" fill="#FFA726" opacity="0.5"/>
+  <circle cx="441" cy="341" r="4" fill="#CE93D8" opacity="0.5"/>
+
+  <!-- Ring 3 - 200r -->
+  <circle cx="740" cy="440" r="4" fill="#FFD54F" opacity="0.4"/>
+  <circle cx="340" cy="440" r="4" fill="#42A5F5" opacity="0.4"/>
+  <circle cx="540" cy="240" r="4" fill="#66BB6A" opacity="0.4"/>
+  <circle cx="540" cy="640" r="4" fill="#EF5350" opacity="0.4"/>
+  <circle cx="681" cy="299" r="3" fill="#CE93D8" opacity="0.3"/>
+  <circle cx="399" cy="581" r="3" fill="#FFA726" opacity="0.3"/>
+
+  <!-- Connection lines (subtle web) -->
+  <line x1="540" y1="440" x2="620" y2="440" stroke="#FFD54F" stroke-width="0.5" opacity="0.15"/>
+  <line x1="540" y1="440" x2="460" y2="440" stroke="#42A5F5" stroke-width="0.5" opacity="0.15"/>
+  <line x1="540" y1="440" x2="540" y2="360" stroke="#66BB6A" stroke-width="0.5" opacity="0.15"/>
+  <line x1="540" y1="440" x2="540" y2="520" stroke="#EF5350" stroke-width="0.5" opacity="0.15"/>
+  <line x1="540" y1="440" x2="639" y2="341" stroke="#FFD54F" stroke-width="0.3" opacity="0.1"/>
+  <line x1="540" y1="440" x2="441" y2="539" stroke="#FFD54F" stroke-width="0.3" opacity="0.1"/>
+  <line x1="540" y1="440" x2="639" y2="539" stroke="#FFD54F" stroke-width="0.3" opacity="0.1"/>
+  <line x1="540" y1="440" x2="441" y2="341" stroke="#FFD54F" stroke-width="0.3" opacity="0.1"/>
+
+  <!-- Iran flag stripes -->
+  <rect x="0" y="0" width="1080" height="4" fill="#2E7D32"/>
+  <rect x="0" y="1076" width="1080" height="4" fill="#C62828"/>
+
+  <!-- Header -->
+  <text x="540" y="60" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="15" fill="#CE93D8" opacity="0.5" letter-spacing="4">فراخوان</text>
+
+  <!-- Main title -->
+  <text x="540" y="130" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="60" font-weight="bold" fill="#FFD54F">ایرانِ ما</text>
+
+  <!-- Subtitle -->
+  <text x="540" y="175" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="22" fill="#B0BEC5" opacity="0.8">از هر تبار · هر زبان · هر باور · یک ملت</text>
+
+  <!-- Values ring labels - positioned around the circle -->
+  <text x="540" y="230" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#66BB6A" opacity="0.7">آزادی</text>
+  <text x="750" y="340" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#FFD54F" opacity="0.7">شایستگی</text>
+  <text x="750" y="560" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#FFA726" opacity="0.7">انصاف</text>
+  <text x="540" y="660" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#EF5350" opacity="0.7">حق‌طلبی</text>
+  <text x="330" y="560" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#CE93D8" opacity="0.7">برادری</text>
+  <text x="330" y="340" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="14" fill="#42A5F5" opacity="0.7">برابری</text>
+
+  <!-- Manifesto -->
+  <rect x="120" y="720" width="840" height="220" rx="20" fill="rgba(255,255,255,0.03)" stroke="#FFD54F" stroke-width="1" opacity="0.5"/>
+
+  <text x="540" y="765" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="20" font-weight="bold" fill="#FFD54F">ما باور داریم:</text>
+
+  <text x="540" y="805" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="16" fill="#ffffff" opacity="0.85">قدرت از آنِ مردم است، نه یک فرد</text>
+  <text x="540" y="835" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="16" fill="#ffffff" opacity="0.85">قانون بر همه حاکم است، نه یک ایده</text>
+  <text x="540" y="865" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="16" fill="#ffffff" opacity="0.85">حقوق همه برابر است، نه یک قوم</text>
+  <text x="540" y="895" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="16" fill="#ffffff" opacity="0.85">آینده مشترک ماست، نه بازگشت به گذشته</text>
+  <text x="540" y="925" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="16" fill="#FFD54F" font-weight="bold">ایران آزاد · آباد · رقابتی · شایسته‌محور</text>
+
+  <!-- CTA -->
+  <rect x="320" y="975" width="440" height="55" rx="28" fill="rgba(255,213,79,0.15)" stroke="#FFD54F" stroke-width="1.5"/>
+  <text x="540" y="1010" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="22" font-weight="bold" fill="#FFD54F">🇮🇷 ایران برای همه‌ی ایرانیان</text>
+
+  <text x="540" y="1058" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="12" fill="#ffffff" opacity="0.2">۴ از ۴ · طرح مهستان</text>
+</svg>

@@ -1,0 +1,9 @@
+\contentsline {chapter}{\numberline {1}اصول کلی و مبانی حاکمیت}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {2}شورای هماهنگی گذار (فاز صفر و خلأ اولیه)}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {3}مجلس مهستان (نهاد عالی گذار)}{5}{chapter.3}%
+\contentsline {chapter}{\numberline {4}ارکان اجرایی و قضایی انتقالی}{6}{chapter.4}%
+\contentsline {chapter}{\numberline {5}عدالت انتقالی و اصلاح بخش امنیتی}{7}{chapter.5}%
+\contentsline {chapter}{\numberline {6}نهادهای ناظر و تخصصی مستقل}{8}{chapter.6}%
+\contentsline {chapter}{\numberline {7}فرایند تقنینی (ترکیب علم و دموکراسی)}{9}{chapter.7}%
+\contentsline {chapter}{\numberline {8}اقدامات اضطراری و اولویت‌های تقنینی (۱۰۰ روز اول)}{10}{chapter.8}%
+\contentsline {chapter}{\numberline {9}پایان مأموریت و انتقال قدرت}{11}{chapter.9}%

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0D1B2A"/>
+      <stop offset="30%" stop-color="#1B1340"/>
+      <stop offset="60%" stop-color="#4A148C"/>
+      <stop offset="82%" stop-color="#BF360C"/>
+      <stop offset="100%" stop-color="#FFB300"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.5" cy="0.82" r="0.35">
+      <stop offset="0%" stop-color="#FFD54F" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFD54F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sun1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFF9C4"/>
+      <stop offset="60%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#FFB300"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1080" height="1080" fill="url(#sky1)"/>
+  <rect width="1080" height="1080" fill="url(#glow1)"/>
+
+  <!-- Stars -->
+  <circle cx="90" cy="60" r="2.5" fill="#fff" opacity="0.9"/>
+  <circle cx="250" cy="120" r="1.5" fill="#fff" opacity="0.7"/>
+  <circle cx="420" cy="45" r="2" fill="#fff" opacity="0.85"/>
+  <circle cx="620" cy="100" r="1.5" fill="#fff" opacity="0.6"/>
+  <circle cx="780" cy="55" r="2.5" fill="#fff" opacity="0.9"/>
+  <circle cx="940" cy="130" r="1.5" fill="#fff" opacity="0.7"/>
+  <circle cx="160" cy="200" r="1" fill="#fff" opacity="0.5"/>
+  <circle cx="700" cy="180" r="1.2" fill="#fff" opacity="0.45"/>
+  <circle cx="500" cy="160" r="1" fill="#fff" opacity="0.4"/>
+  <circle cx="870" cy="210" r="1" fill="#fff" opacity="0.35"/>
+
+  <!-- Sun rays -->
+  <line x1="540" y1="870" x2="540" y2="580" stroke="#FFD54F" stroke-width="2.5" opacity="0.2"/>
+  <line x1="540" y1="870" x2="300" y2="640" stroke="#FFD54F" stroke-width="2" opacity="0.18"/>
+  <line x1="540" y1="870" x2="780" y2="640" stroke="#FFD54F" stroke-width="2" opacity="0.18"/>
+  <line x1="540" y1="870" x2="150" y2="760" stroke="#FFD54F" stroke-width="1.5" opacity="0.12"/>
+  <line x1="540" y1="870" x2="930" y2="760" stroke="#FFD54F" stroke-width="1.5" opacity="0.12"/>
+  <line x1="540" y1="870" x2="420" y2="620" stroke="#FFD54F" stroke-width="1.5" opacity="0.15"/>
+  <line x1="540" y1="870" x2="660" y2="620" stroke="#FFD54F" stroke-width="1.5" opacity="0.15"/>
+  <line x1="540" y1="870" x2="60" y2="850" stroke="#FFD54F" stroke-width="1" opacity="0.08"/>
+  <line x1="540" y1="870" x2="1020" y2="850" stroke="#FFD54F" stroke-width="1" opacity="0.08"/>
+
+  <!-- Sun -->
+  <circle cx="540" cy="870" r="130" fill="#FFB300" opacity="0.25"/>
+  <circle cx="540" cy="870" r="90" fill="#FFC107" opacity="0.4"/>
+  <circle cx="540" cy="870" r="60" fill="url(#sun1)"/>
+
+  <!-- Mountains - back layer (distant, lighter) -->
+  <polygon points="0,770 100,640 220,720 340,580 460,680 540,520 640,640 750,560 870,660 980,590 1080,710 1080,1080 0,1080" fill="#1a0a30" opacity="0.55"/>
+
+  <!-- Mountains - front layer (closer, darker) -->
+  <polygon points="0,840 150,730 300,800 420,690 540,760 680,670 800,750 920,700 1080,800 1080,1080 0,1080" fill="#0D1B2A" opacity="0.8"/>
+
+  <!-- Ground -->
+  <rect x="0" y="910" width="1080" height="170" fill="#0D1B2A"/>
+
+  <!-- Iran flag thin stripes -->
+  <rect x="0" y="0" width="1080" height="4" fill="#2E7D32"/>
+  <rect x="0" y="4" width="1080" height="2" fill="#ffffff" opacity="0.4"/>
+  <rect x="0" y="6" width="1080" height="4" fill="#C62828"/>
+
+  <!-- Geometric Islamic star pattern (subtle watermark) -->
+  <g transform="translate(540,400)" opacity="0.06">
+    <rect x="-120" y="-120" width="240" height="240" fill="none" stroke="#FFD54F" stroke-width="1.5"/>
+    <rect x="-120" y="-120" width="240" height="240" fill="none" stroke="#FFD54F" stroke-width="1.5" transform="rotate(45)"/>
+    <circle cx="0" cy="0" r="170" fill="none" stroke="#FFD54F" stroke-width="1"/>
+    <circle cx="0" cy="0" r="85" fill="none" stroke="#FFD54F" stroke-width="1"/>
+  </g>
+
+  <!-- Subtitle -->
+  <text x="540" y="280" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="22" fill="#CE93D8" opacity="0.85" letter-spacing="3">چشم‌اندازی برای فردای ایران</text>
+
+  <!-- Main Title -->
+  <text x="540" y="380" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="90" font-weight="bold" fill="#FFD54F">ایرانِ آزاد</text>
+
+  <!-- Sub-title line -->
+  <text x="540" y="460" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="38" fill="#ffffff" opacity="0.9">آباد · رقابتی · شایسته‌محور</text>
+
+  <!-- Decorative divider -->
+  <line x1="340" y1="495" x2="740" y2="495" stroke="#FFD54F" stroke-width="2" opacity="0.4"/>
+  <circle cx="540" cy="495" r="5" fill="#FFD54F" opacity="0.6"/>
+  <circle cx="340" cy="495" r="3" fill="#FFD54F" opacity="0.4"/>
+  <circle cx="740" cy="495" r="3" fill="#FFD54F" opacity="0.4"/>
+
+  <!-- Vision statement -->
+  <text x="540" y="545" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#E1BEE7" opacity="0.8">کشوری ساخته بر بنیاد قانون، اراده‌ی مردم و شایستگی</text>
+
+  <!-- Values arc at bottom -->
+  <text x="540" y="955" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="20" fill="#FFD54F" opacity="0.8" letter-spacing="2">آزادی · برابری · برادری · انصاف · حق‌طلبی · شایستگی</text>
+
+  <!-- Tagline -->
+  <text x="540" y="1005" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="16" fill="#CE93D8" opacity="0.5">سپیده‌دم نزدیک است</text>
+
+  <!-- Page number -->
+  <text x="540" y="1055" text-anchor="middle" font-family="Tahoma,Arial,sans-serif" font-size="12" fill="#ffffff" opacity="0.25">۱ از ۴ · طرح مهستان</text>
+</svg>
