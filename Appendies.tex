@@ -1,0 +1,1101 @@
+% ============================================================
+%  PART II: APPENDICES
+% ============================================================
+\part{ضمائم و گسترش}
+\label{part:appendices}
+
+% ============================================================
+%  APPENDIX 0: PRE-ASSEMBLY GOVERNANCE
+% ============================================================
+\chapter{پیوست نخست: مدیریت خلأ پیش از تشکیل مجلس مهستان}
+\label{app:preassembly}
+
+\section*{چرا این پیوست؟}
+
+یکی از خطرناک‌ترین لحظات هر گذار دموکراتیک، \textbf{فاصله‌ی میان سقوط نظام پیشین
+و تشکیل اولین نهاد منتخب} است. این فاصله --- که می‌تواند ۴ تا ۸ هفته به طول
+بینجامد --- در صورت مدیریت نادرست می‌تواند به خلأ قدرت، هرج‌ومرج، یا مصادره‌ی
+فرایند توسط یک جریان خاص منجر شود.
+
+تجربه‌ی مصر (۲۰۱۱)، لیبی (۲۰۱۱) و یمن نشان می‌دهد که نبود پاسخ آماده برای این
+فاصله، هزینه‌ای گاه غیرقابل‌جبران دارد.
+
+\section{مدل پیشنهادی: شورای هماهنگی گذار}
+
+\begin{dangerbox}
+\textbf{تعریف:} یک نهاد \textbf{موقت، کوچک، و با مأموریت محدود} که تنها برای مدیریت
+این فاصله تشکیل می‌شود و پس از تشکیل مجلس مهستان، \textbf{بلافاصله منحل} می‌گردد.
+\end{dangerbox}
+
+\vspace{0.5\baselineskip}
+\begin{center}
+\resizebox{0.85\linewidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={align=right, font=\small},
+  node distance=1.2cm
+]
+\node[
+  rectangle, rounded corners=8pt,
+  draw=MahestanRed, fill=DangerBg,
+  text width=5cm, inner sep=10pt, font=\bfseries\small
+] (vacuum) {
+  \rl{خلأ پیش از مجلس مهستان}\\[4pt]
+  \rl{\footnotesize فاصله‌ی بین سقوط نظام}\\
+  \rl{\footnotesize تا تشکیل مجلس مهستان}\\
+  \rl{\footnotesize (تخمین: ۴ تا ۸ هفته)}
+};
+\node[
+  rectangle, rounded corners=8pt,
+  draw=MahestanGold, fill=WarningBg,
+  text width=6cm, inner sep=10pt, below=of vacuum
+] (council) {
+  \textbf{\rl{شورای هماهنگی گذار}}\\[6pt]
+  \rl{رهبران شناخته‌شده‌ی اپوزیسیون}\\
+  \rl{به شرط هماهنگی و اتحاد}\\[4pt]
+  \rl{\footnotesize حداکثر ۱۵--۲۰ نفر}\\
+  \rl{\footnotesize نمایندگی جریان‌های اصلی}
+};
+\node[
+  rectangle, rounded corners=6pt,
+  draw=MahestanBlue, fill=NodeBg,
+  text width=7cm, inner sep=8pt, below=of council
+] (mandate) {
+  \textbf{\rl{مأموریت محدود}}\\[4pt]
+  \rl{\textcolor{MahestanGreen}{\lr{(v)} مجاز:}}\\
+  \rl{برگزاری انتخابات مجلس مهستان}\\
+  \rl{صدور ۱۰ فرمان اضطراری}\\
+  \rl{تثبیت نظم عمومی}\\
+  \rl{اطلاع‌رسانی به جامعه‌ی بین‌المللی}\\[4pt]
+  \rl{\textcolor{MahestanRed}{\lr{(x)} غیرمجاز:}}\\
+  \rl{تصمیمات ساختاری یا قانون‌گذاری}\\
+  \rl{معاهدات بین‌المللی الزام‌آور}
+};
+\node[
+  rectangle, rounded corners=6pt,
+  draw=MahestanGreen, fill=SuccessBg,
+  text width=5cm, inner sep=8pt, below=of mandate
+] (assembly) {
+  \textbf{\rl{تشکیل مجلس مهستان}}
+};
+\node[
+  rectangle, rounded corners=6pt,
+  draw=MahestanGreen, fill=SuccessBg,
+  text width=5cm, inner sep=6pt, below=of assembly
+] (dissolve) {
+  \textbf{\rl{انحلال فوری شورای هماهنگی گذار}}
+};
+
+\draw[maharrow=MahestanRed] (vacuum) -- (council);
+\draw[maharrow=MahestanGold] (council) -- (mandate);
+\draw[maharrow=MahestanBlue] (mandate) -- (assembly);
+\draw[maharrow=MahestanGreen] (assembly) -- (dissolve);
+\end{tikzpicture}
+}%
+\end{center}
+\vspace{0.5\baselineskip}
+
+\section{اصول تشکیل شورای هماهنگی گذار}
+
+\begin{bandbox}{اصل اول --- اتحاد و هماهنگی شرط ورود است}
+شناخته‌شده‌ترین چهره‌های اپوزیسیون تنها در صورتی می‌توانند این نقش را بر عهده
+بگیرند که \textbf{با یکدیگر به توافق رسیده باشند.} جریانی که از همکاری سرباز زند
+یا ادعای انحصار داشته باشد، از ورود به این شورا محروم خواهد بود.
+\end{bandbox}
+
+\begin{bandbox}{اصل دوم --- نمایندگی متنوع}
+ترکیب شورا باید طیف وسیعی از جریان‌های سیاسی، قومی، و جغرافیایی را دربر بگیرد.
+حضور نمایندگان زنان، اقلیت‌های قومی، و جوانان الزامی است.
+\end{bandbox}
+
+\begin{bandbox}{اصل سوم --- شفافیت کامل}
+تمام جلسات و تصمیمات شورا علنی است. هیچ تصمیمی با اکثریت کمتر از \lr{$\frac{2}{3}$} اعضا اتخاذ نمی‌شود.
+\end{bandbox}
+
+\begin{bandbox}{اصل چهارم --- محدودیت مأموریت}
+شورا هیچ صلاحیتی فراتر از «اداره‌ی ضروریات» و «برگزاری انتخابات» ندارد.
+\end{bandbox}
+
+\begin{bandbox}{اصل پنجم --- نظارت بین‌المللی}
+از همان روز اول، ناظران بین‌المللی (سازمان ملل، اتحادیه اروپا، \lr{OSCE}) دعوت
+می‌شوند تا بر کار شورا نظارت کنند.
+\end{bandbox}
+
+\begin{notebox}[title={\rl{فراخوان به جریان‌های اپوزیسیون}}]
+آمادگی برای این فاز باید از هم‌اکنون آغاز شود. هر جریانی که می‌خواهد نقشی در
+مدیریت این مرحله داشته باشد، باید:
+\begin{enumerate}
+  \item نماینده‌ی مشخص برای مذاکره با سایر جریان‌ها معرفی کند
+  \item خطوط قرمز و نقاط توافق خود را صریحاً اعلام کند
+  \item پیش‌نویس توافق‌نامه‌ی همکاری را آماده کند
+  \item درباره‌ی ترکیب شورا و آیین‌نامه‌ی تصمیم‌گیری از هم‌اکنون مذاکره کند
+\end{enumerate}
+\end{notebox}
+
+% ============================================================
+%  APPENDIX A: COMPARATIVE ANALYSIS
+% ============================================================
+\chapter{ضمیمه‌ی الف: تحلیل تطبیقی گذارهای دموکراتیک}
+\label{app:comparative}
+
+\section{الگوهای موفق}
+
+\vspace{0.5\baselineskip}
+\noindent
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}p{2.5cm}p{3cm}p{4cm}p{4cm}@{}}
+\toprule
+\textbf{کشور} & \textbf{دوره} & \textbf{عوامل موفقیت} & \textbf{درس برای ایران} \\
+\midrule
+\rowcolor{SuccessBg}
+آفریقای جنوبی & ۱۹۹۴--۱۹۹۶ &
+  مذاکرات \lr{CODESA}؛ دو قانون اساسی؛ مشاوره‌ی ۲ میلیون نفری &
+  مدل دو قانون اساسی قابل اجرا در ایران است \\
+\addlinespace
+اسپانیا & ۱۹۷۵--۱۹۷۸ &
+  پیمان مونکلوا؛ اجماع نخبگان؛ تصویب قانون اساسی با ۸۸\% آرا &
+  اجماع نخبگان حتی با رقیبان ایدئولوژیک \\
+\addlinespace
+\rowcolor{SuccessBg}
+لهستان & ۱۹۸۹ &
+  مذاکرات میزگرد؛ انتخابات تدریجی؛ حفظ نهادها &
+  «اصلاح نه تخریب» جواب داد \\
+\addlinespace
+شیلی & ۱۹۸۸--۱۹۹۰ &
+  رفراندوم مسالمت‌آمیز؛ حفظ ارتش در چارچوب &
+  عبور از دیکتاتور بدون جنگ داخلی \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+\section{ضد الگوها (از چه باید پرهیز کرد)}
+
+\vspace{0.5\baselineskip}
+\noindent
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}p{2.5cm}p{3cm}p{4cm}p{4cm}@{}}
+\toprule
+\textbf{کشور} & \textbf{اشتباه کلیدی} & \textbf{پیامد} & \textbf{هشدار برای ایران} \\
+\midrule
+\rowcolor{DangerBg}
+عراق & انحلال کامل ارتش و حزب بعث &
+  فروپاشی نهادها؛ شکل‌گیری \lr{ISIS} &
+  حفظ ساختارهای غیرایدئولوژیک ضروری است \\
+\addlinespace
+\rowcolor{DangerBg}
+لیبی & نبود توافق پیش از سقوط قذافی &
+  جنگ داخلی؛ تجزیه &
+  برنامه‌ریزی پیشین برای مرحله‌ی گذار \\
+\addlinespace
+\rowcolor{DangerBg}
+مصر & ارتش جای سیاست‌مداران را گرفت &
+  بازگشت اقتدارگرایی با ظاهر دموکراتیک &
+  نظامی‌ها نباید رهبری سیاسی گذار را بگیرند \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+% ── Detailed Case Studies ──────────────────────────────────
+\section{تحلیل تفصیلی: موردهای کلیدی}
+
+\subsection{الف-۱. تونس (۲۰۱۱–۲۰۱۴): نزدیک‌ترین الگو}
+
+تونس موفق‌ترین نمونه‌ی گذار دموکراتیک در خاورمیانه و شمال آفریقا محسوب می‌شود.
+
+\needspace{4\baselineskip}
+\begin{bandbox}{شباهت‌ها با طرح پیشنهادی}
+\begin{itemize}
+  \item انتخاب \textbf{مجلس مؤسسان ملی} (\lr{Assemblée nationale constituante}) در اکتبر ۲۰۱۱ به‌عنوان نهاد محوری گذار
+  \item این مجلس هم وظیفه‌ی \textbf{قانون‌گذاری موقت} و هم \textbf{تدوین قانون اساسی} را بر عهده داشت
+  \item تشکیل \textbf{دولت تکنوکرات} تحت نظارت مجلس
+  \item استفاده از \textbf{ائتلاف سه‌جانبه} (ترویکا) برای مدیریت تکثرگرایانه
+\end{itemize}
+\end{bandbox}
+
+\begin{notebox}[title={\rl{دروس آموخته}}]
+\begin{itemize}
+  \item \textbf{بحران ۲۰۱۳}: «چهارگانه‌ی گفتگوی ملی» (شامل اتحادیه‌ی کارگری \lr{UGTT}، اتحادیه‌ی کارفرمایان، کانون وکلا و جامعه حقوق بشر) از سقوط فرایند جلوگیری کرد. \textbf{درس: نهادهای میانجی‌گر غیردولتی حیاتی‌اند.}
+  \item تأخیر در تدوین قانون اساسی (سه سال به جای یک سال): \textbf{واقع‌بینی در زمان‌بندی ضروری است.}
+  \item عدم رسیدگی کافی به اصلاحات اقتصادی و بخش امنیتی، زمینه‌ی بازگشت استبداد را فراهم کرد (۲۰۲۱).
+\end{itemize}
+
+\textbf{پیشنهاد}: مجلس مهستان باید از همان ابتدا \textbf{کمیسیون مستقل اصلاحات اقتصادی} و \textbf{کمیسیون اصلاح بخش امنیتی} را تشکیل دهد. نهادهای مستقل جامعه‌ی مدنی باید نقش رسمی مشورتی و نظارتی داشته باشند.
+\end{notebox}
+
+\subsection{الف-۲. آفریقای جنوبی (۱۹۹۰–۱۹۹۶): مدل عدالت انتقالی}
+
+\begin{bandbox}{فرایند گذار}
+\begin{itemize}
+  \item \textbf{مذاکرات کادسا} (\lr{CODESA I \& II}) --- ۱۹۹۱–۱۹۹۲
+  \item \textbf{مجمع مذاکره‌ی چندحزبی} (\lr{MPNF}) --- ۱۹۹۳
+  \item \textbf{شورای اجرایی انتقالی} (\lr{TEC}) --- نظارت بر انتخابات ۱۹۹۴
+  \item \textbf{قانون اساسی موقت} $\leftarrow$ \textbf{انتخابات} $\leftarrow$ \textbf{مجلس مؤسسان} $\leftarrow$ \textbf{قانون اساسی نهایی} (۱۹۹۶)
+  \item \textbf{کمیسیون حقیقت و آشتی} (\lr{TRC}) به ریاست دزموند توتو
+\end{itemize}
+\end{bandbox}
+
+\begin{notebox}[title={\rl{دروس آموخته}}]
+\begin{itemize}
+  \item مدل \textbf{دو مرحله‌ای قانون اساسی} (موقت + نهایی) بسیار مؤثر بود.
+  \item کمیسیون حقیقت و آشتی با \textbf{عفو مشروط} (در ازای اعتراف کامل)، مسیر میانه‌ای بین انتقام و فراموشی ایجاد کرد.
+  \item \textbf{ضمانت‌های حقوق اقلیت‌ها} در قانون اساسی موقت، ترس اقلیت سفیدپوست را کاهش داد.
+\end{itemize}
+
+\textbf{پیشنهاد}: یک \textbf{منشور اصول بنیادین غیرقابل‌نقض} باید پیش از انتخابات مجلس مهستان تدوین شود.
+\end{notebox}
+
+\subsection{الف-۳. اسپانیا (۱۹۷۵–۱۹۸۲): مدل گذار تدریجی}
+
+\begin{bandbox}{ویژگی‌های کلیدی}
+\begin{itemize}
+  \item گذار \textbf{مذاکره‌شده و تدریجی} پس از مرگ فرانکو
+  \item \textbf{پیمان‌های مونکلوآ} (۱۹۷۷) --- توافق اقتصادی‌اجتماعی بین احزاب، کارگران و کارفرمایان
+  \item تصویب قانون اساسی ۱۹۷۸ در رفراندوم با ۸۸\% آرا
+\end{itemize}
+\end{bandbox}
+
+\begin{notebox}[title={\rl{درس کلیدی}}]
+\textbf{قانون فراموشی} (\lr{Pacto del Olvido}) اگرچه در کوتاه‌مدت ثبات آورد، در بلندمدت مشکل‌ساز شد. \textbf{درس: عدالت انتقالی را نمی‌توان به‌طور کامل نادیده گرفت.} کودتای نافرجام ۱۹۸۱ نشان داد که \textbf{اصلاح بخش نظامی} از همان ابتدا حیاتی است.
+\end{notebox}
+
+\subsection{الف-۴. لهستان (۱۹۸۹): مدل میز مذاکره}
+
+\begin{bandbox}{ویژگی‌های کلیدی}
+\begin{itemize}
+  \item \textbf{مذاکرات میزگرد} بین جنبش همبستگی (\lr{Solidarność}) و حکومت کمونیست
+  \item \textbf{انتخابات نیمه‌آزاد} ژوئن ۱۹۸۹ --- دولت ائتلافی به رهبری مازوویتسکی
+  \item سیاست \textbf{«خط ضخیم»} مازوویتسکی: جدایی از گذشته بدون انتقام‌جویی
+\end{itemize}
+
+\textbf{پیشنهاد}: برنامه‌ی اقتصادی دوران گذار باید \textbf{تدریجی و با شبکه‌ی ایمنی اجتماعی} همراه باشد. شوک‌درمانی اقتصادی می‌تواند مشروعیت دموکراسی نوپا را تضعیف کند.
+\end{bandbox}
+
+\subsection{الف-۵. شیلی (۱۹۸۸–۱۹۹۰): مدل رفراندوم و ائتلاف}
+
+\begin{bandbox}{ویژگی‌ها و درس کلیدی}
+\begin{itemize}
+  \item \textbf{رفراندوم ۱۹۸۸}: «نه» به پینوشه --- \textbf{ائتلاف احزاب} (\lr{Concertación}) --- ۱۷ حزب با ایدئولوژی‌های متفاوت
+  \item توانایی جریان‌های مختلف برای کنار گذاشتن اختلافات و تشکیل ائتلاف فراگیر، عامل اصلی موفقیت بود
+  \item فرایند عدالت انتقالی \textbf{تدریجی} بود --- کمیسیون حقیقت (گزارش رتیگ ۱۹۹۱) ابتدا فقط حقیقت‌یابی کرد
+\end{itemize}
+\end{bandbox}
+
+\subsection{الف-۶. نمونه‌های ناموفق --- درس‌های منفی}
+
+\vspace{0.5\baselineskip}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}p{2.5cm}p{4cm}p{6.5cm}@{}}
+\toprule
+\textbf{کشور} & \textbf{مشکل اصلی} & \textbf{درس برای ایران} \\
+\midrule
+\rowcolor{DangerBg}
+لیبی (۲۰۱۱--) &
+  عدم وجود نهاد محوری مورد توافق؛ شوراهای رقیب؛ مداخله‌ی خارجی &
+  نهاد واحد گذار با مشروعیت انتخاباتی ضروری است \\
+\addlinespace
+\rowcolor{DangerBg}
+مصر (۲۰۱۱--۲۰۱۳) &
+  ارتش به‌عنوان «ضامن» گذار؛ تقابل اسلامگرا-سکولار &
+  استقلال نهاد گذار از نیروهای نظامی و جلوگیری از دوقطبی‌سازی \\
+\addlinespace
+\rowcolor{DangerBg}
+عراق (۲۰۰۳--) &
+  اشغال خارجی؛ سیستم محاصصه‌ای؛ انحلال ارتش &
+  عدم انحلال کامل نهادهای اداری‌نظامی؛ اصلاح به‌جای تخریب \\
+\addlinespace
+\rowcolor{DangerBg}
+یمن (۲۰۱۱--) &
+  گذار مصنوعی و ظاهری؛ مذاکره‌ی بدون مشارکت عمومی &
+  مشارکت واقعی مردم از طریق انتخابات \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+\subsection{الف-۷. جدول مقایسه‌ای جامع}
+
+\vspace{0.5\baselineskip}
+\begin{landscape}
+\thispagestyle{plain}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}p{2.8cm}p{3.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{3.5cm}@{}}
+\toprule
+\textbf{معیار} & \textbf{تونس} & \textbf{آفریقای جنوبی} & \textbf{اسپانیا} & \textbf{لهستان} & \textbf{طرح مهستان} \\
+\midrule
+\rowcolor{MahestanLightBlue!30}
+\textbf{نهاد محوری} &
+  مجلس مؤسسان منتخب &
+  شورای اجرایی انتقالی + مجلس مؤسسان &
+  پارلمان منتخب &
+  دولت ائتلافی &
+  مجلس مهستان منتخب \\
+\addlinespace
+\textbf{مدت گذار} & ۳ سال & ۶ سال & ۳ سال & ۲ سال & حداکثر ۲ سال \\
+\addlinespace
+\rowcolor{MahestanLightBlue!30}
+\textbf{سیستم انتخاباتی} &
+  فهرستی نسبی &
+  فهرستی نسبی &
+  منطقه‌ای نسبی &
+  مختلط &
+  فهرستی ترکیبی \\
+\addlinespace
+\textbf{عدالت انتقالی} &
+  \lr{IVD} (۲۰۱۴) &
+  \lr{TRC} (۱۹۹۵) &
+  قانون فراموشی (ناقص) &
+  «خط ضخیم» &
+  پیش‌بینی‌شده در طرح \\
+\addlinespace
+\rowcolor{MahestanLightBlue!30}
+\textbf{نقش نظامیان} &
+  حامی گذار &
+  مذاکره‌شده &
+  چالش‌برانگیز &
+  زیر نظر دولت &
+  تحت نظارت مجلس \\
+\addlinespace
+\textbf{قانون اساسی} &
+  مجلس مؤسسان + رفراندوم &
+  دو مرحله‌ای &
+  رفراندوم &
+  اجماع + رفراندوم &
+  تدوین + رفراندوم \\
+\addlinespace
+\rowcolor{SuccessBg}
+\textbf{نتیجه} &
+  بازگشت استبداد (۲۰۲۱) &
+  دموکراسی پایدار &
+  دموکراسی پایدار &
+  دموکراسی (با چالش) &
+  هدف: دموکراسی پایدار \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{landscape}
+
+% ============================================================
+%  APPENDIX B: TIMELINE TABLE
+% ============================================================
+\chapter{ضمیمه‌ی ب: جدول زمانی پیشنهادی اجرا}
+\label{app:timeline}
+
+\begin{notebox}
+تمام زمان‌بندی‌های زیر \textbf{نسبی} هستند. «هفته‌ی ۱» یعنی هفته‌ی اول پس از
+\textbf{روز صفر} (آغاز رسمی گذار). مجلس مهستان می‌تواند این جدول را بر اساس
+شرایط واقعی تعدیل کند.
+\end{notebox}
+
+\subsection*{فاز صفر: آمادگی (پیش از گذار)}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}lp{10cm}@{}}
+\toprule
+\textbf{زمان} & \textbf{اقدام} \\
+\midrule
+\rowcolor{MahestanLightGray}
+مستمر & شکل‌گیری خودجوش جریان‌ها و فهرست‌ها \\
+مستمر & تبلیغات، معرفی کاندیداها و ائتلاف‌سازی \\
+\rowcolor{MahestanLightGray}
+مستمر & طراحی زیرساخت‌های فنی رأی‌گیری (بستر دیجیتال) \\
+مستمر & تدوین منشور اصول بنیادین غیرقابل‌نقض \\
+\rowcolor{MahestanLightGray}
+مستمر & تهیه‌ی فهرست قوانین فوری (تعلیق/الغای فوری) \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+\subsection*{فاز یک: تثبیت اولیه (هفته‌ی ۱--۴)}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}lp{10cm}@{}}
+\toprule
+\textbf{هفته} & \textbf{اقدام} \\
+\midrule
+\rowcolor{WarningBg}
+۱ & اعلام رسمی آغاز دوره‌ی گذار؛ انتصاب مدیران موقت فرمانداری‌ها \\
+۱--۲ & آغاز ثبت‌نام رسمی نامزدها و فهرست‌ها \\
+\rowcolor{WarningBg}
+۱--۲ & تشکیل ستاد مرکزی انتخابات با مشارکت ناظران بین‌المللی \\
+۲--۳ & دوره‌ی تبلیغات رسمی \\
+\rowcolor{WarningBg}
+۳--۴ & دعوت از ناظران بین‌المللی (سازمان ملل، اتحادیه اروپا) \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+\subsection*{فاز دو: انتخابات و تشکیل مجلس (هفته‌ی ۴--۸)}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}lp{10cm}@{}}
+\toprule
+\textbf{هفته} & \textbf{اقدام} \\
+\midrule
+\rowcolor{DangerBg}
+۴--۵ & برگزاری انتخابات مجلس مهستان \\
+۵--۶ & شمارش آرا و تأیید نتایج \\
+\rowcolor{DangerBg}
+۶ & تشکیل رسمی مجلس مهستان \\
+۶--۷ & انتخاب هیأت رئیسه و تعیین کمیسیون‌ها \\
+\rowcolor{DangerBg}
+۷--۸ & تشکیل کابینه‌ی اجرایی و رأی اعتماد \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+% ============================================================
+%  APPENDIX C: RISK ANALYSIS
+% ============================================================
+\chapter{ضمیمه‌ی ج: تحلیل ریسک و راهکارهای مقابله}
+\label{app:risk}
+
+\section{جدول ریسک‌های اصلی}
+
+\vspace{0.5\baselineskip}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}p{0.4cm}p{3cm}p{1.8cm}p{1.5cm}p{6cm}@{}}
+\toprule
+\textbf{\#} & \textbf{ریسک} & \textbf{احتمال} & \textbf{شدت} & \textbf{راهکار پیشنهادی} \\
+\midrule
+\rowcolor{DangerBg}
+۱ & خلأ امنیتی پس از سقوط نظام &
+  بالا & بسیار بالا &
+  تشکیل فوری شورای امنیتی موقت؛ حفظ ساختار پایه‌ای نیروهای انتظامی با رهبری جدید؛ کمک‌خواهی از نهادهای بین‌المللی \\
+\addlinespace
+\rowcolor{DangerBg}
+۲ & تجزیه‌طلبی و درگیری‌های قومی &
+  متوسط & بسیار بالا &
+  تضمین حقوق قومی و زبانی در منشور؛ کرسی‌های تضمینی در مجلس؛ فدرالیسم به‌عنوان گزینه \\
+\addlinespace
+\rowcolor{DangerBg}
+۳ & بازگشت اقتدارگرایی (کودتا) &
+  متوسط & بسیار بالا &
+  نظارت مجلس بر نیروهای نظامی؛ پراکنده‌سازی قدرت نظامی؛ حمایت بین‌المللی \\
+\addlinespace
+\rowcolor{WarningBg}
+۴ & بحران اقتصادی حاد &
+  بالا & بالا &
+  تشکیل فوری تیم مدیریت بحران؛ درخواست کمک از \lr{IMF}/\lr{WB}؛ تثبیت ارزی \\
+\addlinespace
+\rowcolor{WarningBg}
+۵ & مداخله‌ی خارجی &
+  متوسط & بالا &
+  دیپلماسی فعال و متنوع؛ عدم وابستگی به یک قدرت؛ شفافیت در روابط خارجی \\
+\addlinespace
+\rowcolor{WarningBg}
+۶ & اختلاف درون مجلس و بن‌بست سیاسی &
+  بالا & متوسط &
+  سازوکارهای حل اختلاف (میانجی‌گری)؛ نقش ناظران جامعه‌ی مدنی \\
+\addlinespace
+\rowcolor{NodeBg}
+۷ & مصادره‌ی جنبش توسط یک جریان &
+  متوسط & بالا &
+  سیستم فهرستی نسبی؛ آستانه‌ی بالای تغییر قوانین (۷۵\%)؛ منشور غیرقابل‌نقض \\
+\addlinespace
+\rowcolor{NodeBg}
+۸ & خشونت انتقام‌جویانه &
+  بالا & بالا &
+  قانون عدالت انتقالی فوری؛ محاکم قانونی؛ کمپین‌های ملی آشتی \\
+\addlinespace
+\rowcolor{NodeBg}
+۹ & تقلب در انتخابات &
+  پایین (با نظارت) & متوسط &
+  ناظران بین‌المللی؛ بستر دیجیتال شفاف \\
+\addlinespace
+\rowcolor{NodeBg}
+۱۰ & فساد در نهادهای جدید &
+  متوسط & متوسط &
+  واحد بازرسی مستقل؛ شفافیت مالی نمایندگان؛ نظارت رسانه‌ای \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+\section{سناریوهای بحرانی و پاسخ‌ها}
+
+\begin{bandbox}{سناریو ۱ --- عدم تشکیل ائتلاف در مجلس}
+\begin{itemize}
+  \item فعال‌سازی سازوکار بند ۱۱ (رأی‌گیری فردی برای هر پست)
+  \item میانجی‌گری توسط شخصیت‌های مورد احترام ملی
+  \item در صورت عدم موفقیت: رأی‌گیری مجدد ظرف ۶۰ روز
+\end{itemize}
+\end{bandbox}
+
+\begin{bandbox}{سناریو ۲ --- تلاش نظامی برای کودتا}
+\begin{itemize}
+  \item فراخوان فوری مقاومت مدنی از سوی مجلس
+  \item فعال‌سازی پروتکل‌های بین‌المللی (بیانیه‌ی محکومیت، تحریم)
+  \item جانشین فرمانده به‌عنوان فرمانده‌ی قانونی شناخته می‌شود
+\end{itemize}
+\end{bandbox}
+
+\begin{bandbox}{سناریو ۳ --- بحران اقتصادی حاد}
+\begin{itemize}
+  \item تشکیل کمیته‌ی بحران اقتصادی با اختیارات ویژه
+  \item درخواست کمک اضطراری از صندوق بین‌المللی پول و بانک جهانی
+  \item اجرای برنامه‌ی یارانه‌ی مستقیم به شهروندان
+\end{itemize}
+\end{bandbox}
+
+% ============================================================
+%  APPENDIX D: ECONOMIC GOVERNANCE
+% ============================================================
+\chapter{ضمیمه‌ی د: حکمرانی اقتصادی در دوران گذار}
+\label{app:economic}
+
+\section{اصول راهنما}
+
+\begin{notebox}
+تجربه‌ی جهانی نشان می‌دهد که \textbf{بحران اقتصادی} بزرگ‌ترین تهدید برای دموکراسی‌های نوپاست. مردمی که گرسنه‌اند و کاری ندارند، به دموکراسی بی‌اعتماد می‌شوند. دموکراسی‌های موفق (اسپانیا، لهستان، کره‌ی جنوبی) همه از ثبات اقتصادی نسبی در دوران گذار برخوردار بودند.
+\end{notebox}
+
+\begin{enumerate}
+  \item \textbf{تثبیت اقتصادی} مقدم بر اصلاحات ساختاری است
+  \item \textbf{شبکه‌ی ایمنی اجتماعی} باید از همان روز اول فعال باشد
+  \item \textbf{شفافیت} در دارایی‌های عمومی و بودجه‌ی دولت ضروری است
+  \item \textbf{استفاده از تخصص} اقتصاددانان ایرانی داخل و خارج
+\end{enumerate}
+
+\section{اقدامات فوری (۱۰۰ روز اول)}
+
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}lp{10.5cm}@{}}
+\toprule
+\textbf{اولویت} & \textbf{اقدام} \\
+\midrule
+\rowcolor{DangerBg}
+فوری &
+  حسابرسی فوری بانک مرکزی و صندوق توسعه‌ی ملی \\
+\rowcolor{DangerBg}
+فوری &
+  تثبیت نرخ ارز و جلوگیری از فرار سرمایه \\
+\rowcolor{DangerBg}
+فوری &
+  ادامه‌ی پرداخت حقوق کارمندان دولت و بازنشستگان \\
+\rowcolor{WarningBg}
+بالا &
+  مذاکره با نهادهای مالی بین‌المللی برای بسته‌ی حمایتی \\
+\rowcolor{WarningBg}
+بالا &
+  آزادسازی دارایی‌های مسدودشده (پس از رفع تحریم‌ها) \\
+\rowcolor{NodeBg}
+متوسط &
+  رسیدگی به دارایی‌های غیرقانونی بنیادها و نهادهای حکومتی \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+\section{اقدامات میان‌مدت (۱۰۰ روز تا ۲ سال)}
+
+\begin{itemize}
+  \item بازسازی شفاف بودجه‌ی ملی
+  \item اصلاح تدریجی نظام یارانه‌ای با حمایت هدفمند از اقشار آسیب‌پذیر
+  \item بازنگری قراردادهای نفتی و بین‌المللی
+  \item آغاز خصوصی‌سازی شفاف نهادهای اقتصادی وابسته به حکومت (سپاه، بنیادها)
+  \item ایجاد فضای جذب سرمایه‌گذاری خارجی
+\end{itemize}
+
+\begin{summarybox}
+\textbf{درس از لهستان}: برنامه‌ی اقتصادی دوران گذار باید \textbf{تدریجی و با شبکه‌ی ایمنی اجتماعی} همراه باشد. شوک‌درمانی اقتصادی (الگوی لهستان) می‌تواند در بلندمدت مؤثر باشد اما در کوتاه‌مدت \textbf{درد اجتماعی شدیدی} ایجاد می‌کند که ممکن است مشروعیت دموکراسی نوپا را تضعیف کند. ایران باید مسیری میانه را بپیماید: اصلاحات اقتصادی ضروری، اما با سرعتی که مردم بتوانند تحمل کنند.
+\end{summarybox}
+
+% ============================================================
+%  APPENDIX: TRANSITIONAL JUSTICE (condensed)
+% ============================================================
+\chapter{ضمیمه‌ی ه: چارچوب عدالت انتقالی}
+\label{app:tj}
+
+\section{مقایسه‌ی مدل‌های عدالت انتقالی}
+
+\vspace{0.5\baselineskip}
+\noindent
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}p{3cm}lp{4.5cm}p{4.5cm}@{}}
+\toprule
+\textbf{کشور} & \textbf{مدل} & \textbf{نقاط قوت} & \textbf{نتیجه} \\
+\midrule
+\rowcolor{SuccessBg}
+آفریقای جنوبی & \lr{TRC} (1995--2002) &
+  عفو مشروط + حقیقت‌یابی &
+  آشتی نسبی؛ دموکراسی پایدار \\
+\addlinespace
+شیلی & تدریجی &
+  \lr{CONADEP}؛ غرامت؛ موزه‌ی حافظه &
+  الگوی موفق محاکمات \\
+\addlinespace
+\rowcolor{SuccessBg}
+آرژانتین & عدالت‌محور &
+  \lr{CONADEP}؛ محاکمات گسترده &
+  الگوی محاکمات جنایی \\
+\addlinespace
+\rowcolor{DangerBg}
+اسپانیا & پیمان فراموشی &
+  ثبات سیاسی کوتاه‌مدت &
+  زخم‌های باز تاریخی \\
+\addlinespace
+\rowcolor{DangerBg}
+تونس & \lr{IVD} (2014--2018) &
+  کمیسیون حقیقت‌یابی &
+  بازگشت استبداد (2021) \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+\section{درس کلیدی}
+
+\begin{summarybox}
+\begin{center}
+\begin{tikzpicture}
+\node[
+  rectangle, rounded corners=6pt,
+  draw=MahestanRed, fill=DangerBg,
+  text width=4.5cm, inner sep=8pt, font=\small
+] (justice_only) {\textbf{\rl{فقط عدالت کیفری}}\\[4pt]\rl{خشم و انتقام باقی ماند}\\[2pt]\rl{\tiny (رواندا)}};
+
+\node[
+  rectangle, rounded corners=6pt,
+  draw=MahestanGold, fill=WarningBg,
+  text width=4.5cm, inner sep=8pt, font=\small,
+  right=0.8cm of justice_only
+] (peace_only) {\textbf{\rl{فقط آشتی}}\\[4pt]\rl{بی‌عدالتی نهادینه شد}\\[2pt]\rl{\tiny (اسپانیا)}};
+
+\node[
+  rectangle, rounded corners=6pt,
+  draw=MahestanGreen, fill=SuccessBg,
+  text width=4.5cm, inner sep=8pt, font=\small,
+  right=0.8cm of peace_only
+] (both) {\textbf{\rl{عدالت + آشتی}}\\[4pt]\rl{صلح پایدار}\\[2pt]\rl{\tiny (آفریقای جنوبی، شیلی)}};
+
+\node[below=0.3cm of justice_only, font=\Large\color{MahestanRed}] {\lr{(x)}};
+\node[below=0.3cm of peace_only, font=\Large\color{MahestanGold}] {\lr{(x)}};
+\node[below=0.3cm of both, font=\Large\color{MahestanGreen}] {\lr{(v)}};
+\end{tikzpicture}
+\end{center}
+\end{summarybox}
+
+\section{مدل چهارستونی سازمان ملل}
+
+\begin{notebox}[title={\rl{مدل کلاسیک \lr{UN Guidance Note 2010}}}]
+مدل چهارستونی، استاندارد مرجع سازمان ملل برای عدالت انتقالی است و در اکثر گذارهای دموکراتیک دهه‌های اخیر به‌کار رفته است.
+\end{notebox}
+
+\vspace{0.5\baselineskip}
+\begin{center}
+\resizebox{0.92\linewidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={align=right, font=\small},
+  node distance=0.8cm and 1.5cm
+]
+\node[
+  rectangle, rounded corners=8pt,
+  draw=MahestanPurple, fill=MahestanLightPurple,
+  text width=5cm, inner sep=10pt, font=\bfseries\small
+] (center) {
+  \rl{عدالت انتقالی ایران}\\[4pt]
+  \rl{\footnotesize \lr{Transitional Justice}}\\[2pt]
+  \rl{\footnotesize مدل نهایی را مجلس مهستان}\\
+  \rl{\footnotesize با مشارکت مردم تعیین می‌کند}
+};
+
+\node[mahbox=MahestanBlue, above right=1.5cm and 1.8cm of center] (p1) {
+  \textbf{\rl{ستون ۱: حقیقت‌یابی}}\\[3pt]
+  \rl{کمیسیون حقیقت و آشتی}\\
+  \rl{مستندسازی جنایات}\\
+  \rl{ثبت شهادت قربانیان}\\
+  \rl{گزارش نهایی جامع}\\[2pt]
+  \rl{\scriptsize الگو: \lr{TRC} آفریقای جنوبی}
+};
+
+\node[mahbox=MahestanRed, below right=1.5cm and 1.8cm of center] (p2) {
+  \textbf{\rl{ستون ۲: عدالت کیفری}}\\[3pt]
+  \rl{محاکمات عادلانه و علنی}\\
+  \rl{تفکیک سطوح مسئولیت}\\
+  \rl{دادرسی عادلانه}\\
+  \rl{عفو مشروط (سطوح پایین)}\\[2pt]
+  \rl{\scriptsize الگو: دادگاه‌های بین‌المللی}
+};
+
+\node[mahbox=MahestanOrange, above left=1.5cm and 1.8cm of center] (p3) {
+  \textbf{\rl{ستون ۳: جبران خسارت}}\\[3pt]
+  \rl{غرامت مالی فردی}\\
+  \rl{بازگرداندن اموال مصادره‌شده}\\
+  \rl{خدمات درمانی‌روانشناختی}\\
+  \rl{اعاده‌ی حیثیت}\\[2pt]
+  \rl{\scriptsize الگو: برنامه‌ی غرامت شیلی}
+};
+
+\node[mahbox=MahestanGreen, below left=1.5cm and 1.8cm of center] (p4) {
+  \textbf{\rl{ستون ۴: تضمین عدم تکرار}}\\[3pt]
+  \rl{اصلاح بخش امنیتی (\lr{SSR})}\\
+  \rl{اصلاح دستگاه قضایی}\\
+  \rl{غربال‌گری (\lr{Vetting})}\\
+  \rl{آموزش حقوق بشر}\\[2pt]
+  \rl{\scriptsize الگو: قانون اساسی آلمان}
+};
+
+\draw[maharrow=MahestanBlue] (center) -- (p1);
+\draw[maharrow=MahestanRed] (center) -- (p2);
+\draw[maharrow=MahestanOrange] (center) -- (p3);
+\draw[maharrow=MahestanGreen] (center) -- (p4);
+\draw[-Stealth, thick, MahestanBlue!50, dashed] (p1) -- (p2)
+  node[midway, right]{\tiny\rl{مبنای محاکمات}};
+\draw[-Stealth, thick, MahestanOrange!50, dashed] (p1) -- (p3)
+  node[midway, above]{\tiny\rl{شناسایی قربانیان}};
+\draw[-Stealth, thick, MahestanGreen!50, dashed] (p2) -- (p4)
+  node[midway, right]{\tiny\rl{بازدارندگی}};
+\end{tikzpicture}
+}%
+\end{center}
+\vspace{0.5\baselineskip}
+
+\section{مدل پنج‌ستونی جامع}
+
+\begin{notebox}[title={\rl{مدل جامع (\lr{Holistic Model}) --- با ستون مستقل آشتی ملی}}]
+مدل پنج‌ستونی با افزودن \textbf{«آشتی ملی و حافظه‌ی تاریخی»} به‌عنوان ستون مستقل، بر بُعد اجتماعی‌فرهنگی تأکید بیشتری دارد. این مدل در کلمبیا، سیرالئون و تیمور شرقی اجرا شده است.
+\end{notebox}
+
+\vspace{0.5\baselineskip}
+\begin{center}
+\resizebox{0.95\linewidth}{!}{%
+\begin{tikzpicture}[
+  every node/.style={align=right, font=\small},
+  node distance=0.7cm and 1.5cm
+]
+\node[
+  rectangle, rounded corners=8pt,
+  draw=MahestanPurple, fill=MahestanLightPurple,
+  text width=4.5cm, inner sep=10pt, font=\bfseries\small
+] (center5) {
+  \rl{عدالت انتقالی ایران}\\[3pt]
+  \rl{\footnotesize مدل پنج‌ستونی جامع}\\
+  \rl{\footnotesize (\lr{Holistic Model})}
+};
+
+\node[mahbox=MahestanBlue, above=2cm of center5, xshift=-4.5cm] (q1) {
+  \textbf{\rl{ستون ۱: حقیقت‌یابی}}\\[2pt]
+  \rl{کمیسیون حقیقت‌یابی ملی}\\
+  \rl{مستندسازی نظام‌مند}\\
+  \rl{جمع‌آوری شهادت‌ها}\\
+  \rl{جلسات علنی}
+};
+\node[mahbox=MahestanRed, above=2cm of center5, xshift=-1.5cm] (q2) {
+  \textbf{\rl{ستون ۲: عدالت کیفری}}\\[2pt]
+  \rl{دادگاه‌های داخلی ویژه}\\
+  \rl{همکاری با \lr{ICC}}\\
+  \rl{تفکیک سطوح مسئولیت}\\
+  \rl{امکان عفو مشروط}
+};
+\node[mahbox=MahestanOrange, above=2cm of center5, xshift=1.5cm] (q3) {
+  \textbf{\rl{ستون ۳: جبران خسارت}}\\[2pt]
+  \rl{الف) فردی: غرامت مالی}\\
+  \rl{ب) جمعی: بازسازی مناطق}\\
+  \rl{ج) نمادین: عذرخواهی}
+};
+\node[mahbox=MahestanGold, above=2cm of center5, xshift=4.5cm] (q4) {
+  \textbf{\rl{ستون ۴: آشتی ملی}}\\[2pt]
+  \rl{گفتگوهای ملی}\\
+  \rl{موزه‌ها و یادبودها}\\
+  \rl{اصلاح تاریخ‌نگاری}\\
+  \rl{روز ملی یادبود}
+};
+\node[mahbox=MahestanGreen, below=2cm of center5] (q5) {
+  \textbf{\rl{ستون ۵: تضمین عدم تکرار}}\\[2pt]
+  \rl{اصلاح بخش امنیتی}\\
+  \rl{غربال‌گری مقامات}\\
+  \rl{آموزش حقوق بشر}\\
+  \rl{قانون اساسی دموکراتیک}
+};
+
+\draw[maharrow=MahestanBlue] (center5) -- (q1);
+\draw[maharrow=MahestanRed] (center5) -- (q2);
+\draw[maharrow=MahestanOrange] (center5) -- (q3);
+\draw[maharrow=MahestanGold] (center5) -- (q4);
+\draw[maharrow=MahestanGreen] (center5) -- (q5);
+\draw[-Stealth, thick, MahestanBlue!40, dashed] (q1) -- (q2);
+\draw[-Stealth, thick, MahestanGold!60, dashed] (q4) -- (q5)
+  node[midway, left]{\tiny\rl{فرهنگ‌سازی}};
+\end{tikzpicture}
+}%
+\end{center}
+\vspace{0.5\baselineskip}
+
+\section{مقایسه‌ی دو مدل و کدام برای ایران}
+
+\vspace{0.5\baselineskip}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}p{3.5cm}p{5.5cm}p{5.5cm}@{}}
+\toprule
+\textbf{معیار} & \textbf{مدل ۴ ستونی (سازمان ملل)} & \textbf{مدل ۵ ستونی (جامع)} \\
+\midrule
+\rowcolor{MahestanLightBlue!30}
+\textbf{مرجع اصلی} &
+  \lr{UN Guidance Note} (2010) &
+  \lr{ICTJ}؛ \lr{Pablo de Greiff}؛ تجربه‌ی کلمبیا \\
+\addlinespace
+\textbf{تعداد ستون‌ها} & ۴ & ۵ \\
+\addlinespace
+\rowcolor{MahestanLightBlue!30}
+\textbf{جایگاه آشتی} & زیرمجموعه‌ی سایر ستون‌ها & \textbf{ستون مستقل و برابر} \\
+\addlinespace
+\textbf{تأکید اصلی} & حقوقی‌قانونی & حقوقی‌قانونی + \textbf{اجتماعی‌فرهنگی} \\
+\addlinespace
+\rowcolor{MahestanLightBlue!30}
+\textbf{مناسب برای} & جوامع با شکاف‌های کمتر & جوامع با شکاف‌های عمیق \\
+\addlinespace
+\textbf{مزیت اصلی} & سادگی؛ اجماع بین‌المللی & جامعیت؛ توجه به بُعد فرهنگی \\
+\addlinespace
+\rowcolor{MahestanLightBlue!30}
+\textbf{ضعف اصلی} & ممکن است بُعد اجتماعی نادیده گرفته شود & پیچیدگی بیشتر؛ منابع و زمان بیشتر \\
+\addlinespace
+\rowcolor{NodeBg}
+\textbf{پیشنهاد برای ایران} &
+  \multicolumn{2}{p{11cm}}{\rl{مجلس مهستان بر اساس مشاوره‌ی عمومی و بررسی تجربه‌ی جهانی، یکی از این دو مدل (یا ترکیبی از آن‌ها) را انتخاب خواهد کرد.}} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+% ============================================================
+%  APPENDIX: ELECTORAL SYSTEM
+% ============================================================
+\chapter{ضمیمه‌ی ک: سیستم انتخاباتی مجلس مهستان و آینده}
+\label{app:electoral}
+
+\section{مقایسه‌ی سیستم‌های انتخاباتی}
+
+\vspace{0.5\baselineskip}
+\noindent
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}p{2.5cm}p{2.8cm}p{2.8cm}p{2.8cm}p{2.8cm}@{}}
+\toprule
+\textbf{معیار} & \textbf{\lr{FPTP} (اکثریتی)} & \textbf{\lr{List PR} (نسبی)} & \textbf{\lr{MMP} (مختلط)} & \textbf{\lr{STV}} \\
+\midrule
+نمایندگی منطقه‌ای & بالا & پایین & متوسط-بالا & متوسط \\
+\addlinespace
+\rowcolor{MahestanLightGray}
+نمایندگی اقلیت‌ها & ضعیف & بالا & بالا & بالا \\
+\addlinespace
+ثبات حکومتی & بالا & متوسط & متوسط-بالا & متوسط \\
+\addlinespace
+\rowcolor{MahestanLightGray}
+پیچیدگی اجرایی & ساده & ساده & متوسط & پیچیده \\
+\addlinespace
+مناسب برای گذار & متوسط & \textbf{بالا} & متوسط & پایین \\
+\addlinespace
+\rowcolor{NodeBg}
+\textbf{پیشنهاد} & --- & \textbf{مجلس مهستان} & \textbf{قانون اساسی نهایی} & --- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+\section{توجیه سیستم \lr{MMP} برای آینده}
+
+\begin{infobox}[title={\rl{چرا \lr{MMP} برای قانون اساسی نهایی؟}}]
+سیستم \lr{MMP} (مختلط موازی‌جبرانی --- الگوی آلمانی با دو رأی) مزایای هر دو رویکرد
+را ترکیب می‌کند:
+\begin{itemize}
+  \item \textbf{رأی اول}: رأی به نماینده‌ی حوزه‌ی محلی --- نمایندگی منطقه‌ای قوی
+  \item \textbf{رأی دوم}: رأی به فهرست حزبی ملی --- جبران‌کننده و تضمین نسبیت
+\end{itemize}
+این سیستم در \textbf{آلمان} (بیش از ۷۰ سال)، \textbf{نیوزیلند}، \textbf{اسکاتلند}
+و چندین کشور دیگر با موفقیت اجرا شده است.
+
+\textbf{چرا نه برای مجلس مهستان؟} اجرای \lr{MMP} نیازمند زیرساخت فنی بیشتر
+(ثبت احزاب، محاسبه‌ی جبرانی) و آموزش رأی‌دهندگان است که در هفته‌های اول گذار
+فراهم نیست. سیستم فهرستی نسبی‌تر برای اولین انتخابات پس از گذار مناسب‌تر است.
+\end{infobox}
+
+% ============================================================
+%  APPENDIX: INTERNATIONAL ENGAGEMENT
+% ============================================================
+\chapter{ضمیمه‌ی و: راهبرد تعامل بین‌المللی}
+\label{app:international}
+
+\section{نقش‌های بین‌المللی مورد نیاز}
+
+\vspace{0.5\baselineskip}
+\noindent
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}p{4cm}p{9cm}@{}}
+\toprule
+\textbf{نهاد} & \textbf{نقش مورد انتظار} \\
+\midrule
+\rowcolor{MahestanLightGray}
+سازمان ملل (\lr{UNDP}، \lr{OHCHR}) &
+  نظارت بر انتخابات؛ کمک فنی در تدوین قانون اساسی؛ حمایت از عدالت انتقالی \\
+اتحادیه اروپا &
+  حمایت اقتصادی؛ مشاوره‌ی حقوقی و قضایی؛ مذاکرات تجاری \\
+\rowcolor{MahestanLightGray}
+صندوق بین‌المللی پول و بانک جهانی &
+  بسته‌ی حمایتی اقتصادی اضطراری؛ مشاوره‌ی اصلاحات مالی و بانکی \\
+کمیسیون ونیز &
+  مشاوره‌ی تخصصی حقوقی در تدوین قانون اساسی \\
+\rowcolor{MahestanLightGray}
+\lr{IDEA} بین‌المللی &
+  کمک فنی در طراحی سیستم انتخاباتی \\
+دیوان بین‌المللی کیفری (\lr{ICC}) &
+  همکاری در رسیدگی به جنایات علیه بشریت \\
+\rowcolor{MahestanLightGray}
+دیاسپورای ایرانی &
+  مشارکت در رأی‌گیری؛ سرمایه‌گذاری؛ انتقال دانش و تخصص \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+% ============================================================
+%  APPENDIX: DUAL CONSTITUTION
+% ============================================================
+\chapter{ضمیمه‌ی ز: مدل دو قانون اساسی}
+\label{app:dualconst}
+
+\section{مقایسه‌ی قانون اساسی موقت و نهایی}
+
+\vspace{0.5\baselineskip}
+\noindent
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}p{3.5cm}p{5cm}p{5cm}@{}}
+\toprule
+\textbf{معیار} & \textbf{قانون اساسی موقت} & \textbf{قانون اساسی نهایی} \\
+\midrule
+مرجع تدوین & کمیسیون ویژه‌ی مجلس مهستان & مجلس/کمیسیون مؤسسان منتخب \\
+\addlinespace
+\rowcolor{MahestanLightGray}
+زمان تدوین & ۶ تا ۸ هفته & ۶ تا ۱۲ ماه \\
+\addlinespace
+عمق و تفصیل & حداقلی و عملیاتی (۴۰--۶۰ اصل) & جامع (۱۵۰--۲۵۰ اصل) \\
+\addlinespace
+\rowcolor{MahestanLightGray}
+تصویب در مجلس & \lr{$\frac{2}{3}$} آرای مجلس مهستان & \lr{$\frac{2}{3}$} آرای مجلس مؤسسان \\
+\addlinespace
+رفراندوم & بله (۵۰\%+۱) & بله (۵۰\%+۱) \\
+\addlinespace
+\rowcolor{MahestanLightGray}
+قابلیت تغییر & با رأی \lr{$\frac{2}{3}$} مجلس مهستان & فقط با رفراندوم یا فوق‌اکثریت \lr{$\frac{4}{5}$} \\
+\addlinespace
+مدت اعتبار & تا تصویب قانون اساسی نهایی (حداکثر ۲ سال) & دائمی \\
+\addlinespace
+\rowcolor{SuccessBg}
+\textbf{اهمیت} & جلوگیری از خلأ حقوقی + سرعت & ساختار نهایی و دائمی کشور \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+% ============================================================
+%  APPENDIX: GLOSSARY
+% ============================================================
+\chapter{ضمیمه‌ی ر: واژه‌نامه‌ی تخصصی}
+\label{app:glossary}
+
+\begin{adjustbox}{max width=\linewidth}
+\begin{longtable}{@{}p{4cm}p{10cm}@{}}
+\toprule
+\textbf{واژه} & \textbf{توضیح} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\rl{گذار دموکراتیک} &
+  فرایند تبدیل از یک نظام اقتدارگرا به یک نظام دموکراتیک. شامل مرحله‌ی
+  «آزادسازی» (کاهش سرکوب)، «گذار» (تثبیت نهادهای دموکراتیک)
+  و «تحکیم» (عمیق شدن دموکراسی). \\
+\addlinespace
+\rowcolor{MahestanLightGray}
+\rl{مجلس مهستان} &
+  نهاد اصلی گذار: مجلس منتخب مردم که مسئولیت هدایت فرایند گذار
+  (قانون‌گذاری، نهادسازی، قانون اساسی) را بر عهده دارد. \\
+\addlinespace
+\rl{قانون اساسی‌گرایی دو مرحله‌ای} &
+  مدلی که در آن یک قانون اساسی موقت (سریع، چارچوب‌ساز)
+  و سپس یک قانون اساسی نهایی (جامع، دائمی) تدوین می‌شود.
+  نمونه: آفریقای جنوبی (۱۹۹۴ و ۱۹۹۶). \\
+\addlinespace
+\rowcolor{MahestanLightGray}
+\lr{SSR} &
+  \lr{Security Sector Reform}: اصلاح بخش امنیتی؛ فرایند تحول
+  نیروهای نظامی، پلیس و دستگاه اطلاعاتی از ابزار سرکوب به
+  خدمتگزار قانون و مردم. \\
+\addlinespace
+\rl{عدالت انتقالی} &
+  مجموعه‌ای از فرایندها و سازوکارها که جوامع پس از دوره‌ای از
+  سرکوب یا درگیری برای پردازش گذشته به کار می‌برند؛ شامل
+  حقیقت‌یابی، عدالت کیفری، جبران خسارت، و اصلاح نهادی. \\
+\addlinespace
+\rowcolor{MahestanLightGray}
+\lr{MMP} &
+  \lr{Mixed Member Proportional}: سیستم مختلط موازی‌جبرانی؛
+  هر رأی‌دهنده دو رأی دارد: یکی برای نماینده‌ی محلی و یکی برای
+  فهرست حزبی؛ کرسی‌های جبرانی تضمین می‌کنند نتایج نهایی نسبی باشد. \\
+\addlinespace
+\rl{بازوی تکنوکراتیک} &
+  مرکز تحقیقات مجلس مهستان؛ مسئول تهیه‌ی گزارش‌های فنی‌تخصصی
+  و ارائه‌ی گزینه‌های سیاستی بدون توصیه‌ی یکجانبه. \\
+\addlinespace
+\rowcolor{MahestanLightGray}
+\rl{بازوی دموکراتیک} &
+  واحد ارتباط مردمی و دموکراسی مستقیم؛ مسئول نظرسنجی، جلسات
+  عمومی، مدیریت طومارها و پیوند مستقیم با مردم. \\
+\addlinespace
+\lr{Vetting} (غربال‌گری) &
+  فرایند بررسی سوابق مقامات و نیروهای امنیتی برای شناسایی و
+  کنار گذاشتن عاملان نقض حقوق بشر از مناصب عمومی. \\
+\addlinespace
+\rowcolor{MahestanLightGray}
+\rl{دیاسپورا} &
+  جمعیت ایرانیان مقیم خارج از کشور. این سند بر حق مشارکت
+  دیاسپورا در انتخابات گذار تأکید دارد. \\
+\end{longtable}
+\end{adjustbox}
+
+% ============================================================
+%  CLOSING
+% ============================================================
+\chapter*{خاتمه}
+\addcontentsline{toc}{chapter}{خاتمه}
+
+\begin{summarybox}
+این سند نه یک فرمان است و نه یک پیمان‌نامه‌ی قطعی. \textbf{دعوتی است برای گفتگو.}
+
+طرح مجلس مهستان یک پیشنهاد است --- چارچوبی که با مشارکت همگانی بهتر خواهد شد.
+هر نقد سازنده، هر پیشنهاد بهتر، و هر تجربه‌ی تاریخی که از قلم افتاده، این سند را
+غنی‌تر می‌کند.
+
+\begin{center}
+{\large\color{MahestanDarkBlue}\bfseries
+تصمیم نهایی درباره‌ی آینده‌ی ایران\\[0.3em]
+فقط و فقط با مردم ایران است.}
+\end{center}
+\end{summarybox}
+
+\vspace{2cm}
+\begin{flushright}
+\small\color{MahestanGray}
+آخرین ویرایش: اسفند ۱۴۰۴ \lr{/} فوریه‌ی ۲۰۲۶ --- نسخه‌ی ۲.۰
+
+\vspace{0.3cm}
+جزئیات بیشتر در کتاب پیشنهادی «شکوفایی: ایران از بحران تا بالندگی» ارائه خواهد شد.
+\end{flushright}
+
+% ── Bibliography placeholder ────────────────────────────────
+\backmatter
+\chapter*{منابع و مراجع}
+\addcontentsline{toc}{chapter}{منابع و مراجع}
+
+\begin{itemize}[itemsep=4pt]
+  \item \rl{لیپهارت، آرند.}
+    \textit{\rl{الگوهای دموکراسی: اشکال حکومت و عملکرد در ۳۶ کشور.}}
+    \lr{Lijphart, Arend (1999). \textit{Patterns of Democracy.} Yale University Press.}
+
+  \item \rl{هانتینگتون، ساموئل.}
+    \lr{Huntington, Samuel (1991). \textit{The Third Wave: Democratization in the Late 20th Century.}}
+
+  \item \rl{اودانل و اشمیتر.}
+    \lr{O'Donnell \& Schmitter (1986). \textit{Transitions from Authoritarian Rule.} Johns Hopkins.}
+
+  \item \rl{پرز‌دیاز، ویکتور.}
+    \lr{Pérez-Díaz, Víctor (1993). \textit{The Return of Civil Society: The Emergence of Democratic Spain.}}
+
+  \item \rl{کمیسیون ونیز.}
+    \lr{Venice Commission (2014). \textit{Rule of Law Checklist.} Council of Europe.}
+
+  \item \rl{کمیسیون حقیقت و آشتی آفریقای جنوبی.}
+    \lr{Truth and Reconciliation Commission of South Africa (2003). \textit{Final Report, Volumes 1--7.}}
+
+  \item \rl{ایدئا بین‌المللی.}
+    \lr{International IDEA (2021). \textit{Electoral System Design: The New International IDEA Handbook.}}
+
+  \item \rl{سازمان ملل.}
+    \lr{United Nations (2010). \textit{Guidance Note of the Secretary-General: United Nations Approach to Transitional Justice.}}
+\end{itemize}

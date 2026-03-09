@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.1) (preloaded format=xelatex 2026.3.3)  5 MAR 2026 21:10
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.1) (preloaded format=xelatex 2026.3.3)  7 MAR 2026 01:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1301,203 +1301,1336 @@ apping=tex-text;"
 
 
 Package fontspec Info: 
-(fontspec)             Vazirmatn scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "Vazirmatn/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Vazirmatn scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             Vazirmatn scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             Vazirmatn/B scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             Vazirmatn/B scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             Vazirmatn/BI scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             Vazirmatn/BI scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'Vazirmatn(0)' created for font 'Vazirmatn'
-(fontspec)             with options
-(fontspec)             [RawFeature={script=arab},Ligatures=PersianTeX,Scale=1.1
-].
+(fontspec)             Font family 'XBNiloofar(0)' created for font 'XB
+(fontspec)             Niloofar' with options
+(fontspec)             [RawFeature={script=arab},Ligatures=PersianTeX].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1.1]"Vazirmatn/OT:script=latn;language=dflt;script
-=arab;mapping=persian-tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1.1]"Vazirmatn/OT:script=latn;language=dflt;script
-=arab;+smcp;mapping=persian-tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.1]"Vazirmatn/B/OT:script=latn;language=dflt;scri
-pt=arab;mapping=persian-tex-text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1.1]"Vazirmatn/B/OT:script=latn;language=dflt;scri
-pt=arab;+smcp;mapping=persian-tex-text;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->s*[1.1]"Vazirmatn/BI/OT:script=latn;language=dflt;scr
-ipt=arab;mapping=persian-tex-text;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1.1]"Vazirmatn/BI/OT:script=latn;language=dflt;scr
-ipt=arab;+smcp;mapping=persian-tex-text;"
-
-LaTeX Font Info:    Font shape `TU/Vazirmatn(0)/m/n' will be
-(Font)              scaled to size 13.20007pt on input line 65.
-
-Package fontspec Info: 
-(fontspec)             TeX Gyre Pagella scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             TeX Gyre Pagella scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             TeX Gyre Pagella scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             TeX Gyre Pagella/B scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             TeX Gyre Pagella/B scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             TeX Gyre Pagella/I scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             TeX Gyre Pagella/I scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             TeX Gyre Pagella/BI scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             TeX Gyre Pagella/BI scale = 1.1.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'TeXGyrePagella(0)' created for font 'TeX
-(fontspec)             Gyre Pagella' with options [Ligatures=TeX,Scale=1.1].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[1.1]"TeX Gyre
-(fontspec)             Pagella/OT:script=latn;language=dflt;mapping=tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->s*[1.1]"TeX
-(fontspec)             Gyre
-(fontspec)             Pagella/OT:script=latn;language=dflt;+smcp;mapping=tex-t
-ext;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[1.1]"TeX Gyre
-(fontspec)             Pagella/B/OT:script=latn;language=dflt;mapping=tex-text;
-"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->s*[1.1]"TeX Gyre
-(fontspec)             Pagella/B/OT:script=latn;language=dflt;+smcp;mapping=tex
--text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->s*[1.1]"TeX Gyre
-(fontspec)             Pagella/I/OT:script=latn;language=dflt;mapping=tex-text;
-"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1.1]"TeX Gyre
-(fontspec)             Pagella/I/OT:script=latn;language=dflt;+smcp;mapping=tex
--text;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->s*[1.1]"TeX
-(fontspec)             Gyre
-(fontspec)             Pagella/BI/OT:script=latn;language=dflt;mapping=tex-text
-;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->s*[1.1]"TeX Gyre
-(fontspec)             Pagella/BI/OT:script=latn;language=dflt;+smcp;mapping=te
-x-text;"
-
-LaTeX Info: Redefining \latinfont on input line 66.
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "Vazirmatn/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'Vazirmatn(1)' created for font 'Vazirmatn'
-(fontspec)             with options [Ligatures=PersianTeX].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"Vazirmatn/OT:script=latn;language=dflt;mapping=persi
-an-tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"Vazirmatn/OT:script=latn;language=dflt;+smcp;mapping
-=persian-tex-text;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"Vazirmatn/B/OT:script=latn;language=dflt;mapping=per
-sian-tex-text;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"Vazirmatn/B/OT:script=latn;language=dflt;+smcp;mappi
-ng=persian-tex-text;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"Vazirmatn/BI/OT:script=latn;language=dflt;mapping=pe
-rsian-tex-text;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"Vazirmatn/BI/OT:script=latn;language=dflt;+smcp;mapp
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"XB
+(fontspec)             Niloofar/OT:script=latn;language=dflt;script=arab;mappin
+g=persian-tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"XB
+(fontspec)             Niloofar/B/OT:script=latn;language=dflt;script=arab;mapp
 ing=persian-tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"XB
+(fontspec)             Niloofar/I/OT:script=latn;language=dflt;script=arab;mapp
+ing=persian-tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"XB
+(fontspec)             Niloofar/BI/OT:script=latn;language=dflt;script=arab;map
+ping=persian-tex-text;"
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 115.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 115.
+
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 115.
+ (mahestan.aux)
+\openout1 = `mahestan.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 333.
+LaTeX Font Info:    ... okay on input line 333.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(85.35826pt, 449.55365pt, 62.59596pt)
+* v-part:(T,H,B)=(79.6678pt, 685.71124pt, 79.6678pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=449.55365pt
+* \textheight=685.71124pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=-9.67403pt
+* \topmargin=-27.47598pt
+* \headheight=24.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=88.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+Package hyperref Info: Link coloring ON on input line 333.
+(mahestan.out) (mahestan.out)
+\@outlinefile=\write4
+\openout4 = `mahestan.out'.
+
+File: cover.png Graphic file (type bmp)
+<cover.png>
+ [1
 
 
-Package fontspec Info: 
-(fontspec)             Could not resolve font "Vazirmatn/I" (it probably
-(fontspec)             doesn't exist).
+]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
 
 
-Package fontspec Info: 
-(fontspec)             Font family 'Vazirmatn(2)' created for font 'Vazirmatn'
-(fontspec)             with options [].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"Vazirmatn/OT:script=latn;language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"Vazirmatn/OT:script=latn;language=dflt;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"Vazirmatn/B/OT:script=latn;language=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"Vazirmatn/B/OT:script=latn;language=dflt;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"Vazirmatn/BI/OT:script=latn;language=dflt;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"Vazirmatn/BI/OT:script=latn;language=dflt;+smcp;"
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
 
-Package unicode-persianmath Info: DefiningthedefaultPersianmathdigitsfontas'Vaz
-irmatn' on input line 67.
-\sympersianoperators=\mathgroup6
-\sympersianoperatorsbf=\mathgroup7
-\sympersianoperatorsit=\mathgroup8
-Package hyperref Info: Option
+
+Package fancyhdr Warning: \headheight is too small (24.0pt): 
+(fancyhdr)                Make it at least 24.01996pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.01996pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.01996pt}.
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[2
+
+]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[1
+
+]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[2
+
+]
+فصل 1.
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[1
+
+]
+فصل 2.
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 470
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 470
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 474
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 474
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 486
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 486
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 487
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 487
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 488
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 488
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 503
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 503
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 504
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 504
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 505
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 505
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 506
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 506
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[2
+
+]
+\endL or \endR problem (2 missing, 0 extra) detected at line 520
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 520
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 521
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 521
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 522
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 522
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 523
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 523
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[3]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[4]
+فصل 3.
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[5
+
+]
+\endL or \endR problem (2 missing, 0 extra) detected at line 613
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 613
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 615
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 615
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 617
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 617
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 662
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 662
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 663
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 663
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 664
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 664
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 665
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 665
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 666
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 666
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 667
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 667
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 668
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 668
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 669
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 669
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 670
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 670
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 671
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 671
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 672
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 672
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[6]
+\endL or \endR problem (2 missing, 0 extra) detected at line 702
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 702
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 703
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 703
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 704
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 704
+[][][] [][][][][]
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 704
+.
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 704
+.
+
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \vbox (badness 4024) has occurred while \output is active []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[7]
+\endL or \endR problem (2 missing, 0 extra) detected at line 730
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 730
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 731
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 731
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 732
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 732
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 733
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 733
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[8]
+\endL or \endR problem (2 missing, 0 extra) detected at line 749
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 749
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 750
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 750
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 751
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 751
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 752
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 752
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 753
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 753
+[][][] [][][][][]
+ []
+
+
+Underfull \hbox (badness 5637) in paragraph at lines 782--783
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 حقیقت‌یابی[][]
+ []
+
+
+Underfull \hbox (badness 5726) in paragraph at lines 785--785
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 و آشتی ملی[][]
+ []
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 786--786
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 مستندسازی جنایات[][]
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 787--788
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 ثبت شهادت قربانیان[][]
+ []
+
+
+Underfull \hbox (badness 3826) in paragraph at lines 789--790
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 عدالت کیفری[][]
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 791--791
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 محاکمات عادلانه[][]
+ []
+
+
+Underfull \hbox (badness 3449) in paragraph at lines 795--796
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 جبران خسارت[][]
+ []
+
+
+Underfull \hbox (badness 5417) in paragraph at lines 797--797
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 غرامت مالی[][]
+ []
+
+
+Underfull \hbox (badness 3815) in paragraph at lines 798--798
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 اعاده‌ی حیثیت[][]
+ []
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 799--800
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 خدمات روانشناختی[][]
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 801--802
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 آشتی ملی و حافظه[][]
+ []
+
+
+Underfull \hbox (badness 1194) in paragraph at lines 803--803
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 گفتگوهای ملی آشتی[][]
+ []
+
+
+Underfull \hbox (badness 2237) in paragraph at lines 804--804
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 موزه‌ها و یادبودها[][]
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 805--806
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 اصلاح تاریخ‌نگاری[][]
+ []
+
+
+Underfull \hbox (badness 1803) in paragraph at lines 807--808
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 تضمین عدم تکرار[][]
+ []
+
+
+Underfull \hbox (badness 4416) in paragraph at lines 809--809
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 اصلاح نهادی[][]
+ []
+
+
+Underfull \hbox (badness 1931) in paragraph at lines 810--810
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 آموزش حقوق بشر[][]
+ []
+
+
+Overfull \hbox (86.72403pt too wide) in paragraph at lines 770--821
+ [][][][][] 
+ []
+
+
+Underfull \vbox (badness 4229) has occurred while \output is active []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[9]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[10]
+\endL or \endR problem (2 missing, 0 extra) detected at line 859
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 859
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 860
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 860
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 861
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 861
+[][][] [][][][][]
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 946--946
+ [][][]\TU/XBNiloofar(0)/b/n/10 بازوی دموکراتیک[][]
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 946--946
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 رفراندوم‌های رسمی[][]
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 946--946
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 سامانه‌ی ثبت پیشنهاد[][]
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 946--946
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 خطوط تلفنی رایگان[][]
+ []
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 946--946
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 صندوق‌های فیزیکی[][]
+ []
+
+
+Underfull \hbox (badness 1389) in paragraph at lines 946--946
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 ۳. جلسات عمومی[][]
+ []
+
+
+Underfull \hbox (badness 2181) in paragraph at lines 946--946
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 پنل‌های شهروندی[][]
+ []
+
+
+Underfull \hbox (badness 1796) in paragraph at lines 946--946
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 گفتگوهای محله‌ای[][]
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 946--946
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 انتشار عمومی نتایج[][]
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 946--946
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 پخش زنده‌ی جلسات[][]
+ []
+
+
+Underfull \vbox (badness 4899) has occurred while \output is active []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[11]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[12]
+Underfull \hbox (badness 6741) in paragraph at lines 1085--1085
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 لایحه: از سوی کابینه[][]
+ []
+
+
+Underfull \hbox (badness 4108) in paragraph at lines 1085--1085
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 درخواست مردمی: طومار[][]
+ []
+
+
+Underfull \hbox (badness 7925) in paragraph at lines 1085--1085
+ [][]\TU/XBNiloofar(0)/m/n/10.95 با آستانه‌ی تعیین‌شده[][]
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 1085--1085
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 + درخواست همزمان از دو بازو:[][]
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 1085--1085
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 بازوی تکنوکراتیک[][]
+ []
+
+
+Underfull \hbox (badness 2103) in paragraph at lines 1085--1085
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 حداقل ۳ گزینه‌ی سیاستی[][]
+ []
+
+
+Underfull \hbox (badness 6725) in paragraph at lines 1085--1085
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 بازوی دموکراتیک[][]
+ []
+
+
+Underfull \hbox (badness 3428) in paragraph at lines 1085--1085
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 «مردم چه می‌خواهند؟»[][]
+ []
+
+
+Underfull \hbox (badness 3780) in paragraph at lines 1085--1085
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 ۴. ارائه به صحن مجلس[][]
+ []
+
+
+Underfull \hbox (badness 1983) in paragraph at lines 1085--1085
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 بحث آزاد + پیشنهاد اصلاحیه[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1085
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 ۵. رأی‌گیری[][]
+ []
+
+
+Underfull \hbox (badness 3019) in paragraph at lines 1085--1085
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 قوانین عادی: اکثریت ساده[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1085
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 قوانین مهم: []$[]$[] آرا[][]
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 1085--1085
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 رفراندوم عمومی[][]
+ []
+
+
+Underfull \hbox (badness 4673) in paragraph at lines 1085--1085
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 نظارت بین‌المللی[][]
+ []
+
+
+Underfull \hbox (badness 3428) in paragraph at lines 1085--1085
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 نیاز به ۵۰%+۱ آرا[][]
+ []
+
+
+Underfull \hbox (badness 1484) in paragraph at lines 1085--1085
+ [][][]\TU/XBNiloofar(0)/m/n/10.95 حداقل مشارکت: ۴۰%[][]
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 1085--1085
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 ابلاغ به کابینه برای اجرا[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1085
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 اجرا و نظارت[][]
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[13]
+\endL or \endR problem (2 missing, 0 extra) detected at line 1096
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1096
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 1097
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1097
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 1098
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1098
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 1099
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1099
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 1100
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1100
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 1101
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1101
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 1102
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1102
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 1128
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1128
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 1129
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1129
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[14]
+\endL or \endR problem (2 missing, 0 extra) detected at line 1147
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1147
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 1148
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1148
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[15]
+فصل 4.
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[16
+
+]
+Underfull \hbox (badness 8075) in paragraph at lines 1398--1398
+[][][][][][]\TU/XBNiloofar(0)/b/n/10.95 کمیسیون حقیقت‌یابی و[][]
+ []
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1398 ^^I^^I}
+              %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1398 ^^I^^I}
+              %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1398 ^^I^^I}
+              %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1398 ^^I^^I}
+              %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1398 ^^I^^I}
+              %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1398 ^^I^^I}
+              %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1398 ^^I^^I}
+              %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1398 ^^I^^I}
+              %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[17
+
+]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[18]
+فصل 5.
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 1437
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1437
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 1438
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1438
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (2 missing, 0 extra) detected at line 1439
+ [][][]\TU/XBNiloofar(0)/m/n/12 •[][]
+ []
+
+
+\endL or \endR problem (0 missing, 2 extra) detected at line 1439
+[][][] [][][][][]
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[19
+
+
+]
+فصل 6.
+
+Underfull \hbox (badness 6412) in paragraph at lines 1555--1555
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 فاز ۰[][]
+ []
+
+
+Underfull \hbox (badness 2547) in paragraph at lines 1555--1555
+ [][][]\TU/XBNiloofar(0)/m/n/10 پیش از گذار[][]
+ []
+
+
+Underfull \hbox (badness 2088) in paragraph at lines 1555--1555
+ [][][]\TU/XBNiloofar(0)/m/n/6 آمادگی و ائتلاف‌سازی[][]
+ []
+
+
+Underfull \hbox (badness 6412) in paragraph at lines 1555--1555
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 فاز ۱[][]
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 1555--1555
+ [][][]\TU/XBNiloofar(0)/m/n/6 انتخابات + تشکیل مجلس[][]
+ []
+
+
+Underfull \hbox (badness 6412) in paragraph at lines 1555--1555
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 فاز ۲[][]
+ []
+
+
+Underfull \hbox (badness 2600) in paragraph at lines 1555--1555
+ [][][]\TU/XBNiloofar(0)/m/n/10 هفته‌ی ۱–‏۸[][]
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 1555--1555
+ [][][]\TU/XBNiloofar(0)/m/n/6 فرمان‌ها و اقدامات فوری[][]
+ []
+
+
+Underfull \hbox (badness 6412) in paragraph at lines 1555--1555
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 فاز ۳[][]
+ []
+
+
+Underfull \hbox (badness 2005) in paragraph at lines 1555--1555
+ [][][]\TU/XBNiloofar(0)/m/n/10 هفته‌ی ۱–‏۱۰[][]
+ []
+
+
+Underfull \hbox (badness 2600) in paragraph at lines 1555--1555
+ [][][]\TU/XBNiloofar(0)/m/n/6 قانون اساسی موقت[][]
+ []
+
+
+Underfull \hbox (badness 6412) in paragraph at lines 1555--1555
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 فاز ۴[][]
+ []
+
+
+Underfull \hbox (badness 3568) in paragraph at lines 1555--1555
+ [][][]\TU/XBNiloofar(0)/m/n/10 ماه ۳–‏۱۸[][]
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 1555--1555
+ [][][]\TU/XBNiloofar(0)/m/n/6 نهادسازی و اصلاحات[][]
+ []
+
+
+Underfull \hbox (badness 6412) in paragraph at lines 1555--1555
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 فاز ۵[][]
+ []
+
+
+Underfull \hbox (badness 3568) in paragraph at lines 1555--1555
+ [][][]\TU/XBNiloofar(0)/m/n/10 ماه ۶–‏۱۸[][]
+ []
+
+
+Underfull \hbox (badness 2680) in paragraph at lines 1555--1555
+ [][][]\TU/XBNiloofar(0)/m/n/6 قانون اساسی نهایی[][]
+ []
+
+
+Underfull \hbox (badness 6412) in paragraph at lines 1555--1555
+ [][][][]\TU/XBNiloofar(0)/b/n/10.95 فاز ۶[][]
+ []
+
+
+Underfull \hbox (badness 2828) in paragraph at lines 1555--1555
+ [][][]\TU/XBNiloofar(0)/m/n/10 ماه ۱۸–‏۲۴[][]
+ []
+
+
+Underfull \hbox (badness 4981) in paragraph at lines 1555--1555
+ [][][]\TU/XBNiloofar(0)/m/n/6 انتقال قدرت[][]
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[20
+
+]
+فصل 7.
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+[21
+
+] (mahestan.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `mahestan.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `mahestan.out':
+(rerunfilecheck)             Before: 6D2260B075C59D40DF30CFB400316671;115
+(rerunfilecheck)             After:  D766660ECED8B5244E211A81551A615C;8639.
+ ) 
+Here is how much of TeX's memory you used:
+ 44004 strings out of 402982
+ 1065504 string characters out of 5452821
+ 1681444 words of memory out of 5000000
+ 71992 multiletter control sequences out of 15000+600000
+ 634626 words of font info for 109 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 98i,14n,108p,1212b,1463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on mahestan.pdf (25 pages).
