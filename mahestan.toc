@@ -1,2 +1,0 @@
-\contentsline {chapter}{پیش‌گفتار}{آ}{chapter*.1}%
-\contentsline {chapter}{\numberline {\par \let \let \let \let \let \let \hsize \linewidth \parshape \z@ \let \relax آ\let \relax آ\let \let \let \@ne \let \@ne \let \@ne \@ne \let \@ne \@ne \let \let \normalfont \persianfont \let \reset@font \normalfont \persianfont \fontsize 1214.5pt\selectfont \let \@ne \let \@ne {chapter}}مقدمه}{1}{chapter.1}%

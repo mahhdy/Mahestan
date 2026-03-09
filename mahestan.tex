@@ -1,420 +1,3 @@
-% ============================================================
-%  بیانیه‌ی چارچوب نهادی گذار ایران — طرح مجلس مهستان
-%  نسخه‌ی ۲.۰ — اسفند ۱۴۰۴ / فوریه‌ی ۲۰۲۶
-%  XePersian Book — Compiled with XeLaTeX
-% ============================================================
-
-\documentclass[12pt,a4paper,twoside,openany]{book}
-
-% ── Core packages (before xepersian) ────────────────────────
-\usepackage{geometry}
-\geometry{
-  a4paper,
-  top=2.8cm, bottom=2.8cm,
-  inner=3cm, outer=2.2cm,
-  headheight=15pt
-}
-
-\usepackage{graphicx}
-\usepackage{xcolor}
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{enumitem}
-\usepackage{fancyhdr}
-\usepackage{titlesec}
-\usepackage{tcolorbox}
-\usepackage{tikz}
-\usepackage{pgfplots}
-\usepackage{adjustbox}
-\usepackage{needspace}
-\usepackage{hyperref}
-\usepackage{tabularx}
-\usepackage{colortbl}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{pdflscape}
-\usepackage{calc}
-\usepackage{etoolbox}
-\usepackage{ifthen}
-
-% ── TikZ libraries ──────────────────────────────────────────
-\usetikzlibrary{
-  shapes.geometric,
-  shapes.symbols,
-  arrows.meta,
-  positioning,
-  fit,
-  backgrounds,
-  decorations.pathreplacing,
-  calc
-}
-
-% ── tcolorbox libraries ────────────────────────────────────
-\tcbuselibrary{skins, breakable, theorems}
-
-% ── pgfplots ───────────────────────────────────────────────
-\pgfplotsset{compat=1.18}
-
-% ── XePersian (MUST be last) ────────────────────────────────
-\usepackage{xepersian}
-\settextfont{XB Niloofar}
-% ── Fonts (SAFE FALLBACKS) ─────────────────────────────────
-%\settextfont{XB Niloofar}           % Most reliable Persian font
-%\setlatintextfont{Times New Roman}  % Always exists
-%\setdigitfont{XB Niloofar}
-
-% ── Color Palette ───────────────────────────────────────────
-\definecolor{MahestanBlue}{RGB}{21,101,192}
-\definecolor{MahestanDarkBlue}{RGB}{13,71,161}
-\definecolor{MahestanLightBlue}{RGB}{187,222,251}
-\definecolor{MahestanGold}{RGB}{249,168,37}
-\definecolor{MahestanDarkGold}{RGB}{245,127,23}
-\definecolor{MahestanGreen}{RGB}{46,125,50}
-\definecolor{MahestanLightGreen}{RGB}{200,230,201}
-\definecolor{MahestanRed}{RGB}{198,40,40}
-\definecolor{MahestanPurple}{RGB}{106,27,154}
-\definecolor{MahestanLightPurple}{RGB}{243,229,245}
-\definecolor{MahestanCream}{RGB}{255,253,245}
-\definecolor{MahestanGray}{RGB}{97,97,97}
-\definecolor{MahestanLightGray}{RGB}{245,245,245}
-\definecolor{MahestanOrange}{RGB}{230,81,0}
-\definecolor{MahestanLightOrange}{RGB}{255,224,178}
-\definecolor{NodeBg}{RGB}{240,247,255}
-\definecolor{WarningBg}{RGB}{255,243,224}
-\definecolor{SuccessBg}{RGB}{232,245,233}
-\definecolor{DangerBg}{RGB}{252,228,236}
-\definecolor{MainBlue}{HTML}{2C5364}
-\definecolor{LightBlue}{HTML}{E3F2FD}
-\definecolor{SoftGreen}{HTML}{E8F5E9}
-\definecolor{SoftRed}{HTML}{FFEBEE}
-\definecolor{SoftGold}{HTML}{FFF9C4}
-\definecolor{SoftPurple}{HTML}{F3E5F5}
-\definecolor{SlateGray}{HTML}{455A64}
-\definecolor{AccentGold}{HTML}{FFD700}
-
-% ── Hyperref setup (AFTER colors are defined) ───────────────
-\pdfstringdefDisableCommands{%
-  \def\lr#1{#1}%
-  \def\rl#1{#1}%
-}
-\hypersetup{
-  colorlinks=true,
-  linkcolor=MahestanBlue,
-  citecolor=MahestanGreen,
-  urlcolor=MahestanGold,
-  pdfencoding=unicode,
-  pdftitle={بیانیه‌ی چارچوب نهادی گذار ایران — طرح مجلس مهستان},
-  pdfauthor={طرح مهستان},
-  pdfsubject={گذار دموکراتیک ایران},
-  pdfkeywords={مجلس مهستان، گذار، دموکراسی، ایران},
-  pdfcreator={XeLaTeX + XePersian},
-  bookmarksnumbered=true,
-  bookmarksopen=true
-}
-
-% ── Chapter / Section Formatting ────────────────────────────
-% FIXED: Removed \MakeUppercase for Persian compatibility
-\titleformat{\chapter}[display]
-  {\normalfont\bfseries\huge\color{MahestanDarkBlue}}
-  {\raggedleft\small\color{MahestanGray}
-   \chaptername\hspace{.5em}
-   \colorbox{MahestanDarkBlue}{\textcolor{white}{\thechapter}}}
-  {1ex}
-  {\titlerule\raggedleft}
-  [\titlerule]
-
-\titleformat{\section}
-  {\needspace{6\baselineskip}\nopagebreak[4]%
-   \normalfont\bfseries\large\color{MahestanDarkBlue}}
-  {\thesection}{1em}{}
-  [{\color{MahestanBlue}\hrule height 0.8pt}]
-
-\titleformat{\subsection}
-  {\needspace{4\baselineskip}\nopagebreak[4]%
-   \normalfont\bfseries\normalsize\color{MahestanBlue}}
-  {\thesubsection}{1em}{}
-
-\titleformat{\subsubsection}
-  {\needspace{3\baselineskip}\nopagebreak[4]%
-   \normalfont\bfseries\small\color{MahestanGray}}
-  {\thesubsubsection}{1em}{}
-
-\titlespacing*{\chapter}{0pt}{0pt}{20pt}
-\titlespacing*{\section}{0pt}{14pt}{6pt}
-\titlespacing*{\subsection}{0pt}{10pt}{4pt}
-\titlespacing*{\subsubsection}{0pt}{8pt}{3pt}
-
-% ── Headers & Footers ───────────────────────────────────────
-\setlength{\headheight}{24pt}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[LE]{\small\color{MahestanGray}\leftmark}
-\fancyhead[RO]{\small\color{MahestanGray}\rightmark}
-\fancyhead[RE,LO]{\small\color{MahestanGold}\textbf{طرح مجلس مهستان}}
-\fancyfoot[C]{\small\color{MahestanGray}\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0pt}
-\fancypagestyle{plain}{%
-  \fancyhf{}%
-  \fancyfoot[C]{\small\color{MahestanGray}\thepage}%
-  \renewcommand{\headrulewidth}{0pt}%
-}
-
-% ── tcolorbox Styles ─────────────────────────────────────────
-\newtcolorbox{infobox}[1][]{%
-  parbox=false,
-  before skip=10pt, after skip=10pt,
-  colback=NodeBg, colframe=MahestanBlue,
-  arc=4pt, boxrule=1pt,
-  left=8pt, right=8pt, top=6pt, bottom=6pt,
-  fonttitle=\bfseries\small,
-  #1
-}
-
-\newtcolorbox{notebox}[1][]{%
-  parbox=false,
-  before skip=10pt, after skip=10pt,
-  colback=WarningBg, colframe=MahestanGold,
-  arc=4pt, boxrule=1pt,
-  left=8pt, right=8pt, top=6pt, bottom=6pt,
-  fonttitle=\bfseries\small\color{MahestanDarkGold},
-  #1
-}
-
-\newtcolorbox{principlebox}[2][]{%
-  enhanced, parbox=false,
-  before skip=12pt, after skip=12pt,
-  colback=MahestanLightPurple, colframe=MahestanPurple,
-  arc=6pt, boxrule=1.5pt,
-  title={\rl{#2}},
-  fonttitle=\bfseries\small\color{white},
-  attach boxed title to top right={yshift=-2mm, xshift=-4mm},
-  boxed title style={colback=MahestanPurple, colframe=MahestanPurple, arc=3pt},
-  left=8pt, right=8pt, top=10pt, bottom=6pt,
-  #1
-}
-
-\newtcolorbox{bandbox}[2][]{%
-  enhanced, parbox=false,
-  before skip=8pt, after skip=8pt,
-  colback=white, colframe=MahestanBlue!40,
-  arc=3pt, boxrule=0.8pt,
-  borderline west={3pt}{0pt}{MahestanBlue},
-  left=10pt, right=8pt, top=6pt, bottom=6pt,
-  title={\rl{\textbf{#2}}},
-  fonttitle=\bfseries\small\color{MahestanDarkBlue},
-  attach boxed title to top right={yshift=-2mm, xshift=-5mm},
-  boxed title style={colback=MahestanBlue!15, colframe=MahestanBlue!40, arc=2pt},
-  #1
-}
-
-\newtcolorbox{successbox}[1][]{%
-  parbox=false,
-  before skip=10pt, after skip=10pt,
-  colback=SuccessBg, colframe=MahestanGreen,
-  arc=4pt, boxrule=1pt,
-  left=8pt, right=8pt, top=6pt, bottom=6pt,
-  #1
-}
-
-\newtcolorbox{dangerbox}[1][]{%
-  parbox=false,
-  before skip=10pt, after skip=10pt,
-  colback=DangerBg, colframe=MahestanRed,
-  arc=4pt, boxrule=1pt,
-  left=8pt, right=8pt, top=6pt, bottom=6pt,
-  #1
-}
-
-\newtcolorbox{quotebox}[1][]{%
-  enhanced, parbox=false,
-  before skip=10pt, after skip=10pt,
-  colback=MahestanLightGray, colframe=MahestanGray!50,
-  arc=2pt, boxrule=0pt,
-  borderline west={4pt}{0pt}{MahestanGold},
-  left=12pt, right=8pt, top=6pt, bottom=6pt,
-  fontupper=\itshape,
-  #1
-}
-
-\newtcolorbox{summarybox}[1][]{%
-  parbox=false,
-  before skip=12pt, after skip=12pt,
-  colback=MahestanLightBlue!30, colframe=MahestanBlue,
-  arc=5pt, boxrule=1.5pt,
-  left=10pt, right=10pt, top=8pt, bottom=8pt,
-  #1
-}
-
-% ── TikZ Node Styles ────────────────────────────────────────
-\tikzset{
-  mahbox/.style={
-    rectangle, rounded corners=4pt,
-    draw=#1!70, fill=#1!10,
-    text width=4.5cm,
-    align=right,
-    inner sep=6pt,
-    font=\small
-  },
-  maharrow/.style={
-    -Stealth, thick, color=#1, shorten >=2pt, shorten <=2pt
-  },
-  decisionnode/.style={
-    diamond, aspect=2.5,
-    draw=MahestanPurple!70, fill=MahestanPurple!10,
-    text width=2.8cm, align=center,
-    inner sep=3pt, font=\small
-  },
-  phasenode/.style={
-    rectangle, rounded corners=6pt,
-    draw=#1, fill=#1!15,
-    text width=5cm,
-    align=right,
-    inner sep=8pt,
-    font=\small
-  },
-  milestonenode/.style={
-    regular polygon, regular polygon sides=4,
-    rotate=45,
-    draw=MahestanGold!80, fill=MahestanGold!20,
-    minimum size=12pt,
-    font=\tiny
-  },
-}
-
-% ── Misc helpers ────────────────────────────────────────────
-\newcommand{\fraction}[2]{\lr{$\frac{#1}{#2}$}}
-\newcommand{\persianfrac}[2]{\rl{#1/\!/#2}}
-\newcommand{\articlenum}[1]{\textbf{\rl{بند~#1.}}}
-\newcommand{\phaseheader}[2]{%
-  \vspace{0.5\baselineskip}
-  \noindent
-  \colorbox{#1}{\color{white}\bfseries\small\rl{#2}}%
-  \vspace{0.3\baselineskip}
-}
-\renewcommand{\checkmark}{\lr{(v)}}
-\newcommand{\crossmark}{\lr{(x)}}
-\newcommand{\warnmark}{\lr{(!)}}
-\newcommand{\halfmark}{\lr{(+/-)}}
-
-% ── Section numbers in Persian ──────────────────────────────
-% FIXED: Use \arabic{} — XePersian's \setdigitfont automatically
-% converts Arabic numerals to Persian numerals in output
-\renewcommand{\thechapter}{\arabic{chapter}}
-\renewcommand{\thesection}{\thechapter.\arabic{section}}
-\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
-
-% ── List settings ───────────────────────────────────────────
-\setlist[itemize]{
-  rightmargin=0pt, leftmargin=*,
-  label={\color{MahestanBlue}\textbullet},
-  itemsep=2pt, parsep=0pt
-}
-\setlist[enumerate]{
-  rightmargin=0pt, leftmargin=*,
-  label={\color{MahestanBlue}\arabic*.},
-  itemsep=2pt, parsep=0pt
-}
-
-% ── Paragraph spacing ───────────────────────────────────────
-\setlength{\parindent}{1.2em}
-\setlength{\parskip}{4pt}
-
-% ── Table column types ──────────────────────────────────────
-\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
-\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
-
-% ============================================================
-%  BEGIN DOCUMENT
-% ============================================================
-\begin{document}
-
-% ── COVER PAGE ──────────────────────────────────────────────
-\begin{titlepage}
-	\centering
-	\begin{tikzpicture}[remember picture,overlay]
-		% تصویر پس‌زمینه که کل صفحه را می‌پوشاند
-		\node[inner sep=0pt] at (current page.center) {
-			\includegraphics[width=\paperwidth,height=\paperheight]{cover.png}
-		};
-		% یک لایه‌ی نیمه‌شفاف برای بهتر خوانده شدن متن
-		\fill[white!15!MainBlue, opacity=0.8] ($(current page.north west)+(1cm,-4cm)$) rectangle ($(current page.south east)+(-1cm,-22cm)$);
-		
-		% خطوط تزئینی
-		\draw[AccentGold, line width=3pt] ($(current page.north west)+(1.5cm,-4.5cm)$) -- ($(current page.north east)+(-1.5cm,-4.5cm)$);
-		\draw[AccentGold, line width=3pt] ($(current page.north west)+(1.5cm,-21.5cm)$) -- ($(current page.north east)+(-1.5cm,-21.5cm)$);
-	\end{tikzpicture}
-	
-	\vspace*{4.5cm}
-	
-	{\Huge\bfseries\color{white} بیانیه‌ی چارچوب نهادی گذار ایران \par}
-	
-	\vspace{1.5cm}
-	
-	{\huge\bfseries\color{AccentGold} طرح مجلس مهستان \par}
-	
-	\vspace{0.8cm}
-	
-	{\Large\color{LightBlue!80} نسخه‌ی بازنگری‌شده و نهایی کتاب \par}
-	
-	\vfill
-	
-	\begin{tcolorbox}[
-		enhanced, parbox=false,
-		colback=white!10!MainBlue,
-		colframe=AccentGold,
-		arc=15pt,
-		boxrule=1.5pt,
-		width=0.8\textwidth,
-		left=20pt, right=20pt, top=15pt, bottom=15pt,
-		opacityback=0.6
-		]
-		\centering\color{white}
-		\Large\bfseries
-		ترکیب هوشمندانه‌ی واقعیت و ارزش \\
-		\vskip 0.3cm
-		\large\mdseries
-		بال‌های دوقلوی تکنوکراسی و دموکراسی برای نیل به ایران آزاد
-	\end{tcolorbox}
-	
-	\vfill
-	
-	{\large\bfseries\color{white} مهدی سالم \par}
-	\vspace{0.2cm}
-	{\small\color{LightBlue!60} اسفند ۱۴۰۴ / مارس ۲۰۲۶ \par}
-	
-	\vspace{1cm}
-\end{titlepage}
-
-% ── FRONT MATTER ────────────────────────────────────────────
-\frontmatter
-\pagestyle{plain}
-
-% ── Abstract / Opening Statement ───────────────────────────
-\chapter*{پیش‌گفتار}
-\addcontentsline{toc}{chapter}{پیش‌گفتار}
-\begin{summarybox}
-	این سند بیانیه‌ای است که چارچوب نهادی پیشنهادی برای دوران گذار دموکراتیک ایران را تشریح
-	می‌کند. محور آن \textbf{مجلس مهستان} — یک نهاد منتخب و مردم‌محور — است که مسئولیت
-	هدایت فرایند گذار را بر عهده می‌گیرد.
-	
-	این سند سند زنده‌ای است. تمام پیشنهادها، اعداد و ساختارها برای بحث و چکش‌کاری آماده‌اند.
-	تصمیم نهایی درباره‌ی آینده‌ی ایران فقط و فقط با \textbf{مردم ایران} است.
-\end{summarybox}
-
-\vspace{1cm}
-\begin{center}
-	{\large\color{MahestanDarkBlue}\itshape
-		«ایران برای همه‌ی ایرانیان»}
-\end{center}
-
-% ── TOC ────────────────────────────────────────────────────
-%\tableofcontents
-%\cleardoublepage
-
 % ── MAIN MATTER ─────────────────────────────────────────────
 \mainmatter
 \pagestyle{fancy}
@@ -760,66 +343,103 @@
 	مجلس مهستان ظرف حداکثر \textbf{۳ ماه} طرح جامع عدالت انتقالی را تدوین خواهد کرد.
 	در هر صورت، عدالت انتقالی شامل این عناصر خواهد بود:
 \end{bandbox}
-
 \vspace{0.5\baselineskip}
 \noindent
 \begin{center}
-	\begin{tikzpicture}[
-		every node/.style={align=right, font=\small},
-		node distance=1cm and 1.5cm
-		]
-		% Central node
-		\node[
-		rectangle, rounded corners=8pt,
-		draw=MahestanPurple, fill=MahestanLightPurple,
-		text width=4cm, inner sep=8pt,
-		font=\bfseries\small
-		] (center) {\rl{عدالت انتقالی ایران}\\[3pt]
-			\rl{\footnotesize مدل نهایی را مجلس مهستان}\\
-			\rl{\footnotesize با مشارکت مردم تعیین می‌کند}};
-		
-		% Branch nodes
-		\node[mahbox=MahestanBlue, right=2.2cm of center, yshift=3cm] (tj1) {
-			\textbf{\rl{حقیقت‌یابی}}\\[3pt]
-			\rl{کمیسیون حقیقت‌یابی}\\
-			\rl{و آشتی ملی}\\
-			\rl{مستندسازی جنایات}\\
-			\rl{ثبت شهادت قربانیان}
-		};
-		\node[mahbox=MahestanRed, right=2.2cm of center, yshift=1cm] (tj2) {
-			\textbf{\rl{عدالت کیفری}}\\[3pt]
-			\rl{محاکمات عادلانه}\\
-			\rl{تفکیک سطوح مسئولیت}\\
-			\rl{عفو مشروط (سطوح پایین)}
-		};
-		\node[mahbox=MahestanOrange, right=2.2cm of center, yshift=-1cm] (tj3) {
-			\textbf{\rl{جبران خسارت}}\\[3pt]
-			\rl{غرامت مالی}\\
-			\rl{اعاده‌ی حیثیت}\\
-			\rl{خدمات روانشناختی}
-		};
-		\node[mahbox=MahestanGold, left=2.2cm of center, yshift=1cm] (tj4) {
-			\textbf{\rl{آشتی ملی و حافظه}}\\[3pt]
-			\rl{گفتگوهای ملی آشتی}\\
-			\rl{موزه‌ها و یادبودها}\\
-			\rl{اصلاح تاریخ‌نگاری}
-		};
-		\node[mahbox=MahestanGreen, left=2.2cm of center, yshift=-1cm] (tj5) {
-			\textbf{\rl{تضمین عدم تکرار}}\\[3pt]
-			\rl{اصلاح نهادی}\\
-			\rl{آموزش حقوق بشر}\\
-			\rl{نهادهای نظارتی مستقل}
-		};
-		
-		% Arrows
-		\draw[maharrow=MahestanBlue] (center) -- (tj1);
-		\draw[maharrow=MahestanRed] (center) -- (tj2);
-		\draw[maharrow=MahestanOrange] (center) -- (tj3);
-		\draw[maharrow=MahestanGold] (center) -- (tj4);
-		\draw[maharrow=MahestanGreen] (center) -- (tj5);
-	\end{tikzpicture}
+\begin{tikzpicture}[
+    every node/.style={align=right, font=\small},
+    node distance=0.5cm and 1.0cm,
+]
+
+% ----- CENTER NODE -----
+\node[
+    rectangle, rounded corners=8pt,
+    draw=MahestanPurple, fill=MahestanLightPurple,
+    text width=4cm, inner sep=8pt,
+    font=\bfseries\small,
+    align=right
+] (center) {%
+    {\centering \rl{عدالت انتقالی ایران}\par}
+    \vspace{3pt}
+    \rl{\footnotesize مدل نهایی را مجلس مهستان}\\
+    \rl{\footnotesize با مشارکت مردم تعیین می‌کند}%
+};
+
+% ----- TOP NODE -----
+\node[
+    mahbox=MahestanBlue,
+    yshift=45mm
+] (tj1) {%
+    {\centering \textbf{\rl{حقیقت‌یابی}}\par}
+    \vspace{3pt}
+    \rl{کمیسیون حقیقت‌یابی}\\
+    \rl{و آشتی ملی}\\
+    \rl{مستندسازی جنایات}\\
+    \rl{ثبت شهادت قربانیان}%
+};
+
+% ----- RIGHT-UP NODE -----
+\node[
+    mahbox=MahestanRed,
+    right=0.7cm of center,
+    yshift=17mm
+] (tj2) {%
+    {\centering \textbf{\rl{عدالت کیفری}}\par}
+    \vspace{3pt}
+    \rl{محاکمات عادلانه}\\
+    \rl{تفکیک سطوح مسئولیت}\\
+    \rl{عفو مشروط (سطوح پایین)}%
+};
+
+% ----- RIGHT-DOWN NODE -----
+\node[
+    mahbox=MahestanOrange,
+    right=0.7cm of center,
+    yshift=-2.2cm
+] (tj3) {%
+    {\centering \textbf{\rl{جبران خسارت}}\par}
+    \vspace{3pt}
+    \rl{غرامت مالی}\\
+    \rl{اعاده‌ی حیثیت}\\
+    \rl{خدمات روانشناختی}%
+};
+
+% ----- LEFT-UP NODE -----
+\node[
+    mahbox=MahestanGold,
+    left=0.7cm of center,
+    yshift=17mm
+] (tj4) {%
+    {\centering \textbf{\rl{آشتی ملی و حافظه}}\par}
+    \vspace{3pt}
+    \rl{گفتگوهای ملی آشتی}\\
+    \rl{موزه‌ها و یادبودها}\\
+    \rl{اصلاح تاریخ‌نگاری}%
+};
+
+% ----- LEFT-DOWN NODE -----
+\node[
+    mahbox=MahestanGreen,
+    left=0.7cm of center,
+    yshift=-2.2cm
+] (tj5) {%
+    {\centering \textbf{\rl{تضمین عدم تکرار}}\par}
+    \vspace{3pt}
+    \rl{اصلاح نهادی}\\
+    \rl{آموزش حقوق بشر}\\
+    \rl{نهادهای نظارتی مستقل}%
+};
+
+% ----- ARROWS -----
+\draw[maharrow=MahestanBlue, shorten <=4pt, shorten >=4pt] (center) -- (tj1);
+\draw[maharrow=MahestanRed, shorten <=4pt, shorten >=4pt] (center) -- (tj2);
+\draw[maharrow=MahestanOrange, shorten <=4pt, shorten >=4pt] (center) -- (tj3);
+\draw[maharrow=MahestanGold, shorten <=4pt, shorten >=4pt] (center) -- (tj4);
+\draw[maharrow=MahestanGreen, shorten <=4pt, shorten >=4pt] (center) -- (tj5);
+
+\end{tikzpicture}
 \end{center}
-\vspace{0.5\baselineskip}
+\vspace{0.75\baselineskip}
 
 \subsection{و) نهاد ناظر مستقل انتخابات}
 
@@ -975,7 +595,7 @@
 \vspace{0.5\baselineskip}
 \noindent
 \begin{adjustbox}{max width=\linewidth}
-	\begin{tabular}{@{}lp{8cm}@{}}
+	\begin{tabular}{@{}lp{12cm}@{}}
 		\toprule
 		\textbf{زمان‌بندی} & \textbf{اقدامات قانون‌گذاری} \\
 		\midrule
@@ -1585,8 +1205,3 @@
 	مشارکت همگان بهتر خواهد شد. \textbf{تصمیم نهایی درباره‌ی آینده‌ی ایران فقط و فقط
 		با مردم ایران است.}
 \end{summarybox}
-
-
-
-
-\end{document}
