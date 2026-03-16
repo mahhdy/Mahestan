@@ -47,6 +47,9 @@
   positioning,
   fit,
   backgrounds,
+  shadings,
+  shadows.blur,
+  patterns,
   decorations.pathreplacing,
   calc
 }
@@ -62,10 +65,10 @@
 
 % ── XePersian (MUST be last) ────────────────────────────────
 \usepackage[computeautoilg=on]{xepersian}
-\settextfont[Scale=0.85]{Parsi Matn}
+\settextfont[Scale=1]{Parsi Matn}
 \setlatintextfont[Scale=0.85]{Libertinus Serif}
 \settextdigitfont[Numbers=Proportional]{Parsi Matn}
-\setmathdigitfont[Scale=0.85]{Parsi Matn}
+\setmathdigitfont[Scale=0.9]{Parsi Matn}
 
 % ── Color Palette ───────────────────────────────────────────
 % Primary
@@ -133,12 +136,6 @@
   bookmarksopen     = true
 }
 
-% ══════════════════════════════════════════════════════════════
-%  ★ FIX: Extract \nopagebreak out of [...] after-code blocks
-%    to prevent bracket-parsing conflict with XePersian
-% ══════════════════════════════════════════════════════════════
-
-% Helper: safely issues \nopagebreak without exposed brackets
 \newcommand{\sectionafterrule}{%
   {\color{MahestanBlue}\hrule height 0.8pt}%
   \nopagebreak
@@ -149,8 +146,8 @@
 
 % ── Chapter / Section Formatting ────────────────────────────
 \titleformat{\chapter}[display]
-  {\normalfont\bfseries\huge\color{MahestanDarkBlue}}
-  {\raggedleft\small\color{MahestanGray}%
+  {\normalfont\bfseries\LARGE\color{MahestanDarkBlue}}
+  {\raggedleft\Large\color{MahestanGray}%
    \chaptername\hspace{.5em}%
    \colorbox{MahestanDarkBlue}{\textcolor{white}{\thechapter}}}
   {1ex}
@@ -219,7 +216,7 @@
   colback=WarningBg, colframe=MahestanGold,
   arc=4pt, boxrule=1pt,
   left=8pt, right=8pt, top=6pt, bottom=6pt,
-  fonttitle=\bfseries\small\color{MahestanDarkGold},
+  fonttitle=\bfseries\small\color{white},
   #1
 }
 
