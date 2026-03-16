@@ -1,37 +1,45 @@
+% ── Page Geometry ───────────────────────────────────────────
 \usepackage{geometry}
-
 \geometry{
   a4paper,
   top=2.8cm, bottom=2.8cm,
   inner=3cm, outer=2.2cm,
-  headheight=15pt
+  headheight=24pt
 }
 
+\raggedbottom
+
+% ── Core packages ───────────────────────────────────────────
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{amsmath, amssymb}
+
+% ── Tables ──────────────────────────────────────────────────
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{multirow}
-\usepackage{enumitem}
-\usepackage{fancyhdr}
-\usepackage{titlesec}
-\usepackage{tcolorbox}
-\usepackage{tikz}
-\usepackage{pgfplots}
-\usepackage{adjustbox}
-\usepackage{needspace}
-\usepackage{hyperref}
 \usepackage{tabularx}
 \usepackage{colortbl}
-\usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage{adjustbox}
+
+% ── Lists ───────────────────────────────────────────────────
+\usepackage{enumitem}
+
+% ── Layout helpers ──────────────────────────────────────────
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{needspace}
 \usepackage{pdflscape}
 \usepackage{calc}
 \usepackage{etoolbox}
-\usepackage{ifthen}
 
-% ── TikZ libraries ──────────────────────────────────────────
+% ── Boxes ───────────────────────────────────────────────────
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable, theorems}
+
+% ── Graphics / Diagrams ────────────────────────────────────
+\usepackage{tikz}
 \usetikzlibrary{
   shapes.geometric,
   shapes.symbols,
@@ -43,11 +51,14 @@
   calc
 }
 
-% ── tcolorbox libraries ────────────────────────────────────
-\tcbuselibrary{skins, breakable, theorems}
-
-% ── pgfplots ───────────────────────────────────────────────
+\usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
+
+\pgfdeclarelayer{background}
+\pgfsetlayers{background,main}
+
+% ── Hyperref (load late, before xepersian) ──────────────────
+\usepackage{hyperref}
 
 % ── XePersian (MUST be last) ────────────────────────────────
 \usepackage[computeautoilg=on]{xepersian}
@@ -57,88 +68,123 @@
 \setmathdigitfont[Scale=0.85]{Parsi Matn}
 
 % ── Color Palette ───────────────────────────────────────────
+% Primary
 \definecolor{MahestanBlue}{RGB}{21,101,192}
 \definecolor{MahestanDarkBlue}{RGB}{13,71,161}
 \definecolor{MahestanLightBlue}{RGB}{187,222,251}
+% Accent
 \definecolor{MahestanGold}{RGB}{249,168,37}
 \definecolor{MahestanDarkGold}{RGB}{245,127,23}
+\definecolor{MahestanOrange}{RGB}{230,81,0}
+\definecolor{MahestanLightOrange}{RGB}{255,224,178}
+% Status
 \definecolor{MahestanGreen}{RGB}{46,125,50}
 \definecolor{MahestanLightGreen}{RGB}{200,230,201}
 \definecolor{MahestanRed}{RGB}{198,40,40}
 \definecolor{MahestanPurple}{RGB}{106,27,154}
 \definecolor{MahestanLightPurple}{RGB}{243,229,245}
+% Neutrals
 \definecolor{MahestanCream}{RGB}{255,253,245}
 \definecolor{MahestanGray}{RGB}{97,97,97}
 \definecolor{MahestanLightGray}{RGB}{245,245,245}
-\definecolor{MahestanOrange}{RGB}{230,81,0}
-\definecolor{MahestanLightOrange}{RGB}{255,224,178}
+% Semantic backgrounds
 \definecolor{NodeBg}{RGB}{240,247,255}
 \definecolor{WarningBg}{RGB}{255,243,224}
 \definecolor{SuccessBg}{RGB}{232,245,233}
 \definecolor{DangerBg}{RGB}{252,228,236}
+% Extended palette
 \definecolor{MainBlue}{HTML}{2C5364}
-\definecolor{LightBlue}{HTML}{E3F2FD}
+\definecolor{SlateGray}{HTML}{455A64}
+\definecolor{AccentGold}{HTML}{FFD700}
 \definecolor{SoftGreen}{HTML}{E8F5E9}
 \definecolor{SoftRed}{HTML}{FFEBEE}
 \definecolor{SoftGold}{HTML}{FFF9C4}
 \definecolor{SoftPurple}{HTML}{F3E5F5}
-\definecolor{SlateGray}{HTML}{455A64}
-\definecolor{AccentGold}{HTML}{FFD700}
+\definecolor{LightBlue}{HTML}{E3F2FD}
 
-% ── Hyperref setup (AFTER colors are defined) ───────────────
+\definecolor{mahestan-blue}    {HTML}{1E3A8A}
+\definecolor{mahestan-red}     {HTML}{DC2626}
+\definecolor{mahestan-orange}  {HTML}{EA580C}
+\definecolor{mahestan-purple}  {HTML}{7C3AED}
+\definecolor{mahestan-green}   {HTML}{059669}
+\definecolor{mahestan-teal}    {HTML}{0D9488}
+\definecolor{mahestan-gold}    {HTML}{D97706}
+\definecolor{border-gray}       {HTML}{6B7280}
+\definecolor{bg-gray}           {HTML}{F3F4F6}
+\definecolor{bg-light-green}    {HTML}{D1FAE5}
+
+% ── Hyperref setup ──────────────────────────────────────────
 \pdfstringdefDisableCommands{%
   \def\lr#1{#1}%
   \def\rl#1{#1}%
 }
 \hypersetup{
-  colorlinks=true,
-  linkcolor=MahestanBlue,
-  citecolor=MahestanGreen,
-  urlcolor=MahestanGold,
-  pdfencoding=unicode,
-  pdftitle={بیانیه‌ی چارچوب نهادی گذار ایران — طرح مجلس مهستان},
-  pdfauthor={طرح مهستان},
-  pdfsubject={گذار دموکراتیک ایران},
-  pdfkeywords={مجلس مهستان، گذار، دموکراسی، ایران},
-  pdfcreator={XeLaTeX + XePersian},
-  bookmarksnumbered=true,
-  bookmarksopen=true
+  colorlinks  = true,
+  linkcolor   = MahestanBlue,
+  citecolor   = MahestanGreen,
+  urlcolor    = MahestanGold,
+  pdfencoding = unicode,
+  pdftitle    = {بیانیه‌ی چارچوب نهادی گذار ایران — طرح مجلس مهستان},
+  pdfauthor   = {طرح مهستان},
+  pdfsubject  = {گذار دموکراتیک ایران},
+  pdfkeywords = {مجلس مهستان، گذار، دموکراسی، ایران},
+  pdfcreator  = {XeLaTeX + XePersian},
+  bookmarksnumbered = true,
+  bookmarksopen     = true
 }
 
+% ══════════════════════════════════════════════════════════════
+%  ★ FIX: Extract \nopagebreak out of [...] after-code blocks
+%    to prevent bracket-parsing conflict with XePersian
+% ══════════════════════════════════════════════════════════════
+
+% Helper: safely issues \nopagebreak without exposed brackets
+\newcommand{\sectionafterrule}{%
+  {\color{MahestanBlue}\hrule height 0.8pt}%
+  \nopagebreak
+}
+
+\newcommand{\subsectionafterhook}{\nopagebreak}
+\newcommand{\subsubsectionafterhook}{\nopagebreak}
+
 % ── Chapter / Section Formatting ────────────────────────────
-% FIXED: Removed \MakeUppercase for Persian compatibility
 \titleformat{\chapter}[display]
   {\normalfont\bfseries\huge\color{MahestanDarkBlue}}
-  {\raggedleft\small\color{MahestanGray}
-   \chaptername\hspace{.5em}
+  {\raggedleft\small\color{MahestanGray}%
+   \chaptername\hspace{.5em}%
    \colorbox{MahestanDarkBlue}{\textcolor{white}{\thechapter}}}
   {1ex}
   {\titlerule\raggedleft}
   [\titlerule]
 
+% ★ FIXED: no nested brackets — \sectionafterrule handles everything
 \titleformat{\section}
-  {\needspace{6\baselineskip}\nopagebreak[4]%
+  {\needspace{6\baselineskip}\nopagebreak
    \normalfont\bfseries\large\color{MahestanDarkBlue}}
   {\thesection}{1em}{}
-  [{\color{MahestanBlue}\hrule height 0.8pt}]
+  [\sectionafterrule]
 
+% ★ FIXED: no nested brackets — \subsectionafterhook is a plain command
 \titleformat{\subsection}
-  {\needspace{4\baselineskip}\nopagebreak[4]%
+  {\needspace{4\baselineskip}\nopagebreak
    \normalfont\bfseries\normalsize\color{MahestanBlue}}
   {\thesubsection}{1em}{}
+  [\subsectionafterhook]
 
+% ★ FIXED: no nested brackets — \subsubsectionafterhook is a plain command
 \titleformat{\subsubsection}
-  {\needspace{3\baselineskip}\nopagebreak[4]%
+  {\needspace{3\baselineskip}\nopagebreak
    \normalfont\bfseries\small\color{MahestanGray}}
   {\thesubsubsection}{1em}{}
+  [\subsubsectionafterhook]
 
-\titlespacing*{\chapter}{0pt}{0pt}{20pt}
-\titlespacing*{\section}{0pt}{14pt}{6pt}
-\titlespacing*{\subsection}{0pt}{10pt}{4pt}
-\titlespacing*{\subsubsection}{0pt}{8pt}{3pt}
+% ★ Tightened vertical spacing around headings
+\titlespacing*{\chapter}      {0pt}{0pt}{16pt}
+\titlespacing*{\section}      {0pt}{10pt plus 2pt minus 2pt}{4pt plus 1pt}
+\titlespacing*{\subsection}   {0pt}{8pt  plus 2pt minus 1pt}{3pt plus 1pt}
+\titlespacing*{\subsubsection}{0pt}{6pt  plus 1pt minus 1pt}{2pt}
 
 % ── Headers & Footers ───────────────────────────────────────
-\setlength{\headheight}{24pt}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE]{\small\color{MahestanGray}\leftmark}
@@ -147,16 +193,18 @@
 \fancyfoot[C]{\small\color{MahestanGray}\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
+
 \fancypagestyle{plain}{%
   \fancyhf{}%
   \fancyfoot[C]{\small\color{MahestanGray}\thepage}%
   \renewcommand{\headrulewidth}{0pt}%
 }
 
-% ── tcolorbox Styles ─────────────────────────────────────────
+% ── tcolorbox Styles ────────────────────────────────────────
 \newtcolorbox{infobox}[1][]{%
-  parbox=false,
-  before skip=10pt, after skip=10pt,
+  breakable, parbox=false,
+  before={\par\nopagebreak\vspace{8pt plus 2pt}},
+  after={\par\vspace{8pt plus 2pt}},
   colback=NodeBg, colframe=MahestanBlue,
   arc=4pt, boxrule=1pt,
   left=8pt, right=8pt, top=6pt, bottom=6pt,
@@ -165,8 +213,9 @@
 }
 
 \newtcolorbox{notebox}[1][]{%
-  parbox=false,
-  before skip=10pt, after skip=10pt,
+  breakable, parbox=false,
+  before={\par\nopagebreak\vspace{8pt plus 2pt}},
+  after={\par\vspace{8pt plus 2pt}},
   colback=WarningBg, colframe=MahestanGold,
   arc=4pt, boxrule=1pt,
   left=8pt, right=8pt, top=6pt, bottom=6pt,
@@ -175,8 +224,9 @@
 }
 
 \newtcolorbox{principlebox}[2][]{%
-  enhanced, parbox=false,
-  before skip=12pt, after skip=12pt,
+  enhanced, breakable, parbox=false,
+  before={\par\nopagebreak\vspace{10pt plus 2pt}},
+  after={\par\vspace{10pt plus 2pt}},
   colback=MahestanLightPurple, colframe=MahestanPurple,
   arc=6pt, boxrule=1.5pt,
   title={\rl{#2}},
@@ -188,8 +238,9 @@
 }
 
 \newtcolorbox{bandbox}[2][]{%
-  enhanced, parbox=false,
-  before skip=8pt, after skip=8pt,
+  enhanced, breakable, parbox=false,
+  before={\par\nopagebreak\vspace{6pt plus 2pt}},
+  after={\par\vspace{6pt plus 2pt}},
   colback=white, colframe=MahestanBlue!40,
   arc=3pt, boxrule=0.8pt,
   borderline west={3pt}{0pt}{MahestanBlue},
@@ -202,8 +253,9 @@
 }
 
 \newtcolorbox{successbox}[1][]{%
-  parbox=false,
-  before skip=10pt, after skip=10pt,
+  breakable, parbox=false,
+  before={\par\nopagebreak\vspace{8pt plus 2pt}},
+  after={\par\vspace{8pt plus 2pt}},
   colback=SuccessBg, colframe=MahestanGreen,
   arc=4pt, boxrule=1pt,
   left=8pt, right=8pt, top=6pt, bottom=6pt,
@@ -211,8 +263,9 @@
 }
 
 \newtcolorbox{dangerbox}[1][]{%
-  parbox=false,
-  before skip=10pt, after skip=10pt,
+  breakable, parbox=false,
+  before={\par\nopagebreak\vspace{8pt plus 2pt}},
+  after={\par\vspace{8pt plus 2pt}},
   colback=DangerBg, colframe=MahestanRed,
   arc=4pt, boxrule=1pt,
   left=8pt, right=8pt, top=6pt, bottom=6pt,
@@ -220,8 +273,9 @@
 }
 
 \newtcolorbox{quotebox}[1][]{%
-  enhanced, parbox=false,
-  before skip=10pt, after skip=10pt,
+  enhanced, breakable, parbox=false,
+  before={\par\nopagebreak\vspace{8pt plus 2pt}},
+  after={\par\vspace{8pt plus 2pt}},
   colback=MahestanLightGray, colframe=MahestanGray!50,
   arc=2pt, boxrule=0pt,
   borderline west={4pt}{0pt}{MahestanGold},
@@ -231,8 +285,9 @@
 }
 
 \newtcolorbox{summarybox}[1][]{%
-  parbox=false,
-  before skip=12pt, after skip=12pt,
+  breakable, parbox=false,
+  before={\par\nopagebreak\vspace{10pt plus 2pt}},
+  after={\par\vspace{10pt plus 2pt}},
   colback=MahestanLightBlue!30, colframe=MahestanBlue,
   arc=5pt, boxrule=1.5pt,
   left=10pt, right=10pt, top=8pt, bottom=8pt,
@@ -244,13 +299,12 @@
   mahbox/.style={
     rectangle, rounded corners=4pt,
     draw=#1!70, fill=#1!10,
-    text width=4.5cm,
-    align=right,
-    inner sep=6pt,
-    font=\small
+    text width=4.5cm, align=right,
+    inner sep=6pt, font=\small
   },
   maharrow/.style={
-    -Stealth, thick, color=#1, shorten >=2pt, shorten <=2pt
+    -Stealth, thick, color=#1,
+    shorten >=2pt, shorten <=2pt
   },
   decisionnode/.style={
     diamond, aspect=2.5,
@@ -261,17 +315,14 @@
   phasenode/.style={
     rectangle, rounded corners=6pt,
     draw=#1, fill=#1!15,
-    text width=5cm,
-    align=right,
-    inner sep=8pt,
-    font=\small
+    text width=5cm, align=right,
+    inner sep=8pt, font=\small
   },
   milestonenode/.style={
     regular polygon, regular polygon sides=4,
     rotate=45,
     draw=MahestanGold!80, fill=MahestanGold!20,
-    minimum size=12pt,
-    font=\tiny
+    minimum size=12pt, font=\tiny
   },
 }
 
@@ -280,10 +331,10 @@
 \newcommand{\persianfrac}[2]{\rl{#1/\!/#2}}
 \newcommand{\articlenum}[1]{\textbf{\rl{بند~#1.}}}
 \newcommand{\phaseheader}[2]{%
-  \vspace{0.5\baselineskip}
+  \vspace{0.5\baselineskip}%
   \noindent
   \colorbox{#1}{\color{white}\bfseries\small\rl{#2}}%
-  \vspace{0.3\baselineskip}
+  \vspace{0.3\baselineskip}%
 }
 \renewcommand{\checkmark}{\lr{(v)}}
 \newcommand{\crossmark}{\lr{(x)}}
@@ -291,8 +342,6 @@
 \newcommand{\halfmark}{\lr{(+/-)}}
 
 % ── Section numbers in Persian ──────────────────────────────
-% FIXED: Use \arabic{} — XePersian's \setdigitfont automatically
-% converts Arabic numerals to Persian numerals in output
 \renewcommand{\thechapter}{\arabic{chapter}}
 \renewcommand{\thesection}{\thechapter.\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
@@ -302,17 +351,17 @@
 \setlist[itemize]{
   rightmargin=0pt, leftmargin=*,
   label={\color{MahestanBlue}\textbullet},
-  itemsep=2pt, parsep=0pt
+  itemsep=2pt, parsep=0pt, topsep=2pt
 }
 \setlist[enumerate]{
   rightmargin=0pt, leftmargin=*,
   label={\color{MahestanBlue}\arabic*.},
-  itemsep=2pt, parsep=0pt
+  itemsep=2pt, parsep=0pt, topsep=2pt
 }
 
 % ── Paragraph spacing ───────────────────────────────────────
 \setlength{\parindent}{1.2em}
-\setlength{\parskip}{4pt}
+\setlength{\parskip}{3pt plus 1pt minus 1pt}
 
 % ── Table column types ──────────────────────────────────────
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}

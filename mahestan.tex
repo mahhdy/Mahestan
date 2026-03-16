@@ -256,6 +256,25 @@
 	\end{itemize}
 \end{bandbox}
 
+\begin{center}
+\begin{tikzpicture}[
+    comm/.style={draw=border-gray, fill=bg-gray, rounded corners=3pt,
+        minimum width=3.3cm, minimum height=0.7cm, align=center, font=\tiny\bfseries}
+]
+    \node[comm, fill=MahestanBlue!10]  at (0,1.2)   {\rl{قانون اساسی موقت}};
+    \node[comm, fill=mahestan-red!10]   at (3.8,1.2)  {\rl{عدالت انتقالی و حقوق بشر}};
+    \node[comm, fill=mahestan-orange!10]at (7.6,1.2)  {\rl{اصلاح امنیتی و نظامی}};
+    \node[comm, fill=mahestan-purple!10]at (11.4,1.2) {\rl{اصلاح قضایی و حقوقی}};
+    \node[comm, fill=mahestan-green!10] at (0,0.3)    {\rl{اقتصاد و بودجه}};
+    \node[comm, fill=mahestan-teal!10]  at (3.8,0.3)  {\rl{آموزش، علم و فرهنگ}};
+    \node[comm, fill=MahestanBlue!10]  at (7.6,0.3)  {\rl{سیاست خارجی}};
+    \node[comm, fill=mahestan-gold!15]  at (11.4,0.3) {\rl{حقوق اقلیتها}};
+    \node[comm, fill=mahestan-green!10] at (1.9,-0.6) {\rl{محیط زیست}};
+    \node[comm, fill=mahestan-red!10]   at (5.7,-0.6) {\rl{حقوق زنان و برابری}};
+    \node[comm, fill=mahestan-purple!10]at (9.5,-0.6){ \rl{رسانه و حقوق دیجیتال}};
+\end{tikzpicture}
+\end{center}
+
 % ──────────────────────────────────────────────────────────
 \section{تشکیل کابینه‌ی اجرایی موقت}
 % ──────────────────────────────────────────────────────────
@@ -288,6 +307,37 @@
 	\end{itemize}
 \end{bandbox}
 
+\begin{center}
+\begin{tikzpicture}[
+    node distance=0.6cm,
+    inst/.style={draw=#1, fill=#1!8, rounded corners=4pt,
+        minimum width=4cm, minimum height=0.8cm, align=center, font=\small}
+]
+    % مرکز
+    \node[draw=mahestan-green, fill=bg-light-green, rounded corners=6pt,
+        minimum width=6cm, minimum height=1.2cm, align=center,
+        font=\bfseries] (meh) {\rl{مجلس مهستان}\\[-2pt]{\footnotesize \rl{نهاد عالی حاکمیت دوران گذار}}};
+    % ردیف اول
+    \node[inst=mahestan-gold, below left=0.8cm and 0.5cm of meh]  (cab)
+        {\rl{کابینهی اجرایی موقت}};
+    \node[inst=mahestan-red, below=0.8cm of meh]  (jud)
+        {\rl{شورای قضایی انتقالی}};
+    \node[inst=mahestan-orange, below right=0.8cm and 0.5cm of meh]  (mil)
+        {\rl{فرماندهی نظامی-انتظامی}};
+    % ردیف دوم
+    \node[inst=mahestan-purple, below=0.5cm of cab]  (ssr) {\rl{کمیسیون اصلاح امنیتی}};
+    \node[inst=mahestan-blue, below=0.5cm of jud]  (trc) {\rl{کمیسیون حقیقتیابی}};
+    \node[inst=mahestan-teal, below=0.5cm of mil]  (elec) {\rl{هیأت نظارت انتخابات}};
+    % ردیف سوم
+    \node[inst=mahestan-green, below=0.5cm of ssr]  (omb) {\rl{آمبودزمان}};
+    \node[inst=mahestan-blue, below=0.5cm of trc]  (med) {\rl{کمیسیون ملی رسانه‌ها}};
+    \node[inst=mahestan-orange, below=0.5cm of elec]  (econ) {\rl{شورای اقتصادی}};
+    % فلشها
+    \draw[-Stealth, thick, mahestan-green] (meh) -- (cab);
+    \draw[-Stealth, thick, mahestan-green] (meh) -- (jud);
+    \draw[-Stealth, thick, mahestan-green] (meh) -- (mil);
+\end{tikzpicture}
+\end{center}
 % ──────────────────────────────────────────────────────────
 \section{مأموریت‌های ویژه و نهادسازی}
 % ──────────────────────────────────────────────────────────
@@ -781,244 +831,558 @@
 % ============================================================
 %  CHAPTER 4: INSTITUTIONAL STRUCTURE DIAGRAM
 % ============================================================
-\chapter{نمودار جامع ساختار نهادی}
-\label{ch:structure}
+
+% ── save portrait \textwidth for height constraint ──────────
+\newlength{\portraittextwidth}
+\setlength{\portraittextwidth}{\textwidth}
 
 \begin{landscape}
-	\thispagestyle{plain}
-	\vspace*{0.3cm}
-	\begin{center}
-		{\large\bfseries\color{MahestanDarkBlue}\rl{نمودار جامع ساختار نهادی گذار}}\par
-		\vspace{0.4cm}
-		\resizebox{0.97\linewidth}{!}{%
-			\begin{tikzpicture}[
-				every node/.style={align=center, font=\small\rl},
-				node distance=0.8cm and 1.2cm
-				]
-				
-				%% ── مردم ایران (TOP) ──────────────────────────────────
-				\node[
-				rectangle, rounded corners=10pt,
-				draw=MahestanGold, fill=MahestanGold!25,
-				text width=6.5cm, inner sep=10pt, font=\bfseries
-				] (people) {
-					\rl{مردم ایران}\\[4pt]
-					\rl{\footnotesize حاکمیت مطلق}\\
-					\rl{\footnotesize انتخابات مستقیم --- رفراندوم‌ها --- نظرسنجی‌ها}
-				};
-				
-				%% ── مجلس مهستان (CENTER) ──────────────────────────────
-				\node[
-				rectangle, rounded corners=10pt,
-				draw=MahestanDarkBlue, fill=MahestanBlue!15,
-				text width=6.5cm, inner sep=12pt,
-				below=1.8cm of people, font=\bfseries\large
-				] (meh) {
-					\rl{مجلس مهستان}\\[4pt]
-					\rl{\normalsize نهاد عالی حاکمیت دوران گذار}\\[2pt]
-					\rl{\footnotesize ۳۰۰ نماینده‌ی منتخب --- حداکثر ۲ سال}
-				};
-				
-				%% ── بازوی تکنوکراتیک (RIGHT TOP) ─────────────────────
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanOrange, fill=MahestanLightOrange,
-				text width=4cm, inner sep=8pt,
-				right=2.5cm of meh, yshift=1.5cm
-				] (tech) {
-					\textbf{\rl{مرکز تحقیقات}}\\[3pt]
-					\rl{\footnotesize بازوی تکنوکراتیک}\\
-					\rl{\scriptsize واقعیت‌ها --- تحلیل فنی}\\
-					\rl{\scriptsize گزینه‌های سیاستی}
-				};
-				
-				%% ── بازوی دموکراتیک (LEFT TOP) ───────────────────────
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanBlue, fill=MahestanLightBlue!60,
-				text width=4cm, inner sep=8pt,
-				left=2.5cm of meh, yshift=1.5cm
-				] (demo) {
-					\textbf{\rl{واحد ارتباط مردمی}}\\[3pt]
-					\rl{\footnotesize بازوی دموکراتیک}\\
-					\rl{\scriptsize نظرسنجی‌ها --- بازخورد}\\
-					\rl{\scriptsize جلسات عمومی --- رفراندوم}
-				};
-				
-				%% ── کابینه‌ی اجرایی موقت (RIGHT BOTTOM) ──────────────
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanGreen, fill=MahestanLightGreen,
-				text width=3.8cm, inner sep=8pt,
-				below right=1.8cm and 0.5cm of meh
-				] (cabinet) {
-					\textbf{\rl{کابینه‌ی اجرایی موقت}}\\[3pt]
-					\rl{\footnotesize پاسخ‌گو به مجلس}
-				};
-				
-				%% ── شورای قضایی انتقالی (LEFT BOTTOM) ────────────────
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanRed, fill=MahestanRed!10,
-				text width=3.8cm, inner sep=8pt,
-				below left=1.8cm and 0.5cm of meh
-				] (judicial) {
-					\textbf{\rl{شورای قضایی انتقالی}}\\[3pt]
-					\rl{\footnotesize مستقل}
-				};
-				
-				%% ── فرماندهی نظامی (BELOW CABINET) ───────────────────
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanGray, fill=MahestanLightGray,
-				text width=3.5cm, inner sep=7pt,
-				below=1.2cm of cabinet
-				] (military) {
-					\textbf{\rl{فرماندهی نظامی‌انتظامی}}\\[2pt]
-					\rl{\footnotesize موقت --- زیر نظر مجلس}
-				};
-				
-				%% ── کمیسیون اصلاح امنیتی (BELOW MILITARY) ────────────
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanGray!80, fill=MahestanLightGray!60,
-				text width=3.5cm, inner sep=7pt,
-				below=0.8cm of military
-				] (ssr) {
-					\textbf{\rl{کمیسیون اصلاح امنیتی}}\\[2pt]
-					\rl{\footnotesize \lr{SSR} --- غربال‌گری نیروها}
-				};
-				
-				%% ── کمیسیون حقیقت‌یابی (BELOW JUDICIAL) ──────────────
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanPurple, fill=MahestanLightPurple,
-				text width=3.5cm, inner sep=7pt,
-				below=1.2cm of judicial
-				] (trc) {
-					\textbf{\rl{کمیسیون حقیقت‌یابی و آشتی}}\\[2pt]
-					\rl{\footnotesize عدالت انتقالی}
-				};
-				
-				%% ── هیأت نظارت بر انتخابات (RIGHT OF DEMO) ───────────
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanPurple!70, fill=MahestanLightPurple!50,
-				text width=3.5cm, inner sep=7pt,
-				left=1.5cm of demo
-				] (election) {
-					\textbf{\rl{هیأت نظارت بر انتخابات}}\\[2pt]
-					\rl{\footnotesize مستقل}
-				};
-				
-				%% ── آمبودزمان (BELOW DEMO) ────────────────────────────
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanGold, fill=MahestanGold!10,
-				text width=3.5cm, inner sep=7pt,
-				below=3.2cm of demo
-				] (ombud) {
-					\textbf{\rl{آمبودزمان}}\\[2pt]
-					\rl{\footnotesize نهاد حقوق شهروندی}
-				};
-				
-				%% ── کمیسیون رسانه‌ها و شورای اقتصادی (RIGHT OF TECH) ─
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanBlue!60, fill=NodeBg,
-				text width=3.5cm, inner sep=7pt,
-				right=1.5cm of tech
-				] (media) {
-					\textbf{\rl{کمیسیون رسانه‌ها}}\\[2pt]
-					\rl{\footnotesize استقلال رسانه‌ای}
-				};
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanGreen!70, fill=SuccessBg,
-				text width=3.5cm, inner sep=7pt,
-				below=0.8cm of media
-				] (econ) {
-					\textbf{\rl{شورای اقتصادی گذار}}\\[2pt]
-					\rl{\footnotesize اقتصاددانان مستقل}
-				};
-				
-				%% ── قانون اساسی موقت و نهایی (BOTTOM CENTER) ─────────
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanPurple, fill=MahestanLightPurple!40,
-				text width=3.5cm, inner sep=7pt,
-				below=4cm of meh, xshift=-2.5cm
-				] (ctmp) {
-					\textbf{\rl{قانون اساسی موقت}}\\[2pt]
-					\rl{\footnotesize ظرف ۲ ماه --- رفراندوم}
-				};
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanPurple!80, fill=MahestanLightPurple!70,
-				text width=3.5cm, inner sep=7pt,
-				right=0.8cm of ctmp
-				] (cfin) {
-					\textbf{\rl{قانون اساسی نهایی}}\\[2pt]
-					\rl{\footnotesize مجلس مؤسسان --- رفراندوم}
-				};
-				
-				%% ── جامعه‌ی مدنی (FAR RIGHT BOTTOM) ──────────────────
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanGreen!50, fill=SoftGreen,
-				text width=3cm, inner sep=6pt,
-				below=3.8cm of tech, xshift=0.8cm
-				] (civil) {
-					\textbf{\rl{جامعه‌ی مدنی}}\\[2pt]
-					\rl{\footnotesize نظارت + مشاوره}
-				};
-				
-				%% ── جامعه‌ی بین‌المللی (FAR LEFT BOTTOM) ─────────────
-				\node[
-				rectangle, rounded corners=6pt,
-				draw=MahestanGreen!40, fill=SoftGreen!50,
-				text width=3cm, inner sep=6pt,
-				below=1.5cm of election
-				] (intl) {
-					\textbf{\rl{جامعه‌ی بین‌المللی}}\\[2pt]
-					\rl{\footnotesize سازمان ملل --- اتحادیه اروپا}\\
-					\rl{\scriptsize نظارت + حمایت فنی}
-				};
-				
-				%%─── Arrows ───────────────────────────────────────────────
-				\draw[maharrow=MahestanGold, line width=2pt] (people) -- (meh)
-				node[midway, right, xshift=4pt]{\footnotesize\rl{انتخابات مستقیم}};
-				\draw[maharrow=MahestanOrange] (meh) -- (tech)
-				node[midway, above]{\tiny\rl{مدیریت}};
-				\draw[maharrow=MahestanBlue] (meh) -- (demo)
-				node[midway, above]{\tiny\rl{مدیریت}};
-				\draw[maharrow=MahestanGreen, thick] (meh) -- (cabinet)
-				node[midway, above right]{\tiny\rl{تشکیل+نظارت}};
-				\draw[maharrow=MahestanRed, thick] (meh) -- (judicial)
-				node[midway, above left]{\tiny\rl{تعیین}};
-				\draw[maharrow=MahestanGray] (meh) to[out=285, in=90] (military);
-				\draw[maharrow=MahestanGray] (military) -- (ssr);
-				\draw[maharrow=MahestanGreen] (cabinet) -- (military)
-				node[midway, right]{\tiny\rl{هماهنگی}};
-				\draw[maharrow=MahestanPurple] (meh) to[out=250, in=90] (trc);
-				\draw[maharrow=MahestanPurple] (meh) to[out=200, in=0] (election);
-				\draw[maharrow=MahestanGold] (meh) to[out=240, in=90] (ombud);
-				\draw[maharrow=MahestanBlue] (meh) to[out=15, in=180] (media);
-				\draw[maharrow=MahestanGreen] (meh) to[out=5, in=200] (econ);
-				\draw[-Stealth, thick, MahestanPurple, dashed] (meh) to[out=260, in=90] (ctmp)
-				node[near start, left]{\tiny\rl{۲ ماه}};
-				\draw[-Stealth, thick, MahestanPurple!80, dashed] (meh) to[out=275, in=90] (cfin);
-				\draw[-Stealth, thick, MahestanGold, dashed] (people) to[out=215, in=90] (ctmp)
-				node[near end, left]{\tiny\rl{رفراندوم}};
-				\draw[-Stealth, thick, MahestanGold, dashed] (people) to[out=200, in=110] (cfin);
-				\draw[-Stealth, thick, MahestanBlue, dashed] (demo) to[out=240, in=90] (people);
-				\draw[-Stealth, thick, MahestanGreen!60, dashed] (civil) to[out=90, in=270] (meh);
-				\draw[-Stealth, thick, MahestanGreen!50, dashed] (intl) to[out=60, in=230] (meh);
-			\end{tikzpicture}
-		}%
-	\end{center}
+\thispagestyle{plain}
+
+% ── Chapter heading WITHOUT triggering \clearpage ───────────
+% (landscape already issued \clearpage, so we place heading manually)
+\refstepcounter{chapter}%
+\addcontentsline{toc}{chapter}%
+  {\protect\numberline{\thechapter}نمودار جامع ساختار نهادی}%
+\label{ch:structure}%
+\markboth{نمودار جامع ساختار نهادی}{نمودار جامع ساختار نهادی}%
+
+{%
+  \raggedleft
+  \small\color{MahestanGray}%
+  \chaptername\hspace{.5em}%
+  \colorbox{MahestanDarkBlue}{\textcolor{white}{\thechapter}}%
+  \par\nobreak\vspace{1ex}%
+  {\color{MahestanBlue}\hrule height 0.8pt}\nobreak\vspace{0.4ex}%
+  {\huge\bfseries\color{MahestanDarkBlue}%
+   نمودار جامع ساختار نهادی}\par\nobreak%
+  {\color{MahestanBlue}\hrule height 0.8pt}%
+  \vspace{8pt}%
+}%
+
+% ── Diagram: constrained to fit remaining page ──────────────
+% Available height ≈ landscape width − top/bottom margins − heading
+% We cap both dimensions so it never overflows
+\noindent
+\begin{adjustbox}{max width=\linewidth, max height=\dimexpr\portraittextwidth-4cm\relax, center}
+\begin{tikzpicture}[
+  every node/.style={align=center, font=\footnotesize},
+  node distance=0.6cm and 1cm,
+  >={Stealth[length=4pt]}
+]
+
+%% ══════════════════════════════════════════════════════════
+%%  ROW 0 — مردم ایران (top center)
+%% ══════════════════════════════════════════════════════════
+\node[
+  rectangle, rounded corners=8pt,
+  draw=MahestanGold, fill=MahestanGold!25,
+  text width=5.5cm, inner sep=7pt,
+  font=\small\bfseries
+] (people) {
+  \rl{مردم ایران}\\[2pt]
+  {\footnotesize\rl{حاکمیت مطلق}}\\
+  {\scriptsize\rl{انتخابات مستقیم --- رفراندوم‌ها --- نظرسنجی‌ها}}
+};
+
+% ── جامعه‌ی بین‌المللی (far left) ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanGreen!40, fill=SoftGreen!50,
+  text width=4cm, inner sep=4pt,
+  left = 3cm of people
+] (intl) {
+  \textbf{\rl{جامعه‌ی بین‌المللی}}\\[2pt]
+  {\scriptsize\rl{سازمان ملل --- اتحادیه اروپا}}\\
+  {\scriptsize\rl{نظارت + حمایت فنی}}
+};
+% ── جامعه‌ی مدنی ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanGreen!50, fill=SoftGreen,
+  text width=4cm, inner sep=4pt,
+  right=3cm of people
+] (civil) {
+  \textbf{\rl{جامعه‌ی مدنی}}\\[2pt]
+  {\scriptsize\rl{نظارت + مشاوره}}
+  {\scriptsize\rl{نقد + مطالبه}}
+};
+%% ══════════════════════════════════════════════════════════
+%%  ROW 1 — بازوهای مجلس + مجلس مهستان (3-column)
+%% ══════════════════════════════════════════════════════════
+
+% ── مجلس مهستان (center) ──
+\node[
+  rectangle, rounded corners=8pt,
+  draw=MahestanDarkBlue, fill=MahestanBlue!15,
+  text width=5.5cm, inner sep=8pt,
+  below=1.2cm of people,
+  font=\small\bfseries
+] (meh) {
+  \rl{مجلس مهستان}\\[2pt]
+  {\footnotesize\rl{نهاد عالی حاکمیت دوران گذار}}\\
+  {\scriptsize\rl{۳۰۰ نماینده‌ی منتخب --- حداکثر ۲ سال}}
+};
+
+% ── واحد ارتباط مردمی (left of meh) ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanBlue, fill=MahestanLightBlue!60,
+  text width=3.2cm, inner sep=6pt,
+  left=2cm of meh, yshift=1cm
+] (demo) {
+  \textbf{\rl{واحد ارتباط مردمی}}\\[2pt]
+  {\scriptsize\rl{بازوی دموکراتیک}}\\
+  {\scriptsize\rl{نظرسنجی --- بازخورد --- رفراندوم}}
+};
+
+
+% ── مرکز تحقیقات (right of meh) ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanOrange, fill=MahestanLightOrange,
+  text width=3.2cm, inner sep=6pt,
+  right=2cm of meh, yshift=1cm
+] (tech) {
+  \textbf{\rl{مرکز تحقیقات}}\\[2pt]
+  {\scriptsize\rl{بازوی تکنوکراتیک}}\\
+  {\scriptsize\rl{واقعیت‌ها --- تحلیل فنی}}
+};
+
+%% ══════════════════════════════════════════════════════════
+%%  ROW 2 — نهادهای مستقل + اجرایی (5-column spread)
+%% ══════════════════════════════════════════════════════════
+
+% ── هیأت نظارت بر انتخابات (far left) ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanPurple!70, fill=MahestanLightPurple!50,
+  text width=2.8cm, inner sep=5pt,
+  below left=0.0cm and 4cm of meh
+] (election) {
+  \textbf{\rl{هیأت نظارت بر انتخابات}}\\[2pt]
+  {\scriptsize\rl{مستقل}}
+};
+% ── آمبودزمان ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanGold, fill=MahestanGold!10,
+  text width=2.5cm, inner sep=4pt,
+  below=1cm of election
+] (ombud) {
+  \textbf{\rl{آمبودزمان}}\\[2pt]
+  {\scriptsize\rl{نهاد حقوق شهروندی}}
+};
+
+% ── شورای قضایی انتقالی (left) ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanRed, fill=MahestanRed!10,
+  text width=2.8cm, inner sep=5pt,
+  below left=1.4cm and 0.5cm of meh
+] (judicial) {
+  \textbf{\rl{شورای قضایی انتقالی}}\\[2pt]
+  {\scriptsize\rl{مستقل}}
+};
+
+
+% ── کابینه‌ی اجرایی موقت (right) ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanGreen, fill=MahestanLightGreen,
+  text width=2.8cm, inner sep=5pt,
+  below right=1.4cm and 0.5cm of meh
+] (cabinet) {
+  \textbf{\rl{کابینه‌ی اجرایی موقت}}\\[2pt]
+  {\scriptsize\rl{پاسخ‌گو به مجلس}}
+};
+
+% ── کمیسیون رسانه‌ها (far right) ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanBlue!60, fill=NodeBg,
+  text width=2.8cm, inner sep=5pt,
+  below right=1.4cm and 4.5cm of meh
+] (media) {
+  \textbf{\rl{کمیسیون رسانه‌ها}}\\[2pt]
+  {\scriptsize\rl{استقلال رسانه‌ای}}
+};
+
+%% ══════════════════════════════════════════════════════════
+%%  ROW 3 — نهادهای زیرمجموعه (bottom row, 7-column)
+%% ══════════════════════════════════════════════════════════
+
+% ── کمیسیون حقیقت‌یابی ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanPurple, fill=MahestanLightPurple,
+  text width=2.5cm, inner sep=4pt,
+  below=1.2cm of judicial
+] (trc) {
+  \textbf{\rl{کمیسیون حقیقت‌یابی}}\\[2pt]
+  {\scriptsize\rl{عدالت انتقالی}}
+};
+
+% ── قانون اساسی موقت ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanPurple, fill=MahestanLightPurple!40,
+  text width=2.5cm, inner sep=4pt,
+  below=1.5cm of meh
+] (ctmp) {
+  \textbf{\rl{قانون اساسی موقت}}\\[2pt]
+  {\scriptsize\rl{ظرف ۲ ماه --- رفراندوم}}
+};
+
+% ── قانون اساسی نهایی ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanPurple!80, fill=MahestanLightPurple!70,
+  text width=3cm, inner sep=4pt,
+  below=1.5cm of ctmp
+] (cfin) {
+  \textbf{\rl{قانون اساسی نهایی}}\\[2pt]
+  {\scriptsize\rl{مجلس مؤسسان --- رفراندوم}}
+};
+
+% ── فرماندهی نظامی ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanGray, fill=MahestanLightGray,
+  text width=2.5cm, inner sep=4pt,
+  below=1.2cm of cabinet
+] (military) {
+  \textbf{\rl{فرماندهی نظامی‌انتظامی}}\\[2pt]
+  {\scriptsize\rl{موقت --- زیر نظر مجلس}}
+};
+
+% ── کمیسیون اصلاح امنیتی ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanGray!80, fill=MahestanLightGray!60,
+  text width=2.5cm, inner sep=4pt,
+  right=0.4cm of military
+] (ssr) {
+  \textbf{\rl{کمیسیون اصلاح امنیتی}}\\[2pt]
+  {\scriptsize\rl{\lr{SSR} --- غربال‌گری}}
+};
+
+% ── شورای اقتصادی (far right) ──
+\node[
+  rectangle, rounded corners=5pt,
+  draw=MahestanGreen!70, fill=SuccessBg,
+  text width=2.5cm, inner sep=4pt,
+  below right = 0.5cm and 0.5cm of tech
+] (econ) {
+  \textbf{\rl{شورای اقتصادی گذار}}\\[2pt]
+  {\scriptsize\rl{اقتصاددانان مستقل}}
+};
+
+
+
+%% ══════════════════════════════════════════════════════════
+%%  ARROWS — all behind nodes via background layer
+%% ══════════════════════════════════════════════════════════
+\begin{scope}[on background layer]
+
+  % ── Primary link: people → meh ──
+  \draw[maharrow=MahestanGold, line width=1.8pt]
+    (people) -- (meh)
+    node[midway, right, xshift=3pt, font=\scriptsize]{\rl{انتخابات مستقیم}};
+
+  % ── meh → arms ──
+  \draw[maharrow=MahestanBlue]    (meh) -- (demo)
+    node[midway, above, font=\tiny]{\rl{مدیریت}};
+  \draw[maharrow=MahestanOrange]  (meh) -- (tech)
+    node[midway, above, font=\tiny]{\rl{مدیریت}};
+
+  % ── meh → row 2 institutions ──
+  \draw[maharrow=MahestanPurple]  (meh) -- (election)
+    node[midway, above left, font=\tiny]{\rl{تعیین}};
+  \draw[maharrow=MahestanRed]     (meh) -- (judicial)
+    node[midway, above left, font=\tiny]{\rl{تعیین}};
+  \draw[maharrow=MahestanGreen]   (meh) -- (cabinet)
+    node[midway, above right, font=\tiny]{\rl{تشکیل+نظارت}};
+  \draw[maharrow=MahestanBlue]    (meh) -- (media)
+    node[midway, above right, font=\tiny]{\rl{تعیین}};
+
+  % ── meh → row 3 institutions ──
+  \draw[maharrow=MahestanGold]    (meh) -- (ombud);
+  \draw[maharrow=MahestanGray]    (meh) to[out=310, in=90] (military);
+  \draw[maharrow=MahestanPurple]  (judicial) -- (trc);
+  \draw[maharrow=MahestanGreen]   (cabinet) -- (military)
+    node[midway, right, font=\tiny]{\rl{هماهنگی}};
+  \draw[maharrow=MahestanGray]    (military) -- (ssr);
+
+  % ── Constitution links (dashed) ──
+  \draw[->, thick, MahestanPurple, dashed]
+    (meh) to[out=250, in=90] (ctmp)
+    node[near start, left, font=\tiny]{\rl{۲ ماه}};
+  \draw[->, thick, MahestanPurple!80, dashed]
+    (meh) to[out=280, in=90] (cfin);
+
+  % ── Referendum links (dashed) ──
+  \draw[->, thick, MahestanGold, dashed]
+    (people) to[out=220, in=100] (ctmp)
+    node[near end, left, font=\tiny]{\rl{رفراندوم}};
+  \draw[->, thick, MahestanGold, dashed]
+    (people) to[out=320, in=100] (cfin);
+
+  % ── Feedback loops (dashed) ──
+  \draw[->, thick, MahestanBlue, dashed]
+    (demo) to[out=120, in=190] (people);
+  \draw[->, thick, MahestanGreen!60, dashed]
+    (civil) to[out=90, in=350] (meh);
+  \draw[->, thick, MahestanGreen!50, dashed]
+    (intl) to[out=60, in=210] (meh);
+  \draw[->, thick, MahestanGreen!50, dashed]
+    (econ) to[out=90, in=330] (meh);
+
+\end{scope}
+
+\end{tikzpicture}
+\end{adjustbox}
+
 \end{landscape}
-\vspace{0.5\baselineskip}
+
+% \chapter{نمودار جامع ساختار نهادی}
+% \label{ch:structure}
+
+% \begin{landscape}
+% 	\thispagestyle{plain}
+% 	\vspace*{0.3cm}
+% 	\begin{center}
+% 		{\large\bfseries\color{MahestanDarkBlue}\rl{نمودار جامع ساختار نهادی گذار}}\par
+% 		\vspace{0.4cm}
+% 		\resizebox{0.97\linewidth}{!}{%
+% 			\begin{tikzpicture}[
+% 				every node/.style={align=center, font=\small\rl},
+% 				node distance=0.8cm and 1.2cm
+% 				]
+				
+% 				%% ── مردم ایران (TOP) ──────────────────────────────────
+% 				\node[
+% 				rectangle, rounded corners=10pt,
+% 				draw=MahestanGold, fill=MahestanGold!25,
+% 				text width=6.5cm, inner sep=10pt, font=\bfseries
+% 				] (people) {
+% 					\rl{مردم ایران}\\[4pt]
+% 					\rl{\footnotesize حاکمیت مطلق}\\
+% 					\rl{\footnotesize انتخابات مستقیم --- رفراندوم‌ها --- نظرسنجی‌ها}
+% 				};
+				
+% 				%% ── مجلس مهستان (CENTER) ──────────────────────────────
+% 				\node[
+% 				rectangle, rounded corners=10pt,
+% 				draw=MahestanDarkBlue, fill=MahestanBlue!15,
+% 				text width=6.5cm, inner sep=12pt,
+% 				below=1.8cm of people, font=\bfseries\large
+% 				] (meh) {
+% 					\rl{مجلس مهستان}\\[4pt]
+% 					\rl{\normalsize نهاد عالی حاکمیت دوران گذار}\\[2pt]
+% 					\rl{\footnotesize ۳۰۰ نماینده‌ی منتخب --- حداکثر ۲ سال}
+% 				};
+				
+% 				%% ── بازوی تکنوکراتیک (RIGHT TOP) ─────────────────────
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanOrange, fill=MahestanLightOrange,
+% 				text width=4cm, inner sep=8pt,
+% 				right=2.5cm of meh, yshift=1.5cm
+% 				] (tech) {
+% 					\textbf{\rl{مرکز تحقیقات}}\\[3pt]
+% 					\rl{\footnotesize بازوی تکنوکراتیک}\\
+% 					\rl{\scriptsize واقعیت‌ها --- تحلیل فنی}\\
+% 					\rl{\scriptsize گزینه‌های سیاستی}
+% 				};
+				
+% 				%% ── بازوی دموکراتیک (LEFT TOP) ───────────────────────
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanBlue, fill=MahestanLightBlue!60,
+% 				text width=4cm, inner sep=8pt,
+% 				left=2.5cm of meh, yshift=1.5cm
+% 				] (demo) {
+% 					\textbf{\rl{واحد ارتباط مردمی}}\\[3pt]
+% 					\rl{\footnotesize بازوی دموکراتیک}\\
+% 					\rl{\scriptsize نظرسنجی‌ها --- بازخورد}\\
+% 					\rl{\scriptsize جلسات عمومی --- رفراندوم}
+% 				};
+				
+% 				%% ── کابینه‌ی اجرایی موقت (RIGHT BOTTOM) ──────────────
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanGreen, fill=MahestanLightGreen,
+% 				text width=3.8cm, inner sep=8pt,
+% 				below right=1.8cm and 0.5cm of meh
+% 				] (cabinet) {
+% 					\textbf{\rl{کابینه‌ی اجرایی موقت}}\\[3pt]
+% 					\rl{\footnotesize پاسخ‌گو به مجلس}
+% 				};
+				
+% 				%% ── شورای قضایی انتقالی (LEFT BOTTOM) ────────────────
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanRed, fill=MahestanRed!10,
+% 				text width=3.8cm, inner sep=8pt,
+% 				below left=1.8cm and 0.5cm of meh
+% 				] (judicial) {
+% 					\textbf{\rl{شورای قضایی انتقالی}}\\[3pt]
+% 					\rl{\footnotesize مستقل}
+% 				};
+				
+% 				%% ── فرماندهی نظامی (BELOW CABINET) ───────────────────
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanGray, fill=MahestanLightGray,
+% 				text width=3.5cm, inner sep=7pt,
+% 				below=1.2cm of cabinet
+% 				] (military) {
+% 					\textbf{\rl{فرماندهی نظامی‌انتظامی}}\\[2pt]
+% 					\rl{\footnotesize موقت --- زیر نظر مجلس}
+% 				};
+				
+% 				%% ── کمیسیون اصلاح امنیتی (BELOW MILITARY) ────────────
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanGray!80, fill=MahestanLightGray!60,
+% 				text width=3.5cm, inner sep=7pt,
+% 				below=0.8cm of military
+% 				] (ssr) {
+% 					\textbf{\rl{کمیسیون اصلاح امنیتی}}\\[2pt]
+% 					\rl{\footnotesize \lr{SSR} --- غربال‌گری نیروها}
+% 				};
+				
+% 				%% ── کمیسیون حقیقت‌یابی (BELOW JUDICIAL) ──────────────
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanPurple, fill=MahestanLightPurple,
+% 				text width=3.5cm, inner sep=7pt,
+% 				below=1.2cm of judicial
+% 				] (trc) {
+% 					\textbf{\rl{کمیسیون حقیقت‌یابی و آشتی}}\\[2pt]
+% 					\rl{\footnotesize عدالت انتقالی}
+% 				};
+				
+% 				%% ── هیأت نظارت بر انتخابات (RIGHT OF DEMO) ───────────
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanPurple!70, fill=MahestanLightPurple!50,
+% 				text width=3.5cm, inner sep=7pt,
+% 				left=1.5cm of demo
+% 				] (election) {
+% 					\textbf{\rl{هیأت نظارت بر انتخابات}}\\[2pt]
+% 					\rl{\footnotesize مستقل}
+% 				};
+				
+% 				%% ── آمبودزمان (BELOW DEMO) ────────────────────────────
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanGold, fill=MahestanGold!10,
+% 				text width=3.5cm, inner sep=7pt,
+% 				below=3.2cm of demo
+% 				] (ombud) {
+% 					\textbf{\rl{آمبودزمان}}\\[2pt]
+% 					\rl{\footnotesize نهاد حقوق شهروندی}
+% 				};
+				
+% 				%% ── کمیسیون رسانه‌ها و شورای اقتصادی (RIGHT OF TECH) ─
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanBlue!60, fill=NodeBg,
+% 				text width=3.5cm, inner sep=7pt,
+% 				right=1.5cm of tech
+% 				] (media) {
+% 					\textbf{\rl{کمیسیون رسانه‌ها}}\\[2pt]
+% 					\rl{\footnotesize استقلال رسانه‌ای}
+% 				};
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanGreen!70, fill=SuccessBg,
+% 				text width=3.5cm, inner sep=7pt,
+% 				below=0.8cm of media
+% 				] (econ) {
+% 					\textbf{\rl{شورای اقتصادی گذار}}\\[2pt]
+% 					\rl{\footnotesize اقتصاددانان مستقل}
+% 				};
+				
+% 				%% ── قانون اساسی موقت و نهایی (BOTTOM CENTER) ─────────
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanPurple, fill=MahestanLightPurple!40,
+% 				text width=3.5cm, inner sep=7pt,
+% 				below=4cm of meh, xshift=-2.5cm
+% 				] (ctmp) {
+% 					\textbf{\rl{قانون اساسی موقت}}\\[2pt]
+% 					\rl{\footnotesize ظرف ۲ ماه --- رفراندوم}
+% 				};
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanPurple!80, fill=MahestanLightPurple!70,
+% 				text width=3.5cm, inner sep=7pt,
+% 				right=0.8cm of ctmp
+% 				] (cfin) {
+% 					\textbf{\rl{قانون اساسی نهایی}}\\[2pt]
+% 					\rl{\footnotesize مجلس مؤسسان --- رفراندوم}
+% 				};
+				
+% 				%% ── جامعه‌ی مدنی (FAR RIGHT BOTTOM) ──────────────────
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanGreen!50, fill=SoftGreen,
+% 				text width=3cm, inner sep=6pt,
+% 				below=3.8cm of tech, xshift=0.8cm
+% 				] (civil) {
+% 					\textbf{\rl{جامعه‌ی مدنی}}\\[2pt]
+% 					\rl{\footnotesize نظارت + مشاوره}
+% 				};
+				
+% 				%% ── جامعه‌ی بین‌المللی (FAR LEFT BOTTOM) ─────────────
+% 				\node[
+% 				rectangle, rounded corners=6pt,
+% 				draw=MahestanGreen!40, fill=SoftGreen!50,
+% 				text width=3cm, inner sep=6pt,
+% 				below=1.5cm of election
+% 				] (intl) {
+% 					\textbf{\rl{جامعه‌ی بین‌المللی}}\\[2pt]
+% 					\rl{\footnotesize سازمان ملل --- اتحادیه اروپا}\\
+% 					\rl{\scriptsize نظارت + حمایت فنی}
+% 				};
+				
+% 				%%─── Arrows ───────────────────────────────────────────────
+% 				\draw[maharrow=MahestanGold, line width=2pt] (people) -- (meh)
+% 				node[midway, right, xshift=4pt]{\footnotesize\rl{انتخابات مستقیم}};
+% 				\draw[maharrow=MahestanOrange] (meh) -- (tech)
+% 				node[midway, above]{\tiny\rl{مدیریت}};
+% 				\draw[maharrow=MahestanBlue] (meh) -- (demo)
+% 				node[midway, above]{\tiny\rl{مدیریت}};
+% 				\draw[maharrow=MahestanGreen, thick] (meh) -- (cabinet)
+% 				node[midway, above right]{\tiny\rl{تشکیل+نظارت}};
+% 				\draw[maharrow=MahestanRed, thick] (meh) -- (judicial)
+% 				node[midway, above left]{\tiny\rl{تعیین}};
+% 				\draw[maharrow=MahestanGray] (meh) to[out=285, in=90] (military);
+% 				\draw[maharrow=MahestanGray] (military) -- (ssr);
+% 				\draw[maharrow=MahestanGreen] (cabinet) -- (military)
+% 				node[midway, right]{\tiny\rl{هماهنگی}};
+% 				\draw[maharrow=MahestanPurple] (meh) to[out=250, in=90] (trc);
+% 				\draw[maharrow=MahestanPurple] (meh) to[out=200, in=0] (election);
+% 				\draw[maharrow=MahestanGold] (meh) to[out=240, in=90] (ombud);
+% 				\draw[maharrow=MahestanBlue] (meh) to[out=15, in=180] (media);
+% 				\draw[maharrow=MahestanGreen] (meh) to[out=5, in=200] (econ);
+% 				\draw[-Stealth, thick, MahestanPurple, dashed] (meh) to[out=260, in=90] (ctmp)
+% 				node[near start, left]{\tiny\rl{۲ ماه}};
+% 				\draw[-Stealth, thick, MahestanPurple!80, dashed] (meh) to[out=275, in=90] (cfin);
+% 				\draw[-Stealth, thick, MahestanGold, dashed] (people) to[out=215, in=90] (ctmp)
+% 				node[near end, left]{\tiny\rl{رفراندوم}};
+% 				\draw[-Stealth, thick, MahestanGold, dashed] (people) to[out=200, in=110] (cfin);
+% 				\draw[-Stealth, thick, MahestanBlue, dashed] (demo) to[out=240, in=90] (people);
+% 				\draw[-Stealth, thick, MahestanGreen!60, dashed] (civil) to[out=90, in=270] (meh);
+% 				\draw[-Stealth, thick, MahestanGreen!50, dashed] (intl) to[out=60, in=230] (meh);
+% 			\end{tikzpicture}
+% 		}%
+% 	\end{center}
+% \end{landscape}
+% \vspace{0.5\baselineskip}
 
 % ============================================================
 %  CHAPTER 5: NON-NEGOTIABLE PRINCIPLES
