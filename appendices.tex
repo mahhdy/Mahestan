@@ -20,81 +20,14 @@
 تجربه‌ی مصر (۲۰۱۱)، لیبی (۲۰۱۱) و یمن نشان می‌دهد که نبود پاسخ آماده برای این
 فاصله، هزینه‌ای گاه غیرقابل‌جبران دارد.
 
-\section{مدل پیشنهادی: شورای هماهنگی گذار}
+\section*{مدل پیشنهادی: شورای هماهنگی گذار}
 
 \begin{dangerbox}
 \textbf{تعریف:} یک نهاد \textbf{موقت، کوچک، و با مأموریت محدود} که تنها برای مدیریت
 این فاصله تشکیل می‌شود و پس از تشکیل مجلس مهستان، \textbf{بلافاصله منحل} می‌گردد.
 \end{dangerbox}
 
-\vspace{0.5\baselineskip}
-\begin{center}
-\resizebox{0.85\linewidth}{!}{%
-\begin{tikzpicture}[
-  every node/.style={align=right, font=\small},
-  node distance=1.2cm
-]
-\node[
-  rectangle, rounded corners=8pt,
-  draw=MahestanRed, fill=DangerBg,
-  text width=5cm, inner sep=10pt, font=\bfseries\small
-] (vacuum) {
-  \rl{خلأ پیش از مجلس مهستان}\\[4pt]
-  \rl{\footnotesize فاصله‌ی بین سقوط نظام}\\
-  \rl{\footnotesize تا تشکیل مجلس مهستان}\\
-  \rl{\footnotesize (تخمین: ۴ تا ۸ هفته)}
-};
-\node[
-  rectangle, rounded corners=8pt,
-  draw=MahestanGold, fill=WarningBg,
-  text width=6cm, inner sep=10pt, below=of vacuum
-] (council) {
-  \textbf{\rl{شورای هماهنگی گذار}}\\[6pt]
-  \rl{رهبران شناخته‌شده‌ی اپوزیسیون}\\
-  \rl{به شرط هماهنگی و اتحاد}\\[4pt]
-  \rl{\footnotesize حداکثر ۱۵--۲۰ نفر}\\
-  \rl{\footnotesize نمایندگی جریان‌های اصلی}
-};
-\node[
-  rectangle, rounded corners=6pt,
-  draw=MahestanBlue, fill=NodeBg,
-  text width=7cm, inner sep=8pt, below=of council
-] (mandate) {
-  \textbf{\rl{مأموریت محدود}}\\[4pt]
-  \rl{\textcolor{MahestanGreen}{\lr{(v)} مجاز:}}\\
-  \rl{برگزاری انتخابات مجلس مهستان}\\
-  \rl{صدور ۱۰ فرمان اضطراری}\\
-  \rl{تثبیت نظم عمومی}\\
-  \rl{اطلاع‌رسانی به جامعه‌ی بین‌المللی}\\[4pt]
-  \rl{\textcolor{MahestanRed}{\lr{(x)} غیرمجاز:}}\\
-  \rl{تصمیمات ساختاری یا قانون‌گذاری}\\
-  \rl{معاهدات بین‌المللی الزام‌آور}
-};
-\node[
-  rectangle, rounded corners=6pt,
-  draw=MahestanGreen, fill=SuccessBg,
-  text width=5cm, inner sep=8pt, below=of mandate
-] (assembly) {
-  \textbf{\rl{تشکیل مجلس مهستان}}
-};
-\node[
-  rectangle, rounded corners=6pt,
-  draw=MahestanGreen, fill=SuccessBg,
-  text width=5cm, inner sep=6pt, below=of assembly
-] (dissolve) {
-  \textbf{\rl{انحلال فوری شورای هماهنگی گذار}}
-};
-
-\draw[maharrow=MahestanRed] (vacuum) -- (council);
-\draw[maharrow=MahestanGold] (council) -- (mandate);
-\draw[maharrow=MahestanBlue] (mandate) -- (assembly);
-\draw[maharrow=MahestanGreen] (assembly) -- (dissolve);
-\end{tikzpicture}
-}%
-\end{center}
-\vspace{0.5\baselineskip}
-
-\section{اصول تشکیل شورای هماهنگی گذار}
+\section*{اصول تشکیل شورای هماهنگی گذار}
 
 \begin{bandbox}{اصل اول --- اتحاد و هماهنگی شرط ورود است}
 شناخته‌شده‌ترین چهره‌های اپوزیسیون تنها در صورتی می‌توانند این نقش را بر عهده
@@ -108,8 +41,95 @@
 \end{bandbox}
 
 \begin{bandbox}{اصل سوم --- شفافیت کامل}
-تمام جلسات و تصمیمات شورا علنی است. هیچ تصمیمی با اکثریت کمتر از \lr{$\frac{2}{3}$} اعضا اتخاذ نمی‌شود.
+تمام جلسات و تصمیمات شورا علنی است. هیچ تصمیمی با اکثریت کمتر از
+\fraction{2}{3} اعضا اتخاذ نمی‌شود.
 \end{bandbox}
+
+% ★ FIX: single scaling method only — let TikZ handle it via `scale`
+%   Removed the outer \resizebox wrapper that caused double-scaling
+\begin{center}
+\begin{tikzpicture}[
+  scale=0.88, transform shape,
+  every node/.style={align=right, font=\small},
+  node distance=1cm                      % ★ tightened from 1.2cm
+]
+
+% ── Node 1: Vacuum ──
+\node[
+  rectangle, rounded corners=8pt,
+  draw=MahestanRed, fill=DangerBg,
+  text width=6cm, inner sep=8pt          % ★ unified width, cleaner padding
+] (vacuum) {
+  \textbf{\rl{خلأ پیش از مجلس مهستان}}\\[3pt]
+  \rl{فاصله‌ی بین سقوط نظام}\\
+  \rl{تا تشکیل مجلس مهستان}\\
+  \rl{(تخمین: ۴ تا ۸ هفته)}
+};
+
+% ── Node 2: Council ──
+\node[
+  rectangle, rounded corners=8pt,
+  draw=MahestanGold, fill=WarningBg,
+  text width=6cm, inner sep=8pt,
+  below=of vacuum
+] (council) {
+  \textbf{\rl{شورای هماهنگی گذار}}\\[4pt]
+  \rl{رهبران شناخته‌شده‌ی اپوزیسیون}\\
+  \rl{به شرط هماهنگی و اتحاد}\\[3pt]
+  {\footnotesize
+    \rl{حداکثر ۱۵–۲۰ نفر}\\
+    \rl{نمایندگی جریان‌های اصلی}%
+  }
+};
+
+% ── Node 3: Mandate ──
+\node[
+  rectangle, rounded corners=6pt,
+  draw=MahestanBlue, fill=NodeBg,
+  text width=6cm, inner sep=8pt,         % ★ was 7cm — now consistent
+  below=of council
+] (mandate) {
+  \textbf{\rl{مأموریت محدود}}\\[3pt]
+  \rl{\textcolor{MahestanGreen}{\checkmark{} مجاز:}}\\
+  \rl{برگزاری انتخابات مجلس مهستان}\\
+  \rl{صدور ۱۰ فرمان اضطراری}\\
+  \rl{تثبیت نظم عمومی}\\
+  \rl{اطلاع‌رسانی به جامعه‌ی بین‌المللی}\\[3pt]
+  \rl{\textcolor{MahestanRed}{\crossmark{} غیرمجاز:}}\\
+  \rl{تصمیمات ساختاری یا قانون‌گذاری}\\
+  \rl{معاهدات بین‌المللی الزام‌آور}
+};
+
+% ── Node 4: Assembly ──
+\node[
+  rectangle, rounded corners=6pt,
+  draw=MahestanGreen, fill=SuccessBg,
+  text width=6cm, inner sep=8pt,
+  below=of mandate
+] (assembly) {
+  \textbf{\rl{تشکیل مجلس مهستان}}
+};
+
+% ── Node 5: Dissolve ──
+\node[
+  rectangle, rounded corners=6pt,
+  draw=MahestanGreen!70!black, fill=SuccessBg,
+  text width=6cm, inner sep=6pt,
+  below=of assembly
+] (dissolve) {
+  \textbf{\rl{انحلال فوری شورای هماهنگی گذار}}
+};
+
+% ── Arrows ──
+\draw[maharrow=MahestanRed]   (vacuum)  -- (council);
+\draw[maharrow=MahestanGold]  (council) -- (mandate);
+\draw[maharrow=MahestanBlue]  (mandate) -- (assembly);
+\draw[maharrow=MahestanGreen] (assembly) -- (dissolve);
+
+\end{tikzpicture}
+\end{center}
+
+
 
 \begin{bandbox}{اصل چهارم --- محدودیت مأموریت}
 شورا هیچ صلاحیتی فراتر از «اداره‌ی ضروریات» و «برگزاری انتخابات» ندارد.
