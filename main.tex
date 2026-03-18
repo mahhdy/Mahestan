@@ -4,7 +4,7 @@
 %  XePersian Book — Compiled with XeLaTeX
 % ============================================================
 
-\documentclass[12pt,a4paper,twoside,openany]{book}
+\documentclass[12pt,a4paper,twoside,openany]{extbook}
 
 \input{tex/preamble.tex}
 
@@ -14,14 +14,13 @@
 \input{tex/cover.tex}
 
 % ── TOC ────────────────────────────────────────────────────
-% \tableofcontents
-% \cleardoublepage
+\tableofcontents
+\cleardoublepage
 \mainmatter
 \part{طرح}
 \input{tex/mahestan.tex}
 
-% \backmatter
-% \part{ضمائم}
-% \input{tex/appendices.tex}
+\backmatter
+\input{tex/appendices.tex}
 
 \end{document}
